@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from enum import Enum
-from typing import Self
+from typing_extensions import Self
 
 __all__ = "Method", "Server", "JobGroups", "Stats", "Config"
 
