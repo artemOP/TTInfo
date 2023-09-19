@@ -13,7 +13,7 @@ from ttinfo import LogHandler, TycoonHttp
 async def main():
     env = dotenv.dotenv_values()
     async with (
-        TycoonHttp(default_key=env.get("tycoon_token")) as http_session,
+        TycoonHttp() as http_session,
         asyncpg.create_pool(
             database=env.get("postgres_db"),
             user=env.get("postgres_user"),

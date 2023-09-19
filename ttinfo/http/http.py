@@ -56,12 +56,9 @@ class TycoonHTTP:
     session: ClientSession
     logger = logging.getLogger("ttinfo.http")
 
-    def __init__(self, default_key: str):
-        self.default_key: str = default_key
-
     async def __aenter__(self):
         self.session = aiohttp.ClientSession(
-            json_serialize=lambda x: str(orjson.dumps(x), "utf-8"), headers={"x-tycoon-key": self.default_key}
+            json_serialize=lambda x: str(orjson.dumps(x), "utf-8")
         )
         return self
 
