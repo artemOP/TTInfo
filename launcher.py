@@ -1,12 +1,10 @@
 import asyncio
 import pathlib
 
-import aiohttp
 import asyncpg
 import discord
 from discord.ext import commands
 import dotenv
-import orjson
 
 import ttinfo
 from ttinfo import LogHandler, TycoonHttp
