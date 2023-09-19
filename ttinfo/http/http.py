@@ -114,7 +114,7 @@ class TycoonHTTP:
         return await self.request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
 
     async def economy(self, *, server: Server) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "economy.json"))
+        return await self.request(Route(Method.get, server, "economy.csv"))
 
     async def sotd(self, *, server: Server, key: str) -> dict[str, Any]:
         return await self.request(Route(Method.get, server, "sotd.json", headers={"x-tycoon-key": key}))
