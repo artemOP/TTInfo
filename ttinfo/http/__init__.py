@@ -1,3 +1,3 @@
-from enums import *
-from ttinfo.http import *
-from models import *
+from .enums import *
+from .models import *
+from .http import TycoonHTTP as TycoonHTTP
