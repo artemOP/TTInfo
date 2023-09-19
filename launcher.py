@@ -9,13 +9,13 @@ import dotenv
 import orjson
 
 import ttinfo
-from ttinfo import LogHandler
+from ttinfo import LogHandler, TycoonHttp
 
 
 async def main():
     env = dotenv.dotenv_values()
     async with (
-        aiohttp.ClientSession(json_serialize=lambda x: str(orjson.dumps(x), "utf-8")) as http_session,
+        TycoonHttp(default_key=env.get("tycoon_token")) as http_session,
         asyncpg.create_pool(
             database=env.get("postgres_db"),
             user=env.get("postgres_user"),

@@ -15,17 +15,16 @@ if TYPE_CHECKING:
     from pathlib import Path
     from typing import Any, Callable, Coroutine, Generator, Optional, TypeAlias, Union
 
-    from aiohttp import ClientSession
     from asyncpg import Pool
     from discord import Intents
 
-    from utils import LogHandler
+    from ..http import TycoonHTTP
 
     Prefix: TypeAlias = Union[str, list[str], Callable, Coroutine]
 
 
 class Bot(commands.Bot):
-    http_session: ClientSession
+    http_session: TycoonHTTP
     log_handler: Logger
     logging_queue: Queue[LogRecord]
     pool: Pool
