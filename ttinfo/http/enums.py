@@ -3,7 +3,7 @@ from __future__ import annotations
 from enum import Enum
 from typing_extensions import Self
 
-__all__ = "Method", "Server", "JobGroups", "Stats", "Config"
+__all__ = "Method", "Server", "JobGroups", "Stats", "Config", "Skill", "SkillShort"
 
 
 class Method(Enum):
@@ -90,3 +90,9 @@ class Config(Enum):
     omni_postop_air = "PostOP Air"
     omni_self_storage = "Self Storage"
     vrp = "Houses, House contents"
+
+class Skill(Enum):  # todo: fill
+    ...
+
+class SkillShort(Enum):  # todo: fill
+    ...
