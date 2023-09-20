@@ -50,6 +50,27 @@ def key_cache(timer: int = 60 * 60 * 24):
     return decorator
 
 
+def charges(timer: int = 60 * 60):
+    cache = TimedCache(timer)
+
+    def decorator(func):
+        @functools.wraps(func)
+        async def wrapper(cls, key: str, **kwargs):
+            if not kwargs.get("force", False):
+                if key in cache:
+                    logging.debug("Cache hit: <{key}: {cache[key]}>")
+                    return cache[key]
+
+            data = await func(cls, key, **kwargs)
+            cache[key] = data
+            logger.debug(f"data added to cache: <{key}: {data}>")
+            return data
+
+        return wrapper
+
+    return decorator
+
+
 def vrp_cache():
     cache = {}
 

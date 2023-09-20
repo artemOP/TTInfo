@@ -8,12 +8,14 @@ from ..core import errors
 
 if TYPE_CHECKING:
     from types import TracebackType
-    from typing import Literal, Optional
+    from typing import Literal, Optional, TypeAlias
 
     from asyncpg import Pool
     from typing_extensions import Self
 
     from ttinfo import Bot
+
+    Key: TypeAlias = str
 
 
 class Client:
@@ -40,7 +42,7 @@ class Client:
         return self.bot.env_values["tycoon_token"]
 
     @cache.key_cache()
-    async def get_keys(self, vrp_id: int) -> dict[Literal["public", "private"], str]:
+    async def get_keys(self, vrp_id: int) -> dict[Literal["public", "private"], Key]:
         """Get private and or public keys linked to a specific vrp_id
 
         Raises:
@@ -59,7 +61,7 @@ class Client:
         self,
         discord_id: int,
         *,
-        key: Optional[str] = None,
+        key: Optional[Key] = None,
         server: enums.Server = enums.Server.main,
         force: bool = False,
     ) -> models.Snowflake2User:
@@ -91,3 +93,9 @@ class Client:
             )
             return response
         raise errors.NotLinked()
+
+    @cache.charges()
+    async def fetch_charges(self, key: Key, *, server: enums.Server, force: bool = False) -> models.Charges:
+        data = await self.session.charges(server, key=key)
+        response = models.Charges(charges=data["charges"])
+        return response
