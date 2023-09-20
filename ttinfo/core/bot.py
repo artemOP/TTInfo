@@ -33,7 +33,12 @@ class Bot(commands.Bot):
 
     def __init__(self, prefix: Prefix, intents: Intents, env_values: dict[str, Any], extension_path: Path, **kwargs):
         super().__init__(
-            prefix, help_command=None, intents=intents, case_insensitive=True, tree_cls=CommandTree, **kwargs
+            prefix,  # type: ignore
+            help_command=None,
+            intents=intents,
+            case_insensitive=True,
+            tree_cls=CommandTree,
+            **kwargs,
         )
         self.env_values = env_values
         self.extension_path = extension_path
@@ -77,11 +82,11 @@ class Bot(commands.Bot):
                 if command is None:
                     self.log_handler.debug("command not found")
                     continue
-                await self.add_to_extra(command, fetched_command.mention, None if not guild else guild.id)
+                await self.add_to_extra(command, fetched_command.mention, None if not guild else guild.id)  # type: ignore
                 if isinstance(command, Group):
                     for child in command.walk_commands():
                         await self.add_to_extra(
-                            child, f"</{child.qualified_name}:{fetched_command.id}>", None if not guild else guild.id
+                            child, f"</{child.qualified_name}:{fetched_command.id}>", None if not guild else guild.id  # type: ignore
                         )
 
     @prepare_mentions.before_loop

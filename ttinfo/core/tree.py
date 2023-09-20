@@ -19,7 +19,7 @@ class CommandTree(app_commands.CommandTree):
 
     async def interaction_check(self, interaction: Interaction, /) -> bool:
         if not interaction.guild:
-            await interaction.response.send_message("This bot cannot be used in DMs", ephemeral=True)  # type: ignore
+            await interaction.response.send_message("This bot cannot be used in DMs", ephemeral=True)
             return False
         return True
 
@@ -53,7 +53,7 @@ class CommandTree(app_commands.CommandTree):
         flat_commands = []
         for command in command_list:
             if isinstance(command, app_commands.Group | commands.Command):
-                for child in command.walk_commands():
+                for child in command.walk_commands():  # type: ignore
                     flat_commands.append(child)
             else:
                 flat_commands.append(command)

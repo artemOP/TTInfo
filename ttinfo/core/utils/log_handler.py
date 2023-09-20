@@ -5,11 +5,12 @@ from logging.handlers import RotatingFileHandler
 import pathlib
 from typing import TYPE_CHECKING
 
-from discord.utils import _ColourFormatter as ColourFormatter, stream_supports_colour  # type: ignore
+from discord.utils import _ColourFormatter as ColourFormatter, stream_supports_colour
 
 
 if TYPE_CHECKING:
-    from typing import Any, Self
+    from logging import Logger
+    from typing import Any
 
     from ttinfo import Bot
 
@@ -42,10 +43,10 @@ class LogHandler:
         self.exception = self.log.exception
         self.critical = self.log.critical
 
-    async def __aenter__(self) -> Self:
+    async def __aenter__(self) -> Logger:
         return self.__enter__()
 
-    def __enter__(self) -> Self:
+    def __enter__(self) -> Logger:
         logging.getLogger("discord").setLevel(logging.INFO)
         logging.getLogger("discord.http").setLevel(logging.INFO)
         logging.getLogger("discord.state").setLevel(logging.WARNING)

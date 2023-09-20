@@ -13,7 +13,9 @@ from .enums import Server, Method, Stats, Config
 from ..core import errors
 
 if TYPE_CHECKING:
-    from typing import Any, Union
+    from typing import Any, Union, Optional
+    from types import TracebackType
+
     from aiohttp import ClientSession
 
 
@@ -27,9 +29,9 @@ class Route:
         method: Method,
         server: Server = Server.main,
         path: Union[str, URL] = MISSING,
-        body: Union[str, dict] = None,  # used for push
-        query: list[tuple[str, Any]] = None,  # used for get
-        headers: dict = None,
+        body: Optional[Union[str, dict[str, Any]]] = None,  # used for push
+        query: Optional[list[tuple[str, Any]]] = None,  # used for get
+        headers: Optional[dict[str, Any]] = None,
     ):
         self.method = method
         self.server = server
@@ -57,18 +59,22 @@ class TycoonHTTP:
     logger = logging.getLogger("ttinfo.http")
 
     async def __aenter__(self):
-        self.session = aiohttp.ClientSession(
-            json_serialize=lambda x: str(orjson.dumps(x), "utf-8")
-        )
+        self.session = aiohttp.ClientSession(json_serialize=lambda x: str(orjson.dumps(x), "utf-8"))
         return self
 
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
+    async def __aexit__(
+        self,
+        exc_type: Optional[type[BaseException]],
+        exc_val: Optional[BaseException],
+        exc_tb: Optional[TracebackType],
+    ):
         await self.session.close()
 
-    async def request(self, route: Route, retries: int = 5):
+    async def request(self, route: Route, retries: int = 5) -> Any:
         assert self.session
         headers = route.headers
-        reason = None
+        reason: Optional[str] = None
+        status: Optional[int] = None
         for attempt in range(retries):
             async with self.session.request(route.method.value, route.path, headers=headers, data=route.body) as resp:
                 try:
@@ -81,7 +87,7 @@ class TycoonHTTP:
                         status=resp.status,
                     )
 
-                if 500 <= resp.reason <= 504:
+                if 500 <= resp.status <= 504:
                     reason = resp.reason
                     sleep_time = 2**attempt + 1
                     self.logger.debug(f"Retrying request due to {resp.reason}, sleeping for {sleep_time}")
@@ -105,7 +111,8 @@ class TycoonHTTP:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
                     raise errors.NoKey(resp.reason)
-        raise errors.HTTPException("Unhandled status code", reason=reason, status=resp.status)
+                status = resp.status
+        raise errors.HTTPException("Unhandled status code", reason=reason, status=status)
 
     async def alive(self, *, server: Server) -> bool:
         return await self.request(Route(Method.get, server, "alive.json"))

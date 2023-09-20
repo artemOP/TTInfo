@@ -18,6 +18,7 @@ async def main():
             database=env.get("postgres_db"),
             user=env.get("postgres_user"),
             password=env.get("postgres_password"),
+            host="127.0.0.1",
             command_timeout=1,
             min_size=1,
             max_size=25,
@@ -30,7 +31,6 @@ async def main():
         ) as bot,
         LogHandler(bot=bot) as log_handler,
     ):
-
         bot.logging_queue = asyncio.Queue()
         bot.log_handler = log_handler
         bot.http_session = http_session
@@ -40,7 +40,10 @@ async def main():
         log_handler.info(f"pool: {pool}")
         log_handler.info(f"http_session: {http_session}")
 
-        await bot.start(env.get("discord_token"))
+        if token := env.get("discord_token", None):
+            await bot.start(token)
+        else:
+            raise Exception("discord Token is not present in .env")
 
 
 if __name__ == "__main__":
