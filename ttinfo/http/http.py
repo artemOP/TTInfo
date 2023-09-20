@@ -76,8 +76,6 @@ class TycoonHTTP:
         reason: Optional[str] = None
         status: Optional[int] = None
         for attempt in range(retries):
-            print(route.path)
-            print(headers)
             async with self.session.request(route.method.value, route.path, headers=headers, data=route.body) as resp:
                 try:
                     message = await resp.text(encoding="utf-8")
