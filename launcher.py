@@ -7,13 +7,12 @@ from discord.ext import commands
 import dotenv
 
 import ttinfo
-from ttinfo import LogHandler, TycoonHttp
+from ttinfo import LogHandler, TycoonClient
 
 
 async def main():
     env = dotenv.dotenv_values()
     async with (
-        TycoonHttp() as http_session,
         asyncpg.create_pool(
             database=env.get("postgres_db"),
             user=env.get("postgres_user"),
@@ -29,16 +28,17 @@ async def main():
             env_values=env,
             extension_path=pathlib.Path("ttinfo/extensions"),
         ) as bot,
+        TycoonClient(bot=bot) as tycoon_client,
         LogHandler(bot=bot) as log_handler,
     ):
         bot.logging_queue = asyncio.Queue()
         bot.log_handler = log_handler
-        bot.http_session = http_session
+        bot.client = tycoon_client
         bot.pool = pool
 
         log_handler.info("Starting bot")
         log_handler.info(f"pool: {pool}")
-        log_handler.info(f"http_session: {http_session}")
+        log_handler.info(f"http_session: {tycoon_client}")
 
         if token := env.get("discord_token", None):
             await bot.start(token)
