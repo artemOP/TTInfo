@@ -6,10 +6,6 @@ from yarl import URL
 from . import enums
 
 
-class Charges(NamedTuple):
-    charges: int
-
-
 class SOTD(NamedTuple):
     skill: enums.Skill
     aptitude: str  # replace with enum
@@ -51,10 +47,6 @@ class Weather(NamedTuple):
     weather: enums.Weather
     hour: int
     minute: int
-
-
-class Forecast(NamedTuple):
-    forecast: list[enums.Weather]
 
 
 class Player(NamedTuple):
@@ -109,17 +101,9 @@ class Position(NamedTuple):
     history: Optional[list[Coords]]
 
 
-class Positions(NamedTuple):
-    players: list[Position]
-
-
 class Top10(NamedTuple):
     stat: enums.Stats
     top: list[dict[str, Any]]
-
-
-class Config(NamedTuple):
-    resource: str
 
 
 class Snowflake2User(NamedTuple):
@@ -266,10 +250,6 @@ class UserFaction(NamedTuple):
     faction_id: Optional[int] = None
 
 
-class FactionSize(NamedTuple):
-    size: int
-
-
 class FactionMember(NamedTuple):
     admin: bool
     earned: float
@@ -285,22 +265,10 @@ class FactionMembers(NamedTuple):
     size: int
 
 
-class FactionPerks(NamedTuple):
-    perks: int
-
-
-class FactionBalance(NamedTuple):
-    balance: int
-
-
 class FactionInfo(NamedTuple):
     faction_id: int
     name: str
     tag: str
-
-
-class RTSVehicles(NamedTuple):
-    vehicles: list[str]
 
 
 class Heister(NamedTuple):
@@ -317,7 +285,15 @@ class PigsParty(NamedTuple):
     limit: int
 
 
+Charges: TypeAlias = int
+Config: TypeAlias = str
+FactionSize: TypeAlias = int
+FactionPerks: TypeAlias = int
+FactionBalance: TypeAlias = int
+Forecast: TypeAlias = list[enums.Weather]
 OwnedBusiness: TypeAlias = dict[str, int]
 OwnedVehicles: TypeAlias = dict[str, Vehicle]
-Trunks: TypeAlias = dict[str, Trunk]
+Positions: TypeAlias = list[Position]
 RaceStats: TypeAlias = list[RaceStat]
+RTSVehicles: TypeAlias = list[str]
+Trunks: TypeAlias = dict[str, Trunk]
