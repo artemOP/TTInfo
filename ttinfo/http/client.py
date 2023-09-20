@@ -48,7 +48,7 @@ class Client:
             errors.NoKey: raised if private key is not set
 
         Returns:
-            _type_: _description_
+            dict[str, str]: {private: ..., public: ...}
         """
         keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id)
         if not keys or keys["private"]:
@@ -66,13 +66,13 @@ class Client:
         """Get vrp_id from cache, fallback to db and then api as required
 
         Args:
-            discord_id (int): _description_
+            discord_id (int): The account to fetch
             key (Optional[str]): the key to use for the api call. Defaults to fallback.
-            server (Optional[enums.Server]): the server to search. Defaults to Main.
+            server (Optional[enums.Server]): the server to search.
             force (Optional[bool]): Skip cache layer entirely
 
         Raises:
-            errors.NotLinked: _description_
+            errors.NotLinked: Raised if no response is given from the API
 
         Returns:
             models.Snowflake2User: _description_
@@ -94,6 +94,16 @@ class Client:
 
     @cache.server_specific(60 * 60)
     async def fetch_charges(self, key: Key, server: enums.Server, force: bool = False) -> models.Charges:
+        """Get the number of remaining charges left on a specific key
+
+        Args:
+            key (Key): The key to check
+            server (enums.Server): Split servers do not share keys
+            force (bool): Force skip the cache. Defaults to False.
+
+        Returns:
+            models.Charges: {charges: int}
+        """
         data = await self.session.charges(server, key=key)
         response = models.Charges(charges=data[0])
         return response
