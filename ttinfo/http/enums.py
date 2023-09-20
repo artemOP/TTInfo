@@ -96,3 +96,19 @@ class Skill(Enum):  # todo: fill
 
 class SkillShort(Enum):  # todo: fill
     ...
+
+class Weather(Enum):
+    BLIZZARD = "BLIZZARD"
+    CLEAR = "CLEAR"
+    CLEARING = "CLEARING"
+    CLOUDS = "CLOUDS"
+    EXTRASUNNY = "EXTRASUNNY"
+    FOGGY = "FOGGY"
+    NEUTRAL = "NEUTRAL"
+    OVERCAST = "OVERCAST"
+    RAIN = "RAIN"
+    SMOG = "SMOG"
+    SNOW = "SNOW"
+    SNOWLIGHT = "SNOWLIGHT"
+    THUNDER = "THUNDER"
+    XMAS = "XMAS"
