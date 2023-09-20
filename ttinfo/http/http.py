@@ -76,6 +76,8 @@ class TycoonHTTP:
         reason: Optional[str] = None
         status: Optional[int] = None
         for attempt in range(retries):
+            print(route.path)
+            print(headers)
             async with self.session.request(route.method.value, route.path, headers=headers, data=route.body) as resp:
                 try:
                     message = await resp.text(encoding="utf-8")
@@ -106,8 +108,12 @@ class TycoonHTTP:
                         return message
                 elif resp.status == 400:
                     message_json = orjson.loads(message)
+                    try:
+                        description = message_json.get("description")
+                    except Exception:
+                        description = message_json
                     self.logger.debug(message_json)
-                    raise errors.HTTPException("Failed to fulfill request", reason=resp.reason, status=resp.status)
+                    raise errors.HTTPException("Failed to fulfill request", reason=description, status=resp.status)
                 elif resp.status == 401:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
