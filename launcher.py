@@ -1,19 +1,18 @@
 import asyncio
 import pathlib
 
-import asyncpg
 import discord
 from discord.ext import commands
 import dotenv
 
 import ttinfo
-from ttinfo import LogHandler, TycoonClient
+from ttinfo import LogHandler, Pool, TycoonClient
 
 
 async def main():
     env = dotenv.dotenv_values()
     async with (
-        asyncpg.create_pool(
+        Pool(
             database=env.get("postgres_db"),
             user=env.get("postgres_user"),
             password=env.get("postgres_password"),
