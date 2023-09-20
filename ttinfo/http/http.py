@@ -70,7 +70,7 @@ class TycoonHTTP:
     ):
         await self.session.close()
 
-    async def request(self, route: Route, retries: int = 5) -> Any:
+    async def _request(self, route: Route, retries: int = 5) -> Any:
         assert self.session
         headers = route.headers
         reason: Optional[str] = None
@@ -115,48 +115,48 @@ class TycoonHTTP:
         raise errors.HTTPException("Unhandled status code", reason=reason, status=status)
 
     async def alive(self, *, server: Server) -> bool:
-        return await self.request(Route(Method.get, server, "alive.json"))
+        return await self._request(Route(Method.get, server, "alive.json"))
 
     async def charges(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
 
     async def economy(self, *, server: Server) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "economy.csv"))
+        return await self._request(Route(Method.get, server, "economy.csv"))
 
     async def sotd(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "sotd.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "sotd.json", headers={"x-tycoon-key": key}))
 
     async def racing_tracks(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "racing/tracks.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "racing/tracks.json", headers={"x-tycoon-key": key}))
 
     async def racing_map(self, *, server: Server, id_: Any, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, f"racing/map/{id_}", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, f"racing/map/{id_}", headers={"x-tycoon-key": key}))
 
     async def weather(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "weather.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "weather.json", headers={"x-tycoon-key": key}))
 
     async def forecast(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "forecast.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "forecast.json", headers={"x-tycoon-key": key}))
 
     async def players(self, *, server: Server) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "widget/players.json"))
+        return await self._request(Route(Method.get, server, "widget/players.json"))
 
     async def positions(self, *, server: Server, key: str) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, "map/positions2.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, "map/positions2.json", headers={"x-tycoon-key": key}))
 
     async def top10(self, *, server: Server, key: str, stat_name: Stats) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
 
     async def config(self, *, server: Server, resource: Config) -> dict[str, Any]:
-        return await self.request(Route(Method.get, server, f"config/{resource.name}"))
+        return await self._request(Route(Method.get, server, f"config/{resource.name}"))
 
     async def snowflake2user(self, *, server: Server, key: str, discord_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(Method.get, server, f"snowflake2user/{discord_id}", headers={"x-tycoon-key": key})
         )
 
     async def streak(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -166,7 +166,7 @@ class TycoonHTTP:
         )
 
     async def owned_business(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -176,7 +176,7 @@ class TycoonHTTP:
         )
 
     async def owned_vehicles(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -186,7 +186,7 @@ class TycoonHTTP:
         )
 
     async def trunks(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -196,7 +196,7 @@ class TycoonHTTP:
         )
 
     async def pots(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -206,7 +206,7 @@ class TycoonHTTP:
         )
 
     async def stats(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -216,7 +216,7 @@ class TycoonHTTP:
         )
 
     async def storages(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -226,7 +226,7 @@ class TycoonHTTP:
         )
 
     async def racing_stats(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -236,7 +236,7 @@ class TycoonHTTP:
         )
 
     async def data(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -246,7 +246,7 @@ class TycoonHTTP:
         )
 
     async def data_adv(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -258,7 +258,7 @@ class TycoonHTTP:
     async def vehicle_storage(
         self, *, server: Server, private_key: str, public_key: str, vrp_id: int, vehicle_class: str, vehicle_model: str
     ) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -268,7 +268,7 @@ class TycoonHTTP:
         )
 
     async def home_storage(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -280,7 +280,7 @@ class TycoonHTTP:
     async def backpack_storage(
         self, *, server: Server, private_key: str, public_key: str, vrp_id: int
     ) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -292,7 +292,7 @@ class TycoonHTTP:
     async def faction_storage(
         self, *, server: Server, private_key: str, public_key: str, vrp_id: int, faction_id: int
     ) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -304,7 +304,7 @@ class TycoonHTTP:
     async def general_storage(
         self, *, server: Server, private_key: str, public_key: str, vrp_id: int, storage_id: int
     ) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -314,7 +314,7 @@ class TycoonHTTP:
         )
 
     async def wealth(self, *, server: Server, private_key: str, public_key: str, vrp_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -324,7 +324,7 @@ class TycoonHTTP:
         )
 
     async def item_info(self, *, server: Server, private_key: str, item_id: int) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -336,7 +336,7 @@ class TycoonHTTP:
     async def get_user_faction(
         self, *, server: Server, private_key: str, public_key: str, vrp_id: int
     ) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -346,7 +346,7 @@ class TycoonHTTP:
         )
 
     async def faction_size(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -356,7 +356,7 @@ class TycoonHTTP:
         )
 
     async def faction_members(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -366,7 +366,7 @@ class TycoonHTTP:
         )
 
     async def faction_perks(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -376,7 +376,7 @@ class TycoonHTTP:
         )
 
     async def faction_balance(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -386,7 +386,7 @@ class TycoonHTTP:
         )
 
     async def faction_info(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -396,7 +396,7 @@ class TycoonHTTP:
         )
 
     async def rts_vehicles(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
@@ -406,7 +406,7 @@ class TycoonHTTP:
         )
 
     async def pigs_party(self, *, server: Server, private_key: str, public_key: str) -> dict[str, Any]:
-        return await self.request(
+        return await self._request(
             Route(
                 Method.get,
                 server,
