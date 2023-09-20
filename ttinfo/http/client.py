@@ -10,10 +10,9 @@ if TYPE_CHECKING:
     from types import TracebackType
     from typing import Literal, Optional, TypeAlias
 
-    from asyncpg import Pool
     from typing_extensions import Self
 
-    from ttinfo import Bot
+    from ttinfo import Bot, Pool
 
     Key: TypeAlias = str
 

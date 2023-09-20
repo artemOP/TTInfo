@@ -22,7 +22,7 @@ class Pool:
         self.kwargs = kwargs
 
     async def __aenter__(self):
-        record_class = self.kwargs.pop("record_class", None) or Record()
+        record_class = self.kwargs.pop("record_class", Record)
         self._pool = await asyncpg.create_pool(*self.args, record_class=record_class, **self.kwargs)  # type: ignore
         return self
 
