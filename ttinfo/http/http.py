@@ -99,7 +99,7 @@ class TycoonHTTP:
                         self.logger.debug(f"Received 204 from {route.path}")
                         return True
                     try:
-                        data = await resp.json(content_type=None)
+                        data = await resp.json(content_type=None, loads=orjson.loads)
                         self.logger.debug(data)
                         return data
                     except orjson.JSONDecodeError:
@@ -128,7 +128,7 @@ class TycoonHTTP:
     async def charges(self, server: Server, *, key: str) -> list[int]:
         return await self._request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
 
-    async def economy(self, server: Server) -> dict[str, Any]:
+    async def economy(self, server: Server) -> str:
         return await self._request(Route(Method.get, server, "economy.csv"))
 
     async def sotd(self, server: Server, *, key: str) -> dict[str, Any]:
