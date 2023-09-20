@@ -3,6 +3,11 @@ from typing import Any, Iterable, Optional, Sequence
 import asyncpg
 
 
+class Record(asyncpg.Record):
+    def __getattr__(self, name: str):
+        return self[name]
+
+
 class Pool:
     _pool: asyncpg.Pool
 
@@ -11,7 +16,8 @@ class Pool:
         self.kwargs = kwargs
 
     async def __aenter__(self):
-        self._pool = await asyncpg.create_pool(*self.args, **self.kwargs)
+        record_class = self.kwargs.pop("record_class", None) or Record()
+        self._pool = await asyncpg.create_pool(*self.args, record_class=record_class, **self.kwargs)  # type: ignore
         return self
 
     async def __aexit__(self, *args, **kwargs):
