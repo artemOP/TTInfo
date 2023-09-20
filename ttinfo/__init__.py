@@ -1,3 +1,3 @@
-from .core.bot import Bot as Bot
+from .core import Bot
 from .http import TycoonClient
 from .core.utils import *
