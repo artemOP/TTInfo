@@ -1,31 +1,30 @@
 from datetime import timedelta
-from typing import Any, TypeAlias, TypedDict
-from typing_extensions import NotRequired
+from typing import Any, TypeAlias, NamedTuple, Optional
 
 from yarl import URL
 
 from . import enums
 
 
-class Charges(TypedDict):
+class Charges(NamedTuple):
     charges: int
 
 
-class SOTD(TypedDict):
+class SOTD(NamedTuple):
     skill: enums.Skill
     aptitude: str  # replace with enum
     bonus: int
     short: enums.SkillShort
 
 
-class Coords(TypedDict):
+class Coords(NamedTuple):
     x: float
     y: float
     z: float
     h: float
 
 
-class RaceTrack(TypedDict):
+class RaceTrack(NamedTuple):
     race_type: str  # replace with enum
     name: str
     wr: dict[str, Any]
@@ -34,31 +33,31 @@ class RaceTrack(TypedDict):
     race_id: str  # this is gonna need converting to an int with some tomfoolery
 
 
-class RaceMap(TypedDict):
+class RaceMap(NamedTuple):
     name: str
     checkpoints: list[Coords]
     start: Coords
     finish: Coords
 
 
-class RaceStat(TypedDict):
+class RaceStat(NamedTuple):
     achived: float
     time: int
     track_id: int
     vehicle: str
 
 
-class Weather(TypedDict):
+class Weather(NamedTuple):
     weather: str  # replace with enum
     hour: int
     minute: int
 
 
-class Forecast(TypedDict):
+class Forecast(NamedTuple):
     forecast: list[str]  # use weather enum
 
 
-class Player(TypedDict):
+class Player(NamedTuple):
     name: str
     source_id: int
     vpr_id: int
@@ -68,15 +67,15 @@ class Player(TypedDict):
     donator: bool
 
 
-class DXP(TypedDict):
+class DXP(NamedTuple):
     active: bool
-    host: NotRequired[str]
-    time_remaining: NotRequired[timedelta]
-    extra: NotRequired[timedelta]
-    runtime: NotRequired[timedelta]
+    host: Optional[str] = None
+    time_remaining: Optional[timedelta] = None
+    extra: Optional[timedelta] = None
+    runtime: Optional[timedelta] = None
 
 
-class Server(TypedDict):
+class Server(NamedTuple):
     dxp: DXP
     limit: int
     motd: str
@@ -86,12 +85,12 @@ class Server(TypedDict):
     uptime: timedelta
 
 
-class Players(TypedDict):
+class Players(NamedTuple):
     players: list[Player]
     server: Server
 
 
-class VehicleData(TypedDict):
+class VehicleData(NamedTuple):
     has_trailer: bool
     owned_vehicles: list[str]
     trailer: str
@@ -103,106 +102,106 @@ class VehicleData(TypedDict):
     vehicle_type: str  # probably an enum
 
 
-class Position(TypedDict):
+class Position(NamedTuple):
     player: Player
     position: Coords
     vehicle_data: VehicleData
-    history: NotRequired[list[Coords]]
+    history: Optional[list[Coords]]
 
 
-class Positions(TypedDict):
+class Positions(NamedTuple):
     players: list[Position]
 
 
-class Top10(TypedDict):
+class Top10(NamedTuple):
     stat: enums.Stats
     top: list[dict[str, Any]]
 
 
-class Config(TypedDict):
+class Config(NamedTuple):
     resource: str
 
 
-class Snowflake2User(TypedDict):
+class Snowflake2User(NamedTuple):
     discord_id: int
     user_id: int
 
 
-class Streak(TypedDict):
+class Streak(NamedTuple):
     days: int
     record: int
     streak: int
 
 
-class Vehicle(TypedDict):
+class Vehicle(NamedTuple):
     name: str
     vehicle_type: str
     trunk_size: int
 
 
-class Trunk(TypedDict):
+class Trunk(NamedTuple):
     inventory: dict[str, int]
     vehicle_type: str
     vehicle_name: str
 
 
-class Pot(TypedDict):
+class Pot(NamedTuple):
     position: Position
     age: int
     pot_type: str  # ENUM
 
 
-class Pots(TypedDict):
+class Pots(NamedTuple):
     pots: list[Pot]
     total: int
 
 
-class Stats(TypedDict):
+class Stats(NamedTuple):
     amount: int
     stat: enums.Stats
 
 
-class Item(TypedDict):
+class Item(NamedTuple):
     name: str
-    html_name: NotRequired[str]
     amount: int
-    weight: NotRequired[float]
+    html_name: Optional[str] = None
+    weight: Optional[float] = None
 
 
-class Storage(TypedDict):
+class Storage(NamedTuple):
     name: str
     items: dict[str, Item]
 
 
-class Storages(TypedDict):
+class Storages(NamedTuple):
     user_id: int
     storages: dict[str, Storage]
 
 
-class Skills(TypedDict):
-    business: NotRequired[float]
-    casino: NotRequired[float]
-    ems: NotRequired[float]
-    fire: NotRequired[float]
-    farming: NotRequired[float]
-    fishing: NotRequired[float]
-    mining: NotRequired[float]
-    hunting: NotRequired[float]
-    strength: NotRequired[float]
-    cargos: NotRequired[float]
-    heli: NotRequired[float]
-    piloting: NotRequired[float]
-    player: NotRequired[float]
-    racing: NotRequired[float]
-    bus: NotRequired[float]
-    train: NotRequired[float]
-    garbage: NotRequired[float]
-    mechanic: NotRequired[float]
-    postop: NotRequired[float]
-    trucking: NotRequired[float]
+class Skills(NamedTuple):
+    business: Optional[float] = None
+    casino: Optional[float] = None
+    ems: Optional[float] = None
+    fire: Optional[float] = None
+    farming: Optional[float] = None
+    fishing: Optional[float] = None
+    mining: Optional[float] = None
+    hunting: Optional[float] = None
+    strength: Optional[float] = None
+    cargos: Optional[float] = None
+    heli: Optional[float] = None
+    piloting: Optional[float] = None
+    player: Optional[float] = None
+    racing: Optional[float] = None
+    bus: Optional[float] = None
+    train: Optional[float] = None
+    garbage: Optional[float] = None
+    mechanic: Optional[float] = None
+    postop: Optional[float] = None
+    trucking: Optional[float] = None
 
 
-class Data(TypedDict):
+class Data(NamedTuple):
     user_id: int
     accepting_player_ems: bool
     chat_prefix: str
@@ -224,7 +223,7 @@ class Data(TypedDict):
     data_type: str  # ENUM
 
 
-class DataAdv(TypedDict):
+class DataAdv(NamedTuple):
     user_id: int
     AcceptingPlayerEMS: bool
     chat_prefix: str
@@ -246,32 +245,32 @@ class DataAdv(TypedDict):
     data_type: str  # ENUM
 
 
-class Wealth(TypedDict):
+class Wealth(NamedTuple):
     user_id: int
     bank: int
     loan: int
     wallet: int
 
 
-class ItemInfo(TypedDict):
-    description: NotRequired[str]
+class ItemInfo(NamedTuple):
     exists: bool
     item_id: str
-    name: NotRequired[str]
-    weight: NotRequired[float]
+    description: Optional[str] = None
+    name: Optional[str] = None
+    weight: Optional[float] = None
 
 
-class UserFaction(TypedDict):
-    faction_id: NotRequired[int]
+class UserFaction(NamedTuple):
     is_in_faction: bool
     user_id: int
+    faction_id: Optional[int] = None
 
 
-class FactionSize(TypedDict):
+class FactionSize(NamedTuple):
     size: int
 
 
-class FactionMember(TypedDict):
+class FactionMember(NamedTuple):
     admin: bool
     earned: float
     joined: float
@@ -281,36 +280,36 @@ class FactionMember(TypedDict):
     username: list[int]
 
 
-class FactionMembers(TypedDict):
+class FactionMembers(NamedTuple):
     members: list[FactionMember]
     size: int
 
 
-class FactionPerks(TypedDict):
+class FactionPerks(NamedTuple):
     perks: int
 
 
-class FactionBalance(TypedDict):
+class FactionBalance(NamedTuple):
     balance: int
 
 
-class FactionInfo(TypedDict):
+class FactionInfo(NamedTuple):
     faction_id: int
     name: str
     tag: str
 
 
-class RTSVehicles(TypedDict):
+class RTSVehicles(NamedTuple):
     vehicles: list[str]
 
 
-class Heister(TypedDict):
+class Heister(NamedTuple):
     user_id: int
     ready: bool
     cut: int
 
 
-class PigsParty(TypedDict):
+class PigsParty(NamedTuple):
     host: Heister
     take: int
     players: list[Heister]
