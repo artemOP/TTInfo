@@ -1,6 +1,12 @@
-from typing import Any, Iterable, Optional, Sequence
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 import asyncpg
+
+if TYPE_CHECKING:
+    from types import TracebackType
+    from typing import Any, Iterable, Optional, Sequence
 
 
 class Record(asyncpg.Record):
@@ -20,7 +26,12 @@ class Pool:
         self._pool = await asyncpg.create_pool(*self.args, record_class=record_class, **self.kwargs)  # type: ignore
         return self
 
-    async def __aexit__(self, *args, **kwargs):
+    async def __aexit__(
+        self,
+        exc_type: Optional[type[BaseException]],
+        exc_val: Optional[BaseException],
+        exc_tb: Optional[TracebackType],
+    ):
         await self._pool.close()
 
     async def fetch(self, sql: str, *args) -> Optional[list[asyncpg.Record]]:
