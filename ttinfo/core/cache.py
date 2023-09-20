@@ -55,10 +55,11 @@ def vrp_cache():
 
     def decorator(func):
         @functools.wraps(func)
-        async def wrapper(cls, snowflake: Hashable):
-            if snowflake in cache:
-                logger.debug(f"Cache hit: <{snowflake}: {cache[snowflake]}>")
-                return cache[snowflake]
+        async def wrapper(cls, snowflake: Hashable, **kwargs):
+            if not kwargs.get("force", False):
+                if snowflake in cache:
+                    logger.debug(f"Cache hit: <{snowflake}: {cache[snowflake]}>")
+                    return cache[snowflake]
 
             data = await func(cls, snowflake)
             cache[snowflake] = data
