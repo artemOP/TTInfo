@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import timedelta
 from typing import TYPE_CHECKING
 
 from . import enums, models, TycoonHTTP
@@ -8,7 +9,7 @@ from ..core import errors
 
 if TYPE_CHECKING:
     from types import TracebackType
-    from typing import Literal, Optional, TypeAlias
+    from typing import Literal, Optional, TypeAlias, AsyncGenerator
 
     from typing_extensions import Self
 
@@ -26,6 +27,7 @@ class Client:
 
     async def __aenter__(self) -> Self:
         self.session = await TycoonHTTP().__aenter__()
+        print(await self.fetch_players(enums.Server.main))
         return self
 
     async def __aexit__(
@@ -92,6 +94,9 @@ class Client:
             return response
         raise errors.NotLinked()
 
+    async def alive(self, server: enums.Server) -> bool:
+        return await self.session.alive(server)
+
     @cache.server_specific(60 * 60)
     async def fetch_charges(self, key: Key, server: enums.Server, force: bool = False) -> models.Charges:
         """Get the number of remaining charges left on a specific key
@@ -105,5 +110,64 @@ class Client:
             models.Charges: {charges: int}
         """
         data = await self.session.charges(server, key=key)
-        response = models.Charges(charges=data[0])
+        response = models.Charges(data[0])
         return response
+
+    async def fetch_economy(self, server: enums.Server) -> AsyncGenerator[dict[str, int], None]:
+        data = await self.session.economy(server)
+        headers = data.split("\n", 1)[0].split(";")
+        for row in data.splitlines()[1:]:
+            row = row.split(";")
+            yield {key: int(value) for key, value in zip(headers, row, strict=True)}
+
+    async def fetch_sotd(self, key: Key, server: enums.Server) -> models.SOTD:
+        """Fetch the current SOTD
+
+        Args:
+            key (Key): API key to use
+            server (enums.Server): The server to request from
+
+        Returns:
+            models.SOTD: {skill: Skill, aptitude: str, bonus: int, short: SkillShort}
+        """
+        data = await self.session.sotd(server, key=key)
+        return models.SOTD(
+            skill=data["skill"],  # todo: enum
+            aptitude=data["aptitude"],
+            bonus=data["bonus"],
+            short=data["short"],  # todo: enum
+        )
+
+    # todo: racing endpoints
+
+    async def fetch_weather(self, key: Key, server: enums.Server) -> models.Weather:
+        data = await self.session.weather(server, key=key)
+        return models.Weather(enums.Weather[data["weather"]], data["hour"], data["minute"])
+
+    async def fetch_forecast(self, key: Key, server: enums.Server) -> models.Forecast:
+        data = await self.session.forecast(server, key=key)
+        return models.Forecast(enums.Weather[weather] for weather in data)
+
+    async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players:
+        """_summary_
+
+        Args:
+            key (Key): _description_
+            server (enums.Server): _description_
+            force (bool, optional): _description_. Defaults to False.
+        """
+        data = await self.session.players(server)
+        hours, minutes = map(int, data["server"]["uptime"].replace("h", "").replace("m", "").split())
+        uptime = timedelta(hours=hours, minutes=minutes)
+        return models.Players(
+            players=[models.Player(*player) for player in data["players"]],
+            server=models.Server(
+                models.DXP(*data["server"]["dxp"]),
+                limit=data["server"]["limit"],
+                motd=data["server"]["motd"],
+                name=data["server"]["name"],
+                number=int(data["server"]["number"]),
+                region=data["server"]["region"],
+                uptime=uptime,
+            ),
+        )
