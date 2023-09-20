@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from . import enums, models, TycoonHTTP
-from .. import cache
+from ttinfo import cache
 from ..core import errors
 
 if TYPE_CHECKING:
@@ -40,8 +40,8 @@ class Client:
     def fallback_key(self):
         return self.bot.env_values["tycoon_token"]
 
-    @cache.key_cache()
-    async def get_keys(self, vrp_id: int) -> dict[Literal["public", "private"], Key]:
+    @cache.server_specific(60 * 60 * 24)
+    async def get_keys(self, vrp_id: int, server: enums.Server, force: bool) -> dict[Literal["public", "private"], Key]:
         """Get private and or public keys linked to a specific vrp_id
 
         Raises:
@@ -51,18 +51,17 @@ class Client:
             _type_: _description_
         """
         keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id)
-        if not keys["private"]:
+        if not keys or keys["private"]:
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
         return keys
 
-    @cache.vrp_cache()
+    @cache.server_specific(None)
     async def fetch_vrp(
         self,
         discord_id: int,
-        *,
-        key: Optional[Key] = None,
-        server: enums.Server = enums.Server.main,
+        server: enums.Server,
         force: bool = False,
+        key: Optional[Key] = None,
     ) -> models.Snowflake2User:
         """Get vrp_id from cache, fallback to db and then api as required
 
@@ -93,8 +92,8 @@ class Client:
             return response
         raise errors.NotLinked()
 
-    @cache.charges()
-    async def fetch_charges(self, key: Key, *, server: enums.Server, force: bool = False) -> models.Charges:
+    @cache.server_specific(60 * 60)
+    async def fetch_charges(self, key: Key, server: enums.Server, force: bool = False) -> models.Charges:
         data = await self.session.charges(server, key=key)
-        response = models.Charges(charges=data["charges"])
+        response = models.Charges(charges=data[0])
         return response
