@@ -61,22 +61,55 @@ class JobGroups(Enum):
 
 
 class Stats(Enum):
-    firefighter_streak_record = "firefighter streak record"
-    omni_void_leaderboard = "omni void leaderboard"
-    ems_streak_record = "ems streak record"
-    ems_deliveries = "ems deliveries"
-    houses_crafted = "houses crafted"
-    toll_paid = "toll paid"
-    trap_paid = "trap paid"
-    drops_collected = "drops collected"
-    quarry_excavate = "quarry excavate"
-    quarry_coop = "quarry coop"
-    quarry_deliver = "quarry deliver"
-    quarry_solo = "quarry solo"
-    vehicles_crafted = "vehicles crafted"
-    eastereggs_pickup = "easter eggs picked up"
-    maid_maxscans = "maid max scans"
-    maid_ticket = "maid ticket"
+    aerialfire_earnings = "Aerial Firefighter Earnings"
+    aerialfire_finished = "Aerial Fires Extinguished"
+    aerialfire_finished_747fire = "Aerial Fires Extinguished (747)"
+    aerialfire_finished_cg130h = "Aerial Fires Extinguished (CG130H)"
+    aerialfire_finished_cl415f = "Aerial Fires Extinguished (CL415F)"
+    aerialfire_finished_tula = "Aerial Fires Extinguished (Tula)"
+    bus_behemoth_completed = "Bus Driver Behemoth Route(s) Completed"
+    bus_fares_earned = "Bus Driver Total Fares"
+    bus_money_earned = "Bus Driver Money Earned"
+    bus_route_completed = "Bus Driver Completed Route(s)"
+    concrete_sold = "Trucking Concrete Sold"
+    drops_collected = "Treasure Chests Collected"
+    eastereggs_pickup = "EXP Bonuses Collected"
+    ems_deliveries = "Completed Paramedic Callouts"
+    ems_streak_record = "Highest Paramedic Streak"
+    firefighter_streak_record = "Highest Firefighter Streak"
+    garbage_routes_finished = "Garbage Routes Finished"
+    garbage_trash_collected = "Garbage Bags Collected"
+    houses_crafted = "Trucking Completed Houses"
+    hunting_missions = "Hunting Missions Completed"
+    hunting_skin = "Animals Gutted"
+    hunting_skin_mission = "Mission Animals Gutted"
+    hunting_zones = "Hunting Zones Cleared"
+    hw22_zombies_looted = "Zombies Looted 2022"
+    mechanic_skylift_dropoffs = "Mechanic Skylift Dropoffs"
+    quarry_coop = "Contributed Quarry Deliveries"
+    quarry_deliver = "Total Quarry Drop-offs"
+    quarry_excavate = "Excavator Buckets Filled"
+    surveying_missions = "Surveying Missions Completed"
+    surveying_steps = "Surveyed Areas"
+    toll_paid = "Toll Fines"
+    trap_paid = "Speed Trap Fines"
+    vehicles_crafted = "Crafted Vehicle Shipments"
+    xmplow_bonus22 = "Highest Snowplowing Convoy Bonus 2022"
+    xmplow_dist22 = "Snowplowing Total Distance (m) 2022"
+    xmplow_pay22 = "Snowplowing Pay Earned 2022"
+    xmplow_road22 = "Snowplowing Roads Cleared (m²) 2022"
+    xmplow_salt22 = "Snowplowing Salted Roads (m²) 2022"
+    xmplow_snow22 = "Snowplowing Snow Removed (m³) 2022"
+    xmplow_tokens22 = "Snowplowing Tokens Earned 2022"
+    MP0_DIST_SWIMMING = "Swimming Distance"
+    MP0_NUMBER_NEAR_MISS = "Near Misses"
+    MP0_FASTEST_SPEED = "Fastest Speed"
+    MP0_DIST_DRIVING_PLANE = "Plane Distance"
+    MP0_DIST_WALKING = "Walking Distance"
+    MP0_DIST_RUNNING = "Running Distance"
+    MP0_DIST_DRIVING_BOAT = "Boat Distance"
+    MP0_DIST_DRIVING_CAR = "Car Distance"
+    MP0_DIST_DRIVING_HELI = "Helicopter Distance"
 
 
 class Config(Enum):
@@ -91,11 +124,14 @@ class Config(Enum):
     omni_self_storage = "Self Storage"
     vrp = "Houses, House contents"
 
+
 class Skill(Enum):  # todo: fill
     ...
 
+
 class SkillShort(Enum):  # todo: fill
     ...
+
 
 class Weather(Enum):
     BLIZZARD = "BLIZZARD"
