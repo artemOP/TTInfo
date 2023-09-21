@@ -197,7 +197,7 @@ class Data(NamedTuple):
 
 class DataAdv(NamedTuple):
     user_id: int
-    AcceptingPlayerEMS: bool
+    accepting_player_ems: bool
     chat_prefix: str
     chat_title: str
     current_loan: str
