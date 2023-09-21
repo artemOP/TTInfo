@@ -155,7 +155,7 @@ class TycoonHTTP:
     async def top10(self, server: Server, *, key: str, stat_name: Stats) -> dict[str, Any]:
         return await self._request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
 
-    async def config(self, server: Server, *, resource: Config) -> dict[str, Any]:
+    async def config(self, server: Server, *, resource: Config) -> str:
         return await self._request(Route(Method.get, server, f"config/{resource.name}"))
 
     async def snowflake2user(self, server: Server, *, key: str, discord_id: int) -> dict[str, Any]:
