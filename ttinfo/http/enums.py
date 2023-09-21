@@ -3,7 +3,7 @@ from __future__ import annotations
 from enum import Enum
 from typing_extensions import Self
 
-__all__ = "Method", "Server", "JobGroups", "Stats", "Config", "Skill", "SkillShort"
+__all__ = "Method", "Server", "JobGroups", "Stats", "Config", "Skill", "SkillShort", "Weather"
 
 
 class Method(Enum):
