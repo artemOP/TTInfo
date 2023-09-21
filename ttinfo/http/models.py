@@ -17,7 +17,7 @@ class Coords(NamedTuple):
     x: float
     y: float
     z: float
-    h: float
+    h: Optional[float] = None
     index: Optional[int] = None
 
 
@@ -131,8 +131,8 @@ class Trunk(NamedTuple):
 
 
 class Pot(NamedTuple):
-    position: Position
-    age: int
+    position: Coords
+    age: timedelta
     pot_type: str  # ENUM
 
 
@@ -141,7 +141,7 @@ class Pots(NamedTuple):
     total: int
 
 
-class Stats(NamedTuple):
+class Stat(NamedTuple):
     amount: int
     stat: enums.Stats
 
