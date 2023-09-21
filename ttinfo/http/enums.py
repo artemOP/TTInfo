@@ -86,16 +86,22 @@ class Config(Enum):
     omni_helitour = "Heli Job"
     omni_paramedic = "EMS/Paramedic"
     omni_pax = "Conductor"
-    omni_postop_ground = "PostOP Ground"
     omni_postop_air = "PostOP Air"
+    omni_postop_ground = "PostOP Ground"
     omni_self_storage = "Self Storage"
+    rts_ground = "RTS Ground"
     vrp = "Houses, House contents"
+
+    custom_vehicle_classes = "Custom Vehicle Classes"  # fix: resource is `custom-vehicle-classes`
+
 
 class Skill(Enum):  # todo: fill
     ...
 
+
 class SkillShort(Enum):  # todo: fill
     ...
+
 
 class Weather(Enum):
     BLIZZARD = "BLIZZARD"
