@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from datetime import timedelta
 from typing import Any, TypeAlias, NamedTuple, Optional
 
@@ -141,26 +143,11 @@ class Pots(NamedTuple):
     total: int
 
 
-class Stat(NamedTuple):
-    amount: int
-    stat: enums.Stats
-
-
 class Item(NamedTuple):
     name: str
     amount: int
     html_name: Optional[str] = None
     weight: Optional[float] = None
-
-
-class Storage(NamedTuple):
-    name: str
-    items: dict[str, Item]
-
-
-class Storages(NamedTuple):
-    user_id: int
-    storages: dict[str, Storage]
 
 
 class Skills(NamedTuple):
@@ -193,8 +180,8 @@ class Data(NamedTuple):
     chat_title: str
     current_loan: str
     customization: dict[str, list[int] | int]
-    gaptitudes: dict[str, Skills]
-    gaptitudes_v: dict[str, Skills]
+    gaptitudes: Skills
+    gaptitudes_v: Skills
     groups: dict[str, bool]
     health: int
     hunger: int
@@ -215,8 +202,8 @@ class DataAdv(NamedTuple):
     chat_title: str
     current_loan: str
     customization: dict[str, list[int] | int]
-    gaptitudes: dict[str, Skills]
-    gaptitudes_v: dict[str, Skills]
+    gaptitudes: Skills
+    gaptitudes_v: Skills
     groups: dict[str, bool]
     health: int
     hunger: int
@@ -297,4 +284,7 @@ OwnedVehicles: TypeAlias = dict[str, Vehicle]
 Positions: TypeAlias = list[Position]
 RaceStats: TypeAlias = list[RaceStat]
 RTSVehicles: TypeAlias = list[str]
+Stats: TypeAlias = dict[enums.Stats, int]
+Storage: TypeAlias = dict[str, Item]
+Storages: TypeAlias = dict[str, Storage]
 Trunks: TypeAlias = dict[str, Trunk]
