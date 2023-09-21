@@ -48,19 +48,19 @@ class RaceStat(NamedTuple):
 
 
 class Weather(NamedTuple):
-    weather: str  # replace with enum
+    weather: enums.Weather
     hour: int
     minute: int
 
 
 class Forecast(NamedTuple):
-    forecast: list[str]  # use weather enum
+    forecast: list[enums.Weather]
 
 
 class Player(NamedTuple):
     name: str
     source_id: int
-    vpr_id: int
+    vrp_id: int
     avatar_url: URL
     staff: bool
     job: enums.JobGroups
