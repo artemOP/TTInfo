@@ -11,6 +11,10 @@ class NoKey(TTInfoException):
     pass
 
 
+class NotLinked(TTInfoException):
+    pass
+
+
 class HTTPException(TTInfoException):
     """For catching custom HTTP exceptions
 
