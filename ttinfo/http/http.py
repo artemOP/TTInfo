@@ -38,11 +38,11 @@ class Route:
         self.headers = headers or {}
 
         if isinstance(path, URL):
-            self.path = path
+            self.path: URL = path
         elif path is MISSING:
             raise ValueError("path is a required argument")
         else:
-            self.path = URL(self.BASE_URL + server.value + "/" + path.rstrip("/"))
+            self.path: URL = URL(self.BASE_URL + server.value + "/" + path.rstrip("/"))
 
         if query:
             self.path = self.path.with_query(query)
@@ -211,7 +211,7 @@ class TycoonHTTP:
             )
         )
 
-    async def pots(self, server: Server, *, private_key: str, public_key: str) -> dict[str, Any]:
+    async def pots(self, server: Server, *, private_key: str, public_key: str) -> list[dict[str, Any]]:
         return await self._request(
             Route(
                 Method.get,
