@@ -95,14 +95,15 @@ class TycoonHTTP:
                     continue
 
                 if 200 <= resp.status < 300:
-                    if resp.content_type == "application/json" and message:
-                        data = await resp.json()
-                        self.logger.debug(data)
-                        return data
                     if resp.status == 204:
                         self.logger.debug(f"Received 204 from {route.path}")
                         return True
-                    return message
+                    try:
+                        data = await resp.json(content_type=None)
+                        self.logger.debug(data)
+                        return data
+                    except orjson.JSONDecodeError:
+                        return message
                 elif resp.status == 400:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
