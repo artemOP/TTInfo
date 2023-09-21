@@ -85,6 +85,7 @@ class TycoonHTTP:
                         message="Request body not received",
                         reason=resp.reason,
                         status=resp.status,
+                        extra={"route": route},
                     )
 
                 if 500 <= resp.status <= 504:
@@ -111,13 +112,20 @@ class TycoonHTTP:
                     except Exception:
                         description = message_json
                     self.logger.debug(message_json)
-                    raise errors.HTTPException("Failed to fulfill request", reason=description, status=resp.status)
+                    raise errors.HTTPException(
+                        "Failed to fulfill request",
+                        reason=description,
+                        status=resp.status,
+                        extra={"route": route},
+                    )
                 elif resp.status == 401:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
                     raise errors.NoKey(resp.reason)
+                elif resp.status == 412:
+                    raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
                 status = resp.status
-        raise errors.HTTPException("Unhandled status code", reason=reason, status=status)
+        raise errors.HTTPException("Unhandled status code", reason=reason, status=status, extra={"route": route})
 
     async def alive(
         self,
