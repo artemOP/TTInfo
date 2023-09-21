@@ -96,7 +96,29 @@ class Config(Enum):
 
 
 class Skill(Enum):  # todo: fill
-    ...
+    animals = "Animal Handling"
+    bus = "Bus Driver"
+    business = "Businesses"
+    cargos = "Cargo Pilot"
+    casino = "casino"
+    ems = "EMS"
+    farming = "Farming"
+    fire = "Firefighting"
+    fishing = "Fishing"
+    garbage = "Garbage"
+    heli = "Helicopter"
+    mechanic = "Mechanic"
+    mining = "Quarry Worker"
+    pilot = "Airline"
+    player = "Player"
+    police = "Police Officer"
+    postop = "PostOP"
+    racing = "Racing"
+    strength = "Physical Strength"
+    train = "Train Conductor"
+    trucking = "Trucking"
+
+    skill = "Hunting"  # fix: aptitude is `hunting`, but skill is named `skill`
 
 
 class SkillShort(Enum):  # todo: fill
