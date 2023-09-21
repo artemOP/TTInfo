@@ -60,7 +60,7 @@ class Forecast(NamedTuple):
 class Player(NamedTuple):
     name: str
     source_id: int
-    vpr_id: int
+    vrp_id: int
     avatar_url: URL
     staff: bool
     job: enums.JobGroups
