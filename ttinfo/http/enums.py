@@ -61,22 +61,22 @@ class JobGroups(Enum):
 
 
 class Stats(Enum):
-    firefighter_streak_record = "firefighter streak record"
-    omni_void_leaderboard = "omni void leaderboard"
-    ems_streak_record = "ems streak record"
-    ems_deliveries = "ems deliveries"
-    houses_crafted = "houses crafted"
-    toll_paid = "toll paid"
-    trap_paid = "trap paid"
     drops_collected = "drops collected"
-    quarry_excavate = "quarry excavate"
-    quarry_coop = "quarry coop"
-    quarry_deliver = "quarry deliver"
-    quarry_solo = "quarry solo"
-    vehicles_crafted = "vehicles crafted"
     eastereggs_pickup = "easter eggs picked up"
+    ems_deliveries = "ems deliveries"
+    ems_streak_record = "ems streak record"
+    firefighter_streak_record = "firefighter streak record"
+    houses_crafted = "houses crafted"
     maid_maxscans = "maid max scans"
     maid_ticket = "maid ticket"
+    omni_void_leaderboard = "omni void leaderboard"
+    quarry_coop = "quarry coop"
+    quarry_deliver = "quarry deliver"
+    quarry_excavate = "quarry excavate"
+    quarry_solo = "quarry solo"
+    toll_paid = "toll paid"
+    trap_paid = "trap paid"
+    vehicles_crafted = "vehicles crafted"
 
 
 class Config(Enum):
