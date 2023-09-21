@@ -5,8 +5,7 @@ import discord
 from discord.ext import commands
 import dotenv
 
-import ttinfo
-from ttinfo import LogHandler, Pool, TycoonClient
+from ttinfo import Bot, LogHandler, Pool, TycoonClient
 
 
 async def main():
@@ -21,13 +20,13 @@ async def main():
             min_size=1,
             max_size=25,
         ) as pool,
-        ttinfo.Bot(
+        Bot(
             prefix=commands.when_mentioned,
             intents=discord.Intents.all(),
             env_values=env,
             extension_path=pathlib.Path("ttinfo/extensions"),
         ) as bot,
-        TycoonClient(bot=bot) as tycoon_client,
+        TycoonClient(bot=bot, pool=pool) as tycoon_client,
         LogHandler(bot=bot) as log_handler,
     ):
         bot.logging_queue = asyncio.Queue()

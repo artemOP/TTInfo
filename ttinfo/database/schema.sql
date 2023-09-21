@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS keys(vrp_id INT PRIMARY KEY, private TEXT, public TEXT);
+CREATE TABLE IF NOT EXISTS snowflake2user(vrp_id INT PRIMARY KEY, snowflake BIGINT NOT NULL);
