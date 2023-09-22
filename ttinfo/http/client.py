@@ -27,7 +27,6 @@ class Client:
 
     async def __aenter__(self) -> Self:
         self.session = await TycoonHTTP().__aenter__()
-        print(await self.fetch_players(enums.Server.main))
         return self
 
     async def __aexit__(
@@ -53,9 +52,9 @@ class Client:
             dict[str, str]: {private: ..., public: ...}
         """
         keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id)
-        if not keys or keys["private"]:
+        if not (keys or keys.get("private")):
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
-        return keys
+        return {"private": keys["private"], "public": keys.get("public")}
 
     @cache.server_specific(None)
     async def fetch_vrp(
@@ -152,7 +151,6 @@ class Client:
         """_summary_
 
         Args:
-            key (Key): _description_
             server (enums.Server): _description_
             force (bool, optional): _description_. Defaults to False.
         """
@@ -170,4 +168,47 @@ class Client:
                 region=data["server"]["region"],
                 uptime=uptime,
             ),
+        )
+
+    async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions:
+        data = await self.session.positions(server, key=key)
+        return models.Positions(
+            models.Position(
+                player=models.Player(
+                    name=player[0],
+                    source_id=player[1],
+                    vrp_id=player[2],
+                    job=enums.JobGroups(player[5].get("group")),
+                ),
+                position=models.Coords(
+                    h=player[3].get("h"),
+                    x=player[3].get("x"),
+                    y=player[3].get("y"),
+                    z=player[3].get("z"),
+                ),
+                vehicle_data=models.VehicleData(
+                    has_trailer=player[4]["has_trailer"],
+                    owned_vehicles=player[4]["owned_vehicles"] or {},
+                    trailer=player[4]["trailer"],
+                    vehicle_class=player[4]["vehicle_class"],
+                    vehicle_label=player[4]["vehicle_label"],
+                    vehicle_model=player[4]["vehicle_model"],
+                    vehicle_name=player[4]["vehicle_name"],
+                    vehicle_spawn=player[4]["vehicle_spawn"],
+                    vehicle_type=player[4]["vehicle_type"],
+                ),
+                history=[
+                    models.Coords(
+                        index=coord[0],
+                        x=coord[1],
+                        y=coord[2],
+                        z=coord[3],
+                        h=coord[4],
+                    )
+                    for coord in player[6]
+                ]
+                if len(player) > 6
+                else None,
+            )
+            for player in data["players"]
         )
