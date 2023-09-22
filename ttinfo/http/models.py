@@ -26,10 +26,10 @@ class Coords(NamedTuple):
 class RaceTrack(NamedTuple):
     race_type: str  # replace with enum
     name: str
-    wr: dict[str, Any]
+    wr: RaceWorldRecord
     race_class: str
     length: int
-    race_id: str  # this is gonna need converting to an int with some tomfoolery
+    race_id: int  # note: the id is the position index(lua) in the list
 
 
 class RaceMap(NamedTuple):
@@ -44,6 +44,13 @@ class RaceStat(NamedTuple):
     time: int
     track_id: int
     vehicle: str
+
+
+class RaceWorldRecord(NamedTuple):
+    vehicle: str
+    name: str
+    time: int
+    date: int
 
 
 class Weather(NamedTuple):
@@ -94,7 +101,7 @@ class VehicleData(NamedTuple):
     vehicle_model: int
     vehicle_name: str
     vehicle_spawn: str
-    vehicle_type: enums.VehicleType  # probably an enum
+    vehicle_type: enums.VehicleType
 
 
 class Position(NamedTuple):
