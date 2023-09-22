@@ -94,7 +94,7 @@ class VehicleData(NamedTuple):
     vehicle_model: int
     vehicle_name: str
     vehicle_spawn: str
-    vehicle_type: str  # probably an enum
+    vehicle_type: enums.VehicleType  # probably an enum
 
 
 class Position(NamedTuple):
