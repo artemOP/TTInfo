@@ -200,7 +200,7 @@ class Data(NamedTuple):
     position: Coords
     thirst: int
     vehicle: VehicleData
-    data_type: str  # ENUM
+    data_type: enums.DataType
 
 
 class DataAdv(NamedTuple):
@@ -222,7 +222,7 @@ class DataAdv(NamedTuple):
     position: Coords
     thirst: int
     vehicle: VehicleData
-    data_type: str  # ENUM
+    data_type: enums.DataType
 
 
 class Wealth(NamedTuple):

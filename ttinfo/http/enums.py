@@ -14,6 +14,7 @@ __all__ = (
     "Stats",
     "VehicleType",
     "Weather",
+    "DataType",
 )
 
 
@@ -203,3 +204,8 @@ class VehicleType(Enum):
 
 class RaceType(Enum):
     ground = "Ground"
+
+
+class DataType(Enum):
+    data = "Online Data"
+    data_offline = "Offline Data"
