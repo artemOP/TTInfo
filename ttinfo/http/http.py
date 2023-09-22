@@ -38,11 +38,11 @@ class Route:
         self.headers = headers or {}
 
         if isinstance(path, URL):
-            self.path = path
+            self.path: URL = path
         elif path is MISSING:
             raise ValueError("path is a required argument")
         else:
-            self.path = URL(self.BASE_URL + server.value + "/" + path.rstrip("/"))
+            self.path: URL = URL(self.BASE_URL + server.value + "/" + path.rstrip("/"))
 
         if query:
             self.path = self.path.with_query(query)
@@ -85,6 +85,7 @@ class TycoonHTTP:
                         message="Request body not received",
                         reason=resp.reason,
                         status=resp.status,
+                        extra={"route": route},
                     )
 
                 if 500 <= resp.status <= 504:
@@ -99,21 +100,32 @@ class TycoonHTTP:
                         self.logger.debug(f"Received 204 from {route.path}")
                         return True
                     try:
-                        data = await resp.json(content_type=None)
+                        data = await resp.json(content_type=None, loads=orjson.loads)
                         self.logger.debug(data)
                         return data
                     except orjson.JSONDecodeError:
                         return message
                 elif resp.status == 400:
                     message_json = orjson.loads(message)
+                    try:
+                        description = message_json.get("description")
+                    except Exception:
+                        description = message_json
                     self.logger.debug(message_json)
-                    raise errors.HTTPException("Failed to fulfill request", reason=resp.reason, status=resp.status)
+                    raise errors.HTTPException(
+                        "Failed to fulfill request",
+                        reason=description,
+                        status=resp.status,
+                        extra={"route": route},
+                    )
                 elif resp.status == 401:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
                     raise errors.NoKey(resp.reason)
+                elif resp.status == 412:
+                    raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
                 status = resp.status
-        raise errors.HTTPException("Unhandled status code", reason=reason, status=status)
+        raise errors.HTTPException("Unhandled status code", reason=reason, status=status, extra={"route": route})
 
     async def alive(
         self,
@@ -121,10 +133,10 @@ class TycoonHTTP:
     ) -> bool:
         return await self._request(Route(Method.get, server, "alive.json"))
 
-    async def charges(self, server: Server, *, key: str) -> dict[str, Any]:
+    async def charges(self, server: Server, *, key: str) -> list[int]:
         return await self._request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
 
-    async def economy(self, server: Server) -> dict[str, Any]:
+    async def economy(self, server: Server) -> str:
         return await self._request(Route(Method.get, server, "economy.csv"))
 
     async def sotd(self, server: Server, *, key: str) -> dict[str, Any]:
@@ -151,7 +163,7 @@ class TycoonHTTP:
     async def top10(self, server: Server, *, key: str, stat_name: Stats) -> dict[str, Any]:
         return await self._request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
 
-    async def config(self, server: Server, *, resource: Config) -> dict[str, Any]:
+    async def config(self, server: Server, *, resource: Config) -> str:
         return await self._request(Route(Method.get, server, f"config/{resource.name}"))
 
     async def snowflake2user(self, server: Server, *, key: str, discord_id: int) -> dict[str, Any]:
@@ -199,7 +211,7 @@ class TycoonHTTP:
             )
         )
 
-    async def pots(self, server: Server, *, private_key: str, public_key: str) -> dict[str, Any]:
+    async def pots(self, server: Server, *, private_key: str, public_key: str) -> list[dict[str, Any]]:
         return await self._request(
             Route(
                 Method.get,

@@ -15,10 +15,9 @@ if TYPE_CHECKING:
     from pathlib import Path
     from typing import Any, Callable, Coroutine, Generator, Optional, TypeAlias, Union
 
-    from asyncpg import Pool
     from discord import Intents
 
-    from .. import TycoonClient
+    from .. import TycoonClient, Pool
 
     Prefix: TypeAlias = Union[str, list[str], Callable, Coroutine]
 

@@ -1,13 +1,11 @@
+from __future__ import annotations
+
 from datetime import timedelta
 from typing import Any, TypeAlias, NamedTuple, Optional
 
 from yarl import URL
 
 from . import enums
-
-
-class Charges(NamedTuple):
-    charges: int
 
 
 class SOTD(NamedTuple):
@@ -21,7 +19,8 @@ class Coords(NamedTuple):
     x: float
     y: float
     z: float
-    h: float
+    h: Optional[float] = None
+    index: Optional[int] = None
 
 
 class RaceTrack(NamedTuple):
@@ -53,18 +52,14 @@ class Weather(NamedTuple):
     minute: int
 
 
-class Forecast(NamedTuple):
-    forecast: list[enums.Weather]
-
-
 class Player(NamedTuple):
     name: str
     source_id: int
     vrp_id: int
-    avatar_url: URL
-    staff: bool
     job: enums.JobGroups
-    donator: bool
+    avatar_url: Optional[URL] = None
+    staff: Optional[bool] = None
+    donator: Optional[bool] = None
 
 
 class DXP(NamedTuple):
@@ -92,7 +87,7 @@ class Players(NamedTuple):
 
 class VehicleData(NamedTuple):
     has_trailer: bool
-    owned_vehicles: list[str]
+    owned_vehicles: dict[str, str]
     trailer: str
     vehicle_class: int
     vehicle_label: str
@@ -106,20 +101,12 @@ class Position(NamedTuple):
     player: Player
     position: Coords
     vehicle_data: VehicleData
-    history: Optional[list[Coords]]
-
-
-class Positions(NamedTuple):
-    players: list[Position]
+    history: Optional[list[Coords]] = None
 
 
 class Top10(NamedTuple):
     stat: enums.Stats
     top: list[dict[str, Any]]
-
-
-class Config(NamedTuple):
-    resource: str
 
 
 class Snowflake2User(NamedTuple):
@@ -146,8 +133,8 @@ class Trunk(NamedTuple):
 
 
 class Pot(NamedTuple):
-    position: Position
-    age: int
+    position: Coords
+    age: timedelta
     pot_type: str  # ENUM
 
 
@@ -156,26 +143,11 @@ class Pots(NamedTuple):
     total: int
 
 
-class Stats(NamedTuple):
-    amount: int
-    stat: enums.Stats
-
-
 class Item(NamedTuple):
     name: str
     amount: int
     html_name: Optional[str] = None
     weight: Optional[float] = None
-
-
-class Storage(NamedTuple):
-    name: str
-    items: dict[str, Item]
-
-
-class Storages(NamedTuple):
-    user_id: int
-    storages: dict[str, Storage]
 
 
 class Skills(NamedTuple):
@@ -208,8 +180,8 @@ class Data(NamedTuple):
     chat_title: str
     current_loan: str
     customization: dict[str, list[int] | int]
-    gaptitudes: dict[str, Skills]
-    gaptitudes_v: dict[str, Skills]
+    gaptitudes: Skills
+    gaptitudes_v: Skills
     groups: dict[str, bool]
     health: int
     hunger: int
@@ -225,13 +197,13 @@ class Data(NamedTuple):
 
 class DataAdv(NamedTuple):
     user_id: int
-    AcceptingPlayerEMS: bool
+    accepting_player_ems: bool
     chat_prefix: str
     chat_title: str
     current_loan: str
     customization: dict[str, list[int] | int]
-    gaptitudes: dict[str, Skills]
-    gaptitudes_v: dict[str, Skills]
+    gaptitudes: Skills
+    gaptitudes_v: Skills
     groups: dict[str, bool]
     health: int
     hunger: int
@@ -266,10 +238,6 @@ class UserFaction(NamedTuple):
     faction_id: Optional[int] = None
 
 
-class FactionSize(NamedTuple):
-    size: int
-
-
 class FactionMember(NamedTuple):
     admin: bool
     earned: float
@@ -285,22 +253,10 @@ class FactionMembers(NamedTuple):
     size: int
 
 
-class FactionPerks(NamedTuple):
-    perks: int
-
-
-class FactionBalance(NamedTuple):
-    balance: int
-
-
 class FactionInfo(NamedTuple):
     faction_id: int
     name: str
     tag: str
-
-
-class RTSVehicles(NamedTuple):
-    vehicles: list[str]
 
 
 class Heister(NamedTuple):
@@ -317,7 +273,18 @@ class PigsParty(NamedTuple):
     limit: int
 
 
+Charges: TypeAlias = int
+Config: TypeAlias = str
+FactionSize: TypeAlias = int
+FactionPerks: TypeAlias = int
+FactionBalance: TypeAlias = int
+Forecast: TypeAlias = list[enums.Weather]
 OwnedBusiness: TypeAlias = dict[str, int]
 OwnedVehicles: TypeAlias = dict[str, Vehicle]
-Trunks: TypeAlias = dict[str, Trunk]
+Positions: TypeAlias = list[Position]
 RaceStats: TypeAlias = list[RaceStat]
+RTSVehicles: TypeAlias = list[str]
+Stats: TypeAlias = dict[enums.Stats, int]
+Storage: TypeAlias = dict[str, Item]
+Storages: TypeAlias = dict[str, Storage]
+Trunks: TypeAlias = dict[str, Trunk]

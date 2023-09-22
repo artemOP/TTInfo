@@ -1,9 +1,16 @@
+from __future__ import annotations
+
 import time
 import functools
 import logging
-from typing import Hashable
+from typing import Hashable, Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ttinfo.http.enums import Server
 
 logger = logging.getLogger("ttinfo.cache")
+
+__all__ = "server_specific", "TimedCache"
 
 
 class TimedCache(dict):
@@ -30,39 +37,28 @@ class TimedCache(dict):
         return {a: b[0] for a, b in self.items()}.__contains__(key)
 
 
-def key_cache(timer: int = 60 * 60 * 24):
-    cache = TimedCache(timer)
+def get_index_key(server: Server, value: str) -> str:
+    return f"{server.value}_{value}"
+
+
+def server_specific(timer: Optional[int]):
+    if timer:
+        cache = TimedCache(timer)
+    else:
+        cache = {}
 
     def decorator(func):
         @functools.wraps(func)
-        async def wrapper(cls, vrp_id: int):
-            if vrp_id in cache:
-                logger.debug(f"Cache hit: <{vrp_id}: {cache[vrp_id]}>")
-                return cache[vrp_id]
+        async def wrapper(cls, value: str, server: Server, force: bool = False, *args, **kwargs):
+            index_key = get_index_key(server, value)
+            if not force:
+                if index_key in cache:
+                    logger.debug(f"Cache hit: <{index_key}: {cache[index_key]}>")
+                    return cache[index_key]
 
-            data = await func(cls, vrp_id)
-            cache[vrp_id] = data
-            logger.debug(f"data added to cache: <{vrp_id}: {data}>")
-            return data
-
-        return wrapper
-
-    return decorator
-
-
-def vrp_cache():
-    cache = {}
-
-    def decorator(func):
-        @functools.wraps(func)
-        async def wrapper(cls, snowflake: Hashable):
-            if snowflake in cache:
-                logger.debug(f"Cache hit: <{snowflake}: {cache[snowflake]}>")
-                return cache[snowflake]
-
-            data = await func(cls, snowflake)
-            cache[snowflake] = data
-            logger.debug(f"data added to cache: <{snowflake}: {data}>")
+            data = await func(cls, value, server, force, *args, **kwargs)
+            cache[index_key] = data
+            logger.debug(f"data added to cache: <{index_key}: {data}>")
             return data
 
         return wrapper
