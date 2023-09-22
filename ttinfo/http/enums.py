@@ -112,7 +112,6 @@ class Stats(Enum):
     MP0_DIST_DRIVING_HELI = "Helicopter Distance"
 
 
-
 class Config(Enum):
     omni_busdriver = "Bus Job"
     omni_businesses = "Businesses"
@@ -127,6 +126,7 @@ class Config(Enum):
     vrp = "Houses, House contents"
 
     custom_vehicle_classes = "Custom Vehicle Classes"  # fix: resource is `custom-vehicle-classes`
+
 
 class Skill(Enum):  # todo: fill
     animals = "Animal Handling"
@@ -152,7 +152,6 @@ class Skill(Enum):  # todo: fill
     trucking = "Trucking"
 
     skill = "Hunting"  # fix: aptitude is `hunting`, but skill is named `skill`
-
 
 
 class SkillShort(Enum):  # todo: fill
