@@ -24,12 +24,13 @@ class Coords(NamedTuple):
 
 
 class RaceTrack(NamedTuple):
-    race_type: str  # replace with enum
+    race_type: enums.RaceType
     name: str
     wr: RaceWorldRecord
     race_class: str
     length: int
-    race_id: int  # note: the id is the position index(lua) in the list
+    race_id: str
+    id: int
 
 
 class RaceMap(NamedTuple):
