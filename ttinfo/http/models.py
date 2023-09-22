@@ -18,6 +18,7 @@ class Coords(NamedTuple):
     y: float
     z: float
     h: float
+    index: Optional[int] = None
 
 
 class RaceTrack(NamedTuple):
@@ -53,10 +54,10 @@ class Player(NamedTuple):
     name: str
     source_id: int
     vrp_id: int
-    avatar_url: URL
-    staff: bool
     job: enums.JobGroups
-    donator: bool
+    avatar_url: Optional[URL] = None
+    staff: Optional[bool] = None
+    donator: Optional[bool] = None
 
 
 class DXP(NamedTuple):
@@ -84,7 +85,7 @@ class Players(NamedTuple):
 
 class VehicleData(NamedTuple):
     has_trailer: bool
-    owned_vehicles: list[str]
+    owned_vehicles: dict[str, str]
     trailer: str
     vehicle_class: int
     vehicle_label: str
@@ -98,7 +99,7 @@ class Position(NamedTuple):
     player: Player
     position: Coords
     vehicle_data: VehicleData
-    history: Optional[list[Coords]]
+    history: Optional[list[Coords]] = None
 
 
 class Top10(NamedTuple):
