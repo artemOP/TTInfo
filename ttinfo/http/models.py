@@ -185,7 +185,7 @@ class Data(NamedTuple):
     groups: dict[str, bool]
     health: int
     hunger: int
-    inventory: dict[str, Storage]
+    inventory: dict[str, Item]
     ironman: bool
     licenses: dict[str, int]
     loans: dict[str, bool]
@@ -207,7 +207,7 @@ class DataAdv(NamedTuple):
     groups: dict[str, bool]
     health: int
     hunger: int
-    inventory: dict[str, Storage]
+    inventory: dict[str, Item]
     ironman: bool
     licenses: dict[str, int]
     loans: dict[str, bool]

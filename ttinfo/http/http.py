@@ -342,7 +342,7 @@ class TycoonHTTP:
         private_key: str,
         public_key: str,
         vrp_id: int,
-        storage_id: int,
+        storage_id: str,
     ) -> dict[str, Any]:
         return await self._request(
             Route(
