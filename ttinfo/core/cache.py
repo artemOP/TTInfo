@@ -12,6 +12,7 @@ logger = logging.getLogger("ttinfo.cache")
 
 __all__ = "TimedCache", "with_server", "with_key"
 
+
 class TimedCache(dict):
     def __init__(self, seconds: int):
         self.__timeout = seconds
