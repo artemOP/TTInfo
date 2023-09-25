@@ -1,9 +1,8 @@
 from __future__ import annotations
 
-import pprint
-from datetime import timedelta
+from datetime import datetime, timedelta
 from typing import TYPE_CHECKING, cast
-
+from zoneinfo import ZoneInfo
 from discord.utils import MISSING
 
 from . import enums, models, TycoonHTTP
@@ -30,7 +29,6 @@ class Client:
 
     async def __aenter__(self) -> Self:
         self.session = await TycoonHTTP().__aenter__()
-        pprint.pprint(await self.fetch_racing_map(enums.Server.main, self.fallback_key, 1))
         return self
 
     async def __aexit__(
@@ -58,7 +56,7 @@ class Client:
         keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id) or {}
         if not (keys or keys.get("private")):
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
-        return {"private": keys["private"], "public": keys.get("public")}
+        return {"private": keys["private"], "public": keys.get("public", "")}
 
     @cache.with_key(None)
     async def fetch_vrp(
@@ -159,9 +157,40 @@ class Client:
                 name=track["name"],
                 race_type=track["type"],
                 wr=track["wr"],
+                index=i + 1,
             )
-            for track in data
+            for i, track in enumerate(data)
         ]
+
+    async def fetch_racing_map(self, server: enums.Server, track_index: int, key: Key) -> models.RaceMap:
+        data = await self.session.racing_map(server, track_id=track_index, key=key)
+        print(data)
+        return models.RaceMap(
+            name=data["name"],
+            start=models.Coords(x=data["start"]["x"], y=data["start"]["y"], z=data["start"]["z"], h=data["start"]["h"]),
+            finish=models.Coords(
+                x=data["finish"]["x"], y=data["finish"]["y"], z=data["finish"]["z"], h=data["finish"]["h"]
+            ),
+            checkpoints=[
+                models.Coords(
+                    x=checkpoint["x"],
+                    y=checkpoint["y"],
+                    z=checkpoint["z"],
+                    h=checkpoint["h"],
+                )
+                for checkpoint in data["checkpoints"]
+            ],
+        )
+
+    async def fetch_racing_stats(
+        self,
+        vrp_id: int,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.RaceStats:
+        data = await self.session.racing_stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
+        # return [models.RaceStat() for race in data] todo: fill data
 
     async def fetch_weather(self, key: Key, server: enums.Server) -> models.Weather:
         data = await self.session.weather(server, key=key)
@@ -276,8 +305,6 @@ class Client:
         private_key: Key = MISSING,
         public_key: Key = "",
     ) -> models.Streak:
-        if private_key is MISSING:
-            raise errors.NoKey("No key passed")
         data = await self.session.streak(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return models.Streak(data["data"].get("days"), data["data"].get("streak"), data["data"].get("record"))
 
@@ -290,8 +317,6 @@ class Client:
         private_key: Key = MISSING,
         public_key: Key = "",
     ) -> models.OwnedBusiness:
-        if private_key is MISSING:
-            raise errors.NoKey("No key passed")
         data = await self.session.owned_business(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return data["businesses"]
 
@@ -304,8 +329,6 @@ class Client:
         private_key: Key = MISSING,
         public_key: Key = "",
     ) -> models.OwnedVehicles:
-        if private_key is MISSING:
-            raise errors.NoKey("No key passed")
         data = await self.session.owned_vehicles(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         if data["vehicles"]:
             return {name: models.Vehicle(name, *data) for name, data in data["vehicles"].items()}
@@ -320,8 +343,6 @@ class Client:
         private_key: Key = MISSING,
         public_key: Key = "",
     ) -> models.Trunks:
-        if private_key is MISSING:
-            raise errors.NoKey("No key passed")
         data = await self.session.trunks(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         if data["trunks"]:
             return {
@@ -335,7 +356,7 @@ class Client:
 
         return {}
 
-    async def fetch_pots(self, server: enums.Server, private_key: str, public_key: str = "") -> models.Pots:
+    async def fetch_pots(self, server: enums.Server, private_key: Key, public_key: Key = "") -> models.Pots:
         data = await self.session.pots(server, private_key=private_key, public_key=public_key)
         return models.Pots(
             pots=[
@@ -355,12 +376,9 @@ class Client:
         vrp_id: int,
         server: enums.Server,
         force: bool = False,
-        private_key: str = MISSING,
-        public_key: str = "",
+        private_key: Key = MISSING,
+        public_key: Key = "",
     ) -> models.Stats:
-        if private_key is MISSING:
-            raise errors.NoKey("Key was not passed to the command")
-
         data = await self.session.stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return {enums.Stats[stat["stat"]]: stat["amount"] for stat in data["data"]}
 
@@ -370,8 +388,8 @@ class Client:
         vrp_id: int,
         server: enums.Server,
         force: bool = False,
-        private_key: str = MISSING,
-        public_key: str = "",
+        private_key: Key = MISSING,
+        public_key: Key = "",
     ) -> models.Storages:
         data = await self.session.storages(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return {
@@ -408,8 +426,8 @@ class Client:
         vrp_id: int,
         server: enums.Server,
         force: bool = False,
-        private_key: str = MISSING,
-        public_key: str = "",
+        private_key: Key = MISSING,
+        public_key: Key = "",
     ) -> models.Data:
         data = await self.session.data(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         if not data["data"]:
@@ -427,7 +445,7 @@ class Client:
             groups=data["data"].get("groups", {}),
             health=data["data"].get("health", 200),
             hunger=data["data"].get("hunger", 0),
-            inventory={item: count["amount"] for item, count in data["data"]["inventory"].items()},
+            inventory={item: models.Item(item, count["amount"]) for item, count in data["data"]["inventory"].items()},
             ironman=data["data"].get("ironman", False),
             licenses=data["data"].get("licenses", {}),
             loans=data["data"].get("loans", {}),
@@ -458,8 +476,8 @@ class Client:
         vrp_id: int,
         server: enums.Server,
         force: bool = False,
-        private_key: str = MISSING,
-        public_key: str = "",
+        private_key: Key = MISSING,
+        public_key: Key = "",
     ) -> models.DataAdv:
         data = await self.session.data_adv(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         if not data["data"]:
@@ -477,7 +495,10 @@ class Client:
             groups=data["data"].get("groups", {}),
             health=data["data"].get("health", 200),
             hunger=data["data"].get("hunger", 0),
-            inventory={item: count["amount"] for item, count in data["data"]["inventory"].items()},
+            inventory={
+                item: models.Item(item, count["amount"], count["name"], count["weight"])
+                for item, count in data["data"]["inventory"].items()
+            },
             ironman=data["data"].get("ironman", False),
             licenses=data["data"].get("licenses", {}),
             loans=data["data"].get("loans", {}),
@@ -506,9 +527,224 @@ class Client:
         self,
         vrp_id: int,
         server: enums.Server,
-        private_key: Key,
-        public_key: Key,
         vehicle_class: str,
         vehicle_model: str,
+        private_key: Key,
+        public_key: Key = "",
     ) -> models.Storage:
-        ...
+        data = await self.session.vehicle_storage(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+            vehicle_class=vehicle_class,
+            vehicle_model=vehicle_model,
+        )
+        return {item: models.Item(item, count["amount"]) for item, count in data["data"].items()}
+
+    async def fetch_home_storage(
+        self,
+        vrp_id: int,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.Storage:
+        data = await self.session.home_storage(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
+        return {item: models.Item(item, count["amount"]) for item, count in data["data"].items()}
+
+    async def fetch_backpack_storage(
+        self,
+        vrp_id: int,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.Storage:
+        data = await self.session.backpack_storage(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+        )
+        return {item: models.Item(item, count["amount"]) for item, count in data["data"].items()}
+
+    async def fetch_faction_storage(
+        self,
+        vrp_id: int,
+        server: enums.Server,
+        faction_id: int,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.Storage:
+        data = await self.session.faction_storage(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+            faction_id=faction_id,
+        )
+        return {item: models.Item(item, count["amount"]) for item, count in data["data"].items()}
+
+    async def fetch_general_storage(
+        self,
+        vrp_id: int,
+        server: enums.Server,
+        storage_id: str,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.Storage:
+        data = await self.session.general_storage(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+            storage_id=storage_id,
+        )
+        return {item: models.Item(item, count["amount"]) for item, count in data["data"].items()}
+
+    @cache.with_key(3 * 60)
+    async def fetch_wealth(
+        self, vrp_id: int, server: enums.Server, force: bool = False, private_key: Key = MISSING, public_key: Key = ""
+    ) -> models.Wealth:
+        data = await self.session.wealth(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+        )
+        if data["code"] == "200":
+            await self.pool.execute(
+                "INSERT INTO wealth(vrp_id, server, wallet, bank, loan) VALUES($1, $2, $3, $4, $5) ON CONFLICT(vrp_id, server) DO UPDATE SET wallet=EXCLUDED.wallet, bank=EXCLUDED.bank, loan=EXCLUDED.loan",
+                vrp_id,
+                server.name,
+                data.get("wallet", 0),
+                data.get("bank", 0),
+                data.get("loan", 0),
+            )
+            return models.Wealth(
+                data.get("user_id", -1), data.get("bank", 0), data.get("loan", 0), data.get("wallet", 0), False
+            )
+
+        data = await self.pool.fetchrow(
+            "SELECT wallet, bank, loan FROM wealth WHERE vrp_id=$1 AND server=$2", vrp_id, server.name
+        )
+        if not data:
+            raise errors.OfflineError("This data has not been cached yet")
+        return models.Wealth(vrp_id, data.bank, data.loan, data.wallet, True)
+
+    @cache.with_key(None)
+    async def fetch_item_info(
+        self,
+        item_id: str,
+        server: enums.Server,
+        force: bool = False,
+        private_key: Key = MISSING,
+    ) -> models.ItemInfo:
+        data = await self.pool.fetchrow("SELECT * FROM item_info WHERE item_id = $1", item_id)
+        if not data:
+            data = await self.session.item_info(server, private_key=private_key, item_id=item_id)
+            if not data.get("exists", False):
+                raise errors.InvalidItem(f"{item_id} is not a valid item")
+            await self.pool.execute(
+                "INSERT INTO item_info(item_id, description, name, weight) VALUES($1, $2, $3, $4)",
+                data["item_id"],
+                data.get("description"),
+                data.get("name"),
+                data.get("weight"),
+            )
+
+        return models.ItemInfo(
+            data.get("exists", True),
+            data["item_id"],
+            data.get("description"),
+            data.get("name"),
+            data.get("weight"),
+        )
+
+    @cache.with_key(60 * 60)
+    async def fetch_user_faction(
+        self, vrp_id: int, server: enums.Server, force: bool = False, private_key: Key = MISSING, public_key: Key = ""
+    ) -> models.UserFaction:
+        data = await self.session.get_user_faction(
+            server,
+            private_key=private_key,
+            public_key=public_key,
+            vrp_id=vrp_id,
+        )
+        return models.UserFaction(data["is_in_faction"], vrp_id, data.get("faction_id"))
+
+    async def fetch_faction_size(
+        self,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.FactionSize:
+        data = await self.session.faction_size(server, private_key=private_key, public_key=public_key)
+        return data[0]
+
+    async def fetch_faction_members(
+        self,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.FactionMembers:
+        data = await self.session.faction_members(server, private_key=private_key, public_key=public_key)
+        return models.FactionMembers(
+            [
+                models.FactionMember(
+                    admin=bool(member["admin"]),
+                    earned=member["earned"],
+                    management=bool(member["management"]),
+                    recruiter=int(member["recruiter"]),
+                    user_id=int(member["user_id"]),
+                    username="".join([chr(letter) for letter in member["username"]]),
+                    joined=datetime.fromtimestamp(member["joined"] / 1000, tz=ZoneInfo("UTC")),
+                )
+                for member in data
+            ],
+            len(data),
+        )
+
+    async def fetch_faction_perks(
+        self,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.FactionPerks:
+        data = await self.session.faction_perks(server, private_key=private_key, public_key=public_key)
+        return data[0]
+
+    async def fetch_faction_balance(
+        self,
+        server: enums.Server,
+        private_key: Key,
+        public_key: Key = "",
+    ) -> models.FactionPerks:
+        data = await self.session.faction_balance(server, private_key=private_key, public_key=public_key)
+        return data[0]
+
+    async def fetch_rts_vehicles(self, server: enums.Server, private_key: Key, public_key: Key) -> models.RTSVehicles:
+        return await self.session.rts_vehicles(server, private_key=private_key, public_key=public_key)
+
+    async def fetch_pigs_party(self, server: enums.Server, private_key: Key, public_key: Key = "") -> models.PigsParty:
+        data = await self.session.pigs_party(server, private_key=private_key, public_key=public_key)
+        if not data.get("master"):
+            raise errors.NoPigs("No party currently found")
+
+        return models.PigsParty(
+            host=models.Heister(
+                user_id=data["master"]["source"],
+                ready=data["master"]["ready"],
+                cut=data["master"]["cut"],
+            ),
+            take=data["take"],
+            players=[
+                models.Heister(
+                    user_id=heister["source"],
+                    ready=heister["ready"],
+                    cut=heister["cut"],
+                )
+                for heister in data["slaves"]
+            ],
+            kills=data["kills"],
+            limit=data["limit"],
+        )
