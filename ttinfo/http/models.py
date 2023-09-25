@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 from typing import Any, TypeAlias, NamedTuple, Optional
 
 from yarl import URL
@@ -29,7 +29,8 @@ class RaceTrack(NamedTuple):
     wr: dict[str, Any]
     race_class: str
     length: int
-    race_id: str  # this is gonna need converting to an int with some tomfoolery
+    race_id: str
+    index: int  # used for fetch_racing_map
 
 
 class RaceMap(NamedTuple):
@@ -41,7 +42,7 @@ class RaceMap(NamedTuple):
 
 class RaceStat(NamedTuple):
     achived: float
-    time: int
+    time: timedelta
     track_id: int
     vehicle: str
 
@@ -222,6 +223,7 @@ class Wealth(NamedTuple):
     bank: int
     loan: int
     wallet: int
+    offline: bool
 
 
 class ItemInfo(NamedTuple):
@@ -241,11 +243,11 @@ class UserFaction(NamedTuple):
 class FactionMember(NamedTuple):
     admin: bool
     earned: float
-    joined: float
+    joined: datetime
     management: bool
     recruiter: int
     user_id: int
-    username: list[int]
+    username: str
 
 
 class FactionMembers(NamedTuple):
