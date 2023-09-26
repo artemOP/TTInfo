@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import pprint
 from datetime import timedelta
 from typing import TYPE_CHECKING, cast
 
@@ -29,6 +30,7 @@ class Client:
 
     async def __aenter__(self) -> Self:
         self.session = await TycoonHTTP().__aenter__()
+        pprint.pprint(await self.fetch_racing_map(enums.Server.main, self.fallback_key, 1))
         return self
 
     async def __aexit__(
@@ -43,7 +45,7 @@ class Client:
     def fallback_key(self):
         return self.bot.env_values["tycoon_token"]
 
-    @cache.server_specific(60 * 60 * 24)
+    @cache.with_key(60 * 60 * 24)
     async def get_keys(self, vrp_id: int, server: enums.Server, force: bool) -> dict[Literal["public", "private"], Key]:
         """Get private and or public keys linked to a specific vrp_id
 
@@ -53,12 +55,12 @@ class Client:
         Returns:
             dict[str, str]: {private: ..., public: ...}
         """
-        keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id)
+        keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id) or {}
         if not (keys or keys.get("private")):
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
         return {"private": keys["private"], "public": keys.get("public")}
 
-    @cache.server_specific(None)
+    @cache.with_key(None)
     async def fetch_vrp(
         self,
         discord_id: int,
@@ -98,7 +100,6 @@ class Client:
     async def alive(self, server: enums.Server) -> bool:
         return await self.session.alive(server)
 
-    @cache.server_specific(60 * 60)
     async def fetch_charges(self, key: Key, server: enums.Server, force: bool = False) -> models.Charges:
         """Get the number of remaining charges left on a specific key
 
@@ -121,7 +122,7 @@ class Client:
             row = row.split(";")
             yield {key: int(value) for key, value in zip(headers, row, strict=True)}
 
-    async def fetch_sotd(self, key: Key, server: enums.Server) -> models.SOTD:
+    async def fetch_sotd(self, server: enums.Server, key: Key) -> models.SOTD:
         """Fetch the current SOTD
 
         Args:
@@ -139,7 +140,28 @@ class Client:
             short=data["short"],  # todo: enum
         )
 
-    # todo: racing endpoints
+    async def fetch_racing_tracks(self, server: enums.Server, key: Key) -> list[models.RaceTrack]:
+        """Fetch the racing tracks
+
+        Args:
+            key (Key): API key to use
+            server (enums.Server): The server to request from
+
+        Returns:
+            list[models.RacingTrack]: [description]
+        """
+        data = await self.session.racing_tracks(server, key=key)
+        return [
+            models.RaceTrack(
+                race_class=track["class"],
+                race_id=track["id"],
+                length=track["length"],
+                name=track["name"],
+                race_type=track["type"],
+                wr=track["wr"],
+            )
+            for track in data
+        ]
 
     async def fetch_weather(self, key: Key, server: enums.Server) -> models.Weather:
         data = await self.session.weather(server, key=key)
@@ -149,6 +171,7 @@ class Client:
         data = await self.session.forecast(server, key=key)
         return models.Forecast(enums.Weather[weather] for weather in data)
 
+    @cache.with_server(60)
     async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players:
         """_summary_
 
@@ -226,7 +249,7 @@ class Client:
             for player in data["players"]
         )
 
-    @cache.server_specific(60 * 60)
+    @cache.with_key(60 * 60)
     async def fetch_top10(
         self,
         stat: enums.Stats,
@@ -239,12 +262,12 @@ class Client:
         data = await self.session.top10(server, key=key, stat_name=stat)
         return models.Top10(data["stat"], data["top"])
 
-    @cache.server_specific(60 * 60 * 24)
+    @cache.with_key(60 * 60 * 24)
     async def fetch_config(self, resoure: enums.Config, server: enums.Server, force: bool = False) -> models.Config:
         data = await self.session.config(server, resource=resoure)
         return models.Config(data)
 
-    @cache.server_specific(60 * 60 * 24)
+    @cache.with_key(60 * 60 * 24)
     async def fetch_streak(
         self,
         vrp_id: int,
@@ -258,7 +281,7 @@ class Client:
         data = await self.session.streak(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return models.Streak(data["data"].get("days"), data["data"].get("streak"), data["data"].get("record"))
 
-    @cache.server_specific(60)
+    @cache.with_key(60)
     async def fetch_owned_business(
         self,
         vrp_id: int,
@@ -272,7 +295,7 @@ class Client:
         data = await self.session.owned_business(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return data["businesses"]
 
-    @cache.server_specific(60)
+    @cache.with_key(60)
     async def fetch_owned_vehicles(
         self,
         vrp_id: int,
@@ -288,7 +311,7 @@ class Client:
             return {name: models.Vehicle(name, *data) for name, data in data["vehicles"].items()}
         return {}
 
-    @cache.server_specific(60)
+    @cache.with_key(60)
     async def fetch_trunks(
         self,
         vrp_id: int,
@@ -326,7 +349,7 @@ class Client:
             total=len(data),
         )
 
-    @cache.server_specific(60 * 15)
+    @cache.with_key(60 * 15)
     async def fetch_stats(
         self,
         vrp_id: int,
@@ -341,7 +364,7 @@ class Client:
         data = await self.session.stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return {enums.Stats[stat["stat"]]: stat["amount"] for stat in data["data"]}
 
-    @cache.server_specific(60 * 2)
+    @cache.with_key(60 * 2)
     async def fetch_storages(
         self,
         vrp_id: int,
@@ -356,7 +379,8 @@ class Client:
             for storage in data["storages"]
         }
 
-    async def unpack_gaptitudes(self, data: dict[str, dict[str, float]]) -> models.Skills:
+    @staticmethod
+    async def unpack_gaptitudes(data: dict[str, dict[str, float]]) -> models.Skills:
         return models.Skills(
             business=data.get("business", {}).get("business", 0),
             casino=data.get("casino", {}).get("casino", 0),
@@ -378,7 +402,7 @@ class Client:
             trucking=data.get("trucking", {}).get("trucking", 0),
         )
 
-    @cache.server_specific(60)
+    @cache.with_key(60)
     async def fetch_data(
         self,
         vrp_id: int,
@@ -428,7 +452,7 @@ class Client:
             data_type=data.get("data_type", "data_offline"),
         )
 
-    @cache.server_specific(60)
+    @cache.with_key(60)
     async def fetch_data_adv(
         self,
         vrp_id: int,
