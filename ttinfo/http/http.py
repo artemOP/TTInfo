@@ -142,11 +142,11 @@ class TycoonHTTP:
     async def sotd(self, server: Server, *, key: str) -> dict[str, Any]:
         return await self._request(Route(Method.get, server, "sotd.json", headers={"x-tycoon-key": key}))
 
-    async def racing_tracks(self, server: Server, *, key: str) -> dict[str, Any]:
+    async def racing_tracks(self, server: Server, *, key: str) -> list[dict[str, Any]]:
         return await self._request(Route(Method.get, server, "racing/tracks.json", headers={"x-tycoon-key": key}))
 
-    async def racing_map(self, server: Server, *, id_: Any, key: str) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, f"racing/map/{id_}", headers={"x-tycoon-key": key}))
+    async def racing_map(self, server: Server, *, track_id: Any, key: str) -> dict[str, Any]:
+        return await self._request(Route(Method.get, server, f"racing/map/{track_id}", headers={"x-tycoon-key": key}))
 
     async def weather(self, server: Server, *, key: str) -> dict[str, Any]:
         return await self._request(Route(Method.get, server, "weather.json", headers={"x-tycoon-key": key}))
