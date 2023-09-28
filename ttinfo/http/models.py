@@ -41,7 +41,7 @@ class RaceMap(NamedTuple):
 
 
 class RaceStat(NamedTuple):
-    achived: float
+    achived: datetime
     time: timedelta
     track_id: int
     vehicle: str
