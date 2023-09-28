@@ -190,7 +190,15 @@ class Client:
         public_key: Key = "",
     ) -> models.RaceStats:
         data = await self.session.racing_stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
-        # return [models.RaceStat() for race in data] todo: fill data
+        return [
+            models.RaceStat(
+                achived=datetime.fromtimestamp(race["achieved"] / 1000, tz=ZoneInfo("UTC")),
+                time=timedelta(seconds=race["time"] / 1000),
+                track_id=race["track_id"],
+                vehicle=race["vehicle"],
+            )  # track_id is nonsense
+            for race in data
+        ]
 
     async def fetch_weather(self, key: Key, server: enums.Server) -> models.Weather:
         data = await self.session.weather(server, key=key)
