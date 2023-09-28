@@ -52,7 +52,7 @@ class Byok(commands.GroupCog, name="byok"):
         )
         await self.bot.pool.execute(
             "INSERT INTO keys(vrp_id, server, private, public) VALUES($1, $2, $3, $4) ON CONFLICT DO UPDATE SET public=EXCLUDED.public WHERE EXCLUDED.public != null, private=EXCLUDED.private WHERE EXCLUDED.private != null",
-            vrp_id,
+            vrp_id.user_id,
             server.name,
             private,
             public,
@@ -74,7 +74,8 @@ class Byok(commands.GroupCog, name="byok"):
             server (Optional[Server]): The server the keys are tied to
         """
         vrp_id = await self.bot.client.fetch_vrp(interaction.user.id, server)
-        await self.bot.pool.execute("UPDATE keys SET {key}=Null WHERE vrp_id=$1", vrp_id)
+        await self.bot.pool.execute("UPDATE keys SET {key}=Null WHERE vrp_id=$1", vrp_id.user_id)
+        await self.bot.client.get_keys(vrp_id.user_id, server, True)
         return await interaction.response.send_message(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
