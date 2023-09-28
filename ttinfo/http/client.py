@@ -53,7 +53,14 @@ class Client:
         Returns:
             dict[str, str]: {private: ..., public: ...}
         """
-        keys = await self.pool.fetchrow("SELECT private, public FROM keys WHERE vrp_id = $1", vrp_id) or {}
+        keys = (
+            await self.pool.fetchrow(
+                "SELECT private, public FROM keys WHERE vrp_id = $1 AND server=$2",
+                vrp_id,
+                server.name,
+            )
+            or {}
+        )
         if not (keys or keys.get("private")):
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
         return {"private": keys["private"], "public": keys.get("public", "")}
