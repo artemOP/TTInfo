@@ -246,7 +246,14 @@ class TycoonHTTP:
             )
         )
 
-    async def racing_stats(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
+    async def racing_stats(
+        self,
+        server: Server,
+        *,
+        private_key: Key,
+        public_key: Key,
+        vrp_id: int,
+    ) -> list[dict[str, Any]]:
         return await self._request(
             Route(
                 Method.get,
