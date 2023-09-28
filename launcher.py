@@ -38,7 +38,8 @@ async def main():
         log_handler.info(f"pool: {pool}")
         log_handler.info(f"http_session: {tycoon_client}")
 
-        # await bot.start(env["discord_token"])
+        token: str = env["discord_token"]  # type: ignore
+        await bot.start(token)
 
 
 if __name__ == "__main__":
