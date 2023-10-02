@@ -103,6 +103,14 @@ class Client:
         raise errors.NotLinked()
 
     async def alive(self, server: enums.Server) -> bool:
+        """Determine if server is alive and responding to requests
+
+        Args:
+            server (enums.Server): the server to ping
+
+        Returns:
+            bool: the status
+        """
         return await self.session.alive(server)
 
     async def fetch_charges(self, key: Key, server: enums.Server, force: bool = False) -> models.Charges:
@@ -121,6 +129,17 @@ class Client:
         return response
 
     async def fetch_economy(self, server: enums.Server) -> AsyncGenerator[dict[str, int], None]:
+        """Returns an async generator of the current economy stats
+
+        Args:
+            server (enums.Server): The server to request from
+
+        Returns:
+            AsyncGenerator[dict[str, int], None]:
+
+        Yields:
+            Iterator[AsyncGenerator[dict[str, int], None]]: dict of a single economy row
+        """
         data = await self.session.economy(server)
         headers = data.split("\n", 1)[0].split(";")
         for row in data.splitlines()[1:]:
@@ -170,6 +189,16 @@ class Client:
         ]
 
     async def fetch_racing_map(self, server: enums.Server, track_index: int, key: Key) -> models.RaceMap:
+        """Fetch coords of a particular race by its index
+
+        Args:
+            server (enums.Server): the server to fetch from
+            track_index (int): The index provided by `racing_tracks`
+            key (Key): Private api key
+
+        Returns:
+            models.RaceMap: name, start, end and checkpoints
+        """
         data = await self.session.racing_map(server, track_id=track_index, key=key)
         print(data)
         return models.RaceMap(
@@ -196,6 +225,18 @@ class Client:
         private_key: Key,
         public_key: Key = "",
     ) -> models.RaceStats:
+        """Fetch a users race stats
+
+        Args:
+            vrp_id (int): the user to look up
+            server (enums.Server): the server to request
+            private_key (Key): api key to charge
+            public_key (Key, optional): Used to lookup a user with a locked api
+
+        Returns:
+            models.RaceStats: stats of PB in each race and class
+        """
+        raise NotImplementedError  # This endpoint is fucked
         data = await self.session.racing_stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
         return [
             models.RaceStat(
@@ -208,6 +249,15 @@ class Client:
         ]
 
     async def fetch_weather(self, key: Key, server: enums.Server) -> models.Weather:
+        """Return current weather and time in game
+
+        Args:
+            key (Key): key to charge
+            server (enums.Server): server to request
+
+        Returns:
+            models.Weather: weather and time info
+        """
         data = await self.session.weather(server, key=key)
         return models.Weather(enums.Weather[data["weather"]], data["hour"], data["minute"])
 
@@ -217,11 +267,11 @@ class Client:
 
     @cache.with_server(60)
     async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players:
-        """_summary_
+        """get data about online players and the server
 
         Args:
-            server (enums.Server): _description_
-            force (bool, optional): _description_. Defaults to False.
+            server (enums.Server): server to request
+            force (bool, optional): Optionally forcibly refresh the cache
         """
         data = await self.session.players(server)
         hours, minutes = map(int, data["server"]["uptime"].replace("h", "").replace("m", "").split())
@@ -251,6 +301,15 @@ class Client:
         )
 
     async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions:
+        """return list of positions, contains player data, coords, vehicle data and *usually* has a history
+
+        Args:
+            server (enums.Server): server to ping
+            key (Key): api key
+
+        Returns:
+            models.Positions: list[Position]
+        """
         data = await self.session.positions(server, key=key)
         return models.Positions(
             models.Position(
@@ -301,8 +360,17 @@ class Client:
         force: bool = False,
         key: Key = MISSING,
     ) -> models.Top10:
-        if key is MISSING:
-            raise errors.NoKey("No key was passed to this function")
+        """fetch top10 players in each stat
+
+        Args:
+            stat (enums.Stats): the stat to request
+            server (enums.Server): the server to ping
+            force (bool, optional): optionally skip the cache. Defaults to False.
+            key (Key, optional): api key
+
+        Returns:
+            models.Top10: info on requested stat
+        """
         data = await self.session.top10(server, key=key, stat_name=stat)
         return models.Top10(data["stat"], data["top"])
 
