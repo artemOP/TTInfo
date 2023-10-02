@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
+import discord
 from discord import app_commands
 from discord.ext import commands
 
@@ -80,7 +81,18 @@ class Byok(commands.GroupCog, name="byok"):
 
     @app_commands.command(name="charges")
     async def charges(self, interaction: Interaction, server: Server = Server.main):
-        ...
+        """Fetch the number of remaining BYOK charges
+
+        Args:
+            interaction (Interaction): Internal
+            server (Server, optional): The server the keys are tied to
+        """
+        await interaction.response.defer(ephemeral=True)
+        key = self.bot.pool.fetchrow(
+            "SELECT K.private FROM keys K LEFT JOIN snowflake2user S ON S.vrp_id=K.vrp_id WHERE S.snowflake=$1",
+            interaction.user.id,
+        )
+        await interaction.followup.send(embed=discord.Embed(title="Charges remaining", description=key), ephemeral=True)
 
 
 async def setup(bot):
