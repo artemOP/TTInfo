@@ -24,9 +24,9 @@ class Coords(NamedTuple):
 
 
 class RaceTrack(NamedTuple):
-    race_type: str  # replace with enum
+    race_type: enums.RaceType
     name: str
-    wr: dict[str, Any]
+    wr: RaceWorldRecord
     race_class: str
     length: int
     race_id: str
@@ -45,6 +45,13 @@ class RaceStat(NamedTuple):
     time: timedelta
     track_id: int
     vehicle: str
+
+
+class RaceWorldRecord(NamedTuple):
+    vehicle: str
+    name: str
+    time: int
+    date: int
 
 
 class Weather(NamedTuple):
@@ -95,7 +102,7 @@ class VehicleData(NamedTuple):
     vehicle_model: int
     vehicle_name: str
     vehicle_spawn: str
-    vehicle_type: str  # probably an enum
+    vehicle_type: enums.VehicleType
 
 
 class Position(NamedTuple):
@@ -193,7 +200,7 @@ class Data(NamedTuple):
     position: Coords
     thirst: int
     vehicle: VehicleData
-    data_type: str  # ENUM
+    data_type: enums.DataType
 
 
 class DataAdv(NamedTuple):
@@ -215,7 +222,7 @@ class DataAdv(NamedTuple):
     position: Coords
     thirst: int
     vehicle: VehicleData
-    data_type: str  # ENUM
+    data_type: enums.DataType
 
 
 class Wealth(NamedTuple):

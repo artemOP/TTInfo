@@ -3,7 +3,19 @@ from __future__ import annotations
 from enum import Enum
 from typing_extensions import Self
 
-__all__ = "Method", "Server", "JobGroups", "Stats", "Config", "Skill", "SkillShort", "Weather"
+__all__ = (
+    "Method",
+    "Config",
+    "JobGroups",
+    "RaceType",
+    "Server",
+    "Skill",
+    "SkillShort",
+    "Stats",
+    "VehicleType",
+    "Weather",
+    "DataType",
+)
 
 
 class Method(Enum):
@@ -179,3 +191,27 @@ class Weather(Enum):
     SNOWLIGHT = "SNOWLIGHT"
     THUNDER = "THUNDER"
     XMAS = "XMAS"
+
+
+class VehicleType(Enum):
+    foot = "On Foot"
+
+    boat = "Boat"
+    deluxo = "Flying Car"
+    helicopter = "Helicopter"
+    land = "Land"
+    plane = "Plane"
+    train = "Train"
+
+    @classmethod
+    def _missing_(cls, value: object) -> Self:
+        return cls.foot
+
+
+class RaceType(Enum):
+    ground = "Ground"
+
+
+class DataType(Enum):
+    data = "Online Data"
+    data_offline = "Offline Data"
