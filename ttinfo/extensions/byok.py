@@ -43,10 +43,10 @@ class Byok(commands.GroupCog, name="byok"):
             public_key (Optional[str]): Your public API key
             server (Optional[Server]): The server the keys are tied to
         """
-        vrp_id = await self.bot.client.fetch_vrp(
+        vrp_id = await self.bot.tycoon_client.fetch_vrp(
             interaction.user.id,
             server,
-            key=private_key or self.bot.client.fallback_key,
+            key=private_key or self.bot.tycoon_client.fallback_key,
         )
         await self.bot.pool.execute(
             "INSERT INTO keys(vrp_id, server, private, public) VALUES($1, $2, $3, $4) ON CONFLICT(vrp_id, server) DO UPDATE SET public=coalesce(excluded.public, keys.public), private=coalesce(excluded.private, keys.private)",
@@ -71,9 +71,9 @@ class Byok(commands.GroupCog, name="byok"):
             key (str): The key to remove
             server (Optional[Server]): The server the keys are tied to
         """
-        vrp_id = await self.bot.client.fetch_vrp(interaction.user.id, server)
+        vrp_id = await self.bot.tycoon_client.fetch_vrp(interaction.user.id, server)
         await self.bot.pool.execute(f"UPDATE keys SET {key}=Null WHERE vrp_id=$1", vrp_id.user_id)
-        await self.bot.client.get_keys(vrp_id.user_id, server, True)
+        await self.bot.tycoon_client.get_keys(vrp_id.user_id, server, True)
         return await interaction.response.send_message(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
@@ -94,7 +94,7 @@ class Byok(commands.GroupCog, name="byok"):
             return await interaction.followup.send(
                 "You have not added a private key yet", ephemeral=True
             )  # todo: Command mention
-        charges = await self.bot.client.fetch_charges(key["private"], server, force=True)
+        charges = await self.bot.tycoon_client.fetch_charges(key["private"], server, force=True)
         await interaction.followup.send(
             embed=discord.Embed(title="Charges remaining", description=f"{charges:,}"), ephemeral=True
         )

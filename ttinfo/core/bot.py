@@ -23,12 +23,12 @@ if TYPE_CHECKING:
 
 
 class Bot(commands.Bot):
-    client: TycoonClient
+    tycoon_client: TycoonClient
     log_handler: Logger
     logging_queue: Queue[LogRecord]
     pool: Pool
 
-    __slots__ = ("client", "log_handler", "logging_queue", "pool", "env_values", "extension_path")
+    __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "env_values", "extension_path")
 
     def __init__(self, prefix: Prefix, intents: Intents, env_values: dict[str, Any], extension_path: Path, **kwargs):
         super().__init__(
@@ -43,7 +43,7 @@ class Bot(commands.Bot):
         self.extension_path = extension_path
 
     async def setup_hook(self) -> None:
-        assert self.client
+        assert self.tycoon_client
         assert self.log_handler
         assert self.pool
         for file in self.collect_cogs(self.extension_path):

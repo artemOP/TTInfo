@@ -31,7 +31,7 @@ async def main():
     ):
         bot.logging_queue = asyncio.Queue()
         bot.log_handler = log_handler
-        bot.client = tycoon_client
+        bot.tycoon_client = tycoon_client
         bot.pool = pool
 
         log_handler.info("Starting bot")
