@@ -12,10 +12,10 @@ async def main():
     env = dotenv.dotenv_values()
     async with (
         Pool(
-            database=env.get("postgres_db"),
-            user=env.get("postgres_user"),
-            password=env.get("postgres_password"),
-            host="127.0.0.1",
+            database=env["postgres_db"],
+            user=env["postgres_user"],
+            password=env["postgres_password"],
+            host=env["postgres_host"],
             command_timeout=1,
             min_size=1,
             max_size=25,
@@ -31,17 +31,15 @@ async def main():
     ):
         bot.logging_queue = asyncio.Queue()
         bot.log_handler = log_handler
-        bot.client = tycoon_client
+        bot.tycoon_client = tycoon_client
         bot.pool = pool
 
         log_handler.info("Starting bot")
         log_handler.info(f"pool: {pool}")
         log_handler.info(f"http_session: {tycoon_client}")
 
-        if token := env.get("discord_token", None):
-            await bot.start(token)
-        else:
-            raise Exception("discord Token is not present in .env")
+        token: str = env["discord_token"]  # type: ignore
+        await bot.start(token)
 
 
 if __name__ == "__main__":

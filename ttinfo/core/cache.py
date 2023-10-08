@@ -3,14 +3,14 @@ from __future__ import annotations
 import time
 import functools
 import logging
-from typing import Hashable, Optional, TYPE_CHECKING
+from typing import Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
     from ttinfo.http.enums import Server
 
 logger = logging.getLogger("ttinfo.cache")
 
-__all__ = "server_specific", "TimedCache"
+__all__ = "TimedCache", "with_server", "with_key"
 
 
 class TimedCache(dict):
@@ -41,7 +41,7 @@ def get_index_key(server: Server, value: str) -> str:
     return f"{server.value}_{value}"
 
 
-def server_specific(timer: Optional[int]):
+def with_key(timer: Optional[int]):
     if timer:
         cache = TimedCache(timer)
     else:
@@ -59,6 +59,30 @@ def server_specific(timer: Optional[int]):
             data = await func(cls, value, server, force, *args, **kwargs)
             cache[index_key] = data
             logger.debug(f"data added to cache: <{index_key}: {data}>")
+            return data
+
+        return wrapper
+
+    return decorator
+
+
+def with_server(timer: Optional[int]):
+    if timer:
+        cache = TimedCache(timer)
+    else:
+        cache = {}
+
+    def decorator(func):
+        @functools.wraps(func)
+        async def wrapper(cls, server: Server, force: bool = False, *args, **kwargs):
+            if not force:
+                if server in cache:
+                    logger.debug(f"Cache hit: <{server}>")
+                    return cache[server]
+
+            data = await func(cls, server, force, *args, **kwargs)
+            cache[server] = data
+            logger.debug(f"data added to cache: <{server}>")
             return data
 
         return wrapper

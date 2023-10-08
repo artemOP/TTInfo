@@ -1,6 +1,6 @@
 from typing import Any, Optional
 
-__all__ = "TTInfoException", "NoKey", "HTTPException", "MalformedResponse"
+__all__ = "TTInfoException", "NoKey", "NotLinked", "OfflineError", "InvalidItem", "HTTPException", "MalformedResponse"
 
 
 class TTInfoException(Exception):
@@ -12,6 +12,18 @@ class NoKey(TTInfoException):
 
 
 class NotLinked(TTInfoException):
+    pass
+
+
+class OfflineError(TTInfoException):
+    pass
+
+
+class InvalidItem(TTInfoException):
+    pass
+
+
+class NoPigs(TTInfoException):
     pass
 
 
