@@ -13,6 +13,7 @@ if TYPE_CHECKING:
     from types import TracebackType
     from typing import Literal, Optional, TypeAlias, AsyncGenerator
 
+    from aiohttp import ClientSession
     from typing_extensions import Self
 
     from ttinfo import Bot, Pool
@@ -23,12 +24,13 @@ if TYPE_CHECKING:
 class Client:
     session: TycoonHTTP
 
-    def __init__(self, bot: Bot, pool: Pool) -> None:
+    def __init__(self, bot: Bot, pool: Pool, session: ClientSession) -> None:
         self.bot = bot
         self.pool = pool
+        self._session = session
 
     async def __aenter__(self) -> Self:
-        self.session = await TycoonHTTP().__aenter__()
+        self.session = await TycoonHTTP(self._session).__aenter__()
         return self
 
     async def __aexit__(

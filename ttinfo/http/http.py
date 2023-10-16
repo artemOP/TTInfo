@@ -60,11 +60,12 @@ class Route:
 
 
 class TycoonHTTP:
-    session: ClientSession
     logger = logging.getLogger("ttinfo.http")
 
+    def __init__(self, session: ClientSession):
+        self.session: ClientSession = session
+
     async def __aenter__(self):
-        self.session = aiohttp.ClientSession(json_serialize=lambda x: str(orjson.dumps(x), "utf-8"))
         return self
 
     async def __aexit__(

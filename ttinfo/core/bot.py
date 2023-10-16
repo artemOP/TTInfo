@@ -15,6 +15,7 @@ if TYPE_CHECKING:
     from pathlib import Path
     from typing import Any, Callable, Coroutine, Generator, Optional, TypeAlias, Union
 
+    from aiohttp import ClientSession
     from discord import Intents
 
     from .. import TycoonClient, Pool
@@ -27,8 +28,9 @@ class Bot(commands.Bot):
     log_handler: Logger
     logging_queue: Queue[LogRecord]
     pool: Pool
+    session: ClientSession
 
-    __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "env_values", "extension_path")
+    __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "session", "env_values", "extension_path")
 
     def __init__(self, prefix: Prefix, intents: Intents, env_values: dict[str, Any], extension_path: Path, **kwargs):
         super().__init__(

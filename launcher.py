@@ -1,9 +1,11 @@
 import asyncio
 import pathlib
 
+import aiohttp
 import discord
 from discord.ext import commands
 import dotenv
+import orjson
 
 from ttinfo import Bot, LogHandler, Pool, TycoonClient
 
@@ -20,19 +22,21 @@ async def main():
             min_size=1,
             max_size=25,
         ) as pool,
+        aiohttp.ClientSession(json_serialize=lambda x: str(orjson.dumps(x), "utf-8")) as session,
         Bot(
             prefix=commands.when_mentioned,
             intents=discord.Intents.all(),
             env_values=env,
             extension_path=pathlib.Path("ttinfo/extensions"),
         ) as bot,
-        TycoonClient(bot=bot, pool=pool) as tycoon_client,
+        TycoonClient(bot=bot, pool=pool, session=session) as tycoon_client,
         LogHandler(bot=bot) as log_handler,
     ):
         bot.logging_queue = asyncio.Queue()
         bot.log_handler = log_handler
         bot.tycoon_client = tycoon_client
         bot.pool = pool
+        bot.session = session
 
         log_handler.info("Starting bot")
         log_handler.info(f"pool: {pool}")
