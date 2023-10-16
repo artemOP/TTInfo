@@ -85,15 +85,7 @@ class Byok(commands.GroupCog, name="byok"):
             server (Server, optional): The server the keys are tied to
         """
         await interaction.response.defer(ephemeral=True)
-        key = await self.bot.pool.fetchrow(
-            "SELECT K.private FROM keys K LEFT JOIN snowflake2user S ON S.vrp_id=K.vrp_id WHERE S.snowflake=$1 AND K.server=$2",
-            interaction.user.id,
-            server.name,
-        )
-        if not key:
-            return await interaction.followup.send(
-                "You have not added a private key yet", ephemeral=True
-            )  # todo: Command mention
+        key = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
         charges = await self.bot.tycoon_client.fetch_charges(key["private"], server, force=True)
         await interaction.followup.send(
             embed=discord.Embed(title="Charges remaining", description=f"{charges:,}"), ephemeral=True
