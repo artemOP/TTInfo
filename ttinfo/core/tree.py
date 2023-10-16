@@ -5,6 +5,8 @@ from typing import TYPE_CHECKING
 from discord import app_commands, AppCommandType
 from discord.ext import commands
 
+from ..http.enums import Server
+
 if TYPE_CHECKING:
     from typing import Optional
 
@@ -12,15 +14,27 @@ if TYPE_CHECKING:
     from discord.abc import Snowflake
     from discord.app_commands import Command, ContextMenu, Group
 
+    from ttinfo import Bot
+
 
 class CommandTree(app_commands.CommandTree):
-    def __init__(self, bot):
+    def __init__(self, bot: Bot):
+        self.bot = bot
         super().__init__(bot)
+
+    async def response(self, interaction: Interaction, message: str) -> None:
+        if interaction.response.is_done():
+            return await interaction.followup.send(message, ephemeral=True)
+        return await interaction.response.send_message(message, ephemeral=True)
 
     async def interaction_check(self, interaction: Interaction, /) -> bool:
         if not interaction.guild:
-            await interaction.response.send_message("This bot cannot be used in DMs", ephemeral=True)
+            await self.response(interaction, "This bot cannot be used in DMs")
             return False
+        if "server" not in interaction.namespace:
+            return False
+        server: str = interaction.namespace["server"].removeprefix("/")
+        await self.bot.tycoon_client.fetch_vrp(interaction.user.id, Server[server])
         return True
 
     def get_command(

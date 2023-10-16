@@ -6,7 +6,7 @@ import logging
 from typing import Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from ttinfo.http.enums import Server
+    from ..http.enums import Server
 
 logger = logging.getLogger("ttinfo.cache")
 

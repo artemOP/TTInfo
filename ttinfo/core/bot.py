@@ -7,7 +7,7 @@ import discord
 from discord.app_commands import Group, Command, ContextMenu
 from discord.ext import commands, tasks
 
-from ttinfo.core.tree import CommandTree
+from .tree import CommandTree
 
 if TYPE_CHECKING:
     from asyncio import Queue

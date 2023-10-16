@@ -6,8 +6,8 @@ from zoneinfo import ZoneInfo
 from discord.utils import MISSING
 
 from . import enums, models, TycoonHTTP
-from ttinfo import cache
-from ..core import errors
+
+from ..core import errors, cache
 
 if TYPE_CHECKING:
     from types import TracebackType
@@ -62,6 +62,22 @@ class Client:
             await self.pool.fetchrow(
                 "SELECT private, public FROM keys WHERE vrp_id = $1 AND server=$2",
                 vrp_id,
+                server.name,
+            )
+            or {}
+        )
+        if not (keys or keys.get("private")):
+            raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
+        return {"private": keys["private"], "public": keys.get("public", "")}
+
+    @cache.with_key(60 * 60 * 24)
+    async def get_keys_with_snowflake(
+        self, snowflake: int, server: enums.Server, force: bool = False
+    ) -> dict[Literal["public", "private"], Key]:
+        keys = (
+            await self.bot.pool.fetchrow(
+                "SELECT K.private, K.public FROM keys K LEFT JOIN snowflake2user S ON S.vrp_id=K.vrp_id WHERE S.snowflake=$1 AND K.server=$2",
+                snowflake,
                 server.name,
             )
             or {}
