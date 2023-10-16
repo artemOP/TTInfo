@@ -39,8 +39,8 @@ async def main():
         bot.session = session
 
         log_handler.info("Starting bot")
-        log_handler.info(f"pool: {pool}")
-        log_handler.info(f"http_session: {tycoon_client}")
+        log_handler.info(f"{pool} connected")
+        log_handler.info(f"{tycoon_client} connected")
 
         token: str = env["discord_token"]  # type: ignore
         await bot.start(token)

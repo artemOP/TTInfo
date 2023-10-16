@@ -41,6 +41,9 @@ class Client:
     ):
         await self.session.__aexit__(exc_type, exc_val, exc_tb)
 
+    def __str__(self) -> str:
+        return "Tycoon API Client"
+
     @property
     def fallback_key(self):
         return self.bot.env_values["tycoon_token"]
