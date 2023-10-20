@@ -27,8 +27,8 @@ class Method(Enum):
 
 
 class Server(Enum):
-    main = "/main"
-    beta = "/beta"
+    legacy = "/main"
+    main = "/beta"
 
 
 class JobGroups(Enum):

@@ -33,7 +33,7 @@ class Byok(commands.GroupCog, name="byok"):
         interaction: Interaction,
         private_key: Optional[str] = None,
         public_key: Optional[str] = None,
-        server: Server = Server.main,
+        server: Server = Server.legacy,
     ):
         """Add your keys to the bot
 
@@ -62,7 +62,7 @@ class Byok(commands.GroupCog, name="byok"):
         self,
         interaction: Interaction,
         key: Literal["private", "public"],
-        server: Server = Server.main,
+        server: Server = Server.legacy,
     ):
         """Add your keys to the bot
 
@@ -77,7 +77,7 @@ class Byok(commands.GroupCog, name="byok"):
         return await interaction.response.send_message(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
-    async def charges(self, interaction: Interaction, server: Server = Server.main):
+    async def charges(self, interaction: Interaction, server: Server = Server.legacy):
         """Fetch the number of remaining BYOK charges
 
         Args:

@@ -29,7 +29,7 @@ class Route:
     def __init__(
         self,
         method: Method,
-        server: Server = Server.main,
+        server: Server = Server.legacy,
         path: Union[str, URL] = MISSING,
         body: Optional[Union[str, dict[str, Any]]] = None,  # used for push
         query: Optional[list[tuple[str, Any]]] = None,  # used for get
