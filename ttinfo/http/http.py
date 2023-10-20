@@ -128,6 +128,10 @@ class TycoonHTTP:
                     message_json = orjson.loads(message)
                     self.logger.debug(message_json)
                     raise errors.NoKey(resp.reason)
+                elif resp.status == 403:
+                    message_json = orjson.loads(message)
+                    self.logger.debug(message_json)
+                    raise errors.NoKey("403 - Forbidden: Likely due to malformed or incorrect key")
                 elif resp.status == 412:
                     raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
                 status = resp.status
