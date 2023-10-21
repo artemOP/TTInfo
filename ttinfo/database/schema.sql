@@ -1,5 +1,5 @@
 DO $$ BEGIN
-    CREATE TYPE SERVER AS ENUM('main', 'beta');
+    CREATE TYPE SERVER AS ENUM('main', 'legacy');
 EXCEPTION
     WHEN duplicate_object THEN null;
 END $$;
