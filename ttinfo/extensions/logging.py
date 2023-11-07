@@ -43,7 +43,8 @@ class Logging(commands.Cog):
         assert self.webhook
 
         to_log = await self.bot.logging_queue.get()
-
+        if "rate limited" in to_log.message:
+            return
         emoji = self.attributes.get(to_log.levelname, "\N{CROSS MARK}")
         dt = datetime.utcfromtimestamp(to_log.created)
 
