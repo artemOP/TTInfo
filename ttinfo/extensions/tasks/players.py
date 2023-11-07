@@ -58,9 +58,10 @@ class Players(commands.Cog):
 
     async def increment_playtime(self, server: Server, player: Player) -> Optional[timedelta]:
         playtime: Optional[timedelta] = await self.bot.pool.execute(
-            "INSERT INTO playtime(vrp_id, server, playtime, date_seen) VALUES($1, $2, '1 minute'::INTERVAL, now()::DATE) ON CONFLICT(vrp_id, server, date_seen) DO UPDATE SET playtime = playtime.playtime + '1 minute'::INTERVAL RETURNING playtime.playtime",
+            "INSERT INTO playtime(vrp_id, server, playtime, job, date_seen) VALUES($1, $2, '1 minute'::INTERVAL, $3, now()::DATE) ON CONFLICT(vrp_id, server, job, date_seen) DO UPDATE SET playtime = playtime.playtime + '1 minute'::INTERVAL RETURNING playtime.playtime",
             player.vrp_id,
             server.name,
+            player.job,
         )
         return playtime
 
