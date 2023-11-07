@@ -66,7 +66,7 @@ class Players(commands.Cog):
 
     async def update_aliases(self, player: Player) -> None:
         await self.bot.pool.execute(
-            "INSERT INTO aliases(vrp_id, name, last_seen) VALUES($1, $2, now()::DATE) ON CONFLICT(vrp_id, name) DO NOTHING",
+            "INSERT INTO aliases(vrp_id, name, last_seen) VALUES($1, $2, now()::DATE) ON CONFLICT(vrp_id, name) DO UPDATE SET last_seen = now()::DATE",
             player.vrp_id,
             player.name,
         )
