@@ -53,9 +53,6 @@ class Players(commands.Cog):
                     self.bot.dispatch("player_logout", player)
                     self.players[server].remove(player)
 
-            if server is Server.legacy:
-                print(self.players[server])
-
     async def increment_playtime(self, server: Server, player: Player) -> Optional[timedelta]:
         playtime: Optional[timedelta] = await self.bot.pool.execute(
             "INSERT INTO playtime(vrp_id, server, playtime, job, date_seen) VALUES($1, $2, '1 minute'::INTERVAL, $3, now()::DATE) ON CONFLICT(vrp_id, server, job, date_seen) DO UPDATE SET playtime = playtime.playtime + '1 minute'::INTERVAL RETURNING playtime.playtime",
