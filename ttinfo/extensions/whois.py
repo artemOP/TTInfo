@@ -75,8 +75,7 @@ class Whois(commands.GroupCog, name="whois"):
         if not name:
             return await self.whois_discord.callback(self, interaction, server, interaction.user)
         vrp_id = await self.bot.pool.fetchval(
-            "SELECT vrp_id FROM aliases WHERE server=$1 AND name LIKE $2 ORDER BY last_seen DESC LIMIT 1",
-            server.name,
+            "SELECT vrp_id FROM aliases WHERE name LIKE $1 ORDER BY last_seen DESC LIMIT 1",
             name,
         )
         if not vrp_id:
