@@ -86,6 +86,14 @@ class Client:
             raise errors.NoKey()  # todo: use command mention logic for eventual BYOK system
         return {"private": keys["private"], "public": keys.get("public", "")}
 
+    async def get_donated_key(self, server: enums.Server) -> Key:
+        vrp = await self.bot.pool.execute(
+            "UPDATE donations SET amount_used=amount_used+1 WHERE vrp_id=(SELECT vrp_id FROM donations TABLESAMPLE SYSTEM_ROWS(1) WHERE amount_used<quantity AND server=$1) RETURNING vrp_id",
+            server.name,
+        )
+        vrp = await self.bot.pool.execute("UPDATE donations SET amount_used=amount_used+1 WHERE vrp_ip=()")
+        ...  # todo: impl
+
     @cache.with_key(None)
     async def fetch_vrp(
         self,
