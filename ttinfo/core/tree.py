@@ -33,8 +33,8 @@ class CommandTree(app_commands.CommandTree):
             return False
         if "server" not in interaction.namespace:
             return False
-        server: str = interaction.namespace["server"].removeprefix("/")
-        await self.bot.tycoon_client.fetch_vrp(interaction.user.id, Server[server])
+        server: str = interaction.namespace["server"]
+        await self.bot.tycoon_client.fetch_vrp(interaction.user.id, Server(server))
         return True
 
     def get_command(
