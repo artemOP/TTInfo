@@ -303,7 +303,11 @@ class Client:
             force (bool, optional): Optionally forcibly refresh the cache
         """
         data = await self.session.players(server)
-        hours, minutes = map(int, data["server"]["uptime"].replace("h", "").replace("m", "").split())
+        uptime = data["server"]["uptime"].replace("h", "").replace("m", "").split()
+        if len(uptime) == 2:
+            hours, minutes = map(int, uptime)
+        else:
+            hours, minutes = 0, int(uptime[0])
         uptime = timedelta(hours=hours, minutes=minutes)
         return models.Players(
             players=[
