@@ -46,7 +46,7 @@ class Byok(commands.GroupCog, name="byok"):
         vrp_id = await self.bot.tycoon_client.fetch_vrp(
             interaction.user.id,
             server,
-            key=private_key or self.bot.tycoon_client.fallback_key,
+            key=private_key or await self.bot.tycoon_client.get_donated_key(server),
         )
         await self.bot.pool.execute(
             "INSERT INTO keys(vrp_id, server, private, public) VALUES($1, $2, $3, $4) ON CONFLICT(vrp_id, server) DO UPDATE SET public=coalesce(excluded.public, keys.public), private=coalesce(excluded.private, keys.private)",
@@ -89,6 +89,31 @@ class Byok(commands.GroupCog, name="byok"):
         charges = await self.bot.tycoon_client.fetch_charges(key["private"], server, force=True)
         await interaction.followup.send(
             embed=discord.Embed(title="Charges remaining", description=f"{charges:,}"), ephemeral=True
+        )
+
+    @app_commands.command(name="donate")
+    async def donate(self, interaction: Interaction, server: Server, amount: int, reccuring: bool = False):
+        """Donate charges to be used for bot upkeep
+
+        Args:
+            interaction (Interaction): _description_
+            server (Server): The server your BYOK is linked to
+            amount (int): The number of charges you wish to donate
+            reccuring (bool): Receive a reminder when your donation has been consumed
+        """
+        await interaction.response.defer(ephemeral=True)
+        key = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
+        if not key:
+            return await interaction.followup.send(
+                "Please set up a BYOK for this server before trying to donate keys", ephemeral=True
+            )
+        vrp_id = await self.bot.tycoon_client.fetch_vrp(interaction.user.id, server, key=key.get("private"))
+        await self.bot.pool.execute(
+            "INSERT INTO donations(vrp_id, server, quantity, reccuring) VALUES($1,$2,$3,$4) ON CONFLICT(vrp_id, server) SET quantity=quantity+EXCLUDED.quantity",
+            vrp_id,
+            server.name,
+            amount,
+            reccuring,
         )
 
 

@@ -44,10 +44,6 @@ class Client:
     def __str__(self) -> str:
         return "Tycoon API Client"
 
-    @property
-    def fallback_key(self):
-        return self.bot.env_values["tycoon_token"]
-
     @cache.with_key(60 * 60 * 24)
     async def get_keys(self, vrp_id: int, server: enums.Server, force: bool) -> dict[Literal["public", "private"], Key]:
         """Get private and or public keys linked to a specific vrp_id
@@ -87,12 +83,18 @@ class Client:
         return {"private": keys["private"], "public": keys.get("public", "")}
 
     async def get_donated_key(self, server: enums.Server) -> Key:
-        vrp = await self.bot.pool.execute(
-            "UPDATE donations SET amount_used=amount_used+1 WHERE vrp_id=(SELECT vrp_id FROM donations TABLESAMPLE SYSTEM_ROWS(1) WHERE amount_used<quantity AND server=$1) RETURNING vrp_id",
+        vrp = await self.pool.execute(
+            "UPDATE donations SET amount_used = amount_used + 1 WHERE server=$1 AND amount_used<quantity AND vrp_id=(SELECT vrp_id FROM donations WHERE server=$1 ORDER BY random() LIMIT 1)",
             server.name,
         )
-        vrp = await self.bot.pool.execute("UPDATE donations SET amount_used=amount_used+1 WHERE vrp_ip=()")
-        ...  # todo: impl
+        key: str | None = await self.pool.execute(
+            "SELECT private FROM keys WHERE vrp_id=$1 AND server=$2",
+            vrp,
+            server.name,
+        )
+        if not key:
+            raise errors.NoKey("No donated keys are available")
+        return key
 
     @cache.with_key(None)
     async def fetch_vrp(
@@ -106,7 +108,7 @@ class Client:
 
         Args:
             discord_id (int): The account to fetch
-            key (Optional[str]): the key to use for the api call. Defaults to fallback.
+            key (Optional[str]): the key to use for the api call. Defaults to donated keys.
             server (Optional[enums.Server]): the server to search.
             force (Optional[bool]): Skip cache layer entirely
 
@@ -119,8 +121,9 @@ class Client:
         if not force:
             if vrp_id := await self.pool.fetchval("SELECT vrp_id FROM snowflake2user WHERE snowflake = $1", discord_id):
                 return models.Snowflake2User(discord_id=discord_id, user_id=vrp_id)
-
-        data = await self.session.snowflake2user(server, key=key or self.fallback_key, discord_id=discord_id)
+        if not key:
+            key = await self.get_donated_key(server)
+        data = await self.session.snowflake2user(server, key=key, discord_id=discord_id)
         if data:
             response = models.Snowflake2User(discord_id=data["discord_id"], user_id=data["user_id"])
             await self.pool.execute(
