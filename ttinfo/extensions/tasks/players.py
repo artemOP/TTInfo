@@ -71,10 +71,18 @@ class Players(commands.Cog):
             player.name,
         )
 
+    async def update_avatar(self, player: Player) -> None:
+        await self.bot.pool.execute(
+            "INSERT INTO avatars(vrp_id, url) VALUES($1, $2) ON CONFLICT(vrp_id) DO UPDATE SET url=EXCLUDED.url",
+            player.vrp_id,
+            player.avatar_url,
+        )
+
     @commands.Cog.listener("on_player_login")
     async def on_player_login(self, player: Player) -> None:
         self.logger.debug(f"login: {player}")
         await self.update_aliases(player)
+        await self.update_avatar(player)
 
     @commands.Cog.listener("on_player_logout")
     async def on_player_logout(self, player: Player) -> None:
