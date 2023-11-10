@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING, Literal, Optional
 
 import discord
 from discord import app_commands
-from discord.ext import commands
+from discord.ext import commands, tasks
 
 from ..http.enums import Server
 
@@ -31,9 +31,9 @@ class Byok(commands.GroupCog, name="byok"):
     async def add_keys(
         self,
         interaction: Interaction,
+        server: Server,
         private_key: Optional[str] = None,
         public_key: Optional[str] = None,
-        server: Server = Server.legacy,
     ):
         """Add your keys to the bot
 
@@ -61,8 +61,8 @@ class Byok(commands.GroupCog, name="byok"):
     async def remove_key(
         self,
         interaction: Interaction,
+        server: Server,
         key: Literal["private", "public"],
-        server: Server = Server.legacy,
     ):
         """Add your keys to the bot
 
@@ -77,7 +77,7 @@ class Byok(commands.GroupCog, name="byok"):
         return await interaction.response.send_message(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
-    async def charges(self, interaction: Interaction, server: Server = Server.legacy):
+    async def charges(self, interaction: Interaction, server: Server):
         """Fetch the number of remaining BYOK charges
 
         Args:
