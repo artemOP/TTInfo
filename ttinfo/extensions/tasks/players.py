@@ -63,6 +63,7 @@ class Players(commands.Cog):
         return playtime
 
     async def update_aliases(self, player: Player) -> None:
+        self.logger.debug(f"{player.vrp_id} alias: {player.name}")
         if not player.name:
             return
         await self.bot.pool.execute(
@@ -72,6 +73,7 @@ class Players(commands.Cog):
         )
 
     async def update_avatar(self, player: Player) -> None:
+        self.logger.debug(f"{player.vrp_id} avatar: {player.avatar_url}")
         await self.bot.pool.execute(
             "INSERT INTO avatars(vrp_id, url) VALUES($1, $2) ON CONFLICT(vrp_id) DO UPDATE SET url=EXCLUDED.url",
             player.vrp_id,
