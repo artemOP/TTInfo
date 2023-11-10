@@ -16,7 +16,7 @@ if TYPE_CHECKING:
     from typing import Literal, Optional
     from ttinfo.core.bot import Bot
 
-    from ...http.models import Player
+    from ...http.models import Player, Server as ServerData
 
 
 class Players(commands.Cog):
@@ -29,6 +29,7 @@ class Players(commands.Cog):
         self.task.add_exception_type(TTInfoException)
 
         self.players: dict[Server, list[Player]] = {server: [] for server in Server}
+        self.servers: dict[Server, ServerData] = {server: None for server in Server}  # type: ignore
 
         self.task.start()
 
@@ -52,6 +53,17 @@ class Players(commands.Cog):
                 if player not in request.players:
                     self.bot.dispatch("player_logout", player)
                     self.players[server].remove(player)
+
+            if not self.servers[server]:
+                self.servers[server] = request.server
+                if request.server.dxp.active:
+                    self.bot.dispatch("dxp_start", request.server)
+            if self.servers[server].dxp.active == False != request.server.dxp.active:
+                self.bot.dispatch("dxp_start", request.server)
+            elif self.servers[server].dxp.active == True != request.server.dxp.active:
+                self.bot.dispatch("dxp_end", request.server)
+
+            self.servers[server] = request.server
 
     async def increment_playtime(self, server: Server, player: Player) -> Optional[timedelta]:
         playtime: Optional[timedelta] = await self.bot.pool.execute(
@@ -89,6 +101,14 @@ class Players(commands.Cog):
     @commands.Cog.listener("on_player_logout")
     async def on_player_logout(self, player: Player) -> None:
         self.logger.debug(f"logout: {player}")
+
+    @commands.Cog.listener("on_dxp_start")
+    async def on_dxp_start(self, server: ServerData):
+        self.logger.debug(f"DXP Start: {server.name} - {server.dxp.host}: {server.dxp.time_remaining}")
+
+    @commands.Cog.listener("on_dxp_end")
+    async def on_dxp_end(self, server: ServerData):
+        self.logger.debug(f"DXP end: {server.name}")
 
     @task.before_loop
     async def wait_for_ready(self):
