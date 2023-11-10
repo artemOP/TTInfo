@@ -52,7 +52,7 @@ class LogHandler:
         logging.getLogger("discord.state").setLevel(logging.WARNING)
         logging.getLogger("discord.gateway").setLevel(logging.WARNING)
 
-        self.log.setLevel(logging.INFO)
+        self.log.setLevel(logging.DEBUG)
         handler = RotatingFileHandler(
             filename=self.logging_path / "ttinfo.log",
             encoding="utf-8",
@@ -67,6 +67,7 @@ class LogHandler:
 
         if self.stream:
             stream_handler = logging.StreamHandler()
+            stream_handler.setLevel(logging.INFO)
             if stream_supports_colour(stream_handler):
                 stream_handler.setFormatter(ColourFormatter())
             self.log.addHandler(stream_handler)
