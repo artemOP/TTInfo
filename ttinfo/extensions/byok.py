@@ -103,11 +103,14 @@ class Byok(commands.GroupCog, name="byok"):
         """
         await interaction.response.defer(ephemeral=True)
         key = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
-        if not key:
+        if not key.get("private"):
             return await interaction.followup.send(
                 "Please set up a BYOK for this server before trying to donate keys", ephemeral=True
             )
-        vrp_id = await self.bot.tycoon_client.fetch_vrp(interaction.user.id, server, key=key.get("private"))
+        charges = await self.bot.tycoon_client.fetch_charges(key["private"], server, force=True)
+        if charges < amount:
+            amount = charges
+        vrp_id = await self.bot.tycoon_client.fetch_vrp(interaction.user.id, server, key=key["private"])
         await self.bot.pool.execute(
             "INSERT INTO donations(vrp_id, server, quantity, reccuring) VALUES($1,$2,$3,$4) ON CONFLICT(vrp_id, server) SET quantity=quantity+EXCLUDED.quantity",
             vrp_id,
