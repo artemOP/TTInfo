@@ -1,9 +1,5 @@
-# create task that loops and stores the results of fetch_players and fetch_positions
-# subscribe to specific users to track and plot on demand
-
 from __future__ import annotations
 
-import logging
 from typing import TYPE_CHECKING
 
 from discord.ext import commands, tasks
@@ -20,7 +16,6 @@ class Tasks(commands.Cog):
     def __init__(self, bot: Bot):
         self.bot = bot
         self.logger = self.bot.log_handler.getChild(self.qualified_name)
-        self.logger.setLevel(logging.DEBUG)
         self.positions: dict[int, Coords] = {}
 
     async def cog_load(self) -> None:
