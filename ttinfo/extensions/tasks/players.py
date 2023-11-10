@@ -77,7 +77,7 @@ class Players(commands.Cog):
         await self.bot.pool.execute(
             "INSERT INTO avatars(vrp_id, url) VALUES($1, $2) ON CONFLICT(vrp_id) DO UPDATE SET url=EXCLUDED.url",
             player.vrp_id,
-            player.avatar_url,
+            player.avatar_url or None,
         )
 
     @commands.Cog.listener("on_player_login")
