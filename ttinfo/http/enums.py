@@ -146,7 +146,7 @@ class Config(Enum):
     custom_vehicle_classes = "Custom Vehicle Classes"  # fix: resource is `custom-vehicle-classes`
 
 
-class Skill(Enum):  # todo: fill
+class Skill(Enum):
     animals = "Animal Handling"
     bus = "Bus Driver"
     business = "Businesses"
