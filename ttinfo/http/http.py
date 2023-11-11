@@ -174,7 +174,8 @@ class TycoonHTTP:
         return await self._request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
 
     async def config(self, server: Server, *, resource: Config) -> str:
-        return await self._request(Route(Method.get, server, f"config/{resource.name}"))
+        name = resource.name if "custom" not in resource.name else resource.name.replace("_", "-")
+        return await self._request(Route(Method.get, server, f"config/{name}"))
 
     async def snowflake2user(self, server: Server, *, key: Key, discord_id: int) -> dict[str, Any]:
         return await self._request(
