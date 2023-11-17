@@ -22,17 +22,15 @@ class CommandTree(app_commands.CommandTree):
         self.bot = bot
         super().__init__(bot)
 
-    async def response(self, interaction: Interaction, message: str) -> None:
-        if interaction.response.is_done():
-            return await interaction.followup.send(message, ephemeral=True)
-        return await interaction.response.send_message(message, ephemeral=True)
-
     async def interaction_check(self, interaction: Interaction, /) -> bool:
+        await interaction.response.defer(ephemeral=True)
+
         if not interaction.guild:
-            await self.response(interaction, "This bot cannot be used in DMs")
+            await interaction.followup.send("This bot cannot be used in DMs")
             return False
         if "server" not in interaction.namespace:
-            return False
+            return True
+
         server: str = interaction.namespace["server"]
         await self.bot.tycoon_client.fetch_vrp(interaction.user.id, Server(server))
         return True
