@@ -76,13 +76,19 @@ class TycoonHTTP:
     ):
         await self.session.close()
 
-    async def _request(self, route: Route, retries: int = 5) -> Any:
+    async def _request(self, route: Route, retries: int = 5, timeout: int = 3) -> Any:
         assert self.session
         headers = route.headers
         reason: Optional[str] = None
         status: Optional[int] = None
         for attempt in range(retries):
-            async with self.session.request(route.method.value, route.path, headers=headers, data=route.body) as resp:
+            async with self.session.request(
+                route.method.value,
+                route.path,
+                headers=headers,
+                data=route.body,
+                timeout=timeout,
+            ) as resp:
                 try:
                     message = await resp.text(encoding="utf-8")
                 except Exception as e:
