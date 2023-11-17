@@ -44,7 +44,6 @@ class Sync(commands.Cog):
                     response_message = "Global commands removed"
 
                 case "+":
-                    self.bot.tree.clear_commands(guild=ctx.guild)
                     self.bot.tree.copy_global_to(guild=ctx.guild)
                     await self.bot.tree.sync(guild=ctx.guild)
                     response_message = "Commands synced locally"
