@@ -7,7 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from ...core.utils import ButtonPaginatedEmbeds, to_codeblock
+from ..core.utils import ButtonPaginatedEmbeds, to_codeblock
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
