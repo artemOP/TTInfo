@@ -58,10 +58,10 @@ class Owner(commands.GroupCog, name="owner"):
         descriptions = [""]
         with open("ttinfo/logs/ttinfo.log", "r") as f:
             for line in f.readlines():
-                if len(descriptions[-1]) + len(line) > 4000:
+                if len(descriptions[-1]) + len(line) > 3800:
                     descriptions.append("")
 
-                descriptions[-1] += line
+                descriptions[-1] = line + descriptions[-1]
             descriptions.reverse()
 
         embeds = [
