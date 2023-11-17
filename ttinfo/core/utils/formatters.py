@@ -16,4 +16,4 @@ def to_codeblock(content: str, *, language: str, escape_md: bool = True) -> str:
     """
     if escape_md:
         content = escape_markdown(content)
-    return f"'''{language}\n{content}\n```"
+    return f"```{language}\n{content}\n```"
