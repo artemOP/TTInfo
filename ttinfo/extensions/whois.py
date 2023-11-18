@@ -37,8 +37,6 @@ class Whois(commands.GroupCog, name="whois"):
             server (Server): The server to perform the lookup on
             user (User | Member | None, optional): The user to lookup. Defaults to you.
         """
-        if not interaction.response.is_done():
-            await interaction.response.defer(ephemeral=True)
         if not user:
             user = interaction.user
         keys = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
@@ -54,7 +52,6 @@ class Whois(commands.GroupCog, name="whois"):
             server (Server): The server to perform the lookup on
             vrp_id (Range[int, 1, 1_000_000] | None, optional): The in game ID. Defaults to your ID.
         """
-        await interaction.response.defer(ephemeral=True)
         if not vrp_id:
             return await self.whois_discord.callback(self, interaction, server, interaction.user)
         await self.whois(interaction, server, vrp_id)
@@ -71,7 +68,6 @@ class Whois(commands.GroupCog, name="whois"):
         Returns:
             _type_: _description_
         """
-        await interaction.response.defer(ephemeral=True)
         if not name:
             return await self.whois_discord.callback(self, interaction, server, interaction.user)
         vrp_id = await self.bot.pool.fetchval(

@@ -55,7 +55,7 @@ class Byok(commands.GroupCog, name="byok"):
             private_key,
             public_key,
         )
-        return await interaction.response.send_message(f"Keys updated", ephemeral=True)
+        return await interaction.followup.send(f"Keys updated", ephemeral=True)
 
     @app_commands.command(name="remove")
     async def remove_key(
@@ -74,7 +74,7 @@ class Byok(commands.GroupCog, name="byok"):
         vrp_id = await self.bot.tycoon_client.fetch_vrp(interaction.user.id, server)
         await self.bot.pool.execute(f"UPDATE keys SET {key}=Null WHERE vrp_id=$1", vrp_id.user_id)
         await self.bot.tycoon_client.get_keys(vrp_id.user_id, server, True)
-        return await interaction.response.send_message(f"{key} key removed", ephemeral=True)
+        return await interaction.followup.send(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
     async def charges(self, interaction: Interaction, server: Server):
@@ -84,7 +84,6 @@ class Byok(commands.GroupCog, name="byok"):
             interaction (Interaction): Internal
             server (Server, optional): The server the keys are tied to
         """
-        await interaction.response.defer(ephemeral=True)
         key = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
         charges = await self.bot.tycoon_client.fetch_charges(key["private"], server, force=True)
         await interaction.followup.send(
@@ -101,7 +100,6 @@ class Byok(commands.GroupCog, name="byok"):
             amount (int): The number of charges you wish to donate
             reccuring (bool): Receive a reminder when your donation has been consumed
         """
-        await interaction.response.defer(ephemeral=True)
         key = await self.bot.tycoon_client.get_keys_with_snowflake(interaction.user.id, server)
         if not key.get("private"):
             return await interaction.followup.send(
