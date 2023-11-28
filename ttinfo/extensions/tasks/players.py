@@ -13,7 +13,7 @@ from ...core.utils.errors import TTInfoException
 
 if TYPE_CHECKING:
     from datetime import timedelta
-    from typing import Literal, Optional
+    from typing import Optional
     from ttinfo.core.bot import Bot
 
     from ...http.models import Player, Server as ServerData

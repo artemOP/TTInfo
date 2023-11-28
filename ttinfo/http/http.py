@@ -4,7 +4,6 @@ import asyncio
 import logging
 from typing import TYPE_CHECKING
 
-import aiohttp
 from discord.utils import MISSING
 import orjson
 from yarl import URL
@@ -233,7 +232,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"deadliest_catch.json",
+                "deadliest_catch.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -419,7 +418,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"faction/size.json",
+                "faction/size.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -429,7 +428,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"faction/members.json",
+                "faction/members.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -439,7 +438,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"faction/perks.json",
+                "faction/perks.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -449,7 +448,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"faction/balance.json",
+                "faction/balance.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -459,7 +458,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"faction/info.json",
+                "faction/info.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -469,7 +468,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"companies/rts/ground.json",
+                "companies/rts/ground.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
@@ -479,7 +478,7 @@ class TycoonHTTP:
             Route(
                 Method.get,
                 server,
-                f"companies/pigs/party.json",
+                "companies/pigs/party.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )

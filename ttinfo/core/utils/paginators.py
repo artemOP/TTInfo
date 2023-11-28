@@ -1,14 +1,12 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
 import discord
 from discord import ui, ButtonStyle
-from discord.utils import format_dt, utcnow
 
 
 if TYPE_CHECKING:
-    from ttinfo.core.bot import Bot
     from discord import Embed, Interaction, InteractionMessage
 
 
@@ -26,7 +24,7 @@ class BaseView(ui.View):
         if not self.response or not getattr(self.response, "interaction", None):
             return True
         if self.response.interaction.user != interaction.user:
-            await interaction.response.send_message(f"This is not your view, please launch your own", ephemeral=True)
+            await interaction.response.send_message("This is not your view, please launch your own", ephemeral=True)
             return False
         return True
 

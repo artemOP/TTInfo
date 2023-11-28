@@ -7,7 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from ..core.utils import ButtonPaginatedEmbeds, EmbedGen, to_codeblock
+from ..core.utils import ButtonPaginatedEmbeds, to_codeblock
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
@@ -78,6 +78,5 @@ class Owner(commands.GroupCog, name="owner"):
 
 
 async def setup(bot: Bot):
-    EmbedGen()()  # todo: this shit
     guild = bot.env_values["discord_guild"]
     await bot.add_cog(Owner(bot), guild=discord.Object(id=guild))

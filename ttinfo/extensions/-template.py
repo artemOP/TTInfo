@@ -7,7 +7,6 @@ from discord.ext import commands
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
-    from discord import Interaction
 
 
 @app_commands.default_permissions()

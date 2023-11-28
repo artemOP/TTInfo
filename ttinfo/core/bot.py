@@ -73,7 +73,7 @@ class Bot(commands.Bot):
         if guild_id:
             command.extras[f"mention for {guild_id}"] = mention
         else:
-            command.extras[f"mention"] = mention
+            command.extras["mention"] = mention
 
     @tasks.loop(count=1)
     async def prepare_mentions(self):
