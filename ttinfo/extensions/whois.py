@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 class Whois(commands.GroupCog, name="whois"):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -25,7 +25,7 @@ class Whois(commands.GroupCog, name="whois"):
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
-    async def whois(self, interaction: Interaction, server: Server, vrp_id: int) -> None:
+    async def whois(self, interaction: Interaction, server: Server, vrp_id: int) -> None:  # todo: embed
         return await interaction.followup.send(f"{server} - {vrp_id}")
 
     @app_commands.command(name="discord")

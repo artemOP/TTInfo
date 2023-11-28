@@ -116,6 +116,7 @@ class TycoonHTTP:
                         self.logger.debug(data)
                         return data
                     except orjson.JSONDecodeError:
+                        self.logger.debug(f"JSONDecodeError:\n{message}")
                         return message
                 elif resp.status == 400:
                     message_json = orjson.loads(message)

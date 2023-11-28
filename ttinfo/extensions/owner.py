@@ -7,7 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from ..core.utils import ButtonPaginatedEmbeds, to_codeblock
+from ..core.utils import ButtonPaginatedEmbeds, EmbedGen, to_codeblock
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
@@ -19,7 +19,7 @@ if TYPE_CHECKING:
 class Owner(commands.GroupCog, name="owner"):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -38,9 +38,9 @@ class Owner(commands.GroupCog, name="owner"):
         current = self.bot.loop.get_debug()
         self.bot.loop.set_debug(mode if mode else not current)
         if current or mode is False:
-            self.bot.log_handler.setLevel(INFO)
+            self.bot.log_handler.log.setLevel(INFO)
         else:
-            self.bot.log_handler.setLevel(DEBUG)
+            self.bot.log_handler.log.setLevel(DEBUG)
 
         await interaction.followup.send(f"Debug mode has been set to: {not current}")
 
@@ -78,5 +78,6 @@ class Owner(commands.GroupCog, name="owner"):
 
 
 async def setup(bot: Bot):
+    EmbedGen()()  # todo: this shit
     guild = bot.env_values["discord_guild"]
     await bot.add_cog(Owner(bot), guild=discord.Object(id=guild))

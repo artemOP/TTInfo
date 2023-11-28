@@ -9,15 +9,15 @@ from discord.utils import _ColourFormatter as ColourFormatter, stream_supports_c
 
 
 if TYPE_CHECKING:
-    from logging import Logger
     from typing import Any
+    from typing_extensions import Self
 
     from ttinfo import Bot
 
 
 class QueueEmitHandler(logging.Handler):
     def __init__(self, bot: Bot):
-        super().__init__(logging.INFO)
+        super().__init__(logging.ERROR)
         self.bot = bot
 
     def emit(self, record: logging.LogRecord) -> None:
@@ -43,16 +43,20 @@ class LogHandler:
         self.exception = self.log.exception
         self.critical = self.log.critical
 
-    async def __aenter__(self) -> Logger:
+    async def __aenter__(self) -> Self:
         return self.__enter__()
 
-    def __enter__(self) -> Logger:
+    def __enter__(self) -> Self:
         logging.getLogger("discord").setLevel(logging.INFO)
         logging.getLogger("discord.http").setLevel(logging.INFO)
         logging.getLogger("discord.state").setLevel(logging.WARNING)
         logging.getLogger("discord.gateway").setLevel(logging.WARNING)
 
-        self.log.setLevel(logging.DEBUG)
+        if self.bot.env_values.get("debug", "").lower() == "true":
+            self.log.setLevel(logging.DEBUG)
+        else:
+            self.log.setLevel(logging.INFO)
+
         handler = RotatingFileHandler(
             filename=self.logging_path / "ttinfo.log",
             encoding="utf-8",
@@ -67,14 +71,14 @@ class LogHandler:
 
         if self.stream:
             stream_handler = logging.StreamHandler()
-            stream_handler.setLevel(logging.INFO)
+            stream_handler.setLevel(logging.WARNING)
             if stream_supports_colour(stream_handler):
                 stream_handler.setFormatter(ColourFormatter())
             self.log.addHandler(stream_handler)
         if self.bot.env_values.get("discord_webhook"):
             self.log.addHandler(QueueEmitHandler(self.bot))
 
-        return self.log
+        return self
 
     async def __aexit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
         return self.__exit__(exc_type, exc_val, exc_tb)

@@ -20,7 +20,7 @@ class HotReload(commands.Cog):
     def __init__(self, bot: Bot):
         self.last_modified_time = {}
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.hot_reload_loop.start()
@@ -51,7 +51,7 @@ class HotReload(commands.Cog):
             except commands.ExtensionError:
                 self.logger.error(f"Couldn't reload extension: {extension}")
             else:
-                self.logger.info(f"Reloaded extension: {extension}")
+                self.logger.warning(f"Reloaded extension: {extension}")
                 self.bot.dispatch("cog_reload", root=None, file=f"{extension}.py")
                 # await self.bot.prepare_mentions.start()
             finally:
