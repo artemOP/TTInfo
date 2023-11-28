@@ -58,9 +58,9 @@ class Players(commands.Cog):
                 self.servers[server] = request.server
                 if request.server.dxp.active:
                     self.bot.dispatch("dxp_start", request.server)
-            if self.servers[server].dxp.active == False != request.server.dxp.active:
+            if self.servers[server].dxp.active is False != request.server.dxp.active:
                 self.bot.dispatch("dxp_start", request.server)
-            elif self.servers[server].dxp.active == True != request.server.dxp.active:
+            elif self.servers[server].dxp.active is True != request.server.dxp.active:
                 self.bot.dispatch("dxp_end", request.server)
 
             self.servers[server] = request.server

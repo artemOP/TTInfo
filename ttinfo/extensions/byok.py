@@ -55,7 +55,7 @@ class Byok(commands.GroupCog, name="byok"):
             private_key,
             public_key,
         )
-        return await interaction.followup.send(f"Keys updated", ephemeral=True)
+        return await interaction.followup.send("Keys updated", ephemeral=True)
 
     @app_commands.command(name="remove")
     async def remove_key(
