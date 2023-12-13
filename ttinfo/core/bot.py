@@ -11,21 +11,21 @@ from .tree import CommandTree
 
 if TYPE_CHECKING:
     from asyncio import Queue
-    from logging import Logger, LogRecord
+    from logging import LogRecord
     from pathlib import Path
     from typing import Any, Callable, Coroutine, Generator, Optional, TypeAlias, Union
 
     from aiohttp import ClientSession
     from discord import Intents
 
-    from .. import TycoonClient, Pool
+    from .. import TycoonClient, Pool, LogHandler
 
     Prefix: TypeAlias = Union[str, list[str], Callable, Coroutine]
 
 
 class Bot(commands.Bot):
     tycoon_client: TycoonClient
-    log_handler: Logger
+    log_handler: LogHandler
     logging_queue: Queue[LogRecord]
     pool: Pool
     session: ClientSession
@@ -73,7 +73,7 @@ class Bot(commands.Bot):
         if guild_id:
             command.extras[f"mention for {guild_id}"] = mention
         else:
-            command.extras[f"mention"] = mention
+            command.extras["mention"] = mention
 
     @tasks.loop(count=1)
     async def prepare_mentions(self):
@@ -83,11 +83,11 @@ class Bot(commands.Bot):
                 if command is None:
                     self.log_handler.debug("command not found")
                     continue
-                await self.add_to_extra(command, fetched_command.mention, None if not guild else guild.id)  # type: ignore
+                await self.add_to_extra(command, fetched_command.mention, None if not guild else guild.id)
                 if isinstance(command, Group):
                     for child in command.walk_commands():
                         await self.add_to_extra(
-                            child, f"</{child.qualified_name}:{fetched_command.id}>", None if not guild else guild.id  # type: ignore
+                            child, f"</{child.qualified_name}:{fetched_command.id}>", None if not guild else guild.id
                         )
 
     @prepare_mentions.before_loop

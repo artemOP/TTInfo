@@ -4,7 +4,7 @@ from typing import TYPE_CHECKING, Literal, Optional
 
 import discord
 from discord import app_commands
-from discord.ext import commands, tasks
+from discord.ext import commands
 
 from ..http.enums import Server
 
@@ -19,7 +19,7 @@ if TYPE_CHECKING:
 class Byok(commands.GroupCog, name="byok"):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -55,7 +55,7 @@ class Byok(commands.GroupCog, name="byok"):
             private_key,
             public_key,
         )
-        return await interaction.followup.send(f"Keys updated", ephemeral=True)
+        return await interaction.followup.send("Keys updated", ephemeral=True)
 
     @app_commands.command(name="remove")
     async def remove_key(

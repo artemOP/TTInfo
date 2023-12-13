@@ -35,7 +35,7 @@ class Pool:
         await self._pool.close()
 
     def __str__(self) -> str:
-        return f"Custom asyncpg connection pool"
+        return "Custom asyncpg connection pool"
 
     async def fetch(self, sql: str, *args) -> Optional[list[asyncpg.Record]]:
         async with self._pool.acquire() as conn:

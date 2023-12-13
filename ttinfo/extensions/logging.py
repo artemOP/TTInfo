@@ -18,7 +18,7 @@ class Logging(commands.Cog):
 
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
         self.user: User | None = MISSING
 

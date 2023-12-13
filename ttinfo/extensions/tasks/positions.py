@@ -15,7 +15,7 @@ if TYPE_CHECKING:
 class Tasks(commands.Cog):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
         self.positions: dict[int, Coords] = {}
 
     async def cog_load(self) -> None:
@@ -43,7 +43,7 @@ class Tasks(commands.Cog):
                     server.name,
                     (position.position.x, position.position.y, position.position.z, position.position.h),
                 )
-                self.logger.debug(f"{position.player.name}: {position.position}")
+                self.logger.info(f"{position.player.name}: {position.position}")
 
     @task.before_loop
     async def wait_for_ready(self):

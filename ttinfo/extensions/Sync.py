@@ -22,7 +22,7 @@ class SyncOptions(Enum):
 class Sync(commands.Cog):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -32,8 +32,8 @@ class Sync(commands.Cog):
 
     @commands.hybrid_command(name="sync", description="Sync command")
     @commands.is_owner()
-    @app_commands.default_permissions()
     @commands.guild_only()
+    @app_commands.default_permissions()
     async def sync(self, ctx: Context, option: SyncOptions = SyncOptions.global_add):
         """Sync commands with set options
 
@@ -51,6 +51,7 @@ class Sync(commands.Cog):
                 response_message = "Global commands removed"
 
             case SyncOptions.local_add:
+                assert ctx.guild
                 self.bot.tree.copy_global_to(guild=ctx.guild)
                 await self.bot.tree.sync(guild=ctx.guild)
                 response_message = "Commands synced locally"

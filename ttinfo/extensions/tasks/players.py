@@ -13,7 +13,7 @@ from ...core.utils.errors import TTInfoException
 
 if TYPE_CHECKING:
     from datetime import timedelta
-    from typing import Literal, Optional
+    from typing import Optional
     from ttinfo.core.bot import Bot
 
     from ...http.models import Player, Server as ServerData
@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 class Players(commands.Cog):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -58,9 +58,9 @@ class Players(commands.Cog):
                 self.servers[server] = request.server
                 if request.server.dxp.active:
                     self.bot.dispatch("dxp_start", request.server)
-            if self.servers[server].dxp.active == False != request.server.dxp.active:
+            if self.servers[server].dxp.active is False != request.server.dxp.active:
                 self.bot.dispatch("dxp_start", request.server)
-            elif self.servers[server].dxp.active == True != request.server.dxp.active:
+            elif self.servers[server].dxp.active is True != request.server.dxp.active:
                 self.bot.dispatch("dxp_end", request.server)
 
             self.servers[server] = request.server
@@ -75,7 +75,7 @@ class Players(commands.Cog):
         return playtime
 
     async def update_aliases(self, player: Player) -> None:
-        self.logger.debug(f"{player.vrp_id} alias: {player.name}")
+        self.logger.info(f"{player.vrp_id} alias: {player.name}")
         if not player.name:
             return
         await self.bot.pool.execute(
@@ -85,7 +85,7 @@ class Players(commands.Cog):
         )
 
     async def update_avatar(self, player: Player) -> None:
-        self.logger.debug(f"{player.vrp_id} avatar: {player.avatar_url}")
+        self.logger.info(f"{player.vrp_id} avatar: {player.avatar_url}")
         await self.bot.pool.execute(
             "INSERT INTO avatars(vrp_id, url) VALUES($1, $2) ON CONFLICT(vrp_id) DO UPDATE SET url=EXCLUDED.url",
             player.vrp_id,
@@ -94,21 +94,21 @@ class Players(commands.Cog):
 
     @commands.Cog.listener("on_player_login")
     async def on_player_login(self, player: Player) -> None:
-        self.logger.debug(f"login: {player}")
+        self.logger.info(f"login: {player}")
         await self.update_aliases(player)
         await self.update_avatar(player)
 
     @commands.Cog.listener("on_player_logout")
     async def on_player_logout(self, player: Player) -> None:
-        self.logger.debug(f"logout: {player}")
+        self.logger.info(f"logout: {player}")
 
     @commands.Cog.listener("on_dxp_start")
     async def on_dxp_start(self, server: ServerData):
-        self.logger.debug(f"DXP Start: {server.name} - {server.dxp.host}: {server.dxp.time_remaining}")
+        self.logger.info(f"DXP Start: {server.name} - {server.dxp.host}: {server.dxp.time_remaining}")
 
     @commands.Cog.listener("on_dxp_end")
     async def on_dxp_end(self, server: ServerData):
-        self.logger.debug(f"DXP end: {server.name}")
+        self.logger.info(f"DXP end: {server.name}")
 
     @task.before_loop
     async def wait_for_ready(self):

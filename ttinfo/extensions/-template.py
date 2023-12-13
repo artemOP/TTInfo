@@ -7,7 +7,6 @@ from discord.ext import commands
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
-    from discord import Interaction
 
 
 @app_commands.default_permissions()
@@ -15,17 +14,13 @@ if TYPE_CHECKING:
 class Template(commands.GroupCog, name="template"):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
 
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
-
-    @app_commands.command(name="template")
-    async def template(self, interaction: Interaction):
-        ...
 
 
 async def setup(bot):

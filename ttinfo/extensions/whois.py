@@ -17,7 +17,10 @@ if TYPE_CHECKING:
 class Whois(commands.GroupCog, name="whois"):
     def __init__(self, bot: Bot):
         self.bot = bot
-        self.logger = self.bot.log_handler.getChild(self.qualified_name)
+        self.logger = self.bot.log_handler.log.getChild(self.qualified_name)
+
+        self.context_menu = app_commands.ContextMenu(name="whois", callback=self.whois_context)
+        self.bot.tree.add_command(self.context_menu)
 
     async def cog_load(self) -> None:
         self.logger.info(f"{self.qualified_name} cog loaded")
@@ -25,7 +28,7 @@ class Whois(commands.GroupCog, name="whois"):
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
-    async def whois(self, interaction: Interaction, server: Server, vrp_id: int) -> None:
+    async def whois(self, interaction: Interaction, server: Server, vrp_id: int) -> None:  # todo: embed
         return await interaction.followup.send(f"{server} - {vrp_id}")
 
     @app_commands.command(name="discord")
@@ -53,7 +56,7 @@ class Whois(commands.GroupCog, name="whois"):
             vrp_id (Range[int, 1, 1_000_000] | None, optional): The in game ID. Defaults to your ID.
         """
         if not vrp_id:
-            return await self.whois_discord.callback(self, interaction, server, interaction.user)
+            return await self.whois_discord.callback(self, interaction, server, interaction.user)  # type: ignore
         await self.whois(interaction, server, vrp_id)
 
     @app_commands.command(name="username")
@@ -69,7 +72,7 @@ class Whois(commands.GroupCog, name="whois"):
             _type_: _description_
         """
         if not name:
-            return await self.whois_discord.callback(self, interaction, server, interaction.user)
+            return await self.whois_discord.callback(self, interaction, server, interaction.user)  # type: ignore
         vrp_id = await self.bot.pool.fetchval(
             "SELECT vrp_id FROM aliases WHERE name LIKE $1 ORDER BY last_seen DESC LIMIT 1",
             name,
@@ -77,6 +80,9 @@ class Whois(commands.GroupCog, name="whois"):
         if not vrp_id:
             return await interaction.followup.send("User Not found")
         await self.whois(interaction, server, vrp_id)
+
+    async def whois_context(self, interaction: Interaction, user: User):
+        return await self.whois_discord.callback(self, interaction, Server.main, interaction.user)  # type: ignore
 
 
 async def setup(bot):
