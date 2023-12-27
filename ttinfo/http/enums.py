@@ -215,3 +215,17 @@ class RaceType(Enum):
 class DataType(Enum):
     data = "Online Data"
     data_offline = "Offline Data"
+
+
+class DealershipCategory(Enum):
+    sports = "Sports"
+    vans = "Vans"
+    sport_classics = "Sport Classics"
+    lowriders = "Lowriders"
+    sedans = "Sedans"
+    supercars = "Supercars"
+    coupes = "Coupes"
+    compacts = "Compacts"
+    muscle = "Muscle"
+    offroad = "Offroad"
+    suvs = "SUVs"

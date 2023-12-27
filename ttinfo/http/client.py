@@ -867,3 +867,7 @@ class Client:
             kills=data["kills"],
             limit=data["limit"],
         )
+
+    async def fetch_dealership(self, server: enums.Server, private_key: Key) -> models.Dealership:
+        data = await self.session.dealership(server, private_key=private_key)
+        return {enums.DealershipCategory[key.lower().replace(" ", "_")]: value for key, value in data.items()}

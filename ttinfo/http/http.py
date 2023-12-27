@@ -482,3 +482,13 @@ class TycoonHTTP:
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
             )
         )
+
+    async def dealership(self, server: Server, *, private_key: Key) -> dict[str, list[dict[str, Any]]]:
+        return await self._request(
+            Route(
+                Method.get,
+                server,
+                "dealership.json",
+                headers={"x-tycoon-key": private_key},
+            )
+        )
