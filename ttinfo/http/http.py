@@ -21,14 +21,14 @@ if TYPE_CHECKING:
 
 
 class Route:
-    BASE_URL = "http://v1.api.tycoon.community"
+    BASE_URL = "https://tycoon-{}.users.cfx.re/status"
 
     __slots__ = "method", "server", "path", "body", "query", "headers"
 
     def __init__(
         self,
         method: Method,
-        server: Server = Server.legacy,
+        server: Server = Server.main,
         path: Union[str, URL] = MISSING,
         body: Optional[Union[str, dict[str, Any]]] = None,  # used for push
         query: Optional[list[tuple[str, Any]]] = None,  # used for get
@@ -43,8 +43,7 @@ class Route:
         elif path is MISSING:
             raise ValueError("path is a required argument")
         else:
-            self.path: URL = URL(self.BASE_URL + server.value + "/" + path.rstrip("/"))
-
+            self.path: URL = URL(self.BASE_URL.format(server.value) + "/" + path.rstrip("/"))
         if self.headers.get("x-tycoon-key") is MISSING:
             raise errors.NoKey("No key was passed to the request body")
 
@@ -141,6 +140,7 @@ class TycoonHTTP:
                 elif resp.status == 412:
                     raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
                 status = resp.status
+        print(route.path)
         raise errors.HTTPException("Unhandled status code", reason=reason, status=status, extra={"route": route})
 
     async def alive(
