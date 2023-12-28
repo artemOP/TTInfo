@@ -586,7 +586,7 @@ class Client:
                 vehicle_spawn=data["data"]["vehicle"]["vehicle_spawn"],
                 vehicle_type=data["data"]["vehicle"]["vehicle_type"],
             ),
-            data_type=data.get("data_type", "data_offline"),
+            data_type=enums.DataType[data.get("data_type", "data_offline")],
         )
 
     @cache.with_key(60)
@@ -639,7 +639,7 @@ class Client:
                 vehicle_spawn=data["data"]["vehicle"]["has_trailer"],
                 vehicle_type=data["data"]["vehicle"]["has_trailer"],
             ),
-            data_type=data.get("data_type", "data_offline"),
+            data_type=enums.DataType[data.get("data_type", "data_offline")],
         )
 
     async def fetch_vehicle_storage(
