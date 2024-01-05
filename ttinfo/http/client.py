@@ -891,3 +891,6 @@ class Client:
             name=data.get("name", None),
             credits=data.get("credits", {}),
         )
+
+    async def fetch_vehicle_list(self) -> models.DealershipList:
+        return await self.session.dealership_list()

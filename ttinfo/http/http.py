@@ -575,6 +575,16 @@ class TycoonHTTP:
             fallback=False,
         )
 
+    async def dealership_list(self) -> list[str]:
+        return await self.request(
+            Route(
+                Method.get,
+                BaseRoute.CDN,
+                path="dealership/list",
+            ),
+            fallback=False,
+        )
+
     async def vehicle_data(self, vehicle: str) -> dict[str, Any]:
         return await self.request(
             Route(
