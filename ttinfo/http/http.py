@@ -540,3 +540,21 @@ class TycoonHTTP:
                 headers={"x-tycoon-key": private_key},
             )
         )
+
+    async def dealership_image(self, vehicle: str) -> bytes:
+        return await self._request(
+            Route(
+                Method.get,
+                BaseRoute.CDN,
+                path=f"dealership/vehicles/{vehicle}.png",
+            )
+        )
+
+    async def vehicle_data(self, vehicle: str) -> dict[str, Any]:
+        return await self._request(
+            Route(
+                Method.get,
+                BaseRoute.CDN,
+                path=f"dealership/vehicles/data/{vehicle}.json",
+            )
+        )

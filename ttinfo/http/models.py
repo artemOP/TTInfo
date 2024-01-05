@@ -282,6 +282,20 @@ class PigsParty(NamedTuple):
     limit: int
 
 
+class VehicleInfo(NamedTuple):
+    manufacturer: str
+    gameName: str
+    displayName: str
+    model: str
+    hash: int
+    makeName: str
+    customClass: str
+    className: str
+    classId: int
+    name: Optional[str] = None
+    credits: Optional[dict] = None
+
+
 Charges: TypeAlias = int
 Config: TypeAlias = str
 FactionSize: TypeAlias = int
