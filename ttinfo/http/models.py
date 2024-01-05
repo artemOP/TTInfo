@@ -293,7 +293,7 @@ class VehicleInfo(NamedTuple):
     className: str
     classId: int
     seats: int
-    _data_generated: Optional[datetime]
+    data_generated: Optional[datetime]
     name: Optional[str] = None
     credits: Optional[dict] = None
     preview: Optional[str] = None
@@ -323,4 +323,4 @@ Storage: TypeAlias = dict[str, Item]
 Storages: TypeAlias = dict[str, Storage]
 Trunks: TypeAlias = dict[str, Trunk]
 Dealership: TypeAlias = dict[enums.DealershipCategory, list[dict[str, Any]]]
-DealershipList: TypeAlias = list[str]
+DealershipList: TypeAlias = list[VehicleInfo]
