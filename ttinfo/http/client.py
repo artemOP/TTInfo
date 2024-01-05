@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import TYPE_CHECKING, cast
 from zoneinfo import ZoneInfo
+
+import orjson
 from discord.utils import MISSING
 
 from . import enums, models, TycoonHTTP
@@ -877,8 +880,16 @@ class Client:
     async def fetch_dealership_image(self, vehicle: str) -> bytes:
         return await self.session.dealership_image(vehicle)
 
-    async def fetch_vehicle_data(self, vehicle: str) -> models.VehicleInfo:
-        data = await self.session.vehicle_data(vehicle)
+    async def fetch_vehicle_data(self, vehicle: str, force: bool = False) -> models.VehicleInfo:
+        path = Path(f"ttinfo/dumps/dealership/{vehicle}.json")
+        if not path.exists or force:
+            data = await self.session.vehicle_data(vehicle)
+            with open(path, "wb") as f:
+                f.write(orjson.dumps(data))
+
+        with open(path, "rb") as f:
+            data = orjson.loads(f.read())
+
         return models.VehicleInfo(
             manufacturer=data["manufacturer"],
             gameName=data["gameName"],
@@ -890,7 +901,7 @@ class Client:
             className=data["className"],
             classId=data["classId"],
             seats=data["seats"],
-            _data_generated=formatters.to_timestamp(data["_data_generated"], "%Y-%m-%d %H:%M:%S"),
+            data_generated=formatters.to_timestamp(data["_data_generated"], "%Y-%m-%d %H:%M:%S"),
             name=data.get("name", None),
             credits=data.get("credits", None),
             dealership=models.DealershipData(
@@ -902,4 +913,5 @@ class Client:
         )
 
     async def fetch_vehicle_list(self) -> models.DealershipList:
-        return await self.session.dealership_list()
+        vehicles = await self.session.dealership_list()
+        return [await self.fetch_vehicle_data(vehicle) for vehicle in vehicles]
