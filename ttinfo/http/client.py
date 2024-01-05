@@ -8,6 +8,7 @@ from discord.utils import MISSING
 from . import enums, models, TycoonHTTP
 
 from ..core import errors, cache
+from ..core.utils import formatters
 
 if TYPE_CHECKING:
     from types import TracebackType
@@ -888,8 +889,16 @@ class Client:
             customClass=data["customClass"],
             className=data["className"],
             classId=data["classId"],
+            seats=data["seats"],
+            _data_generated=formatters.to_timestamp(data["_data_generated"], "%Y-%m-%d %H:%M:%S"),
             name=data.get("name", None),
-            credits=data.get("credits", {}),
+            credits=data.get("credits", None),
+            dealership=models.DealershipData(
+                dealership=data.get("dealership", {}).get("dealership"),
+                category=data.get("dealership", {}).get("category"),
+                price=data.get("dealership", {}).get("price"),
+                premium=data.get("dealership", {}).get("premium"),
+            ),
         )
 
     async def fetch_vehicle_list(self) -> models.DealershipList:

@@ -292,8 +292,19 @@ class VehicleInfo(NamedTuple):
     customClass: str
     className: str
     classId: int
+    seats: int
+    _data_generated: Optional[datetime]
     name: Optional[str] = None
     credits: Optional[dict] = None
+    preview: Optional[str] = None
+    dealership: Optional[DealershipData] = None
+
+
+class DealershipData(NamedTuple):
+    dealership: str
+    category: str
+    price: int
+    premium: bool
 
 
 Charges: TypeAlias = int

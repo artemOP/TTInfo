@@ -1,4 +1,7 @@
 from discord.utils import escape_markdown
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from typing import Optional
 
 
 def to_codeblock(content: str, *, language: str, escape_md: bool = True) -> str:
@@ -17,3 +20,19 @@ def to_codeblock(content: str, *, language: str, escape_md: bool = True) -> str:
     if escape_md:
         content = escape_markdown(content)
     return f"```{language}\n{content}\n```"
+
+
+def to_timestamp(stamp: str, format: str) -> Optional[datetime]:
+    """Attempts to generate a datetime from a string, silently swallows errors
+
+    Args:
+        stamp (str): timestamp string
+        format (str): strptime format strip
+
+    Returns:
+        datetime: timezone aware datetime
+    """
+    try:
+        return datetime.strptime(f"{stamp} +0000", f"{format} %f")
+    except ValueError:
+        return None
