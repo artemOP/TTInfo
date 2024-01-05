@@ -63,7 +63,6 @@ class TycoonHTTP:
         self.session: ClientSession = session
 
     async def __aenter__(self):
-        print(await self.dealership_image("6f01"))
         return self
 
     async def __aexit__(
@@ -74,143 +73,165 @@ class TycoonHTTP:
     ):
         await self.session.close()
 
-    async def _request(self, route: Route, retries: int = 5, timeout: int = 3) -> Any:
+    async def request(self, route: Route, retries: int = 5, timeout: int = 3, fallback: bool = True) -> Any:
+        for server in Server:
+            if fallback:
+                route.server = server
+            for attempt in range(retries):
+                result = await self._request(route, attempt, timeout)
+                if result:
+                    return result
+            self.logger.warning(f"Falling back to {server.name}")
+
+    async def _request(self, route: Route, attempt: int = 5, timeout: int = 3) -> Any:
         assert self.session
         headers = route.headers
         reason: Optional[str] = None
         status: Optional[int] = None
-        for attempt in range(retries):
-            async with self.session.request(
-                route.method.value,
-                route.path,
-                headers=headers,
-                data=route.body,
-                timeout=timeout,
-            ) as resp:
+        async with self.session.request(
+            route.method.value,
+            route.path,
+            headers=headers,
+            data=route.body,
+            timeout=timeout,
+        ) as resp:
+            try:
+                message: bytes | str
+                if "image" in resp.content_type:
+                    message = await resp.read()
+                else:
+                    message = await resp.text(encoding="utf-8")
+            except Exception as e:
+                self.logger.debug("body missing", exc_info=e)
+                raise errors.MalformedResponse(
+                    message="Request body not received",
+                    reason=resp.reason,
+                    status=resp.status,
+                    extra={"route": route},
+                )
+
+            if 500 <= resp.status <= 504:
+                reason = resp.reason
+                sleep_time = 2**attempt + 1
+                self.logger.debug(f"Retrying request due to {resp.reason}, sleeping for {sleep_time}")
+                await asyncio.sleep(sleep_time)
+                return False
+
+            if 200 <= resp.status < 300:
+                if resp.status == 204:
+                    self.logger.debug(f"Received 204 from {route.path}")
+                    return True
                 try:
-                    message: bytes | str
-                    if "image" in resp.content_type:
-                        message = await resp.read()
-                    else:
-                        message = await resp.text(encoding="utf-8")
-                except Exception as e:
-                    self.logger.debug("body missing", exc_info=e)
-                    raise errors.MalformedResponse(
-                        message="Request body not received",
-                        reason=resp.reason,
-                        status=resp.status,
-                        extra={"route": route},
-                    )
-
-                if 500 <= resp.status <= 504:
-                    reason = resp.reason
-                    sleep_time = 2**attempt + 1
-                    self.logger.debug(f"Retrying request due to {resp.reason}, sleeping for {sleep_time}")
-                    await asyncio.sleep(sleep_time)
-                    continue
-
-                if 200 <= resp.status < 300:
-                    if resp.status == 204:
-                        self.logger.debug(f"Received 204 from {route.path}")
-                        return True
-                    try:
-                        match resp.content_type:
-                            case "image/png":
-                                data = await resp.read()
-                            case _:
-                                data = await resp.json(content_type=None, loads=orjson.loads)
-                        self.logger.debug(data)
-                        return data
-                    except orjson.JSONDecodeError | UnicodeDecodeError:
-                        self.logger.debug(f"JSONDecodeError:\n{message}")
-                        return message
-                elif resp.status == 400:
-                    message_json = orjson.loads(message)
-                    try:
-                        description = message_json.get("description")
-                    except Exception:
-                        description = message_json
-                    self.logger.debug(message_json)
-                    raise errors.HTTPException(
-                        "Failed to fulfill request",
-                        reason=description,
-                        status=resp.status,
-                        extra={"route": route},
-                    )
-                elif resp.status == 401:
-                    message_json = orjson.loads(message)
-                    self.logger.debug(message_json)
-                    raise errors.NoKey(resp.reason)
-                elif resp.status == 403:
-                    message_json = orjson.loads(message)
-                    self.logger.debug(message_json)
-                    raise errors.NoKey("403 - Forbidden: Likely due to malformed or incorrect key")
-                elif resp.status == 412:
-                    raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
-                status = resp.status
-        print(route.path)
-        raise errors.HTTPException("Unhandled status code", reason=reason, status=status, extra={"route": route})
+                    match resp.content_type:
+                        case "image/png":
+                            data = await resp.read()
+                        case _:
+                            data = await resp.json(content_type=None, loads=orjson.loads)
+                    self.logger.debug(data)
+                    return data
+                except orjson.JSONDecodeError | UnicodeDecodeError:
+                    self.logger.debug(f"JSONDecodeError:\n{message}")
+                    return message
+            elif resp.status == 400:
+                message_json = orjson.loads(message)
+                try:
+                    description = message_json.get("description")
+                except Exception:
+                    description = message_json
+                self.logger.debug(message_json)
+                raise errors.HTTPException(
+                    "Failed to fulfill request",
+                    reason=description,
+                    status=resp.status,
+                    extra={"route": route},
+                )
+            elif resp.status == 401:
+                message_json = orjson.loads(message)
+                self.logger.debug(message_json)
+                raise errors.NoKey(resp.reason)
+            elif resp.status == 403:
+                message_json = orjson.loads(message)
+                self.logger.debug(message_json)
+                raise errors.NoKey("403 - Forbidden: Likely due to malformed or incorrect key")
+            elif resp.status == 412:
+                raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
+            status = resp.status
+        raise errors.HTTPException(
+            "Unhandled status code",
+            reason=reason,
+            status=status,
+            extra={
+                "route": route,
+                "path": route.path,
+            },
+        )
 
     async def alive(
         self,
         server: Server,
     ) -> bool:
-        return await self._request(Route(Method.get, BaseRoute.API, server, "alive.json"))
+        return await self.request(Route(Method.get, BaseRoute.API, server, "alive.json"))
 
     async def charges(self, server: Server, *, key: Key) -> list[int]:
-        return await self._request(
+        return await self.request(
             Route(Method.get, BaseRoute.API, server, "charges.json", headers={"x-tycoon-key": key})
         )
 
     async def economy(self, server: Server) -> str:
-        return await self._request(Route(Method.get, BaseRoute.API, server, "economy.csv"))
+        return await self.request(Route(Method.get, BaseRoute.API, server, "economy.csv"))
 
     async def sotd(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, BaseRoute.API, server, "sotd.json", headers={"x-tycoon-key": key}))
+        return await self.request(Route(Method.get, BaseRoute.API, server, "sotd.json", headers={"x-tycoon-key": key}))
 
     async def racing_tracks(self, server: Server, *, key: Key) -> list[dict[str, Any]]:
-        return await self._request(
+        return await self.request(
             Route(Method.get, BaseRoute.API, server, "racing/tracks.json", headers={"x-tycoon-key": key})
         )
 
     async def racing_map(self, server: Server, *, track_id: Any, key: Key) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(Method.get, BaseRoute.API, server, f"racing/map/{track_id}", headers={"x-tycoon-key": key})
         )
 
     async def weather(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(
-            Route(Method.get, BaseRoute.API, server, "weather.json", headers={"x-tycoon-key": key})
+        return await self.request(
+            Route(Method.get, BaseRoute.API, server, "weather.json", headers={"x-tycoon-key": key}),
+            fallback=False,
         )
 
     async def forecast(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(
-            Route(Method.get, BaseRoute.API, server, "forecast.json", headers={"x-tycoon-key": key})
+        return await self.request(
+            Route(Method.get, BaseRoute.API, server, "forecast.json", headers={"x-tycoon-key": key}),
+            fallback=False,
         )
 
     async def players(self, server: Server) -> dict[str, Any]:
-        return await self._request(Route(Method.get, BaseRoute.API, server, "widget/players.json"))
+        return await self.request(
+            Route(Method.get, BaseRoute.API, server, "widget/players.json"),
+            fallback=False,
+        )
 
     async def positions(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(
-            Route(Method.get, BaseRoute.API, server, "map/positions2.json", headers={"x-tycoon-key": key})
+        return await self.request(
+            Route(Method.get, BaseRoute.API, server, "map/positions2.json", headers={"x-tycoon-key": key}),
+            fallback=False,
         )
 
     async def top10(self, server: Server, *, key: Key, stat_name: Stats) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(Method.get, BaseRoute.API, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key})
         )
 
     async def config(self, server: Server, *, resource: Config) -> str:
-        return await self._request(Route(Method.get, BaseRoute.API, server, f"config/{resource.name}"))
+        return await self.request(Route(Method.get, BaseRoute.API, server, f"config/{resource.name}"))
 
     async def snowflake2user(self, server: Server, *, key: Key, discord_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(Method.get, BaseRoute.API, server, f"snowflake2user/{discord_id}", headers={"x-tycoon-key": key})
         )
 
     async def streak(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -221,7 +242,7 @@ class TycoonHTTP:
         )
 
     async def owned_business(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -232,7 +253,7 @@ class TycoonHTTP:
         )
 
     async def owned_vehicles(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -243,7 +264,7 @@ class TycoonHTTP:
         )
 
     async def trunks(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -254,7 +275,7 @@ class TycoonHTTP:
         )
 
     async def pots(self, server: Server, *, private_key: Key, public_key: Key) -> list[dict[str, Any]]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -265,7 +286,7 @@ class TycoonHTTP:
         )
 
     async def stats(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -276,7 +297,7 @@ class TycoonHTTP:
         )
 
     async def storages(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -294,7 +315,7 @@ class TycoonHTTP:
         public_key: Key,
         vrp_id: int,
     ) -> list[dict[str, Any]]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -305,7 +326,7 @@ class TycoonHTTP:
         )
 
     async def data(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -316,7 +337,7 @@ class TycoonHTTP:
         )
 
     async def data_adv(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -336,7 +357,7 @@ class TycoonHTTP:
         vehicle_class: str,
         vehicle_model: str,
     ) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -347,7 +368,7 @@ class TycoonHTTP:
         )
 
     async def home_storage(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -365,7 +386,7 @@ class TycoonHTTP:
         public_key: Key,
         vrp_id: int,
     ) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -384,7 +405,7 @@ class TycoonHTTP:
         vrp_id: int,
         faction_id: int,
     ) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -403,7 +424,7 @@ class TycoonHTTP:
         vrp_id: int,
         storage_id: str,
     ) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -414,18 +435,19 @@ class TycoonHTTP:
         )
 
     async def wealth(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
                 server,
                 f"wealth/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
-            )
+            ),
+            fallback=False,
         )
 
     async def item_info(self, server: Server, *, private_key: Key, item_id: str) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -443,7 +465,7 @@ class TycoonHTTP:
         public_key: Key,
         vrp_id: int,
     ) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -454,7 +476,7 @@ class TycoonHTTP:
         )
 
     async def faction_size(self, server: Server, *, private_key: Key, public_key: Key) -> list[int]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -465,7 +487,7 @@ class TycoonHTTP:
         )
 
     async def faction_members(self, server: Server, *, private_key: Key, public_key: Key) -> list[dict[str, Any]]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -476,7 +498,7 @@ class TycoonHTTP:
         )
 
     async def faction_perks(self, server: Server, *, private_key: Key, public_key: Key) -> list[int]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -487,7 +509,7 @@ class TycoonHTTP:
         )
 
     async def faction_balance(self, server: Server, *, private_key: Key, public_key: Key) -> list[int]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -498,7 +520,7 @@ class TycoonHTTP:
         )
 
     async def faction_info(self, server: Server, *, private_key: Key, public_key: Key) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -509,29 +531,31 @@ class TycoonHTTP:
         )
 
     async def rts_vehicles(self, server: Server, *, private_key: Key, public_key: Key) -> list[str]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
                 server,
                 "companies/rts/ground.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
-            )
+            ),
+            fallback=False,
         )
 
     async def pigs_party(self, server: Server, *, private_key: Key, public_key: Key) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
                 server,
                 "companies/pigs/party.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
-            )
+            ),
+            fallback=False,
         )
 
     async def dealership(self, server: Server, *, private_key: Key) -> dict[str, list[dict[str, Any]]]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.API,
@@ -542,19 +566,21 @@ class TycoonHTTP:
         )
 
     async def dealership_image(self, vehicle: str) -> bytes:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.CDN,
                 path=f"dealership/vehicles/{vehicle}.png",
-            )
+            ),
+            fallback=False,
         )
 
     async def vehicle_data(self, vehicle: str) -> dict[str, Any]:
-        return await self._request(
+        return await self.request(
             Route(
                 Method.get,
                 BaseRoute.CDN,
                 path=f"dealership/vehicles/data/{vehicle}.json",
-            )
+            ),
+            fallback=False,
         )
