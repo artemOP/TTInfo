@@ -26,6 +26,11 @@ class Method(Enum):
     delete = "DELETE"
 
 
+class BaseRoute(Enum):
+    API = "https://tycoon-{}.users.cfx.re/status"
+    CDN = "https://CDN.tycoon.community/"
+
+
 class Server(Enum):
     main = "2epova"
     beta = "njyvop"

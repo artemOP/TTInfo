@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 import asyncio
 import logging
 from typing import TYPE_CHECKING
@@ -8,7 +7,7 @@ from discord.utils import MISSING
 import orjson
 from yarl import URL
 
-from .enums import Server, Method, Stats, Config
+from .enums import Server, Method, Stats, Config, BaseRoute
 from ..core import errors
 
 if TYPE_CHECKING:
@@ -21,13 +20,12 @@ if TYPE_CHECKING:
 
 
 class Route:
-    BASE_URL = "https://tycoon-{}.users.cfx.re/status"
-
-    __slots__ = "method", "server", "path", "body", "query", "headers"
+    __slots__ = ("method", "base_url", "server", "path", "body", "query", "headers")
 
     def __init__(
         self,
         method: Method,
+        base_url: BaseRoute,
         server: Server = Server.main,
         path: Union[str, URL] = MISSING,
         body: Optional[Union[str, dict[str, Any]]] = None,  # used for push
@@ -35,6 +33,7 @@ class Route:
         headers: Optional[dict[str, Any]] = None,
     ):
         self.method = method
+        self.base_url = base_url
         self.server = server
         self.headers = headers or {}
 
@@ -43,7 +42,7 @@ class Route:
         elif path is MISSING:
             raise ValueError("path is a required argument")
         else:
-            self.path: URL = URL(self.BASE_URL.format(server.value) + "/" + path.rstrip("/"))
+            self.path: URL = URL(self.base_url.value.format(server.value) + "/" + path.rstrip("/"))
         if self.headers.get("x-tycoon-key") is MISSING:
             raise errors.NoKey("No key was passed to the request body")
 
@@ -64,6 +63,7 @@ class TycoonHTTP:
         self.session: ClientSession = session
 
     async def __aenter__(self):
+        print(await self.dealership_image("6f01"))
         return self
 
     async def __aexit__(
@@ -88,7 +88,11 @@ class TycoonHTTP:
                 timeout=timeout,
             ) as resp:
                 try:
-                    message = await resp.text(encoding="utf-8")
+                    message: bytes | str
+                    if "image" in resp.content_type:
+                        message = await resp.read()
+                    else:
+                        message = await resp.text(encoding="utf-8")
                 except Exception as e:
                     self.logger.debug("body missing", exc_info=e)
                     raise errors.MalformedResponse(
@@ -110,10 +114,14 @@ class TycoonHTTP:
                         self.logger.debug(f"Received 204 from {route.path}")
                         return True
                     try:
-                        data = await resp.json(content_type=None, loads=orjson.loads)
+                        match resp.content_type:
+                            case "image/png":
+                                data = await resp.read()
+                            case _:
+                                data = await resp.json(content_type=None, loads=orjson.loads)
                         self.logger.debug(data)
                         return data
-                    except orjson.JSONDecodeError:
+                    except orjson.JSONDecodeError | UnicodeDecodeError:
                         self.logger.debug(f"JSONDecodeError:\n{message}")
                         return message
                 elif resp.status == 400:
@@ -147,50 +155,65 @@ class TycoonHTTP:
         self,
         server: Server,
     ) -> bool:
-        return await self._request(Route(Method.get, server, "alive.json"))
+        return await self._request(Route(Method.get, BaseRoute.API, server, "alive.json"))
 
     async def charges(self, server: Server, *, key: Key) -> list[int]:
-        return await self._request(Route(Method.get, server, "charges.json", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, "charges.json", headers={"x-tycoon-key": key})
+        )
 
     async def economy(self, server: Server) -> str:
-        return await self._request(Route(Method.get, server, "economy.csv"))
+        return await self._request(Route(Method.get, BaseRoute.API, server, "economy.csv"))
 
     async def sotd(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, "sotd.json", headers={"x-tycoon-key": key}))
+        return await self._request(Route(Method.get, BaseRoute.API, server, "sotd.json", headers={"x-tycoon-key": key}))
 
     async def racing_tracks(self, server: Server, *, key: Key) -> list[dict[str, Any]]:
-        return await self._request(Route(Method.get, server, "racing/tracks.json", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, "racing/tracks.json", headers={"x-tycoon-key": key})
+        )
 
     async def racing_map(self, server: Server, *, track_id: Any, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, f"racing/map/{track_id}", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, f"racing/map/{track_id}", headers={"x-tycoon-key": key})
+        )
 
     async def weather(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, "weather.json", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, "weather.json", headers={"x-tycoon-key": key})
+        )
 
     async def forecast(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, "forecast.json", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, "forecast.json", headers={"x-tycoon-key": key})
+        )
 
     async def players(self, server: Server) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, "widget/players.json"))
+        return await self._request(Route(Method.get, BaseRoute.API, server, "widget/players.json"))
 
     async def positions(self, server: Server, *, key: Key) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, "map/positions2.json", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, "map/positions2.json", headers={"x-tycoon-key": key})
+        )
 
     async def top10(self, server: Server, *, key: Key, stat_name: Stats) -> dict[str, Any]:
-        return await self._request(Route(Method.get, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key}))
+        return await self._request(
+            Route(Method.get, BaseRoute.API, server, f"top10/{stat_name.name}", headers={"x-tycoon-key": key})
+        )
 
     async def config(self, server: Server, *, resource: Config) -> str:
-        return await self._request(Route(Method.get, server, f"config/{resource.name}"))
+        return await self._request(Route(Method.get, BaseRoute.API, server, f"config/{resource.name}"))
 
     async def snowflake2user(self, server: Server, *, key: Key, discord_id: int) -> dict[str, Any]:
         return await self._request(
-            Route(Method.get, server, f"snowflake2user/{discord_id}", headers={"x-tycoon-key": key})
+            Route(Method.get, BaseRoute.API, server, f"snowflake2user/{discord_id}", headers={"x-tycoon-key": key})
         )
 
     async def streak(self, server: Server, *, private_key: Key, public_key: Key, vrp_id: int) -> dict[str, Any]:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"streak/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -201,6 +224,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"getuserbiz/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -211,6 +235,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"ownedvehicles/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -221,6 +246,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"trunks/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -231,6 +257,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "deadliest_catch.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -241,6 +268,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"stats/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -251,6 +279,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"storages/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -268,6 +297,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"racing/races/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -278,6 +308,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"data/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -288,6 +319,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"dataadv/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -307,6 +339,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"chest/u{vrp_id}veh_{vehicle_class}_{vehicle_model}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -317,6 +350,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"chest/u{vrp_id}home",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -334,6 +368,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"chest/u{vrp_id}backpack",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -352,6 +387,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"chest/self_storage:{vrp_id}:faq_{faction_id}:chest",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -370,6 +406,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"chest/self_storage:{vrp_id}:{storage_id}:chest",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -380,6 +417,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"wealth/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -390,6 +428,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"iteminfo/{item_id}",
                 headers={"x-tycoon-key": private_key},
@@ -407,6 +446,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 f"getuserfaq/{vrp_id}",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -417,6 +457,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "faction/size.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -427,6 +468,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "faction/members.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -437,6 +479,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "faction/perks.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -447,6 +490,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "faction/balance.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -457,6 +501,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "faction/info.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -467,6 +512,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "companies/rts/ground.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -477,6 +523,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "companies/pigs/party.json",
                 headers={"x-tycoon-key": private_key, "x-tycoon-public-key": public_key},
@@ -487,6 +534,7 @@ class TycoonHTTP:
         return await self._request(
             Route(
                 Method.get,
+                BaseRoute.API,
                 server,
                 "dealership.json",
                 headers={"x-tycoon-key": private_key},
