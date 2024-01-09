@@ -234,3 +234,6 @@ class DealershipCategory(Enum):
     muscle = "Muscle"
     offroad = "Offroad"
     suvs = "SUVs"
+    motorcycles = "Motorcycles"
+    premium = "Premium"
+    special = "Special"

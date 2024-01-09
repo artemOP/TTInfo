@@ -875,7 +875,12 @@ class Client:
 
     async def fetch_dealership(self, server: enums.Server, private_key: Key) -> models.Dealership:
         data = await self.session.dealership(server, private_key=private_key)
-        return {enums.DealershipCategory[key.lower().replace(" ", "_")]: value for key, value in data.items()}
+        dealership = {}
+        for category, vehicles in data.items():
+            dealership[enums.DealershipCategory[category.lower().replace(" ", "_")]] = [
+                await self.fetch_vehicle_data(vehicle["model"]) for vehicle in vehicles
+            ]
+        return dealership
 
     async def fetch_dealership_image(self, vehicle: str) -> bytes:
         return await self.session.dealership_image(vehicle)
