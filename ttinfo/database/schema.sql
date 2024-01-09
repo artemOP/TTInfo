@@ -19,3 +19,4 @@ CREATE TABLE IF NOT EXISTS aliases(vrp_id INT NOT NULL, name TEXT NOT NUll, last
 CREATE TABLE IF NOT EXISTS playtime(vrp_id INT, server SERVER, playtime INTERVAL, job TEXT, date_seen DATE, PRIMARY KEY(vrp_id, server, job, date_seen));
 CREATE TABLE IF NOT EXISTS positions(vrp_id INT NOT NUll, server SERVER, position COORDS NOT NULL);
 CREATE TABLE IF NOT EXISTS avatars(vrp_id INT PRIMARY KEY, url TEXT);
+CREATE TABLE IF NOT EXISTS sotd(date DATE PRIMARY KEY, aptitude TEXT, bonus INT);
