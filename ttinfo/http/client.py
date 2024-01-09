@@ -97,7 +97,8 @@ class Client:
             server.name,
         )
         if not key:
-            raise errors.NoKey("No donated keys are available")
+            self.bot.log_handler.warning("No donated keys are available")
+            return self.bot.env_values["tycoon_token"]
         return key
 
     @cache.with_key(None)
