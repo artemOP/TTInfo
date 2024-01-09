@@ -594,5 +594,6 @@ class TycoonHTTP:
                 BaseRoute.CDN,
                 path=f"dealership/vehicles/data/{vehicle}.json",
             ),
+            timeout=30,
             fallback=False,
         )
