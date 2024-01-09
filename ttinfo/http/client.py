@@ -367,15 +367,15 @@ class Client:
                     z=player[3].get("z"),
                 ),
                 vehicle_data=models.VehicleData(
-                    has_trailer=player[4]["has_trailer"],
-                    owned_vehicles=player[4]["owned_vehicles"] or {},
-                    trailer=player[4]["trailer"],
-                    vehicle_class=player[4]["vehicle_class"],
-                    vehicle_label=player[4]["vehicle_label"],
-                    vehicle_model=player[4]["vehicle_model"],
-                    vehicle_name=player[4]["vehicle_name"],
-                    vehicle_spawn=player[4]["vehicle_spawn"],
-                    vehicle_type=player[4]["vehicle_type"],
+                    has_trailer=player[4].get("has_trailer"),
+                    owned_vehicles=player[4].get("owned_vehicles") or {},
+                    trailer=player[4].get("trailer"),
+                    vehicle_class=player[4].get("vehicle_class"),
+                    vehicle_label=player[4].get("vehicle_label"),
+                    vehicle_model=player[4].get("vehicle_model"),
+                    vehicle_name=player[4].get("vehicle_name"),
+                    vehicle_spawn=player[4].get("vehicle_spawn"),
+                    vehicle_type=player[4].get("vehicle_type"),
                 ),
                 history=[
                     models.Coords(
@@ -391,6 +391,7 @@ class Client:
                 else None,
             )
             for player in data["players"]
+            if player[3] is not None
         )
 
     @cache.with_key(60 * 60)
