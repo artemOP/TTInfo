@@ -26,9 +26,14 @@ class Method(Enum):
     delete = "DELETE"
 
 
+class BaseRoute(Enum):
+    API = "https://tycoon-{}.users.cfx.re/status"
+    CDN = "https://CDN.tycoon.community/"
+
+
 class Server(Enum):
-    legacy = "/main"
-    main = "/beta"
+    main = "2epova"
+    beta = "njyvop"
 
 
 class JobGroups(Enum):
@@ -215,3 +220,20 @@ class RaceType(Enum):
 class DataType(Enum):
     data = "Online Data"
     data_offline = "Offline Data"
+
+
+class DealershipCategory(Enum):
+    sports = "Sports"
+    vans = "Vans"
+    sport_classics = "Sport Classics"
+    lowriders = "Lowriders"
+    sedans = "Sedans"
+    supercars = "Supercars"
+    coupes = "Coupes"
+    compacts = "Compacts"
+    muscle = "Muscle"
+    offroad = "Offroad"
+    suvs = "SUVs"
+    motorcycles = "Motorcycles"
+    premium = "Premium"
+    special = "Special"

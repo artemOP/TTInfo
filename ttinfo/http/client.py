@@ -1,13 +1,17 @@
 from __future__ import annotations
 
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import TYPE_CHECKING, cast
 from zoneinfo import ZoneInfo
+
+import orjson
 from discord.utils import MISSING
 
 from . import enums, models, TycoonHTTP
 
 from ..core import errors, cache
+from ..core.utils import formatters
 
 if TYPE_CHECKING:
     from types import TracebackType
@@ -268,8 +272,9 @@ class Client:
         Returns:
             models.RaceStats: stats of PB in each race and class
         """
-        raise NotImplementedError  # This endpoint is fucked
+        raise NotImplementedError  # todo: check endpoint after wipe
         data = await self.session.racing_stats(server, private_key=private_key, public_key=public_key, vrp_id=vrp_id)
+        print(data)
         return [
             models.RaceStat(
                 achived=datetime.fromtimestamp(race["achieved"] / 1000, tz=ZoneInfo("UTC")),
@@ -586,7 +591,7 @@ class Client:
                 vehicle_spawn=data["data"]["vehicle"]["vehicle_spawn"],
                 vehicle_type=data["data"]["vehicle"]["vehicle_type"],
             ),
-            data_type=data.get("data_type", "data_offline"),
+            data_type=enums.DataType[data.get("data_type", "data_offline")],
         )
 
     @cache.with_key(60)
@@ -639,7 +644,7 @@ class Client:
                 vehicle_spawn=data["data"]["vehicle"]["has_trailer"],
                 vehicle_type=data["data"]["vehicle"]["has_trailer"],
             ),
-            data_type=data.get("data_type", "data_offline"),
+            data_type=enums.DataType[data.get("data_type", "data_offline")],
         )
 
     async def fetch_vehicle_storage(
@@ -830,7 +835,7 @@ class Client:
         public_key: Key = "",
     ) -> models.FactionPerks:
         data = await self.session.faction_perks(server, private_key=private_key, public_key=public_key)
-        return data[0]
+        return data[0]  # todo: check endpoint for new response
 
     async def fetch_faction_balance(
         self,
@@ -867,3 +872,51 @@ class Client:
             kills=data["kills"],
             limit=data["limit"],
         )
+
+    async def fetch_dealership(self, server: enums.Server, private_key: Key) -> models.Dealership:
+        data = await self.session.dealership(server, private_key=private_key)
+        dealership = {}
+        for category, vehicles in data.items():
+            dealership[enums.DealershipCategory[category.lower().replace(" ", "_")]] = [
+                await self.fetch_vehicle_data(vehicle["model"]) for vehicle in vehicles
+            ]
+        return dealership
+
+    async def fetch_dealership_image(self, vehicle: str) -> bytes:
+        return await self.session.dealership_image(vehicle)
+
+    async def fetch_vehicle_data(self, vehicle: str, force: bool = False) -> models.VehicleInfo:
+        path = Path(f"ttinfo/dumps/dealership/{vehicle}.json")
+        if not path.exists or force:
+            data = await self.session.vehicle_data(vehicle)
+            with open(path, "wb") as f:
+                f.write(orjson.dumps(data))
+
+        with open(path, "rb") as f:
+            data = orjson.loads(f.read())
+
+        return models.VehicleInfo(
+            manufacturer=data["manufacturer"],
+            gameName=data["gameName"],
+            displayName=data["displayName"],
+            model=data["model"],
+            hash=data["hash"],
+            makeName=data["makeName"],
+            customClass=data["customClass"],
+            className=data["className"],
+            classId=data["classId"],
+            seats=data["seats"],
+            data_generated=formatters.to_timestamp(data["_data_generated"], "%Y-%m-%d %H:%M:%S"),
+            name=data.get("name", None),
+            credits=data.get("credits", None),
+            dealership=models.DealershipData(
+                dealership=data.get("dealership", {}).get("dealership"),
+                category=data.get("dealership", {}).get("category"),
+                price=data.get("dealership", {}).get("price"),
+                premium=data.get("dealership", {}).get("premium"),
+            ),
+        )
+
+    async def fetch_vehicle_list(self) -> models.DealershipList:
+        vehicles = await self.session.dealership_list()
+        return [await self.fetch_vehicle_data(vehicle) for vehicle in vehicles]

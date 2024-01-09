@@ -74,6 +74,7 @@ class Players(commands.Cog):
         )
         return playtime
 
+    @commands.Cog.listener("on_player_login")
     async def update_aliases(self, player: Player) -> None:
         self.logger.info(f"{player.vrp_id} alias: {player.name}")
         if not player.name:
@@ -84,6 +85,7 @@ class Players(commands.Cog):
             player.name,
         )
 
+    @commands.Cog.listener("on_player_login")
     async def update_avatar(self, player: Player) -> None:
         self.logger.info(f"{player.vrp_id} avatar: {player.avatar_url}")
         await self.bot.pool.execute(
@@ -95,8 +97,6 @@ class Players(commands.Cog):
     @commands.Cog.listener("on_player_login")
     async def on_player_login(self, player: Player) -> None:
         self.logger.info(f"login: {player}")
-        await self.update_aliases(player)
-        await self.update_avatar(player)
 
     @commands.Cog.listener("on_player_logout")
     async def on_player_logout(self, player: Player) -> None:

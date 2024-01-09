@@ -282,6 +282,31 @@ class PigsParty(NamedTuple):
     limit: int
 
 
+class VehicleInfo(NamedTuple):
+    manufacturer: str
+    gameName: str
+    displayName: str
+    model: str
+    hash: int
+    makeName: str
+    customClass: str
+    className: str
+    classId: int
+    seats: int
+    data_generated: Optional[datetime]
+    name: Optional[str] = None
+    credits: Optional[dict] = None
+    preview: Optional[str] = None
+    dealership: Optional[DealershipData] = None
+
+
+class DealershipData(NamedTuple):
+    dealership: str
+    category: str
+    price: int
+    premium: bool
+
+
 Charges: TypeAlias = int
 Config: TypeAlias = str
 FactionSize: TypeAlias = int
@@ -297,3 +322,5 @@ Stats: TypeAlias = dict[enums.Stats, int]
 Storage: TypeAlias = dict[str, Item]
 Storages: TypeAlias = dict[str, Storage]
 Trunks: TypeAlias = dict[str, Trunk]
+Dealership: TypeAlias = dict[enums.DealershipCategory, list[VehicleInfo]]
+DealershipList: TypeAlias = list[VehicleInfo]
