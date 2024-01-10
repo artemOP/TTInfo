@@ -1,1 +1,2 @@
 ttinfo/dumps/** linguist-generated
+*.sql linguist-language=sql
