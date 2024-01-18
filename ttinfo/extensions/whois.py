@@ -10,7 +10,7 @@ from ..http.enums import Server
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
-    from discord import Interaction
+    from .. import GuildInteraction
 
 
 @app_commands.guild_only()
@@ -28,11 +28,11 @@ class Whois(commands.GroupCog, name="whois"):
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
-    async def whois(self, interaction: Interaction, server: Server, vrp_id: int) -> None:  # todo: embed
+    async def whois(self, interaction: GuildInteraction, server: Server, vrp_id: int) -> None:  # todo: embed
         return await interaction.followup.send(f"{server} - {vrp_id}")
 
     @app_commands.command(name="discord")
-    async def whois_discord(self, interaction: Interaction, server: Server, user: User | Member | None = None):
+    async def whois_discord(self, interaction: GuildInteraction, server: Server, user: User | Member | None = None):
         """Display various information about a user by their discord id
 
         Args:
@@ -47,7 +47,9 @@ class Whois(commands.GroupCog, name="whois"):
         await self.whois(interaction, server, vrp.user_id)
 
     @app_commands.command(name="vrp_id")
-    async def whois_vrp(self, interaction: Interaction, server: Server, vrp_id: Range[int, 1, 1_000_000] | None = None):
+    async def whois_vrp(
+        self, interaction: GuildInteraction, server: Server, vrp_id: Range[int, 1, 1_000_000] | None = None
+    ):
         """Display various information about a user by their in game id
 
         Args:
@@ -60,7 +62,7 @@ class Whois(commands.GroupCog, name="whois"):
         await self.whois(interaction, server, vrp_id)
 
     @app_commands.command(name="username")
-    async def whois_name(self, interaction: Interaction, server: Server, name: Range[str, 1, 100] | None = None):
+    async def whois_name(self, interaction: GuildInteraction, server: Server, name: Range[str, 1, 100] | None = None):
         """Display various information about a user by their in game name
 
         Args:
@@ -81,7 +83,7 @@ class Whois(commands.GroupCog, name="whois"):
             return await interaction.followup.send("User Not found")
         await self.whois(interaction, server, vrp_id)
 
-    async def whois_context(self, interaction: Interaction, user: User):
+    async def whois_context(self, interaction: GuildInteraction, user: User):
         return await self.whois_discord.callback(self, interaction, Server.main, interaction.user)  # type: ignore
 
 

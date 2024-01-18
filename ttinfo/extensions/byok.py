@@ -9,8 +9,7 @@ from discord.ext import commands
 from ..http.enums import Server
 
 if TYPE_CHECKING:
-    from discord import Interaction
-
+    from .. import GuildInteraction
     from ttinfo.core.bot import Bot
 
 
@@ -30,7 +29,7 @@ class Byok(commands.GroupCog, name="byok"):
     @app_commands.command(name="add")
     async def add_keys(
         self,
-        interaction: Interaction,
+        interaction: GuildInteraction,
         server: Server,
         private_key: Optional[str] = None,
         public_key: Optional[str] = None,
@@ -60,7 +59,7 @@ class Byok(commands.GroupCog, name="byok"):
     @app_commands.command(name="remove")
     async def remove_key(
         self,
-        interaction: Interaction,
+        interaction: GuildInteraction,
         server: Server,
         key: Literal["private", "public"],
     ):
@@ -77,7 +76,7 @@ class Byok(commands.GroupCog, name="byok"):
         return await interaction.followup.send(f"{key} key removed", ephemeral=True)
 
     @app_commands.command(name="charges")
-    async def charges(self, interaction: Interaction, server: Server):
+    async def charges(self, interaction: GuildInteraction, server: Server):
         """Fetch the number of remaining BYOK charges
 
         Args:
@@ -91,7 +90,7 @@ class Byok(commands.GroupCog, name="byok"):
         )
 
     @app_commands.command(name="donate")
-    async def donate(self, interaction: Interaction, server: Server, amount: int, reccuring: bool = False):
+    async def donate(self, interaction: GuildInteraction, server: Server, amount: int, reccuring: bool = False):
         """Donate charges to be used for bot upkeep
 
         Args:
