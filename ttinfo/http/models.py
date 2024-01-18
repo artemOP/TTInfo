@@ -299,6 +299,9 @@ class VehicleInfo(NamedTuple):
     preview: Optional[str] = None
     dealership: Optional[DealershipData] = None
 
+    def __hash__(self) -> int:
+        return self.hash
+
 
 class DealershipData(NamedTuple):
     dealership: str
