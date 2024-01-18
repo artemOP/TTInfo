@@ -35,7 +35,7 @@ class Logging(commands.Cog):
 
     async def cog_unload(self) -> None:
         if self.webhook:
-            self.logging_loop.cancel
+            self.logging_loop.cancel()
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
     @tasks.loop(seconds=0)
