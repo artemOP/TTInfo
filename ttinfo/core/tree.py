@@ -10,11 +10,11 @@ from ..http.enums import Server
 if TYPE_CHECKING:
     from typing import Optional
 
+    from discord import Interaction
     from discord.abc import Snowflake
     from discord.app_commands import Command, ContextMenu, Group
 
     from ttinfo import Bot
-    from .. import Interaction
 
 
 class CommandTree(app_commands.CommandTree):

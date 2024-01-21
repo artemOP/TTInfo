@@ -11,7 +11,7 @@ from ..core.utils import ButtonPaginatedEmbeds, to_codeblock
 
 if TYPE_CHECKING:
     from ttinfo.core.bot import Bot
-    from .. import GuildInteraction
+    from discord import Interaction
 
 
 @app_commands.default_permissions()
@@ -28,7 +28,7 @@ class Owner(commands.GroupCog, name="owner"):
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
     @app_commands.command(name="debug")
-    async def debug(self, interaction: GuildInteraction, mode: Optional[bool] = None):
+    async def debug(self, interaction: Interaction, mode: Optional[bool] = None):
         """Toggles debug file logging and asyncio debug mode
 
         Args:
@@ -45,7 +45,7 @@ class Owner(commands.GroupCog, name="owner"):
         await interaction.followup.send(f"Debug mode has been set to: {not current}")
 
     @app_commands.command(name="dump")
-    async def dump(self, interaction: GuildInteraction, raw: Optional[bool] = False):
+    async def dump(self, interaction: Interaction, raw: Optional[bool] = False):
         """View log dump, either as a file dump or paginated
 
         Args:

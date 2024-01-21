@@ -7,9 +7,7 @@ from discord import ui, ButtonStyle
 
 
 if TYPE_CHECKING:
-    from discord import Embed, InteractionMessage
-
-    from ... import ComponentGuildInteraction
+    from discord import Embed, Interaction, InteractionMessage
 
 
 class BaseView(ui.View):
@@ -23,7 +21,7 @@ class BaseView(ui.View):
             raise AttributeError("A response must be provided for the view to timeout")
         await self.response.edit(view=None)
 
-    async def interaction_check(self, interaction: ComponentGuildInteraction, /) -> bool:
+    async def interaction_check(self, interaction: Interaction, /) -> bool:
         if not self.response or not getattr(self.response, "interaction", None):
             return True
         if self.response.interaction.user != interaction.user:
@@ -41,13 +39,13 @@ class ButtonPaginatedEmbeds(BaseView):
         self.page = 0
 
     @discord.ui.button(label="First page", style=ButtonStyle.red)
-    async def first(self, interaction: ComponentGuildInteraction, button: discord.ui.Button):
+    async def first(self, interaction: Interaction, button: discord.ui.Button):
         self.page = 0
         self.page_select.options = self.pages[max(self.page - 12, 0) : min(self.page + 12, len(self.pages))]
         await interaction.response.edit_message(embed=self.embedlist[0], view=self)
 
     @discord.ui.button(label="Previous page", style=ButtonStyle.red)
-    async def previous(self, interaction: ComponentGuildInteraction, button: discord.ui.Button):
+    async def previous(self, interaction: Interaction, button: discord.ui.Button):
         if self.page >= 1:
             self.page -= 1
         else:
@@ -56,11 +54,11 @@ class ButtonPaginatedEmbeds(BaseView):
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
 
     @discord.ui.button(label="Stop", style=ButtonStyle.grey)
-    async def exit(self, interaction: ComponentGuildInteraction, button: discord.ui.Button):
+    async def exit(self, interaction: Interaction, button: discord.ui.Button):
         await self.on_timeout()
 
     @discord.ui.button(label="Next Page", style=ButtonStyle.green)
-    async def next(self, interaction: ComponentGuildInteraction, button: discord.ui.Button):
+    async def next(self, interaction: Interaction, button: discord.ui.Button):
         self.page += 1
         if self.page > len(self.embedlist) - 1:
             self.page = 0
@@ -68,13 +66,13 @@ class ButtonPaginatedEmbeds(BaseView):
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
 
     @discord.ui.button(label="Last Page", style=ButtonStyle.green)
-    async def last(self, interaction: ComponentGuildInteraction, button: discord.ui.Button):
+    async def last(self, interaction: Interaction, button: discord.ui.Button):
         self.page = len(self.embedlist) - 1
         self.page_select.options = self.pages[max(self.page - 12, 0) : min(self.page + 12, len(self.pages))]
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
 
     @discord.ui.select(placeholder="Page Select")
-    async def page_select(self, interaction: ComponentGuildInteraction, select: discord.ui.Select):
+    async def page_select(self, interaction: Interaction, select: discord.ui.Select):
         self.page = int(select.values[0])
         self.page_select.options = self.pages[max(self.page - 12, 0) : min(self.page + 12, len(self.pages))]
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
