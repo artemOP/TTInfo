@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from datetime import time, timezone
 from typing import TYPE_CHECKING
 
 from discord.ext import commands, tasks
@@ -41,13 +42,13 @@ class DealershipLookup(commands.Cog):
             for vehicle in vehicles:
                 self.bot.dispatch("vehicle_expire", vehicle)
 
-    @tasks.loop(hours=1)
+    @tasks.loop(time=time(hour=1, tzinfo=timezone.utc))
     async def task(self):
         key = await self.bot.tycoon_client.get_donated_key(Server.main)
         dealership = await self.bot.tycoon_client.fetch_dealership(Server.main, key)
         for category, new_vehicles in dealership.items():
-            old_vehicles = set(self.dealership.get(category, []).copy())
-            new_vehicles = set(new_vehicles.copy())
+            old_vehicles = set(self.dealership.get(category, []))
+            new_vehicles = set(new_vehicles)
 
             expired_vehicles = old_vehicles - new_vehicles
             new_vehicles = new_vehicles - old_vehicles
