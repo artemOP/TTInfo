@@ -11,9 +11,10 @@ if TYPE_CHECKING:
 
 
 class BaseView(ui.View):
+    response: InteractionMessage
+
     def __init__(self, *, timeout: float | None = 180):
         super().__init__(timeout=timeout)
-        self.response: InteractionMessage | None = None
 
     async def on_timeout(self) -> None:
         if not self.response:
