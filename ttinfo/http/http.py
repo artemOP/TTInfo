@@ -113,7 +113,7 @@ class TycoonHTTP:
 
             if 500 <= resp.status <= 504:
                 reason = resp.reason
-                sleep_time = 2 ** attempt + 1
+                sleep_time = 2**attempt + 1
                 self.logger.debug(f"Retrying request due to {resp.reason}, sleeping for {sleep_time}")
                 await asyncio.sleep(sleep_time)
                 return False

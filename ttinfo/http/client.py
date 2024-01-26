@@ -378,18 +378,20 @@ class Client:
                     vehicle_spawn=player[4].get("vehicle_spawn"),
                     vehicle_type=player[4].get("vehicle_type"),
                 ),
-                history=[
-                    models.Coords(
-                        index=coord[0],
-                        x=coord[1],
-                        y=coord[2],
-                        z=coord[3],
-                        h=coord[4],
-                    )
-                    for coord in player[6]
-                ]
-                if len(player) > 6
-                else None,
+                history=(
+                    [
+                        models.Coords(
+                            index=coord[0],
+                            x=coord[1],
+                            y=coord[2],
+                            z=coord[3],
+                            h=coord[4],
+                        )
+                        for coord in player[6]
+                    ]
+                    if len(player) > 6
+                    else None
+                ),
             )
             for player in data["players"]
             if player[3] is not None
