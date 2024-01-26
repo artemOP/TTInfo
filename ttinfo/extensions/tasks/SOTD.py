@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import date, time, timezone
+from datetime import time, timezone
 from typing import TYPE_CHECKING
 from discord.ext import commands, tasks
 
@@ -38,8 +38,7 @@ class SOTD(commands.Cog):
     @commands.Cog.listener("on_sotd_change")
     async def on_sotd_change(self, payload: models.SOTD) -> None:
         await self.bot.pool.execute(
-            "INSERT INTO sotd(date, aptitude, bonus) VALUES($1, $2, $3)",
-            date.today(),
+            "INSERT INTO sotd(date, aptitude, bonus) VALUES(now()::date, $1, $2)",
             payload.aptitude,
             payload.bonus,
         )
