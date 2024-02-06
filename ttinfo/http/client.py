@@ -15,7 +15,7 @@ from ..core.utils import formatters
 
 if TYPE_CHECKING:
     from types import TracebackType
-    from typing import Literal, Optional, TypeAlias, AsyncGenerator
+    from typing import Any, Literal, Optional, TypeAlias, AsyncGenerator
 
     from aiohttp import ClientSession
     from typing_extensions import Self
@@ -25,6 +25,8 @@ if TYPE_CHECKING:
     Key: TypeAlias = str
 
 
+# todo: add fallbacks to ALL fetch requests, ensure payloads can be unpacked safely no matter what
+# all model keys must be present but value can be None-like
 class Client:
     session: TycoonHTTP
 
@@ -924,3 +926,53 @@ class Client:
     async def fetch_vehicle_list(self) -> models.DealershipList:
         vehicles = await self.session.dealership_list()
         return [await self.fetch_vehicle_data(vehicle) for vehicle in vehicles]
+
+    def myst_headers(self) -> dict[str, str]:
+        auth = self.bot.env_values.get("mystbin")
+        if auth:
+            return {"Content-Type": "application/json", "Authorization": f"Bearer {auth}"}
+
+        self.bot.log_handler.warning("No MystBin Auth provided, limited ratelimits will be used")
+        return {"Content-Type": "application/json"}
+
+    def prepare_paste(self, data: dict[str, Any], password: Optional[str] = None) -> models.MystbinPaste:
+        return models.MystbinPaste(
+            date_type=enums.DataType.data,
+            files=[
+                models.MystbinFile(
+                    filename=file["filename"],
+                    content=file["content"],
+                    loc=file["loc"],
+                    charcount=file["charcount"],
+                    attachement=file["attachment"],
+                )
+                for file in data["files"]
+            ],
+            author_id=data.get("author_id"),
+            paste_id=data.get("id"),
+            created_at=datetime.strptime(data["created_at"], "") if data.get("created_at") is not None else None,
+            last_edited=datetime.strptime(data["last_edited"], "") if data.get("last_edited") is not None else None,
+            views=data.get("views"),
+            expires=datetime.strptime(data["expires"], "") if data.get("expires") is not None else None,
+            password=password,
+        )
+
+    async def post_paste(self, paste: models.MystbinPaste) -> models.MystbinPaste:
+        data = await self.session.create_paste(paste._asdict(), self.myst_headers())
+        return self.prepare_paste(data, paste.password)
+
+    async def fetch_paste(self, paste_id: str) -> models.MystbinPaste:
+        data = await self.session.get_paste(paste_id, self.myst_headers())
+        return self.prepare_paste(data)
+
+    async def fetch_pastes(self) -> list[models.MystbinPaste]:
+        data = await self.session.get_pastes(self.myst_headers())
+        return [self.prepare_paste(paste) for paste in data]
+
+    async def edit_paste(self, paste_id: str, paste: models.MystbinPaste) -> models.MystbinPaste:
+        data = await self.session.edit_paste(paste_id, paste._asdict(), self.myst_headers())
+        return self.prepare_paste(data, paste.password)
+
+    async def delete_paste(self, paste_id: str) -> bool:
+        data = await self.session.delete_paste(paste_id, self.myst_headers())
+        return bool(data.get("deleted"))

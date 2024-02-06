@@ -156,6 +156,12 @@ class TycoonHTTP:
                 raise errors.NoKey("403 - Forbidden: Likely due to malformed or incorrect key")
             elif resp.status == 412:
                 raise errors.HTTPException("No Data returned", status=resp.status, extra={"route": route})
+            elif resp.status == 422:
+                raise errors.HTTPException(
+                    "Validation Error",
+                    status=resp.status,
+                    extra={"route": route, "detail": await resp.json(content_type=None, loads=orjson.loads)},
+                )
             status = resp.status
         raise errors.HTTPException(
             "Unhandled status code",
@@ -595,5 +601,66 @@ class TycoonHTTP:
                 path=f"dealership/vehicles/data/{vehicle}.json",
             ),
             timeout=30,
+            fallback=False,
+        )
+
+    async def create_paste(self, paste: dict[str, str | list], headers: dict[str, str]) -> dict[str, Any]:
+        return await self.request(
+            Route(
+                Method.put,
+                BaseRoute.MYSTBIN,
+                path="paste",
+                body=paste,
+                headers=headers,
+            ),
+            timeout=10,
+            fallback=False,
+        )
+
+    async def get_paste(self, paste_id: str, headers: dict[str, str]) -> dict[str, Any]:
+        return await self.request(
+            Route(
+                Method.get,
+                BaseRoute.MYSTBIN,
+                path=f"paste/{paste_id}",
+                headers=headers,
+            ),
+            timeout=10,
+            fallback=False,
+        )
+
+    async def get_pastes(self, headers: dict[str, str]) -> list[dict[str, Any]]:
+        return await self.request(
+            Route(
+                Method.get,
+                BaseRoute.MYSTBIN,
+                path="pastes/@me",
+                headers=headers,
+            ),
+            timeout=10,
+            fallback=False,
+        )
+
+    async def edit_paste(self, paste_id: str, paste: dict[str, str | list], headers: dict[str, str]) -> dict[str, Any]:
+        return await self.request(
+            Route(
+                Method.patch,
+                BaseRoute.MYSTBIN,
+                path=f"paste/{paste_id}",
+                headers=headers,
+            ),
+            timeout=10,
+            fallback=False,
+        )
+
+    async def delete_paste(self, paste_id: str, headers: dict[str, str]) -> dict[str, Any]:
+        return await self.request(
+            Route(
+                Method.delete,
+                BaseRoute.MYSTBIN,
+                path=f"paste/{paste_id}",
+                headers=headers,
+            ),
+            timeout=10,
             fallback=False,
         )

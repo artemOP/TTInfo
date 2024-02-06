@@ -310,6 +310,26 @@ class DealershipData(NamedTuple):
     premium: bool
 
 
+class MystbinFile(NamedTuple):
+    content: str
+    filename: str
+    loc: Optional[int] = None
+    charcount: Optional[int] = None
+    attachement: Optional[str] = None
+
+
+class MystbinPaste(NamedTuple):
+    date_type: enums.DataType
+    files: list[MystbinFile]
+    author_id: Optional[int] = None
+    paste_id: Optional[str] = None
+    created_at: Optional[datetime] = None
+    last_edited: Optional[datetime] = None
+    views: Optional[int] = None
+    expires: Optional[datetime] = None
+    password: Optional[str] = None
+
+
 Charges: TypeAlias = int
 Config: TypeAlias = str
 FactionSize: TypeAlias = int

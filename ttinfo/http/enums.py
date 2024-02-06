@@ -29,6 +29,7 @@ class Method(Enum):
 class BaseRoute(Enum):
     API = "https://tycoon-{}.users.cfx.re/status"
     CDN = "https://CDN.tycoon.community/"
+    MYSTBIN = "https://api.mystb.in"
 
 
 class Server(Enum):
