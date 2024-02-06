@@ -33,6 +33,9 @@ class Tasks(commands.Cog):
         for server in Server:
             key = await self.bot.tycoon_client.get_donated_key(server)
             request = await self.bot.tycoon_client.fetch_positions(server, key)
+            if not request:
+                continue
+
             for position in request:
                 if self.positions.get(position.player.vrp_id, None) == position.position:
                     continue

@@ -42,6 +42,9 @@ class Players(commands.Cog):
     async def task(self):
         for server in Server:
             request = await self.bot.tycoon_client.fetch_players(server, force=True)
+            if not request:
+                continue
+
             for player in request.players:
                 if player not in self.players[server]:
                     self.bot.dispatch("player_login", player)

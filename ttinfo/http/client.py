@@ -306,7 +306,7 @@ class Client:
         return models.Forecast(enums.Weather[weather] for weather in data)
 
     @cache.with_server(60)
-    async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players:
+    async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players | None:
         """get data about online players and the server
 
         Args:
@@ -314,6 +314,9 @@ class Client:
             force (bool, optional): Optionally forcibly refresh the cache
         """
         data = await self.session.players(server)
+        if not data:
+            return None
+
         uptime = data["server"]["uptime"].replace("h", "").replace("m", "").split()
         if len(uptime) == 2:
             hours, minutes = map(int, uptime)
@@ -344,7 +347,7 @@ class Client:
             ),
         )
 
-    async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions:
+    async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions | None:
         """return list of positions, contains player data, coords, vehicle data and *usually* has a history
 
         Args:
@@ -355,6 +358,9 @@ class Client:
             models.Positions: list[Position]
         """
         data = await self.session.positions(server, key=key)
+        if not data:
+            return None
+
         return models.Positions(
             models.Position(
                 player=models.Player(
