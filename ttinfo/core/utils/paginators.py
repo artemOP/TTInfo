@@ -79,3 +79,11 @@ class ButtonPaginatedEmbeds(BaseView):
         self.page = int(select.values[0])
         self.page_select.options = self.pages[max(self.page - 12, 0) : min(self.page + 12, len(self.pages))]
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
+
+
+class JumpLink(BaseView):
+    def __init__(self, jumplink: str, *, timeout: float | None = None):
+        super().__init__(timeout=timeout)
+
+        self.button = discord.ui.Button(label="Go to", url=jumplink)
+        self.add_item(self.button)
