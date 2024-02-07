@@ -319,7 +319,7 @@ class MystbinFile(NamedTuple):
 
 
 class MystbinPaste(NamedTuple):
-    date_type: enums.DataType
+    data_type: enums.DataType
     files: list[MystbinFile]
     author_id: Optional[int] = None
     paste_id: Optional[str] = None
@@ -328,6 +328,20 @@ class MystbinPaste(NamedTuple):
     views: Optional[int] = None
     expires: Optional[datetime] = None
     password: Optional[str] = None
+
+    def asdict(self) -> dict[str, Any]:
+        paste = MystbinPaste(
+            data_type=self.data_type,
+            files=[file._asdict() for file in self.files],
+            author_id=self.author_id,
+            paste_id=self.paste_id,
+            created_at=self.created_at,
+            last_edited=self.last_edited,
+            views=self.views,
+            expires=self.expires,
+            password=self.password,
+        )
+        return paste._asdict()
 
 
 Charges: TypeAlias = int

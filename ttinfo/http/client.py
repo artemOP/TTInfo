@@ -943,7 +943,7 @@ class Client:
 
     def prepare_paste(self, data: dict[str, Any], password: Optional[str] = None) -> models.MystbinPaste:
         return models.MystbinPaste(
-            date_type=enums.DataType.data,
+            data_type=enums.DataType.data,
             files=[
                 models.MystbinFile(
                     filename=file["filename"],
@@ -956,19 +956,19 @@ class Client:
             ],
             author_id=data.get("author_id"),
             paste_id=data.get("id"),
-            created_at=datetime.strptime(data["created_at"], "") if data.get("created_at") is not None else None,
-            last_edited=datetime.strptime(data["last_edited"], "") if data.get("last_edited") is not None else None,
+            created_at=(datetime.fromisoformat(data["created_at"]) if data.get("created_at") is not None else None),
+            last_edited=datetime.fromisoformat(data["last_edited"]) if data.get("last_edited") is not None else None,
             views=data.get("views"),
-            expires=datetime.strptime(data["expires"], "") if data.get("expires") is not None else None,
+            expires=datetime.fromisoformat(data["expires"]) if data.get("expires") is not None else None,
             password=password,
         )
 
     async def post_paste(self, paste: models.MystbinPaste) -> models.MystbinPaste:
-        data = await self.session.create_paste(paste._asdict(), self.myst_headers())
+        data = await self.session.create_paste(paste.asdict(), self.myst_headers())
         return self.prepare_paste(data, paste.password)
 
-    async def fetch_paste(self, paste_id: str) -> models.MystbinPaste:
-        data = await self.session.get_paste(paste_id, self.myst_headers())
+    async def fetch_paste(self, paste_id: str, password: str | None = None) -> models.MystbinPaste:
+        data = await self.session.get_paste(paste_id, password, self.myst_headers())
         return self.prepare_paste(data)
 
     async def fetch_pastes(self) -> list[models.MystbinPaste]:
@@ -976,7 +976,7 @@ class Client:
         return [self.prepare_paste(paste) for paste in data]
 
     async def edit_paste(self, paste_id: str, paste: models.MystbinPaste) -> models.MystbinPaste:
-        data = await self.session.edit_paste(paste_id, paste._asdict(), self.myst_headers())
+        data = await self.session.edit_paste(paste_id, paste.asdict(), self.myst_headers())
         return self.prepare_paste(data, paste.password)
 
     async def delete_paste(self, paste_id: str) -> bool:

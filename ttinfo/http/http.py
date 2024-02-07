@@ -617,12 +617,13 @@ class TycoonHTTP:
             fallback=False,
         )
 
-    async def get_paste(self, paste_id: str, headers: dict[str, str]) -> dict[str, Any]:
+    async def get_paste(self, paste_id: str, password: str | None, headers: dict[str, str]) -> dict[str, Any]:
         return await self.request(
             Route(
                 Method.get,
                 BaseRoute.MYSTBIN,
                 path=f"paste/{paste_id}",
+                query=[("password", password)] if password else None,
                 headers=headers,
             ),
             timeout=10,
@@ -647,6 +648,11 @@ class TycoonHTTP:
                 Method.patch,
                 BaseRoute.MYSTBIN,
                 path=f"paste/{paste_id}",
+                body={
+                    "new_expire": paste["expires"],
+                    "new_password": paste["password"],
+                    "files": paste["files"],
+                },
                 headers=headers,
             ),
             timeout=10,
