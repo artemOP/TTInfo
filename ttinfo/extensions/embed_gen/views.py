@@ -4,13 +4,18 @@ from copy import deepcopy
 from typing import TYPE_CHECKING, Any
 
 import discord
-from discord import app_commands, ui, SelectOption
+from discord import Interaction, app_commands, ui, SelectOption
 from discord.ext import commands
 from discord.ui import Modal, Select, TextInput, ChannelSelect, UserSelect
 
+import orjson
+
 from ttinfo.core import Bot
 
-from ...core.utils.paginators import BaseView
+from ...http.models import MystbinPaste, MystbinFile
+from ...http.enums import DataType
+from ...core.utils import formatters
+from ...core.utils.paginators import BaseView, JumpLink
 from ...core.utils.errors import ButtonOnCooldown
 
 if TYPE_CHECKING:
@@ -125,7 +130,13 @@ class Builder(BaseView):
         view.response = await interaction.original_response()
 
     @discord.ui.button(label="To Webhook", style=discord.ButtonStyle.green, row=2)
-    async def send_to_webhook(self, interaction: Interaction, button: Button): ...  # WebhookModal
+    async def send_to_webhook(self, interaction: Interaction, button: Button):  # WebhookModal
+        await interaction.response.send_modal(
+            SendToWebhook(
+                title="Send to webhook",
+                parent_view=self,
+            )
+        )
 
     @discord.ui.button(label="To DM", style=discord.ButtonStyle.green, row=2)
     async def send_to_member(self, interaction: Interaction, button: Button):  # MemberView
@@ -138,11 +149,42 @@ class Builder(BaseView):
         await interaction.response.send_message(view=view, ephemeral=True)
         view.response = await interaction.original_response()
 
-    @discord.ui.button(label="Export JSON", row=3)
-    async def export_json(self, interaction: Interaction, button: Button): ...  # Mystbin
+    @discord.ui.button(label="Import JSON", row=3)
+    async def import_json(self, interaction: Interaction, button: Button):  # Mystbin
+        await interaction.response.send_modal(
+            ImportModal(
+                title="Import JSON",
+                parent_view=self,
+            )
+        )
 
     @discord.ui.button(label="Export JSON", row=3)
-    async def import_json(self, interaction: Interaction, button: Button): ...  # Mystbin
+    async def export_json(self, interaction: Interaction[Bot], button: Button):  # Mystbin
+        await interaction.response.defer(ephemeral=True)
+        embed = self.embed.to_dict()
+        stringified = orjson.dumps(embed).decode("utf-8")
+
+        if len(self.embed) <= 4000:
+            return await interaction.followup.send(
+                content=formatters.to_codeblock(
+                    stringified,
+                    language="JSON",
+                    escape_md=False,
+                )
+            )
+
+        paste = await interaction.client.tycoon_client.post_paste(
+            MystbinPaste(
+                data_type=DataType.data_offline,
+                files=[
+                    MystbinFile(
+                        content=stringified,
+                        filename=f"{interaction.user.id} - {discord.utils.utcnow()}",
+                    )
+                ],
+            )
+        )
+        await interaction.followup.send(content=f"https://mystb.in/{paste.paste_id}", ephemeral=True)
 
     @discord.ui.button(label="x", style=discord.ButtonStyle.red, row=3)
     async def close(self, interaction: Interaction, button: Button):
@@ -169,9 +211,11 @@ class BaseModal(Modal):
             self.embed = deepcopy(self.parent_view.embed)
             return await interaction.response.send_message("Embed too long; Exceeded 6000 characters")
 
-        self.parent_view.update_counters()
-        await interaction.response.edit_message(view=self.parent_view, embed=self.embed)
         self.parent_view.embed = deepcopy(self.embed)
+        self.parent_view.update_counters()
+        if not interaction.response.is_done():
+            return await interaction.response.edit_message(view=self.parent_view, embed=self.embed)
+        await interaction.edit_original_response(view=self.parent_view, embed=self.embed)
 
     def add_items(self, *args: ui.Item):
         for arg in args:
@@ -363,10 +407,44 @@ class FieldModal(BaseModal):  # name, value, inline, index
         return await super().on_submit(interaction)
 
 
-class WebhookModal(BaseModal): ...  # URL, name, image
+class ImportModal(BaseModal):  # raw text | url
+    def __init__(self, *, title: str, parent_view: Builder, timeout: float | None = None) -> None:
+        super().__init__(title=title, parent_view=parent_view, timeout=timeout)
 
+        self.import_json = TextInput(
+            label="Json Content / Paste Link",
+            placeholder="Enter raw JSON or mystb.in links",
+            max_length=4000,
+            style=discord.TextStyle.long,
+        )
+        self.paste_password = TextInput(
+            label="Paste Passowrd",
+            placeholder="Enter your paste password if exists (note: Not stored locally)",
+            required=False,
+        )
+        self.add_items(self.import_json, self.paste_password)
 
-class ImportModal(BaseModal): ...  # raw text | url
+    async def on_submit(self, interaction: Interaction[Bot]) -> None:
+        await interaction.response.defer()
+
+        if self.import_json.value.startswith("https://mystb.in/"):
+            paste = await interaction.client.tycoon_client.fetch_paste(
+                paste_id=self.import_json.value.lstrip("https://mystb.in/"),
+                password=self.paste_password.value or None,
+            )
+            content = paste.files[0].content
+        else:
+            content = self.import_json.value
+
+        try:
+            content = orjson.loads(content)
+        except orjson.JSONDecodeError:
+            return await interaction.followup.send("Invalid JSON received, please try again", ephemeral=True)
+
+        assert isinstance(content, dict)
+        self.embed = discord.Embed.from_dict(content)
+
+        return await super().on_submit(interaction)
 
 
 class IndexSelect(Select):  # multiselect from n rows, return value
@@ -459,8 +537,69 @@ class SendToUserOrChannel(BaseView):
         elif response is None:
             return await interaction.followup.send("Channel not found", ephemeral=True)
 
+        assert interaction.channel
+        view = JumpLink(interaction.channel.jump_url)
+
         try:
-            await response.send(embed=self.parent_view.embed)
+            await response.send(view=view, embed=self.parent_view.embed)
             await interaction.followup.send("Embed sent", ephemeral=True)
         except (discord.HTTPException, discord.Forbidden):
             await interaction.followup.send("Failed to send embed", ephemeral=True)
+
+
+class SendToWebhook(BaseModal):
+    def __init__(self, *, title: str, parent_view: Builder, timeout: float | None = None) -> None:
+        super().__init__(title=title, parent_view=parent_view, timeout=timeout)
+        self.webhook_name = TextInput(
+            label="Webhook Name",
+            placeholder="Enter a name for your webhook",
+            default=self.embed.title,
+            required=False,
+        )
+        self.webhook_image = TextInput(
+            label="Webhook Image",
+            placeholder="Set a profile URL for your webhook",
+            required=False,
+        )
+        self.webhook_url = TextInput(
+            label="Webhook URL",
+            placeholder="Enter a webhook URL to send to",
+        )
+        self.add_items(self.webhook_name, self.webhook_image, self.webhook_url)
+
+    async def on_submit(self, interaction: Interaction[Bot]) -> None:
+        await interaction.response.defer(ephemeral=True)
+        view = JumpLink(self.parent_view.response.channel.jump_url, timeout=None)
+
+        try:
+            webhook = discord.Webhook.from_url(
+                self.webhook_url.value,
+                session=interaction.client.session,
+                client=interaction.client,
+                bot_token=interaction.client.http.token,
+            )
+        except ValueError:
+            return await interaction.followup.send("Invalid webhook URL given", ephemeral=True)
+
+        assert interaction.client.user
+
+        try:
+            await webhook.send(
+                username=self.webhook_name.value or interaction.client.user.display_name,
+                avatar_url=self.webhook_image or interaction.client.user.display_avatar.url,
+                view=view,
+                embed=self.embed,
+            )
+            view.response = await interaction.original_response()
+
+        except discord.NotFound:
+            await interaction.followup.send("Webhook not found, perhaps it has been deleted?", ephemeral=True)
+        except discord.Forbidden:
+            await interaction.followup.send("Unable to send DMs to this user", ephemeral=True)
+        except ValueError as e:
+            await interaction.followup.send("Invalid embed has been passed", ephemeral=True)
+            interaction.client.log_handler.log.getChild("Embed_Builder").exception(e, extra={"embed": self.embed})
+        except discord.HTTPException:
+            await interaction.followup.send("Sending this messsage failed for unknown reasons", ephemeral=True)
+        else:
+            await interaction.followup.send("Embed sent successfully", ephemeral=True)
