@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 
 class BaseView(ui.View):
-    response: InteractionMessage
+    response: InteractionMessage = None
 
     def __init__(self, *, timeout: float | None = 180):
         super().__init__(timeout=timeout)
@@ -19,7 +19,10 @@ class BaseView(ui.View):
     async def on_timeout(self) -> None:
         if not self.response:
             raise AttributeError("A response must be provided for the view to timeout")
-        await self.response.edit(view=None)
+        try:
+            await self.response.edit(view=None)
+        except Exception:
+            pass
 
     async def interaction_check(self, interaction: Interaction, /) -> bool:
         if not self.response or not getattr(self.response, "interaction", None):
@@ -76,3 +79,11 @@ class ButtonPaginatedEmbeds(BaseView):
         self.page = int(select.values[0])
         self.page_select.options = self.pages[max(self.page - 12, 0) : min(self.page + 12, len(self.pages))]
         await interaction.response.edit_message(embed=self.embedlist[self.page], view=self)
+
+
+class JumpLink(BaseView):
+    def __init__(self, jumplink: str, *, timeout: float | None = None):
+        super().__init__(timeout=timeout)
+
+        self.button = discord.ui.Button(label="Go to", url=jumplink)
+        self.add_item(self.button)
