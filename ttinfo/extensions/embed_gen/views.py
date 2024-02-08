@@ -1,18 +1,17 @@
 from __future__ import annotations
 
 from copy import deepcopy
-from typing import TYPE_CHECKING, List, Optional, Any
+from typing import TYPE_CHECKING, Any
 
 import discord
-from discord import Embed, Interaction, app_commands, ui
-from discord.components import SelectOption
-from discord.interactions import Interaction
-from discord.ui import Modal, Select, TextInput
-from discord.utils import MISSING
+from discord import app_commands, ui, SelectOption
+from discord.ext import commands
+from discord.ui import Modal, Select, TextInput, ChannelSelect, UserSelect
 
 from ttinfo.core import Bot
 
 from ...core.utils.paginators import BaseView
+from ...core.utils.errors import ButtonOnCooldown
 
 if TYPE_CHECKING:
 
@@ -86,22 +85,58 @@ class Builder(BaseView):
         )
 
     @discord.ui.button(label="-", style=discord.ButtonStyle.red, row=1)
-    async def remove_field(self, interaction: Interaction, button: Button): ...  # IndexView
+    async def remove_field(self, interaction: Interaction, button: Button):  # IndexView
+        if not self.embed.fields:
+            return await interaction.response.send_message("No fields to delete", ephemeral=True, delete_after=15)
+        view = BaseView()
+        view.add_item(DeleteIndex(self))
+        await interaction.response.send_message(view=view, ephemeral=True)
+        view.response = await interaction.original_response()
 
     @discord.ui.button(emoji="\U0001f58b", style=discord.ButtonStyle.blurple, row=1)
-    async def edit_field(self, interaction: Interaction, button: Button): ...  # IndexView -> FieldModal
+    async def edit_field(self, interaction: Interaction, button: Button):  # IndexView -> FieldModal
+        if not self.embed.fields:
+            return await interaction.response.send_message("No fields to edit", ephemeral=True, delete_after=15)
+        view = BaseView()
+        view.add_item(EditIndex(self, max_values=1))
+        await interaction.response.send_message(view=view, ephemeral=True)
+        view.response = await interaction.original_response()
 
     @discord.ui.button(label="Send", row=2, disabled=True)
-    async def send(self, interaction: Interaction, button: Button): ...
+    async def send(self, interaction: Interaction, button: Button):
+        await interaction.response.defer()
 
     @discord.ui.button(label="To Channel", style=discord.ButtonStyle.green, row=2)
-    async def send_to_channel(self, interaction: Interaction, button: Button): ...  # ChannelView
+    async def send_to_channel(self, interaction: Interaction, button: Button):  # ChannelView
+        view = SendToUserOrChannel(
+            self,
+            select_cls=ChannelSelect(
+                placeholder="Select a channel",
+                channel_types=[
+                    discord.ChannelType.text,
+                    discord.ChannelType.news,
+                    discord.ChannelType.news_thread,
+                    discord.ChannelType.public_thread,
+                    discord.ChannelType.private_thread,
+                ],
+            ),
+        )
+        await interaction.response.send_message(view=view, ephemeral=True)
+        view.response = await interaction.original_response()
 
     @discord.ui.button(label="To Webhook", style=discord.ButtonStyle.green, row=2)
     async def send_to_webhook(self, interaction: Interaction, button: Button): ...  # WebhookModal
 
     @discord.ui.button(label="To DM", style=discord.ButtonStyle.green, row=2)
-    async def send_to_member(self, interaction: Interaction, button: Button): ...  # MemberView
+    async def send_to_member(self, interaction: Interaction, button: Button):  # MemberView
+        view = SendToUserOrChannel(
+            self,
+            select_cls=UserSelect(
+                placeholder="Select a User",
+            ),
+        )
+        await interaction.response.send_message(view=view, ephemeral=True)
+        view.response = await interaction.original_response()
 
     @discord.ui.button(label="Export JSON", row=3)
     async def export_json(self, interaction: Interaction, button: Button): ...  # Mystbin
@@ -109,14 +144,18 @@ class Builder(BaseView):
     @discord.ui.button(label="Export JSON", row=3)
     async def import_json(self, interaction: Interaction, button: Button): ...  # Mystbin
 
-    @discord.ui.button(emoji="\U0000274c", style=discord.ButtonStyle.red, row=3)
-    async def close(self, interaction: Interaction, button: Button): ...
+    @discord.ui.button(label="x", style=discord.ButtonStyle.red, row=3)
+    async def close(self, interaction: Interaction, button: Button):
+        self.stop()
+        await interaction.response.edit_message(view=None)
 
     @discord.ui.button(label="0 / 6000 characters", disabled=True, row=4)
-    async def character_count(self, interaction: Interaction, button: Button): ...
+    async def character_count(self, interaction: Interaction, button: Button):
+        await interaction.response.defer()
 
     @discord.ui.button(label="0 / 25 fields", disabled=True, row=4)
-    async def field_count(self, interaction: Interaction, button: Button): ...
+    async def field_count(self, interaction: Interaction, button: Button):
+        await interaction.response.defer()
 
 
 class BaseModal(Modal):
@@ -297,7 +336,7 @@ class FieldModal(BaseModal):  # name, value, inline, index
         self.field_index = TextInput(
             label="Index",
             placeholder="Enter a value between 1 and 25",
-            default=getattr(self.field, "index", None),
+            default=str(getattr(self.field, "index", len(self.embed.fields or []))),
             required=False,
             max_length=2,
         )
@@ -307,9 +346,15 @@ class FieldModal(BaseModal):  # name, value, inline, index
     async def on_submit(self, interaction: Interaction[Bot]) -> None:
         if len(self.embed.fields) >= 25:
             return await interaction.response.send_message("Too many fields; Exceeded 25 fields")
+        if self.field:
+            self.embed.remove_field(self.field.index)  # type: ignore
 
+        if self.field_index.value.isnumeric():
+            index = int(self.field_index.value)
+        else:
+            index = len(self.embed.fields or [])
         self.embed.insert_field_at(
-            index=int(self.field_index.value or len(self.embed.fields)),
+            index=index,
             name=self.field_title,
             value=self.field_value,
             inline=False if self.field_inline.value.lower() in ("f", "n") else True,
@@ -324,10 +369,9 @@ class WebhookModal(BaseModal): ...  # URL, name, image
 class ImportModal(BaseModal): ...  # raw text | url
 
 
-class IndexView(Select):  # multiselect from n rows, return value
+class IndexSelect(Select):  # multiselect from n rows, return value
     def __init__(self, parent_view: Builder, max_options=25) -> None:
         self.parent_view = parent_view
-
         options = [
             SelectOption(
                 label=f"{i+1}. {field.name}",
@@ -335,11 +379,10 @@ class IndexView(Select):  # multiselect from n rows, return value
             )
             for i, field in enumerate(self.parent_view.embed.fields)
         ]
-
         super().__init__(
             placeholder="Which indexes would you like to remove",
             min_values=1,
-            max_values=max_options,
+            max_values=min(max_options, len(options), 25),
             options=options,
         )
 
@@ -347,33 +390,77 @@ class IndexView(Select):  # multiselect from n rows, return value
         raise NotImplemented
 
 
-class DeleteIndex(IndexView):
+class DeleteIndex(IndexSelect):
     async def callback(self, interaction: Interaction[Bot]) -> Any:
         for row in self.values:
             self.parent_view.embed.remove_field(int(row))
 
         self.parent_view.update_counters()
         await self.parent_view.response.edit(view=self.parent_view, embed=self.parent_view.embed)
-        await interaction.response.edit_message(content=f"{len(self.values)} fields deleted", view=None)
+        await interaction.response.edit_message(
+            content=f"{len(self.values)} fields deleted",
+            view=None,
+            delete_after=15,
+        )
+        if self.view:
+            self.view.stop()
 
 
-class EditIndex(IndexView):
-    def __init__(self, parent_view: Builder) -> None:
-        super().__init__(parent_view, 1)
+class EditIndex(IndexSelect):
+    def __init__(self, parent_view: Builder, *, max_values: int = 1) -> None:
+        super().__init__(parent_view, max_values)
 
     async def callback(self, interaction: Interaction[Bot]) -> Any:
         index = int(self.values[0])
-
+        field = self.parent_view.embed.fields[index]
+        setattr(field, "index", index)
         await interaction.response.send_modal(
             FieldModal(
                 title="Edit Field",
                 parent_view=self.parent_view,
-                field=self.parent_view.embed.fields[index],
+                field=field,
             )
         )
+        if self.view:
+            self.view.stop()
 
 
-class MemberView(BaseView): ...  # Select Member
+class SendToUserOrChannel(BaseView):
+    def __init__(self, parent_view: Builder, *, select_cls: UserSelect | ChannelSelect, timeout: float | None = 180):
+        self.parent_view = parent_view
+        super().__init__(timeout=timeout)
 
+        self.select = select_cls
+        select_cls.callback = self.callback
+        self.add_item(select_cls)
 
-class ChannelView(BaseView): ...  # Select Channel
+        self.cooldown = commands.CooldownMapping.from_cooldown(3, 15, lambda i: (i.user.id))  # type: ignore
+
+    async def interaction_check(self, interaction: Interaction[Bot]) -> bool:
+        check = await super().interaction_check(interaction)
+        retry_after = self.cooldown.update_rate_limit(interaction)
+
+        if retry_after:
+            raise ButtonOnCooldown(retry_after)
+        return check or True
+
+    async def on_error(self, interaction: Interaction[Bot], error: Exception, item: ui.Item[Any]):
+        if isinstance(error, ButtonOnCooldown):
+            return await interaction.response.send_message(error, ephemeral=True)
+        return await super().on_error(interaction, error, item)
+
+    async def callback(self, interaction: Interaction[Bot]) -> None:
+        await interaction.response.defer()
+        response = self.select.values[0]
+        if isinstance(response, (app_commands.AppCommandChannel, app_commands.AppCommandThread)):
+            response = response.resolve()
+        if isinstance(response, (discord.ForumChannel, discord.CategoryChannel)):
+            return await interaction.followup.send("Invalid channel type", ephemeral=True)
+        elif response is None:
+            return await interaction.followup.send("Channel not found", ephemeral=True)
+
+        try:
+            await response.send(embed=self.parent_view.embed)
+            await interaction.followup.send("Embed sent", ephemeral=True)
+        except (discord.HTTPException, discord.Forbidden):
+            await interaction.followup.send("Failed to send embed", ephemeral=True)
