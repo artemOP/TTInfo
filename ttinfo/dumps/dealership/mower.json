@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:18", "customClass": "Utility", "seats": 1, "hash": 1783355638, "gameName": "MOWER", "model": "mower", "displayName": "Lawn Mower", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/mower.png", "name": "Lawn Mower", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Utility",
+  "seats": 1,
+  "hash": 1783355638,
+  "gameName": "MOWER",
+  "model": "mower",
+  "displayName": "Lawn Mower",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mower.png",
+  "name": "Lawn Mower",
+  "manufacturer": "NULL"
+}

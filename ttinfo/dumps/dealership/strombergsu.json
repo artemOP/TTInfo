@@ -1,1 +1,24 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:36", "customClass": "Race Cars", "seats": 2, "model": "strombergsu", "hash": 81668440, "gameName": "STROMBERGSU", "makeName": "OCELOT", "displayName": "Stromberg Specials Unit", "credits": {"author": "Smukkeunger"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/strombergsu.png", "name": "Ocelot Stromberg Specials Unit", "manufacturer": "Ocelot"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:36",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "model": "strombergsu",
+  "hash": 81668440,
+  "gameName": "STROMBERGSU",
+  "makeName": "OCELOT",
+  "displayName": "Stromberg Specials Unit",
+  "credits": {
+    "author": "Smukkeunger"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/strombergsu.png",
+  "name": "Ocelot Stromberg Specials Unit",
+  "manufacturer": "Ocelot"
+}

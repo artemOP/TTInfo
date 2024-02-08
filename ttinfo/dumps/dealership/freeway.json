@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:47", "customClass": "Choppers", "seats": 1, "hash": -1844288576, "gameName": "FREEWAY", "model": "freeway", "displayName": "Freeway", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/freeway.png", "name": "Western Freeway", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Choppers",
+  "seats": 1,
+  "hash": -1844288576,
+  "gameName": "FREEWAY",
+  "model": "freeway",
+  "displayName": "Freeway",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/freeway.png",
+  "name": "Western Freeway",
+  "manufacturer": "Western"
+}

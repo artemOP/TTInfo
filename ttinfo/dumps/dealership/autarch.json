@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 2600000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:37", "customClass": "Super", "seats": 2, "hash": -313185164, "gameName": "AUTARCH", "model": "autarch", "displayName": "Autarch", "makeName": "OVERFLOD", "preview": "https://cdn.tycoon.community/dealership/vehicles/autarch.png", "name": "Overflod Autarch", "manufacturer": "Overflod"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 2600000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -313185164,
+  "gameName": "AUTARCH",
+  "model": "autarch",
+  "displayName": "Autarch",
+  "makeName": "OVERFLOD",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/autarch.png",
+  "name": "Overflod Autarch",
+  "manufacturer": "Overflod"
+}

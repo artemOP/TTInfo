@@ -1,1 +1,19 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:52", "customClass": "Trailers", "seats": 2, "model": "stairtrailer1", "hash": 1628752821, "gameName": "STATRAILER", "makeName": "", "displayName": "Airport Stair Trailer", "credits": {"author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders", "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/stairtrailer1.png", "name": "Airport Stair Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Trailers",
+  "seats": 2,
+  "model": "stairtrailer1",
+  "hash": 1628752821,
+  "gameName": "STATRAILER",
+  "makeName": "",
+  "displayName": "Airport Stair Trailer",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders",
+    "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stairtrailer1.png",
+  "name": "Airport Stair Trailer",
+  "manufacturer": "NULL"
+}

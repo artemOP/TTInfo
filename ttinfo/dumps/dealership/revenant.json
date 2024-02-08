@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:47", "customClass": "Motorcycles", "seats": 1, "hash": -359167535, "gameName": "REVENANT", "model": "revenant", "displayName": "Revenant", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/revenant.png", "name": "Western Revenant", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": -359167535,
+  "gameName": "REVENANT",
+  "model": "revenant",
+  "displayName": "Revenant",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/revenant.png",
+  "name": "Western Revenant",
+  "manufacturer": "Western"
+}

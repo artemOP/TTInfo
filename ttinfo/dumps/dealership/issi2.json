@@ -1,1 +1,21 @@
-{"className": "Compacts", "dealership": {"dealership": "Vehicle Shop", "category": "Compacts", "price": 20000, "premium": false}, "classId": 0, "_data_generated": "2024-01-06 18:17:17", "customClass": "Compacts", "seats": 2, "hash": -1177863319, "gameName": "ISSI2", "model": "issi2", "displayName": "Issi", "makeName": "WEENY", "preview": "https://cdn.tycoon.community/dealership/vehicles/issi2.png", "name": "Weeny Issi", "manufacturer": "Weeny"}
+{
+  "className": "Compacts",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Compacts",
+    "price": 20000,
+    "premium": false
+  },
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": -1177863319,
+  "gameName": "ISSI2",
+  "model": "issi2",
+  "displayName": "Issi",
+  "makeName": "WEENY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/issi2.png",
+  "name": "Weeny Issi",
+  "manufacturer": "Weeny"
+}

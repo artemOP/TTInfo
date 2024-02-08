@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:42", "customClass": "Muscle", "seats": 2, "hash": 1706945532, "gameName": "RUINER4", "model": "ruiner4", "displayName": "Ruiner ZZ-8", "makeName": "IMPONTE", "preview": "https://cdn.tycoon.community/dealership/vehicles/ruiner4.png", "name": "Imponte Ruiner ZZ-8", "manufacturer": "Imponte"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 1706945532,
+  "gameName": "RUINER4",
+  "model": "ruiner4",
+  "displayName": "Ruiner ZZ-8",
+  "makeName": "IMPONTE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ruiner4.png",
+  "name": "Imponte Ruiner ZZ-8",
+  "manufacturer": "Imponte"
+}

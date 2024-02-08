@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 44500, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:12", "customClass": "Choppers", "seats": 2, "hash": -159126838, "gameName": "INNOVATION", "model": "innovation", "displayName": "Innovation", "makeName": "LCC", "preview": "https://cdn.tycoon.community/dealership/vehicles/innovation.png", "name": "LCC Innovation", "manufacturer": "LCC"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 44500,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Choppers",
+  "seats": 2,
+  "hash": -159126838,
+  "gameName": "INNOVATION",
+  "model": "innovation",
+  "displayName": "Innovation",
+  "makeName": "LCC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/innovation.png",
+  "name": "LCC Innovation",
+  "manufacturer": "LCC"
+}

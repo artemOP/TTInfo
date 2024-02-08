@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:41", "customClass": "Muscle", "seats": 2, "hash": -1681653521, "gameName": "DRIFTYOSEM", "model": "driftyosemite", "displayName": "Drift Yosemite", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/driftyosemite.png", "name": "Declasse Drift Yosemite", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -1681653521,
+  "gameName": "DRIFTYOSEM",
+  "model": "driftyosemite",
+  "displayName": "Drift Yosemite",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/driftyosemite.png",
+  "name": "Declasse Drift Yosemite",
+  "manufacturer": "Declasse"
+}

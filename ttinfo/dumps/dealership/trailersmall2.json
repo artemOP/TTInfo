@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:26", "customClass": "Anti-Air", "seats": 1, "hash": -1881846085, "gameName": "TRSMALL2", "model": "trailersmall2", "displayName": "Anti-Aircraft Trailer", "makeName": "VOMFEUER", "preview": "https://cdn.tycoon.community/dealership/vehicles/trailersmall2.png", "name": "Vom Feuer Anti-Aircraft Trailer", "manufacturer": "Vom Feuer"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:26",
+  "customClass": "Anti-Air",
+  "seats": 1,
+  "hash": -1881846085,
+  "gameName": "TRSMALL2",
+  "model": "trailersmall2",
+  "displayName": "Anti-Aircraft Trailer",
+  "makeName": "VOMFEUER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/trailersmall2.png",
+  "name": "Vom Feuer Anti-Aircraft Trailer",
+  "manufacturer": "Vom Feuer"
+}

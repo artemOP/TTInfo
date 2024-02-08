@@ -1,1 +1,21 @@
-{"className": "Commercial", "dealership": {"dealership": "Vehicle Shop", "category": "Company Vehicles", "price": 50000000, "premium": false}, "classId": 20, "_data_generated": "2024-01-06 18:17:44", "customClass": "Semi-Cabs", "seats": 2, "hash": -924015262, "gameName": "HAULER2", "model": "frllc_hauler2", "displayName": "Hauler Custom", "makeName": "COBRACO", "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_hauler2.png", "name": "First Responders LLC Hauler Custom", "manufacturer": "First Responders LLC"}
+{
+  "className": "Commercial",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Company Vehicles",
+    "price": 50000000,
+    "premium": false
+  },
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": -924015262,
+  "gameName": "HAULER2",
+  "model": "frllc_hauler2",
+  "displayName": "Hauler Custom",
+  "makeName": "COBRACO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_hauler2.png",
+  "name": "First Responders LLC Hauler Custom",
+  "manufacturer": "First Responders LLC"
+}

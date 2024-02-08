@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 610000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:27", "customClass": "Sports", "seats": 2, "hash": 1274868363, "gameName": "BESTIAGTS", "model": "bestiagts", "displayName": "Bestia GTS", "makeName": "GROTTI", "preview": "https://cdn.tycoon.community/dealership/vehicles/bestiagts.png", "name": "Grotti Bestia GTS", "manufacturer": "Grotti"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 610000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:27",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1274868363,
+  "gameName": "BESTIAGTS",
+  "model": "bestiagts",
+  "displayName": "Bestia GTS",
+  "makeName": "GROTTI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bestiagts.png",
+  "name": "Grotti Bestia GTS",
+  "manufacturer": "Grotti"
+}

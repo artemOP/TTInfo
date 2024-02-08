@@ -1,1 +1,21 @@
-{"className": "Coupes", "dealership": {"dealership": "Vehicle Shop", "category": "Coupes", "price": 1000000, "premium": false}, "classId": 3, "_data_generated": "2024-01-06 18:17:32", "customClass": "Sedans", "seats": 4, "hash": -1930048799, "gameName": "WINDSOR2", "model": "windsor2", "displayName": "Windsor Drop", "makeName": "ENUS", "preview": "https://cdn.tycoon.community/dealership/vehicles/windsor2.png", "name": "Enus Windsor Drop", "manufacturer": "Enus"}
+{
+  "className": "Coupes",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Coupes",
+    "price": 1000000,
+    "premium": false
+  },
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1930048799,
+  "gameName": "WINDSOR2",
+  "model": "windsor2",
+  "displayName": "Windsor Drop",
+  "makeName": "ENUS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/windsor2.png",
+  "name": "Enus Windsor Drop",
+  "manufacturer": "Enus"
+}

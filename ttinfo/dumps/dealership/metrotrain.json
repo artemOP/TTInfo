@@ -1,1 +1,15 @@
-{"className": "Trains", "classId": 21, "_data_generated": "2024-01-06 18:17:29", "customClass": "Metro", "seats": 4, "hash": 868868440, "gameName": "FREIGHT", "model": "metrotrain", "displayName": "Freight Train", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/metrotrain.png", "name": "Freight Train", "manufacturer": "NULL"}
+{
+  "className": "Trains",
+  "classId": 21,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Metro",
+  "seats": 4,
+  "hash": 868868440,
+  "gameName": "FREIGHT",
+  "model": "metrotrain",
+  "displayName": "Freight Train",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/metrotrain.png",
+  "name": "Freight Train",
+  "manufacturer": "NULL"
+}

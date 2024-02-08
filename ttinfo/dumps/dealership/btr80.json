@@ -1,1 +1,19 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:51", "customClass": "Military", "seats": 2, "model": "btr80", "hash": 1013773144, "gameName": "ARMPERSCARR", "makeName": "BTR80", "displayName": "BTR-80", "credits": {"author": "JohnMc & ApacheSS", "download": "https://www.gta5-mods.com/vehicles/btr-80"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/btr80.png", "name": "BTR-80", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Military",
+  "seats": 2,
+  "model": "btr80",
+  "hash": 1013773144,
+  "gameName": "ARMPERSCARR",
+  "makeName": "BTR80",
+  "displayName": "BTR-80",
+  "credits": {
+    "author": "JohnMc & ApacheSS",
+    "download": "https://www.gta5-mods.com/vehicles/btr-80"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/btr80.png",
+  "name": "BTR-80",
+  "manufacturer": "NULL"
+}

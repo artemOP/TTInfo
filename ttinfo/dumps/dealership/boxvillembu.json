@@ -1,1 +1,18 @@
-{"className": "Service", "classId": 17, "_data_generated": "2024-01-06 18:17:52", "customClass": "Service", "seats": 6, "model": "boxvillembu", "hash": -608776946, "gameName": "boxvillembu", "makeName": "BRUTE", "displayName": "Boxville MBU", "credits": {"author": "ToneBeeDTD"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/boxvillembu.png", "name": "Brute Boxville MBU", "manufacturer": "Brute"}
+{
+  "className": "Service",
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Service",
+  "seats": 6,
+  "model": "boxvillembu",
+  "hash": -608776946,
+  "gameName": "boxvillembu",
+  "makeName": "BRUTE",
+  "displayName": "Boxville MBU",
+  "credits": {
+    "author": "ToneBeeDTD"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/boxvillembu.png",
+  "name": "Brute Boxville MBU",
+  "manufacturer": "Brute"
+}

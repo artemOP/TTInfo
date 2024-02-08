@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:19", "customClass": "ATVs", "seats": 1, "hash": -1590337689, "gameName": "BLAZER5", "model": "blazer5", "displayName": "Blazer Aqua", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/blazer5.png", "name": "Nagasaki Blazer Aqua", "manufacturer": "Nagasaki"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "ATVs",
+  "seats": 1,
+  "hash": -1590337689,
+  "gameName": "BLAZER5",
+  "model": "blazer5",
+  "displayName": "Blazer Aqua",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blazer5.png",
+  "name": "Nagasaki Blazer Aqua",
+  "manufacturer": "Nagasaki"
+}

@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:47", "customClass": "Airport", "seats": 4, "hash": -1590284256, "gameName": "PERENNIAL2", "model": "perennial2", "displayName": "Airport Perennial", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/perennial2.png", "name": "Airport Perennial", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Airport",
+  "seats": 4,
+  "hash": -1590284256,
+  "gameName": "PERENNIAL2",
+  "model": "perennial2",
+  "displayName": "Airport Perennial",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/perennial2.png",
+  "name": "Airport Perennial",
+  "manufacturer": "NULL"
+}

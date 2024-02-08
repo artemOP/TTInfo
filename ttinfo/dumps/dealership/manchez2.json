@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:24", "customClass": "Dirtbikes", "seats": 1, "hash": 1086534307, "gameName": "MANCHEZ2", "model": "manchez2", "displayName": "Manchez Scout", "makeName": "MAIBATSU", "preview": "https://cdn.tycoon.community/dealership/vehicles/manchez2.png", "name": "Maibatsu Manchez Scout", "manufacturer": "Maibatsu"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Dirtbikes",
+  "seats": 1,
+  "hash": 1086534307,
+  "gameName": "MANCHEZ2",
+  "model": "manchez2",
+  "displayName": "Manchez Scout",
+  "makeName": "MAIBATSU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/manchez2.png",
+  "name": "Maibatsu Manchez Scout",
+  "manufacturer": "Maibatsu"
+}

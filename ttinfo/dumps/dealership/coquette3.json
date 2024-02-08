@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 695000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:22", "customClass": "Muscle", "seats": 2, "hash": 784565758, "gameName": "COQUETTE3", "model": "coquette3", "displayName": "Coquette BlackFin", "makeName": "INVERTO", "preview": "https://cdn.tycoon.community/dealership/vehicles/coquette3.png", "name": "Invetero Coquette BlackFin", "manufacturer": "Invetero"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 695000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 784565758,
+  "gameName": "COQUETTE3",
+  "model": "coquette3",
+  "displayName": "Coquette BlackFin",
+  "makeName": "INVERTO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/coquette3.png",
+  "name": "Invetero Coquette BlackFin",
+  "manufacturer": "Invetero"
+}

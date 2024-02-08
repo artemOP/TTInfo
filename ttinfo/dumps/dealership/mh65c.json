@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:49", "customClass": "Emergency", "seats": 7, "hash": -399311599, "gameName": "mh65c", "model": "mh65c", "displayName": "MH-65 Dolphin", "makeName": "EUROCOPTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/mh65c.png", "name": "MH-65 Dolphin", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Emergency",
+  "seats": 7,
+  "hash": -399311599,
+  "gameName": "mh65c",
+  "model": "mh65c",
+  "displayName": "MH-65 Dolphin",
+  "makeName": "EUROCOPTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mh65c.png",
+  "name": "MH-65 Dolphin",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:23", "customClass": "Sports", "seats": 2, "hash": 1141395928, "gameName": "COMET7", "model": "comet7", "displayName": "Comet S2 Cabrio", "makeName": "PFISTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/comet7.png", "name": "Pfister Comet S2 Cabrio", "manufacturer": "Pfister"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:23",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1141395928,
+  "gameName": "COMET7",
+  "model": "comet7",
+  "displayName": "Comet S2 Cabrio",
+  "makeName": "PFISTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/comet7.png",
+  "name": "Pfister Comet S2 Cabrio",
+  "manufacturer": "Pfister"
+}

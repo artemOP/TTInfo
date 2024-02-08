@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:12", "customClass": "Choppers", "seats": 2, "hash": -408052231, "gameName": "DIABOLUS", "model": "diabolus", "displayName": "Diabolus", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/diabolus.png", "name": "Western Diabolus", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Choppers",
+  "seats": 2,
+  "hash": -408052231,
+  "gameName": "DIABOLUS",
+  "model": "diabolus",
+  "displayName": "Diabolus",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/diabolus.png",
+  "name": "Western Diabolus",
+  "manufacturer": "Western"
+}

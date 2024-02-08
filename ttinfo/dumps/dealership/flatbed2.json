@@ -1,1 +1,15 @@
-{"className": "Industrial", "classId": 10, "_data_generated": "2024-01-06 18:17:19", "customClass": "Trucks", "seats": 2, "hash": -1882910943, "gameName": "FLATBED", "model": "flatbed2", "displayName": "Flatbed", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/flatbed2.png", "name": "MTL Flatbed", "manufacturer": "MTL"}
+{
+  "className": "Industrial",
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Trucks",
+  "seats": 2,
+  "hash": -1882910943,
+  "gameName": "FLATBED",
+  "model": "flatbed2",
+  "displayName": "Flatbed",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/flatbed2.png",
+  "name": "MTL Flatbed",
+  "manufacturer": "MTL"
+}

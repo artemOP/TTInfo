@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 5000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:29", "customClass": "UTVs", "seats": 2, "hash": -349601129, "gameName": "BIFTA", "model": "bifta", "displayName": "Bifta", "makeName": "BF", "preview": "https://cdn.tycoon.community/dealership/vehicles/bifta.png", "name": "BF Bifta", "manufacturer": "BF"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 5000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "UTVs",
+  "seats": 2,
+  "hash": -349601129,
+  "gameName": "BIFTA",
+  "model": "bifta",
+  "displayName": "Bifta",
+  "makeName": "BF",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bifta.png",
+  "name": "BF Bifta",
+  "manufacturer": "BF"
+}

@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:24", "customClass": "Flying Bikes", "seats": 1, "hash": 884483972, "gameName": "OPPRESSOR", "model": "oppressor", "displayName": "Oppressor", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/oppressor.png", "name": "Pegassi Oppressor", "manufacturer": "Pegassi"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Flying Bikes",
+  "seats": 1,
+  "hash": 884483972,
+  "gameName": "OPPRESSOR",
+  "model": "oppressor",
+  "displayName": "Oppressor",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/oppressor.png",
+  "name": "Pegassi Oppressor",
+  "manufacturer": "Pegassi"
+}

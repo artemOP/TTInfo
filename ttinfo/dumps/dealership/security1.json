@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:50", "customClass": "FailRP", "seats": 4, "hash": -402688037, "gameName": "security1", "model": "security1", "displayName": "Tycoon Staff Buffalo S", "makeName": "Staff Buffa", "preview": "https://cdn.tycoon.community/dealership/vehicles/security1.png", "name": "Tycoon Staff Buffalo S", "manufacturer": "NULL"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "FailRP",
+  "seats": 4,
+  "hash": -402688037,
+  "gameName": "security1",
+  "model": "security1",
+  "displayName": "Tycoon Staff Buffalo S",
+  "makeName": "Staff Buffa",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/security1.png",
+  "name": "Tycoon Staff Buffalo S",
+  "manufacturer": "NULL"
+}

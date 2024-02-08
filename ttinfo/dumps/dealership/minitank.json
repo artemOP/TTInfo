@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:41", "customClass": "Military", "seats": 1, "hash": -1254331310, "gameName": "MINITANK", "model": "minitank", "displayName": "Invade and Persuade Tank", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/minitank.png", "name": "Invade and Persuade Tank", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Military",
+  "seats": 1,
+  "hash": -1254331310,
+  "gameName": "MINITANK",
+  "model": "minitank",
+  "displayName": "Invade and Persuade Tank",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/minitank.png",
+  "name": "Invade and Persuade Tank",
+  "manufacturer": "NULL"
+}

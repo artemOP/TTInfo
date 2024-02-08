@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 1400000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:30", "customClass": "Super", "seats": 2, "hash": -1829802492, "gameName": "PFISTER811", "model": "pfister811", "displayName": "811", "makeName": "PFISTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/pfister811.png", "name": "Pfister 811", "manufacturer": "Pfister"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 1400000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -1829802492,
+  "gameName": "PFISTER811",
+  "model": "pfister811",
+  "displayName": "811",
+  "makeName": "PFISTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pfister811.png",
+  "name": "Pfister 811",
+  "manufacturer": "Pfister"
+}

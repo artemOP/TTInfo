@@ -1,1 +1,15 @@
-{"className": "Sports Classics", "classId": 5, "_data_generated": "2024-01-06 18:17:32", "customClass": "Sports Classics", "seats": 4, "hash": -831834716, "gameName": "BTYPE2", "model": "btype2", "displayName": "Fr\u00e4nken Stange", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/btype2.png", "name": "Albany Fr\u00e4nken Stange", "manufacturer": "Albany"}
+{
+  "className": "Sports Classics",
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Sports Classics",
+  "seats": 4,
+  "hash": -831834716,
+  "gameName": "BTYPE2",
+  "model": "btype2",
+  "displayName": "Fränken Stange",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/btype2.png",
+  "name": "Albany Fränken Stange",
+  "manufacturer": "Albany"
+}

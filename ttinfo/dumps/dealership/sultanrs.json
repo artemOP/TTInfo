@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:20", "customClass": "Race Cars", "seats": 2, "hash": -295689028, "gameName": "SULTANRS", "model": "sultanrs", "displayName": "Sultan RS", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/sultanrs.png", "name": "Karin Sultan RS", "manufacturer": "Karin"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": -295689028,
+  "gameName": "SULTANRS",
+  "model": "sultanrs",
+  "displayName": "Sultan RS",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sultanrs.png",
+  "name": "Karin Sultan RS",
+  "manufacturer": "Karin"
+}

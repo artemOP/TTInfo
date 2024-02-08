@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 90000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:15", "customClass": "Muscle", "seats": 2, "hash": 37348240, "gameName": "HOTKNIFE", "model": "hotknife", "displayName": "Hotknife", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/hotknife.png", "name": "Vapid Hotknife", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 90000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 37348240,
+  "gameName": "HOTKNIFE",
+  "model": "hotknife",
+  "displayName": "Hotknife",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hotknife.png",
+  "name": "Vapid Hotknife",
+  "manufacturer": "Vapid"
+}

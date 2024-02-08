@@ -902,7 +902,7 @@ class Client:
         if not path.exists or force:
             data = await self.session.vehicle_data(vehicle)
             with open(path, "wb") as f:
-                f.write(orjson.dumps(data))
+                f.write(orjson.dumps(data, option=orjson.OPT_INDENT_2))
 
         with open(path, "rb") as f:
             data = orjson.loads(f.read())

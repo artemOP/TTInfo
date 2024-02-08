@@ -1,1 +1,21 @@
-{"className": "Boats", "dealership": {"dealership": "Boat Shop", "category": "Boats", "price": 600000, "premium": false}, "classId": 14, "_data_generated": "2024-01-06 18:17:29", "customClass": "Boats", "seats": 4, "hash": 231083307, "gameName": "SPEEDER", "model": "speeder", "displayName": "Speeder", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/speeder.png", "name": "Pegassi Speeder", "manufacturer": "Pegassi"}
+{
+  "className": "Boats",
+  "dealership": {
+    "dealership": "Boat Shop",
+    "category": "Boats",
+    "price": 600000,
+    "premium": false
+  },
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": 231083307,
+  "gameName": "SPEEDER",
+  "model": "speeder",
+  "displayName": "Speeder",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/speeder.png",
+  "name": "Pegassi Speeder",
+  "manufacturer": "Pegassi"
+}

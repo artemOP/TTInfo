@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:42", "customClass": "Sports", "seats": 2, "hash": 1304459735, "gameName": "GROWLER", "model": "growler", "displayName": "Growler", "makeName": "PFISTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/growler.png", "name": "Pfister Growler", "manufacturer": "Pfister"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1304459735,
+  "gameName": "GROWLER",
+  "model": "growler",
+  "displayName": "Growler",
+  "makeName": "PFISTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/growler.png",
+  "name": "Pfister Growler",
+  "manufacturer": "Pfister"
+}

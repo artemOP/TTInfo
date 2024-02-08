@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:19", "customClass": "Trucks", "seats": 2, "hash": 2112052861, "gameName": "POUNDER", "model": "pounder", "displayName": "Pounder", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/pounder.png", "name": "MTL Pounder", "manufacturer": "MTL"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Trucks",
+  "seats": 2,
+  "hash": 2112052861,
+  "gameName": "POUNDER",
+  "model": "pounder",
+  "displayName": "Pounder",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pounder.png",
+  "name": "MTL Pounder",
+  "manufacturer": "MTL"
+}

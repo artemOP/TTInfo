@@ -1,1 +1,21 @@
-{"className": "Service", "dealership": {"dealership": "Vehicle Shop", "category": "Bus Driver", "price": 21000000, "premium": false}, "classId": 17, "_data_generated": "2024-01-06 18:17:52", "customClass": "Buses", "seats": 16, "hash": -376716352, "gameName": "BUS MAZ", "model": "bus_maz", "displayName": "MAZ Bus", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/bus_maz.png", "name": "MAZ Bus", "manufacturer": "NULL"}
+{
+  "className": "Service",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bus Driver",
+    "price": 21000000,
+    "premium": false
+  },
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Buses",
+  "seats": 16,
+  "hash": -376716352,
+  "gameName": "BUS MAZ",
+  "model": "bus_maz",
+  "displayName": "MAZ Bus",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bus_maz.png",
+  "name": "MAZ Bus",
+  "manufacturer": "NULL"
+}

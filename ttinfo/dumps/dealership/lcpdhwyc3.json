@@ -1,1 +1,19 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:43", "customClass": "Emergency", "seats": 4, "model": "lcpdhwyc3", "hash": -820986261, "gameName": "lcpdhwyc3", "makeName": "VAPID", "displayName": "Stanier", "credits": {"author": "SAS994 & ShaoyeBen", "name": "1st gen Stanier"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwyc3.png", "name": "Vapid Stanier", "manufacturer": "Vapid"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Emergency",
+  "seats": 4,
+  "model": "lcpdhwyc3",
+  "hash": -820986261,
+  "gameName": "lcpdhwyc3",
+  "makeName": "VAPID",
+  "displayName": "Stanier",
+  "credits": {
+    "author": "SAS994 & ShaoyeBen",
+    "name": "1st gen Stanier"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwyc3.png",
+  "name": "Vapid Stanier",
+  "manufacturer": "Vapid"
+}

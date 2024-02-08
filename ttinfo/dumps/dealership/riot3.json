@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Bank Driver", "price": 350000, "premium": false}, "classId": 18, "_data_generated": "2024-01-06 18:17:50", "customClass": "Armored Trucks", "seats": 6, "hash": 1639100653, "gameName": "RIOT3", "model": "riot3", "displayName": "Stockade RCV", "makeName": "G6SECHS", "preview": "https://cdn.tycoon.community/dealership/vehicles/riot3.png", "name": "Gruppe Sechs Stockade RCV", "manufacturer": "Gruppe Sechs"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bank Driver",
+    "price": 350000,
+    "premium": false
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Armored Trucks",
+  "seats": 6,
+  "hash": 1639100653,
+  "gameName": "RIOT3",
+  "model": "riot3",
+  "displayName": "Stockade RCV",
+  "makeName": "G6SECHS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/riot3.png",
+  "name": "Gruppe Sechs Stockade RCV",
+  "manufacturer": "Gruppe Sechs"
+}

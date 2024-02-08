@@ -1,1 +1,21 @@
-{"className": "SUVs", "dealership": {"dealership": "Vehicle Shop", "category": "SUVs", "price": 35000, "premium": false}, "classId": 2, "_data_generated": "2024-01-06 18:17:17", "customClass": "SUVs", "seats": 8, "hash": -1775728740, "gameName": "GRANGER", "model": "granger", "displayName": "Granger", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/granger.png", "name": "Declasse Granger", "manufacturer": "Declasse"}
+{
+  "className": "SUVs",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "SUVs",
+    "price": 35000,
+    "premium": false
+  },
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "SUVs",
+  "seats": 8,
+  "hash": -1775728740,
+  "gameName": "GRANGER",
+  "model": "granger",
+  "displayName": "Granger",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/granger.png",
+  "name": "Declasse Granger",
+  "manufacturer": "Declasse"
+}

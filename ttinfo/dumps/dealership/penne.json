@@ -1,1 +1,18 @@
-{"className": "Open Wheel", "classId": 22, "_data_generated": "2024-01-06 18:17:47", "customClass": "Open Wheel", "seats": 2, "model": "penne", "hash": -1562994430, "gameName": "penne", "makeName": "LAMPADA", "displayName": "169 Penne", "credits": {"author": "Smukkeunger"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/penne.png", "name": "Lampadati 169 Penne", "manufacturer": "Lampadati"}
+{
+  "className": "Open Wheel",
+  "classId": 22,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Open Wheel",
+  "seats": 2,
+  "model": "penne",
+  "hash": -1562994430,
+  "gameName": "penne",
+  "makeName": "LAMPADA",
+  "displayName": "169 Penne",
+  "credits": {
+    "author": "Smukkeunger"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/penne.png",
+  "name": "Lampadati 169 Penne",
+  "manufacturer": "Lampadati"
+}

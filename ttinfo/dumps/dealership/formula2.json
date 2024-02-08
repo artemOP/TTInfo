@@ -1,1 +1,15 @@
-{"className": "Open Wheel", "classId": 22, "_data_generated": "2024-01-06 18:17:38", "customClass": "Open Wheel", "seats": 1, "hash": -1960756985, "gameName": "FORMULA2", "model": "formula2", "displayName": "R88", "makeName": "OCELOT", "preview": "https://cdn.tycoon.community/dealership/vehicles/formula2.png", "name": "Ocelot R88", "manufacturer": "Ocelot"}
+{
+  "className": "Open Wheel",
+  "classId": 22,
+  "_data_generated": "2024-01-06 18:17:38",
+  "customClass": "Open Wheel",
+  "seats": 1,
+  "hash": -1960756985,
+  "gameName": "FORMULA2",
+  "model": "formula2",
+  "displayName": "R88",
+  "makeName": "OCELOT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/formula2.png",
+  "name": "Ocelot R88",
+  "manufacturer": "Ocelot"
+}

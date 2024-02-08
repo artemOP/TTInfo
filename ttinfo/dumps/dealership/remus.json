@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:38", "customClass": "Sports", "seats": 2, "hash": 1377217886, "gameName": "REMUS", "model": "remus", "displayName": "Remus", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/remus.png", "name": "Annis Remus", "manufacturer": "Annis"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:38",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1377217886,
+  "gameName": "REMUS",
+  "model": "remus",
+  "displayName": "Remus",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/remus.png",
+  "name": "Annis Remus",
+  "manufacturer": "Annis"
+}

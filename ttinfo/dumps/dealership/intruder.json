@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 16000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sedans", "seats": 4, "hash": 886934177, "gameName": "INTRUDER", "model": "intruder", "displayName": "Intruder", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/intruder.png", "name": "Karin Intruder", "manufacturer": "Karin"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 16000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 886934177,
+  "gameName": "INTRUDER",
+  "model": "intruder",
+  "displayName": "Intruder",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/intruder.png",
+  "name": "Karin Intruder",
+  "manufacturer": "Karin"
+}

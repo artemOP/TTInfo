@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:51", "customClass": "Airliners", "seats": 2, "hash": -1337619697, "gameName": "a333", "model": "a333", "displayName": "A333", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/a333.png", "name": "A333", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": -1337619697,
+  "gameName": "a333",
+  "model": "a333",
+  "displayName": "A333",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/a333.png",
+  "name": "A333",
+  "manufacturer": "NULL"
+}

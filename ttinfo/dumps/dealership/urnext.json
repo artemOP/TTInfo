@@ -1,1 +1,21 @@
-{"className": "Military", "dealership": {"dealership": "Vehicle Shop", "category": "Semi Cabs", "price": 1500000, "premium": false}, "classId": 19, "_data_generated": "2024-01-06 18:17:29", "customClass": "Semi-Cabs", "seats": 10, "hash": 1803961830, "gameName": "urnext", "model": "urnext", "displayName": "Ural", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/urnext.png", "name": "Ural", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Semi Cabs",
+    "price": 1500000,
+    "premium": false
+  },
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Semi-Cabs",
+  "seats": 10,
+  "hash": 1803961830,
+  "gameName": "urnext",
+  "model": "urnext",
+  "displayName": "Ural",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/urnext.png",
+  "name": "Ural",
+  "manufacturer": "NULL"
+}

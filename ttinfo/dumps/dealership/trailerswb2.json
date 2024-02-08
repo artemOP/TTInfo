@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 100000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:51", "customClass": "Trailers", "seats": 0, "hash": -1889702270, "gameName": "TRAILERSWB2", "model": "trailerswb2", "displayName": "Refridgerated Trailer (MK10)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerswb2.png", "name": "Refridgerated Trailer (MK10)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 100000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1889702270,
+  "gameName": "TRAILERSWB2",
+  "model": "trailerswb2",
+  "displayName": "Refridgerated Trailer (MK10)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerswb2.png",
+  "name": "Refridgerated Trailer (MK10)",
+  "manufacturer": "NULL"
+}

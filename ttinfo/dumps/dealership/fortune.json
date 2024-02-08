@@ -1,1 +1,15 @@
-{"className": "Compacts", "classId": 0, "_data_generated": "2024-01-06 18:17:46", "customClass": "Compacts", "seats": 4, "hash": 627033353, "gameName": "FORTUNE", "model": "fortune", "displayName": "Fortune", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/fortune.png", "name": "Vapid Fortune", "manufacturer": "Vapid"}
+{
+  "className": "Compacts",
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Compacts",
+  "seats": 4,
+  "hash": 627033353,
+  "gameName": "FORTUNE",
+  "model": "fortune",
+  "displayName": "Fortune",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/fortune.png",
+  "name": "Vapid Fortune",
+  "manufacturer": "Vapid"
+}

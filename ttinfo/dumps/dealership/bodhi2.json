@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 25000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:14", "customClass": "Pickups", "seats": 4, "hash": -1435919434, "gameName": "BODHI2", "model": "bodhi2", "displayName": "Bodhi", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/bodhi2.png", "name": "Canis Bodhi", "manufacturer": "Canis"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 25000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Pickups",
+  "seats": 4,
+  "hash": -1435919434,
+  "gameName": "BODHI2",
+  "model": "bodhi2",
+  "displayName": "Bodhi",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bodhi2.png",
+  "name": "Canis Bodhi",
+  "manufacturer": "Canis"
+}

@@ -1,1 +1,21 @@
-{"className": "Commercial", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 20, "_data_generated": "2024-01-06 18:17:18", "customClass": "Semi-Cabs", "seats": 5, "hash": 177270108, "gameName": "PHANTOM3", "model": "phantom3", "displayName": "Phantom Custom", "makeName": "JOBUILT", "preview": "https://cdn.tycoon.community/dealership/vehicles/phantom3.png", "name": "JoBuilt Phantom Custom", "manufacturer": "JoBuilt"}
+{
+  "className": "Commercial",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Semi-Cabs",
+  "seats": 5,
+  "hash": 177270108,
+  "gameName": "PHANTOM3",
+  "model": "phantom3",
+  "displayName": "Phantom Custom",
+  "makeName": "JOBUILT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/phantom3.png",
+  "name": "JoBuilt Phantom Custom",
+  "manufacturer": "JoBuilt"
+}

@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:50", "customClass": "Go-Karts", "seats": 2, "hash": -1241444270, "gameName": "SUPERKART1", "model": "superkart1", "displayName": "Superkart (GO)", "makeName": "KART", "preview": "https://cdn.tycoon.community/dealership/vehicles/superkart1.png", "name": "Superkart (GO)", "manufacturer": "NULL"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Go-Karts",
+  "seats": 2,
+  "hash": -1241444270,
+  "gameName": "SUPERKART1",
+  "model": "superkart1",
+  "displayName": "Superkart (GO)",
+  "makeName": "KART",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/superkart1.png",
+  "name": "Superkart (GO)",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:52", "customClass": "Buses", "seats": 2, "hash": -130050254, "gameName": "IKARUS28049", "model": "ikarus28049", "displayName": "Ikarus 280.49 Articulated Bus", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/ikarus28049.png", "name": "MTL Ikarus 280.49 Articulated Bus", "manufacturer": "MTL"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Buses",
+  "seats": 2,
+  "hash": -130050254,
+  "gameName": "IKARUS28049",
+  "model": "ikarus28049",
+  "displayName": "Ikarus 280.49 Articulated Bus",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ikarus28049.png",
+  "name": "MTL Ikarus 280.49 Articulated Bus",
+  "manufacturer": "MTL"
+}

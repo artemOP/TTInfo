@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 270000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:32", "customClass": "Armored Cars", "seats": 4, "hash": -888242983, "gameName": "SCHAFTER5", "model": "schafter5", "displayName": "Schafter V12 (Armored)", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter5.png", "name": "Benefactor Schafter V12 (Armored)", "manufacturer": "Benefactor"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 270000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Armored Cars",
+  "seats": 4,
+  "hash": -888242983,
+  "gameName": "SCHAFTER5",
+  "model": "schafter5",
+  "displayName": "Schafter V12 (Armored)",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter5.png",
+  "name": "Benefactor Schafter V12 (Armored)",
+  "manufacturer": "Benefactor"
+}

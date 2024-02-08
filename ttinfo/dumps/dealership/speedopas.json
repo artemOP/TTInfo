@@ -1,1 +1,18 @@
-{"className": "Vans", "classId": 12, "_data_generated": "2024-01-06 18:17:49", "customClass": "Vans", "seats": 6, "model": "speedopas", "hash": -391169584, "gameName": "SPEEDOPAS", "makeName": "VAPID", "displayName": "Speedo (Transit)", "credits": {"author": "TheF3nt0n, Bondergomme and others"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/speedopas.png", "name": "Vapid Speedo (Transit)", "manufacturer": "Vapid"}
+{
+  "className": "Vans",
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Vans",
+  "seats": 6,
+  "model": "speedopas",
+  "hash": -391169584,
+  "gameName": "SPEEDOPAS",
+  "makeName": "VAPID",
+  "displayName": "Speedo (Transit)",
+  "credits": {
+    "author": "TheF3nt0n, Bondergomme and others"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/speedopas.png",
+  "name": "Vapid Speedo (Transit)",
+  "manufacturer": "Vapid"
+}

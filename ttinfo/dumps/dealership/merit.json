@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:47", "customClass": "Sedans", "seats": 4, "hash": -1260881538, "gameName": "MERIT", "model": "merit", "displayName": "Merit", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/merit.png", "name": "Declasse Merit", "manufacturer": "Declasse"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1260881538,
+  "gameName": "MERIT",
+  "model": "merit",
+  "displayName": "Merit",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/merit.png",
+  "name": "Declasse Merit",
+  "manufacturer": "Declasse"
+}

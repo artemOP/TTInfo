@@ -1,1 +1,25 @@
-{"className": "Vans", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 0, "premium": false}, "classId": 12, "_data_generated": "2024-01-06 18:17:53", "customClass": "Vans", "seats": 4, "model": "nspeedo", "hash": 1954121213, "gameName": "NSPEEDO", "makeName": "VAPID", "displayName": "Speedo Express", "credits": {"author": "TheF3nt0n, TG_Stig, Dani02, other modders", "download": "https://www.gta5-mods.com/vehicles/vapid-speedo-express-add-on-liveries"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/nspeedo.png", "name": "Vapid Speedo Express", "manufacturer": "Vapid"}
+{
+  "className": "Vans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:53",
+  "customClass": "Vans",
+  "seats": 4,
+  "model": "nspeedo",
+  "hash": 1954121213,
+  "gameName": "NSPEEDO",
+  "makeName": "VAPID",
+  "displayName": "Speedo Express",
+  "credits": {
+    "author": "TheF3nt0n, TG_Stig, Dani02, other modders",
+    "download": "https://www.gta5-mods.com/vehicles/vapid-speedo-express-add-on-liveries"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nspeedo.png",
+  "name": "Vapid Speedo Express",
+  "manufacturer": "Vapid"
+}

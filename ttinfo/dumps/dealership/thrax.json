@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 1000000000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:11", "customClass": "Super", "seats": 2, "hash": 1044193113, "gameName": "THRAX", "model": "thrax", "displayName": "Thrax", "makeName": "TRUFFADE", "preview": "https://cdn.tycoon.community/dealership/vehicles/thrax.png", "name": "Truffade Thrax", "manufacturer": "Truffade"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 1000000000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 1044193113,
+  "gameName": "THRAX",
+  "model": "thrax",
+  "displayName": "Thrax",
+  "makeName": "TRUFFADE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/thrax.png",
+  "name": "Truffade Thrax",
+  "manufacturer": "Truffade"
+}

@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:46", "customClass": "Boats", "seats": 2, "hash": 984855208, "gameName": "BLADE", "model": "blade2", "displayName": "Blade", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/blade2.png", "name": "Blade", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Boats",
+  "seats": 2,
+  "hash": 984855208,
+  "gameName": "BLADE",
+  "model": "blade2",
+  "displayName": "Blade",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blade2.png",
+  "name": "Blade",
+  "manufacturer": "NULL"
+}

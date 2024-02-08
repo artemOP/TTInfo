@@ -1,1 +1,21 @@
-{"className": "Commercial", "dealership": {"dealership": "Vehicle Shop", "category": "Semi Cabs", "price": 1500000, "premium": false}, "classId": 20, "_data_generated": "2024-01-06 18:17:19", "customClass": "Semi-Cabs", "seats": 2, "hash": 569305213, "gameName": "PACKER", "model": "packer", "displayName": "Packer", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/packer.png", "name": "MTL Packer", "manufacturer": "MTL"}
+{
+  "className": "Commercial",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Semi Cabs",
+    "price": 1500000,
+    "premium": false
+  },
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": 569305213,
+  "gameName": "PACKER",
+  "model": "packer",
+  "displayName": "Packer",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/packer.png",
+  "name": "MTL Packer",
+  "manufacturer": "MTL"
+}

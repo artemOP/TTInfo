@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:45", "customClass": "Trailers", "seats": 2, "hash": -1638850081, "gameName": "TRAILER", "model": "collinsco_tanker", "displayName": "Trailer", "makeName": "COLLINSCO", "preview": "https://cdn.tycoon.community/dealership/vehicles/collinsco_tanker.png", "name": "Collins' Petrochem Corp. Trailer", "manufacturer": "Collins' Petrochem Corp."}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": -1638850081,
+  "gameName": "TRAILER",
+  "model": "collinsco_tanker",
+  "displayName": "Trailer",
+  "makeName": "COLLINSCO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/collinsco_tanker.png",
+  "name": "Collins' Petrochem Corp. Trailer",
+  "manufacturer": "Collins' Petrochem Corp."
+}

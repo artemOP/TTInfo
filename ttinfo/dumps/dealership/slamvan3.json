@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Lowriders", "price": 650000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:16", "customClass": "Lowriders", "seats": 2, "hash": 1119641113, "gameName": "SLAMVAN3", "model": "slamvan3", "displayName": "Slamvan Custom", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/slamvan3.png", "name": "Vapid Slamvan Custom", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Lowriders",
+    "price": 650000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Lowriders",
+  "seats": 2,
+  "hash": 1119641113,
+  "gameName": "SLAMVAN3",
+  "model": "slamvan3",
+  "displayName": "Slamvan Custom",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/slamvan3.png",
+  "name": "Vapid Slamvan Custom",
+  "manufacturer": "Vapid"
+}

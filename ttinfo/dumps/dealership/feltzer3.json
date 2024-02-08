@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 975000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:31", "customClass": "Sports Classics", "seats": 2, "hash": -1566741232, "gameName": "FELTZER3", "model": "feltzer3", "displayName": "Stirling GT", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/feltzer3.png", "name": "Benefactor Stirling GT", "manufacturer": "Benefactor"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 975000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": -1566741232,
+  "gameName": "FELTZER3",
+  "model": "feltzer3",
+  "displayName": "Stirling GT",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/feltzer3.png",
+  "name": "Benefactor Stirling GT",
+  "manufacturer": "Benefactor"
+}

@@ -1,1 +1,21 @@
-{"className": "Military", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 10000000, "premium": true}, "classId": 19, "_data_generated": "2024-01-06 18:17:13", "customClass": "Military", "seats": 4, "hash": -212993243, "gameName": "BARRAGE", "model": "barrage", "displayName": "Barrage", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/barrage.png", "name": "Barrage", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 10000000,
+    "premium": true
+  },
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Military",
+  "seats": 4,
+  "hash": -212993243,
+  "gameName": "BARRAGE",
+  "model": "barrage",
+  "displayName": "Barrage",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/barrage.png",
+  "name": "Barrage",
+  "manufacturer": "NULL"
+}

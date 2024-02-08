@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:16", "customClass": "Sports", "seats": 2, "hash": -131348178, "gameName": "EVERON2", "model": "everon2", "displayName": "Hotring Everon", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/everon2.png", "name": "Karin Hotring Everon", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": -131348178,
+  "gameName": "EVERON2",
+  "model": "everon2",
+  "displayName": "Hotring Everon",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/everon2.png",
+  "name": "Karin Hotring Everon",
+  "manufacturer": "Karin"
+}

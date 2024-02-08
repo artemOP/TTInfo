@@ -1,1 +1,18 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:49", "customClass": "Semi-Cabs", "seats": 2, "model": "master", "hash": -232937294, "gameName": "MASTER", "makeName": "BRUTE", "displayName": "Master B8", "credits": {"author": "Monkeypolice188 et al"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/master.png", "name": "Brute Master B8", "manufacturer": "Brute"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "model": "master",
+  "hash": -232937294,
+  "gameName": "MASTER",
+  "makeName": "BRUTE",
+  "displayName": "Master B8",
+  "credits": {
+    "author": "Monkeypolice188 et al"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/master.png",
+  "name": "Brute Master B8",
+  "manufacturer": "Brute"
+}

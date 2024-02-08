@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:48", "customClass": "Trucks", "seats": 6, "hash": -1898120560, "gameName": "YANKEE", "model": "yankee2", "displayName": "Yankee", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/yankee2.png", "name": "Vapid Yankee", "manufacturer": "Vapid"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Trucks",
+  "seats": 6,
+  "hash": -1898120560,
+  "gameName": "YANKEE",
+  "model": "yankee2",
+  "displayName": "Yankee",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/yankee2.png",
+  "name": "Vapid Yankee",
+  "manufacturer": "Vapid"
+}

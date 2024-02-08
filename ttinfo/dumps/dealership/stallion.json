@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:50", "customClass": "Helicopters", "seats": 10, "hash": -1499000182, "gameName": "stallion", "model": "stallion", "displayName": "CH-53 Sea Stallion", "makeName": "SIKORSKY", "preview": "https://cdn.tycoon.community/dealership/vehicles/stallion.png", "name": "Sikorsky CH-53 Sea Stallion", "manufacturer": "Sikorsky"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Helicopters",
+  "seats": 10,
+  "hash": -1499000182,
+  "gameName": "stallion",
+  "model": "stallion",
+  "displayName": "CH-53 Sea Stallion",
+  "makeName": "SIKORSKY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stallion.png",
+  "name": "Sikorsky CH-53 Sea Stallion",
+  "manufacturer": "Sikorsky"
+}

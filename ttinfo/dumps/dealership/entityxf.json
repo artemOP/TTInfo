@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 795000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:16", "customClass": "Super", "seats": 2, "hash": -1291952903, "gameName": "ENTITYXF", "model": "entityxf", "displayName": "Entity XF", "makeName": "OVERFLOD", "preview": "https://cdn.tycoon.community/dealership/vehicles/entityxf.png", "name": "Overflod Entity XF", "manufacturer": "Overflod"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 795000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -1291952903,
+  "gameName": "ENTITYXF",
+  "model": "entityxf",
+  "displayName": "Entity XF",
+  "makeName": "OVERFLOD",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/entityxf.png",
+  "name": "Overflod Entity XF",
+  "manufacturer": "Overflod"
+}

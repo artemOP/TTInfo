@@ -1,1 +1,18 @@
-{"className": "Trains", "classId": 21, "_data_generated": "2024-01-06 18:17:29", "customClass": "Trains", "seats": 4, "model": "lcsubway", "hash": -1338460226, "gameName": "lcsubway", "makeName": "", "displayName": "LC Metro Train", "credits": {"author": "glitchdetector"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/lcsubway.png", "name": "LC Metro Train", "manufacturer": "NULL"}
+{
+  "className": "Trains",
+  "classId": 21,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Trains",
+  "seats": 4,
+  "model": "lcsubway",
+  "hash": -1338460226,
+  "gameName": "lcsubway",
+  "makeName": "",
+  "displayName": "LC Metro Train",
+  "credits": {
+    "author": "glitchdetector"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lcsubway.png",
+  "name": "LC Metro Train",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 1000000000, "premium": true}, "classId": 6, "_data_generated": "2024-01-06 18:17:41", "customClass": "Sedans", "seats": 2, "hash": 872704284, "gameName": "SULTAN2", "model": "sultan2", "displayName": "Sultan Classic", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/sultan2.png", "name": "Karin Sultan Classic", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 1000000000,
+    "premium": true
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Sedans",
+  "seats": 2,
+  "hash": 872704284,
+  "gameName": "SULTAN2",
+  "model": "sultan2",
+  "displayName": "Sultan Classic",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sultan2.png",
+  "name": "Karin Sultan Classic",
+  "manufacturer": "Karin"
+}

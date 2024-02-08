@@ -1,1 +1,15 @@
-{"className": "Compacts", "classId": 0, "_data_generated": "2024-01-06 18:17:44", "customClass": "Compacts", "seats": 4, "hash": 1641693773, "gameName": "SAPC1", "model": "sapc1", "displayName": "SAPC Dilettante", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/sapc1.png", "name": "Karin SAPC Dilettante", "manufacturer": "Karin"}
+{
+  "className": "Compacts",
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Compacts",
+  "seats": 4,
+  "hash": 1641693773,
+  "gameName": "SAPC1",
+  "model": "sapc1",
+  "displayName": "SAPC Dilettante",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sapc1.png",
+  "name": "Karin SAPC Dilettante",
+  "manufacturer": "Karin"
+}

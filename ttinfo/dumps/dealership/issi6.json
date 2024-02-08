@@ -1,1 +1,15 @@
-{"className": "Compacts", "classId": 0, "_data_generated": "2024-01-06 18:17:11", "customClass": "Compacts", "seats": 2, "hash": 1239571361, "gameName": "ISSI6", "model": "issi6", "displayName": "Nightmare Issi", "makeName": "WEENY", "preview": "https://cdn.tycoon.community/dealership/vehicles/issi6.png", "name": "Weeny Nightmare Issi", "manufacturer": "Weeny"}
+{
+  "className": "Compacts",
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": 1239571361,
+  "gameName": "ISSI6",
+  "model": "issi6",
+  "displayName": "Nightmare Issi",
+  "makeName": "WEENY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/issi6.png",
+  "name": "Weeny Nightmare Issi",
+  "manufacturer": "Weeny"
+}

@@ -1,1 +1,21 @@
-{"className": "Coupes", "dealership": {"dealership": "Vehicle Shop", "category": "Coupes", "price": 60000, "premium": false}, "classId": 3, "_data_generated": "2024-01-06 18:17:22", "customClass": "Coupes", "seats": 2, "hash": -1122289213, "gameName": "ZION", "model": "zion", "displayName": "Zion", "makeName": "UBERMACH", "preview": "https://cdn.tycoon.community/dealership/vehicles/zion.png", "name": "Ubermacht Zion", "manufacturer": "Ubermacht"}
+{
+  "className": "Coupes",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Coupes",
+    "price": 60000,
+    "premium": false
+  },
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Coupes",
+  "seats": 2,
+  "hash": -1122289213,
+  "gameName": "ZION",
+  "model": "zion",
+  "displayName": "Zion",
+  "makeName": "UBERMACH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/zion.png",
+  "name": "Ubermacht Zion",
+  "manufacturer": "Ubermacht"
+}

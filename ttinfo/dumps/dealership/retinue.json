@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 100000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:37", "customClass": "Sports Classics", "seats": 2, "hash": 1841130506, "gameName": "RETINUE", "model": "retinue", "displayName": "Retinue", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/retinue.png", "name": "Vapid Retinue", "manufacturer": "Vapid"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 100000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 1841130506,
+  "gameName": "RETINUE",
+  "model": "retinue",
+  "displayName": "Retinue",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/retinue.png",
+  "name": "Vapid Retinue",
+  "manufacturer": "Vapid"
+}

@@ -1,1 +1,15 @@
-{"className": "Trains", "classId": 21, "_data_generated": "2024-01-06 18:17:39", "customClass": "Trains", "seats": 2, "hash": 568820454, "gameName": "n700a07", "model": "n700a07", "displayName": "NULL", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/n700a07.png", "name": "Missing Name (n700a07)", "manufacturer": "NULL"}
+{
+  "className": "Trains",
+  "classId": 21,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Trains",
+  "seats": 2,
+  "hash": 568820454,
+  "gameName": "n700a07",
+  "model": "n700a07",
+  "displayName": "NULL",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/n700a07.png",
+  "name": "Missing Name (n700a07)",
+  "manufacturer": "NULL"
+}

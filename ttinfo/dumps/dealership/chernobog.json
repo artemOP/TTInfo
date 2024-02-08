@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:24", "customClass": "Anti-Air", "seats": 2, "hash": -692292317, "gameName": "CHERNOBOG", "model": "chernobog", "displayName": "Chernobog", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/chernobog.png", "name": "Chernobog", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Anti-Air",
+  "seats": 2,
+  "hash": -692292317,
+  "gameName": "CHERNOBOG",
+  "model": "chernobog",
+  "displayName": "Chernobog",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/chernobog.png",
+  "name": "Chernobog",
+  "manufacturer": "NULL"
+}

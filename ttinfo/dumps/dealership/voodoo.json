@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Lowriders", "price": 120000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:32", "customClass": "Lowriders", "seats": 2, "hash": 2006667053, "gameName": "VOODOO2", "model": "voodoo", "displayName": "Voodoo Custom", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/voodoo.png", "name": "Declasse Voodoo Custom", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Lowriders",
+    "price": 120000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Lowriders",
+  "seats": 2,
+  "hash": 2006667053,
+  "gameName": "VOODOO2",
+  "model": "voodoo",
+  "displayName": "Voodoo Custom",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/voodoo.png",
+  "name": "Declasse Voodoo Custom",
+  "manufacturer": "Declasse"
+}

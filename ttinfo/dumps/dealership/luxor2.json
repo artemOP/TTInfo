@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:31", "customClass": "Airliners", "seats": 8, "hash": -1214293858, "gameName": "LUXOR2", "model": "luxor2", "displayName": "Luxor Deluxe", "makeName": "BUCKING", "preview": "https://cdn.tycoon.community/dealership/vehicles/luxor2.png", "name": "Buckingham Luxor Deluxe", "manufacturer": "Buckingham"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Airliners",
+  "seats": 8,
+  "hash": -1214293858,
+  "gameName": "LUXOR2",
+  "model": "luxor2",
+  "displayName": "Luxor Deluxe",
+  "makeName": "BUCKING",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/luxor2.png",
+  "name": "Buckingham Luxor Deluxe",
+  "manufacturer": "Buckingham"
+}

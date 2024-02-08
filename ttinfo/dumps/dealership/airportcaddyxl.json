@@ -1,1 +1,19 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:25", "customClass": "Airport", "seats": 6, "model": "airportcaddyxl", "hash": -969464938, "gameName": "AIRCADDYXL", "makeName": "", "displayName": "Airport Caddy XL", "credits": {"author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders", "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/airportcaddyxl.png", "name": "Airport Caddy XL", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Airport",
+  "seats": 6,
+  "model": "airportcaddyxl",
+  "hash": -969464938,
+  "gameName": "AIRCADDYXL",
+  "makeName": "",
+  "displayName": "Airport Caddy XL",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders",
+    "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/airportcaddyxl.png",
+  "name": "Airport Caddy XL",
+  "manufacturer": "NULL"
+}

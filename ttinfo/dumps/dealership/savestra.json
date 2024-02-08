@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 150000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:37", "customClass": "Sports Classics", "seats": 2, "hash": 903794909, "gameName": "SAVESTRA", "model": "savestra", "displayName": "Savestra", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/savestra.png", "name": "Annis Savestra", "manufacturer": "Annis"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 150000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 903794909,
+  "gameName": "SAVESTRA",
+  "model": "savestra",
+  "displayName": "Savestra",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/savestra.png",
+  "name": "Annis Savestra",
+  "manufacturer": "Annis"
+}

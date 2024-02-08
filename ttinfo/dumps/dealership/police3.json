@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Police", "price": 50000, "premium": false}, "classId": 18, "_data_generated": "2024-01-06 18:17:20", "customClass": "Law Enforcement", "seats": 4, "hash": 1912215274, "gameName": "POLICE", "model": "police3", "displayName": "Police Cruiser", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/police3.png", "name": "Police Cruiser", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Police",
+    "price": 50000,
+    "premium": false
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": 1912215274,
+  "gameName": "POLICE",
+  "model": "police3",
+  "displayName": "Police Cruiser",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/police3.png",
+  "name": "Police Cruiser",
+  "manufacturer": "NULL"
+}

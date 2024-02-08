@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 160000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:30", "customClass": "Muscle", "seats": 2, "hash": -1205801634, "gameName": "BLADE", "model": "blade", "displayName": "Blade", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/blade.png", "name": "Vapid Blade", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 160000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -1205801634,
+  "gameName": "BLADE",
+  "model": "blade",
+  "displayName": "Blade",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blade.png",
+  "name": "Vapid Blade",
+  "manufacturer": "Vapid"
+}

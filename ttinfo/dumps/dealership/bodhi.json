@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:26", "customClass": "Pickups", "seats": 4, "hash": 1586772991, "gameName": "BODHI2", "model": "bodhi", "displayName": "Bodhi", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/bodhi.png", "name": "Canis Bodhi", "manufacturer": "Canis"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:26",
+  "customClass": "Pickups",
+  "seats": 4,
+  "hash": 1586772991,
+  "gameName": "BODHI2",
+  "model": "bodhi",
+  "displayName": "Bodhi",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bodhi.png",
+  "name": "Canis Bodhi",
+  "manufacturer": "Canis"
+}

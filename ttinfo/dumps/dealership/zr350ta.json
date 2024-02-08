@@ -1,1 +1,24 @@
-{"className": "Super", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:48", "customClass": "Race Cars", "seats": 2, "model": "zr350ta", "hash": 717050057, "gameName": "ZR350TA", "makeName": "ANNIS", "displayName": "ZR-350 T/A", "credits": {"author": "Vanillaworks Team"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/zr350ta.png", "name": "Annis ZR-350 T/A", "manufacturer": "Annis"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "model": "zr350ta",
+  "hash": 717050057,
+  "gameName": "ZR350TA",
+  "makeName": "ANNIS",
+  "displayName": "ZR-350 T/A",
+  "credits": {
+    "author": "Vanillaworks Team"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/zr350ta.png",
+  "name": "Annis ZR-350 T/A",
+  "manufacturer": "Annis"
+}

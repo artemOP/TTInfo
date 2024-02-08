@@ -1,1 +1,21 @@
-{"className": "Service", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 1500000, "premium": true}, "classId": 17, "_data_generated": "2024-01-06 18:17:34", "customClass": "Trucks", "seats": 2, "hash": -2103821244, "gameName": "RALLYTRUCK", "model": "rallytruck", "displayName": "Dune", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/rallytruck.png", "name": "MTL Dune", "manufacturer": "MTL"}
+{
+  "className": "Service",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 1500000,
+    "premium": true
+  },
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Trucks",
+  "seats": 2,
+  "hash": -2103821244,
+  "gameName": "RALLYTRUCK",
+  "model": "rallytruck",
+  "displayName": "Dune",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rallytruck.png",
+  "name": "MTL Dune",
+  "manufacturer": "MTL"
+}

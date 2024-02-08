@@ -1,1 +1,19 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:24", "customClass": "Emergency", "seats": 8, "model": "lcpdhwy5", "hash": 219032727, "gameName": "lcpdhwy5", "makeName": "DECLASSE", "displayName": "Alamo", "credits": {"author": "SAS994 & ShaoyeBen", "name": "Alamo"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwy5.png", "name": "Declasse Alamo", "manufacturer": "Declasse"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Emergency",
+  "seats": 8,
+  "model": "lcpdhwy5",
+  "hash": 219032727,
+  "gameName": "lcpdhwy5",
+  "makeName": "DECLASSE",
+  "displayName": "Alamo",
+  "credits": {
+    "author": "SAS994 & ShaoyeBen",
+    "name": "Alamo"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwy5.png",
+  "name": "Declasse Alamo",
+  "manufacturer": "Declasse"
+}

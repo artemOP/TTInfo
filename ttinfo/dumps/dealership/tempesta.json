@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 650000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:35", "customClass": "Super", "seats": 2, "hash": 272929391, "gameName": "TEMPESTA", "model": "tempesta", "displayName": "Tempesta", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/tempesta.png", "name": "Pegassi Tempesta", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 650000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 272929391,
+  "gameName": "TEMPESTA",
+  "model": "tempesta",
+  "displayName": "Tempesta",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tempesta.png",
+  "name": "Pegassi Tempesta",
+  "manufacturer": "Pegassi"
+}

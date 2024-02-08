@@ -1,1 +1,21 @@
-{"className": "Service", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 11000, "premium": false}, "classId": 17, "_data_generated": "2024-01-06 18:17:22", "customClass": "Taxis", "seats": 4, "hash": -956048545, "gameName": "TAXI", "model": "taxi", "displayName": "Taxi", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/taxi.png", "name": "Taxi", "manufacturer": "NULL"}
+{
+  "className": "Service",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 11000,
+    "premium": false
+  },
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Taxis",
+  "seats": 4,
+  "hash": -956048545,
+  "gameName": "TAXI",
+  "model": "taxi",
+  "displayName": "Taxi",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/taxi.png",
+  "name": "Taxi",
+  "manufacturer": "NULL"
+}

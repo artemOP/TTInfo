@@ -1,1 +1,21 @@
-{"className": "SUVs", "dealership": {"dealership": "Vehicle Shop", "category": "SUVs", "price": 110000, "premium": false}, "classId": 2, "_data_generated": "2024-01-06 18:17:15", "customClass": "SUVs", "seats": 4, "hash": -1137532101, "gameName": "FQ2", "model": "fq2", "displayName": "FQ 2", "makeName": "FATHOM", "preview": "https://cdn.tycoon.community/dealership/vehicles/fq2.png", "name": "Fathom FQ 2", "manufacturer": "Fathom"}
+{
+  "className": "SUVs",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "SUVs",
+    "price": 110000,
+    "premium": false
+  },
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "SUVs",
+  "seats": 4,
+  "hash": -1137532101,
+  "gameName": "FQ2",
+  "model": "fq2",
+  "displayName": "FQ 2",
+  "makeName": "FATHOM",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/fq2.png",
+  "name": "Fathom FQ 2",
+  "manufacturer": "Fathom"
+}

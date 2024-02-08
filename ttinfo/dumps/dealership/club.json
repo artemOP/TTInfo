@@ -1,1 +1,15 @@
-{"className": "Compacts", "classId": 0, "_data_generated": "2024-01-06 18:17:41", "customClass": "Compacts", "seats": 2, "hash": -2098954619, "gameName": "CLUB", "model": "club", "displayName": "Club", "makeName": "BF", "preview": "https://cdn.tycoon.community/dealership/vehicles/club.png", "name": "BF Club", "manufacturer": "BF"}
+{
+  "className": "Compacts",
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": -2098954619,
+  "gameName": "CLUB",
+  "model": "club",
+  "displayName": "Club",
+  "makeName": "BF",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/club.png",
+  "name": "BF Club",
+  "manufacturer": "BF"
+}

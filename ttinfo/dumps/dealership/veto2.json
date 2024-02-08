@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:41", "customClass": "Go-Karts", "seats": 1, "hash": -1492917079, "gameName": "VETO2", "model": "veto2", "displayName": "Veto Modern", "makeName": "DINKA", "preview": "https://cdn.tycoon.community/dealership/vehicles/veto2.png", "name": "Dinka Veto Modern", "manufacturer": "Dinka"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Go-Karts",
+  "seats": 1,
+  "hash": -1492917079,
+  "gameName": "VETO2",
+  "model": "veto2",
+  "displayName": "Veto Modern",
+  "makeName": "DINKA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/veto2.png",
+  "name": "Dinka Veto Modern",
+  "manufacturer": "Dinka"
+}

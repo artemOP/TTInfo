@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 5000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:51", "customClass": "Trailers", "seats": 0, "hash": -686148693, "gameName": "BOTDUMPTR", "model": "botdumptr", "displayName": "Bottom Dump Trailer (MK4)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/botdumptr.png", "name": "Bottom Dump Trailer (MK4)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 5000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -686148693,
+  "gameName": "BOTDUMPTR",
+  "model": "botdumptr",
+  "displayName": "Bottom Dump Trailer (MK4)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/botdumptr.png",
+  "name": "Bottom Dump Trailer (MK4)",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:35", "customClass": "Sports", "seats": 2, "hash": 1076201208, "gameName": "R300", "model": "r300", "displayName": "300R", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/r300.png", "name": "Annis 300R", "manufacturer": "Annis"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1076201208,
+  "gameName": "R300",
+  "model": "r300",
+  "displayName": "300R",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/r300.png",
+  "name": "Annis 300R",
+  "manufacturer": "Annis"
+}

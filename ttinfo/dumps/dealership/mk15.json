@@ -1,1 +1,24 @@
-{"className": "Military", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 19, "_data_generated": "2024-01-06 18:17:53", "customClass": "Semi-Cabs", "seats": 2, "model": "mk15", "hash": 1380660010, "gameName": "mk15", "makeName": "", "displayName": "Chernobog Toter", "credits": {"author": "Morfik"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/mk15.png", "name": "Chernobog Toter", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:53",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "model": "mk15",
+  "hash": 1380660010,
+  "gameName": "mk15",
+  "makeName": "",
+  "displayName": "Chernobog Toter",
+  "credits": {
+    "author": "Morfik"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mk15.png",
+  "name": "Chernobog Toter",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,18 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:49", "customClass": "Semi-Cabs", "seats": 2, "model": "turtlebog", "hash": 1142248726, "gameName": "TURTLEBOG", "makeName": "HVY", "displayName": "Turtlebog", "credits": {"author": "Goobie"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/turtlebog.png", "name": "HVY Turtlebog", "manufacturer": "HVY"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "model": "turtlebog",
+  "hash": 1142248726,
+  "gameName": "TURTLEBOG",
+  "makeName": "HVY",
+  "displayName": "Turtlebog",
+  "credits": {
+    "author": "Goobie"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/turtlebog.png",
+  "name": "HVY Turtlebog",
+  "manufacturer": "HVY"
+}

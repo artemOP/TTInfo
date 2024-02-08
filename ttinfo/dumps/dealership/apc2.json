@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:46", "customClass": "Military", "seats": 6, "hash": 2107106513, "gameName": "APC2", "model": "apc2", "displayName": "Armoured Personnel Carrier", "makeName": "HVY", "preview": "https://cdn.tycoon.community/dealership/vehicles/apc2.png", "name": "HVY Armoured Personnel Carrier", "manufacturer": "HVY"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Military",
+  "seats": 6,
+  "hash": 2107106513,
+  "gameName": "APC2",
+  "model": "apc2",
+  "displayName": "Armoured Personnel Carrier",
+  "makeName": "HVY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/apc2.png",
+  "name": "HVY Armoured Personnel Carrier",
+  "manufacturer": "HVY"
+}

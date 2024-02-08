@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 250000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:37", "customClass": "Sports", "seats": 2, "hash": 1104234922, "gameName": "sentinel3", "model": "sentinel3", "displayName": "Sentinel Classic", "makeName": "UBERMACH", "preview": "https://cdn.tycoon.community/dealership/vehicles/sentinel3.png", "name": "Ubermacht Sentinel Classic", "manufacturer": "Ubermacht"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 250000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1104234922,
+  "gameName": "sentinel3",
+  "model": "sentinel3",
+  "displayName": "Sentinel Classic",
+  "makeName": "UBERMACH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sentinel3.png",
+  "name": "Ubermacht Sentinel Classic",
+  "manufacturer": "Ubermacht"
+}

@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Company", "price": 150000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:51", "customClass": "Airliners", "seats": 16, "hash": 1480837972, "gameName": "779X", "model": "779x", "displayName": "Boeing 777-9X", "makeName": "BOEING", "preview": "https://cdn.tycoon.community/dealership/vehicles/779x.png", "name": "Boeing Boeing 777-9X", "manufacturer": "Boeing"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Company",
+    "price": 150000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Airliners",
+  "seats": 16,
+  "hash": 1480837972,
+  "gameName": "779X",
+  "model": "779x",
+  "displayName": "Boeing 777-9X",
+  "makeName": "BOEING",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/779x.png",
+  "name": "Boeing Boeing 777-9X",
+  "manufacturer": "Boeing"
+}

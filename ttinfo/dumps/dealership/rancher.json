@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Hunter", "price": 200000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:39", "customClass": "Pickups", "seats": 4, "hash": 1390084576, "gameName": "RANCHER", "model": "rancher", "displayName": "Rancher SWB", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/rancher.png", "name": "Declasse Rancher SWB", "manufacturer": "Declasse"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Hunter",
+    "price": 200000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Pickups",
+  "seats": 4,
+  "hash": 1390084576,
+  "gameName": "RANCHER",
+  "model": "rancher",
+  "displayName": "Rancher SWB",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rancher.png",
+  "name": "Declasse Rancher SWB",
+  "manufacturer": "Declasse"
+}

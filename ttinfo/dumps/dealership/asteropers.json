@@ -1,1 +1,24 @@
-{"className": "Sports", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:48", "customClass": "Sports", "seats": 4, "model": "asteropers", "hash": -592147395, "gameName": "ASTEROPERS", "makeName": "KARIN", "displayName": "Asterope RS", "credits": {"author": "LamboFreak"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/asteropers.png", "name": "Karin Asterope RS", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Sports",
+  "seats": 4,
+  "model": "asteropers",
+  "hash": -592147395,
+  "gameName": "ASTEROPERS",
+  "makeName": "KARIN",
+  "displayName": "Asterope RS",
+  "credits": {
+    "author": "LamboFreak"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/asteropers.png",
+  "name": "Karin Asterope RS",
+  "manufacturer": "Karin"
+}

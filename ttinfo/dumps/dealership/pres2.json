@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:43", "customClass": "Sedans", "seats": 4, "hash": -70512139, "gameName": "PRES2", "model": "pres2", "displayName": "Presidente V10S", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/pres2.png", "name": "Albany Presidente V10S", "manufacturer": "Albany"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -70512139,
+  "gameName": "PRES2",
+  "model": "pres2",
+  "displayName": "Presidente V10S",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pres2.png",
+  "name": "Albany Presidente V10S",
+  "manufacturer": "Albany"
+}

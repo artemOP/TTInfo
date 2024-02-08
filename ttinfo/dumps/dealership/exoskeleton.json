@@ -1,1 +1,24 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 500000000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:50", "customClass": "Race Cars", "seats": 2, "model": "exoskeleton", "hash": -1188225531, "gameName": "TEMPESTAX", "makeName": "PEGASSI", "displayName": "Exoskeleton", "credits": {"author": "drlq99"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/exoskeleton.png", "name": "Pegassi Exoskeleton", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 500000000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "model": "exoskeleton",
+  "hash": -1188225531,
+  "gameName": "TEMPESTAX",
+  "makeName": "PEGASSI",
+  "displayName": "Exoskeleton",
+  "credits": {
+    "author": "drlq99"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/exoskeleton.png",
+  "name": "Pegassi Exoskeleton",
+  "manufacturer": "Pegassi"
+}

@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:30", "customClass": "Race Cars", "seats": 2, "hash": -1106353882, "gameName": "JESTER2", "model": "jester2", "displayName": "Jester (Racecar)", "makeName": "DINKA", "preview": "https://cdn.tycoon.community/dealership/vehicles/jester2.png", "name": "Dinka Jester (Racecar)", "manufacturer": "Dinka"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": -1106353882,
+  "gameName": "JESTER2",
+  "model": "jester2",
+  "displayName": "Jester (Racecar)",
+  "makeName": "DINKA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/jester2.png",
+  "name": "Dinka Jester (Racecar)",
+  "manufacturer": "Dinka"
+}

@@ -1,1 +1,19 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:52", "customClass": "Cargo Planes", "seats": 2, "model": "beluxl", "hash": 691316271, "gameName": "BELUGA XL", "makeName": "AIRBUS", "displayName": "Beluga XL", "credits": {"author": "skyrix", "download": "https://www.gta5-mods.com/vehicles/airbus-a330-743l-beluga-xl-add-on"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/beluxl.png", "name": "Airport Bus Beluga XL", "manufacturer": "Airport Bus"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "model": "beluxl",
+  "hash": 691316271,
+  "gameName": "BELUGA XL",
+  "makeName": "AIRBUS",
+  "displayName": "Beluga XL",
+  "credits": {
+    "author": "skyrix",
+    "download": "https://www.gta5-mods.com/vehicles/airbus-a330-743l-beluga-xl-add-on"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/beluxl.png",
+  "name": "Airport Bus Beluga XL",
+  "manufacturer": "Airport Bus"
+}

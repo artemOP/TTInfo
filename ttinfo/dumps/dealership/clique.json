@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 500000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:14", "customClass": "Muscle", "seats": 2, "hash": -1566607184, "gameName": "CLIQUE", "model": "clique", "displayName": "Clique", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/clique.png", "name": "Vapid Clique", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 500000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -1566607184,
+  "gameName": "CLIQUE",
+  "model": "clique",
+  "displayName": "Clique",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/clique.png",
+  "name": "Vapid Clique",
+  "manufacturer": "Vapid"
+}

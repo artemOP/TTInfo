@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:11", "customClass": "Military", "seats": 10, "hash": 630371791, "gameName": "BARRACKS", "model": "barracks3", "displayName": "Barracks", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/barracks3.png", "name": "Barracks", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Military",
+  "seats": 10,
+  "hash": 630371791,
+  "gameName": "BARRACKS",
+  "model": "barracks3",
+  "displayName": "Barracks",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/barracks3.png",
+  "name": "Barracks",
+  "manufacturer": "NULL"
+}

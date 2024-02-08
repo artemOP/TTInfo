@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:51", "customClass": "Sedans", "seats": 4, "hash": -1724630220, "gameName": "rrphantom", "model": "rrphantom", "displayName": "Phantom", "makeName": "rollsroyce", "preview": "https://cdn.tycoon.community/dealership/vehicles/rrphantom.png", "name": "Rolls-Royce Phantom", "manufacturer": "Rolls-Royce"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1724630220,
+  "gameName": "rrphantom",
+  "model": "rrphantom",
+  "displayName": "Phantom",
+  "makeName": "rollsroyce",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rrphantom.png",
+  "name": "Rolls-Royce Phantom",
+  "manufacturer": "Rolls-Royce"
+}

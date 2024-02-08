@@ -1,1 +1,25 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 15000000, "premium": true}, "classId": 7, "_data_generated": "2024-01-06 18:17:50", "customClass": "Open Wheel", "seats": 2, "model": "f1", "hash": -328440374, "gameName": "f1", "makeName": "FORMULA", "displayName": "Formula 1", "credits": {"author": "chinweiren213", "download": "https://www.gta5-mods.com/vehicles/rb14-red-bull-racing-2018-f1-car"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/f1.png", "name": " Formula 1", "manufacturer": ""}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 15000000,
+    "premium": true
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Open Wheel",
+  "seats": 2,
+  "model": "f1",
+  "hash": -328440374,
+  "gameName": "f1",
+  "makeName": "FORMULA",
+  "displayName": "Formula 1",
+  "credits": {
+    "author": "chinweiren213",
+    "download": "https://www.gta5-mods.com/vehicles/rb14-red-bull-racing-2018-f1-car"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/f1.png",
+  "name": " Formula 1",
+  "manufacturer": ""
+}

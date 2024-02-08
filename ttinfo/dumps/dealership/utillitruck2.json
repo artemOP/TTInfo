@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:24", "customClass": "Utility", "seats": 2, "hash": 887537515, "gameName": "UTILTRUC", "model": "utillitruck2", "displayName": "Utility Truck", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/utillitruck2.png", "name": "Utility Truck", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Utility",
+  "seats": 2,
+  "hash": 887537515,
+  "gameName": "UTILTRUC",
+  "model": "utillitruck2",
+  "displayName": "Utility Truck",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/utillitruck2.png",
+  "name": "Utility Truck",
+  "manufacturer": "NULL"
+}

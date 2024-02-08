@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:18", "customClass": "Emergency", "seats": 4, "hash": 469291905, "gameName": "LGUARD", "model": "lguard", "displayName": "Lifeguard", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/lguard.png", "name": "Declasse Lifeguard", "manufacturer": "Declasse"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Emergency",
+  "seats": 4,
+  "hash": 469291905,
+  "gameName": "LGUARD",
+  "model": "lguard",
+  "displayName": "Lifeguard",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lguard.png",
+  "name": "Declasse Lifeguard",
+  "manufacturer": "Declasse"
+}

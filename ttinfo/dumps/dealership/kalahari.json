@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 6000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:29", "customClass": "Off-Road", "seats": 2, "hash": 92612664, "gameName": "KALAHARI", "model": "kalahari", "displayName": "Kalahari", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/kalahari.png", "name": "Canis Kalahari", "manufacturer": "Canis"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 6000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Off-Road",
+  "seats": 2,
+  "hash": 92612664,
+  "gameName": "KALAHARI",
+  "model": "kalahari",
+  "displayName": "Kalahari",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/kalahari.png",
+  "name": "Canis Kalahari",
+  "manufacturer": "Canis"
+}

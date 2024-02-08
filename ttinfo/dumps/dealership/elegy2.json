@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 100000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:16", "customClass": "Sports", "seats": 2, "hash": -566387422, "gameName": "ELEGY2", "model": "elegy2", "displayName": "Elegy RH8", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/elegy2.png", "name": "Annis Elegy RH8", "manufacturer": "Annis"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 100000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": -566387422,
+  "gameName": "ELEGY2",
+  "model": "elegy2",
+  "displayName": "Elegy RH8",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/elegy2.png",
+  "name": "Annis Elegy RH8",
+  "manufacturer": "Annis"
+}

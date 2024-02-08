@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 1816000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:34", "customClass": "Sports Classics", "seats": 2, "hash": 1887331236, "gameName": "TROPOS", "model": "tropos", "displayName": "Tropos Rallye", "makeName": "LAMPADA", "preview": "https://cdn.tycoon.community/dealership/vehicles/tropos.png", "name": "Lampadati Tropos Rallye", "manufacturer": "Lampadati"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 1816000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 1887331236,
+  "gameName": "TROPOS",
+  "model": "tropos",
+  "displayName": "Tropos Rallye",
+  "makeName": "LAMPADA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tropos.png",
+  "name": "Lampadati Tropos Rallye",
+  "manufacturer": "Lampadati"
+}

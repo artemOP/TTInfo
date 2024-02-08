@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:31", "customClass": "Choppers", "seats": 2, "hash": 584879743, "gameName": "HELLFURY", "model": "hellfury", "displayName": "Hellfury", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/hellfury.png", "name": "Western Hellfury", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Choppers",
+  "seats": 2,
+  "hash": 584879743,
+  "gameName": "HELLFURY",
+  "model": "hellfury",
+  "displayName": "Hellfury",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hellfury.png",
+  "name": "Western Hellfury",
+  "manufacturer": "Western"
+}

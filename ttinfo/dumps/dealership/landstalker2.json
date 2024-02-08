@@ -1,1 +1,21 @@
-{"className": "SUVs", "dealership": {"dealership": "Unlockables", "category": "Shipments", "price": 0, "premium": false}, "classId": 2, "_data_generated": "2024-01-06 18:17:41", "customClass": "SUVs", "seats": 4, "hash": -838099166, "gameName": "LANDSTLKR2", "model": "landstalker2", "displayName": "Landstalker XL", "makeName": "DUNDREAR", "preview": "https://cdn.tycoon.community/dealership/vehicles/landstalker2.png", "name": "Dundreary Landstalker XL", "manufacturer": "Dundreary"}
+{
+  "className": "SUVs",
+  "dealership": {
+    "dealership": "Unlockables",
+    "category": "Shipments",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "SUVs",
+  "seats": 4,
+  "hash": -838099166,
+  "gameName": "LANDSTLKR2",
+  "model": "landstalker2",
+  "displayName": "Landstalker XL",
+  "makeName": "DUNDREAR",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/landstalker2.png",
+  "name": "Dundreary Landstalker XL",
+  "manufacturer": "Dundreary"
+}

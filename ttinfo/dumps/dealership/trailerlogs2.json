@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 1250000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:13", "customClass": "Trailers", "seats": 0, "hash": -1007414410, "gameName": "TRAILERLOGS", "model": "trailerlogs2", "displayName": "Log Trailer (MK3)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerlogs2.png", "name": "Log Trailer (MK3)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 1250000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1007414410,
+  "gameName": "TRAILERLOGS",
+  "model": "trailerlogs2",
+  "displayName": "Log Trailer (MK3)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerlogs2.png",
+  "name": "Log Trailer (MK3)",
+  "manufacturer": "NULL"
+}

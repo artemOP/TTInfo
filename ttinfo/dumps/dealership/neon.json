@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 300000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:37", "customClass": "EVs", "seats": 4, "hash": -1848994066, "gameName": "NEON", "model": "neon", "displayName": "Neon", "makeName": "PFISTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/neon.png", "name": "Pfister Neon", "manufacturer": "Pfister"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 300000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "EVs",
+  "seats": 4,
+  "hash": -1848994066,
+  "gameName": "NEON",
+  "model": "neon",
+  "displayName": "Neon",
+  "makeName": "PFISTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/neon.png",
+  "name": "Pfister Neon",
+  "manufacturer": "Pfister"
+}

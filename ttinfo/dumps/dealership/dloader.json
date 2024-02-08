@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 10000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:15", "customClass": "Pickups", "seats": 2, "hash": 1770332643, "gameName": "DLOADER", "model": "dloader", "displayName": "Duneloader", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/dloader.png", "name": "Bravado Duneloader", "manufacturer": "Bravado"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Pickups",
+  "seats": 2,
+  "hash": 1770332643,
+  "gameName": "DLOADER",
+  "model": "dloader",
+  "displayName": "Duneloader",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dloader.png",
+  "name": "Bravado Duneloader",
+  "manufacturer": "Bravado"
+}

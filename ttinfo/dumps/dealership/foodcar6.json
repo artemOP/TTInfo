@@ -1,1 +1,24 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Event", "price": 0, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:48", "customClass": "Food Delivery", "seats": 4, "model": "foodcar6", "hash": 1142902145, "gameName": "FOODCAR6", "makeName": "KARIN", "displayName": "Rebel (Delivery)", "credits": {"author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar6.png", "name": "Karin Rebel (Delivery)", "manufacturer": "Karin"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Event",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Food Delivery",
+  "seats": 4,
+  "model": "foodcar6",
+  "hash": 1142902145,
+  "gameName": "FOODCAR6",
+  "makeName": "KARIN",
+  "displayName": "Rebel (Delivery)",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar6.png",
+  "name": "Karin Rebel (Delivery)",
+  "manufacturer": "Karin"
+}

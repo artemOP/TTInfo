@@ -1,1 +1,21 @@
-{"className": "Compacts", "dealership": {"dealership": "Vehicle Shop", "category": "Compacts", "price": 12000, "premium": false}, "classId": 0, "_data_generated": "2024-01-06 18:17:30", "customClass": "Compacts", "seats": 2, "hash": 841808271, "gameName": "RHAPSODY", "model": "rhapsody", "displayName": "Rhapsody", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/rhapsody.png", "name": "Declasse Rhapsody", "manufacturer": "Declasse"}
+{
+  "className": "Compacts",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Compacts",
+    "price": 12000,
+    "premium": false
+  },
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": 841808271,
+  "gameName": "RHAPSODY",
+  "model": "rhapsody",
+  "displayName": "Rhapsody",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rhapsody.png",
+  "name": "Declasse Rhapsody",
+  "manufacturer": "Declasse"
+}

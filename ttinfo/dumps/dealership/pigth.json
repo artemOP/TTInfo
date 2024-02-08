@@ -1,1 +1,18 @@
-{"className": "Sports Classics", "classId": 5, "_data_generated": "2024-01-06 18:17:44", "customClass": "Sports Classics", "seats": 2, "model": "pigth", "hash": 1755264173, "gameName": "pigth", "makeName": "LAMPADA", "displayName": "Pigalle Camper", "credits": {"author": "Smukkeunger"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/pigth.png", "name": "Lampadati Pigalle Camper", "manufacturer": "Lampadati"}
+{
+  "className": "Sports Classics",
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "model": "pigth",
+  "hash": 1755264173,
+  "gameName": "pigth",
+  "makeName": "LAMPADA",
+  "displayName": "Pigalle Camper",
+  "credits": {
+    "author": "Smukkeunger"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pigth.png",
+  "name": "Lampadati Pigalle Camper",
+  "manufacturer": "Lampadati"
+}

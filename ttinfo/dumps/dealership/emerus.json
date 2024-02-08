@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 56439209, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:41", "customClass": "Super", "seats": 2, "hash": 1323778901, "gameName": "EMERUS", "model": "emerus", "displayName": "Emerus", "makeName": "PROGEN", "preview": "https://cdn.tycoon.community/dealership/vehicles/emerus.png", "name": "Progen Emerus", "manufacturer": "Progen"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 56439209,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 1323778901,
+  "gameName": "EMERUS",
+  "model": "emerus",
+  "displayName": "Emerus",
+  "makeName": "PROGEN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/emerus.png",
+  "name": "Progen Emerus",
+  "manufacturer": "Progen"
+}

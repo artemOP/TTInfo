@@ -1,1 +1,15 @@
-{"className": "Super", "classId": 7, "_data_generated": "2024-01-06 18:17:48", "customClass": "Super", "seats": 2, "hash": 425116616, "gameName": "TYPHOON", "model": "typhoon", "displayName": "Typhoon", "makeName": "MODENA", "preview": "https://cdn.tycoon.community/dealership/vehicles/typhoon.png", "name": "Modena Typhoon", "manufacturer": "Modena"}
+{
+  "className": "Super",
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 425116616,
+  "gameName": "TYPHOON",
+  "model": "typhoon",
+  "displayName": "Typhoon",
+  "makeName": "MODENA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/typhoon.png",
+  "name": "Modena Typhoon",
+  "manufacturer": "Modena"
+}

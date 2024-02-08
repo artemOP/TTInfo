@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 150000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:40", "customClass": "Muscle", "seats": 2, "hash": -49115651, "gameName": "VAMOS", "model": "vamos", "displayName": "Vamos", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/vamos.png", "name": "Declasse Vamos", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 150000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -49115651,
+  "gameName": "VAMOS",
+  "model": "vamos",
+  "displayName": "Vamos",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/vamos.png",
+  "name": "Declasse Vamos",
+  "manufacturer": "Declasse"
+}

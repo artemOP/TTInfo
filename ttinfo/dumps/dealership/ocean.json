@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:54", "customClass": "Boats", "seats": 4, "hash": 2123236799, "gameName": "OCEAN", "model": "ocean", "displayName": "Ocean Motion", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/ocean.png", "name": "Ocean Motion", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:54",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": 2123236799,
+  "gameName": "OCEAN",
+  "model": "ocean",
+  "displayName": "Ocean Motion",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ocean.png",
+  "name": "Ocean Motion",
+  "manufacturer": "NULL"
+}

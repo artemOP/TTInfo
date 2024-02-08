@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 10000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:21", "customClass": "Muscle", "seats": 2, "hash": -227741703, "gameName": "RUINER", "model": "ruiner", "displayName": "Ruiner", "makeName": "IMPONTE", "preview": "https://cdn.tycoon.community/dealership/vehicles/ruiner.png", "name": "Imponte Ruiner", "manufacturer": "Imponte"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -227741703,
+  "gameName": "RUINER",
+  "model": "ruiner",
+  "displayName": "Ruiner",
+  "makeName": "IMPONTE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ruiner.png",
+  "name": "Imponte Ruiner",
+  "manufacturer": "Imponte"
+}

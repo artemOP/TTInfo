@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 65000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:22", "customClass": "Sedans", "seats": 4, "hash": -1255452397, "gameName": "SCHAFTER", "model": "schafter2", "displayName": "Schafter", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter2.png", "name": "Benefactor Schafter", "manufacturer": "Benefactor"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 65000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1255452397,
+  "gameName": "SCHAFTER",
+  "model": "schafter2",
+  "displayName": "Schafter",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter2.png",
+  "name": "Benefactor Schafter",
+  "manufacturer": "Benefactor"
+}

@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:35", "customClass": "Choppers", "seats": 1, "hash": -77769032, "gameName": "WAYFARER", "model": "wayfarer", "displayName": "Wayfarer", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/wayfarer.png", "name": "Western Wayfarer", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Choppers",
+  "seats": 1,
+  "hash": -77769032,
+  "gameName": "WAYFARER",
+  "model": "wayfarer",
+  "displayName": "Wayfarer",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/wayfarer.png",
+  "name": "Western Wayfarer",
+  "manufacturer": "Western"
+}

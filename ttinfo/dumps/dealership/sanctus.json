@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:35", "customClass": "Choppers", "seats": 1, "hash": 1491277511, "gameName": "SANCTUS", "model": "sanctus", "displayName": "Sanctus", "makeName": "LCC", "preview": "https://cdn.tycoon.community/dealership/vehicles/sanctus.png", "name": "LCC Sanctus", "manufacturer": "LCC"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Choppers",
+  "seats": 1,
+  "hash": 1491277511,
+  "gameName": "SANCTUS",
+  "model": "sanctus",
+  "displayName": "Sanctus",
+  "makeName": "LCC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sanctus.png",
+  "name": "LCC Sanctus",
+  "manufacturer": "LCC"
+}

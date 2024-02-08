@@ -1,1 +1,21 @@
-{"className": "Industrial", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 20000, "premium": false}, "classId": 10, "_data_generated": "2024-01-06 18:17:29", "customClass": "Pickups", "seats": 6, "hash": -2107990196, "gameName": "GUARDIAN", "model": "guardian", "displayName": "Guardian", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/guardian.png", "name": "Vapid Guardian", "manufacturer": "Vapid"}
+{
+  "className": "Industrial",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 20000,
+    "premium": false
+  },
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Pickups",
+  "seats": 6,
+  "hash": -2107990196,
+  "gameName": "GUARDIAN",
+  "model": "guardian",
+  "displayName": "Guardian",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/guardian.png",
+  "name": "Vapid Guardian",
+  "manufacturer": "Vapid"
+}

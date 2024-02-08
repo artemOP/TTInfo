@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:37", "customClass": "Muscle", "seats": 2, "hash": -401643538, "gameName": "STALION2", "model": "stalion2", "displayName": "Burger Shot Stallion", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/stalion2.png", "name": "Declasse Burger Shot Stallion", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -401643538,
+  "gameName": "STALION2",
+  "model": "stalion2",
+  "displayName": "Burger Shot Stallion",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stalion2.png",
+  "name": "Declasse Burger Shot Stallion",
+  "manufacturer": "Declasse"
+}

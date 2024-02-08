@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Cargo Planes", "price": 250000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:12", "customClass": "Cargo Planes", "seats": 2, "hash": -644710429, "gameName": "CUBAN800", "model": "cuban800", "displayName": "Cuban 800", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/cuban800.png", "name": "Cuban 800", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Cargo Planes",
+    "price": 250000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "hash": -644710429,
+  "gameName": "CUBAN800",
+  "model": "cuban800",
+  "displayName": "Cuban 800",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cuban800.png",
+  "name": "Cuban 800",
+  "manufacturer": "NULL"
+}

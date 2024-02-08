@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Leisure Planes", "price": 12000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:37", "customClass": "Fighter Planes", "seats": 1, "hash": -1700874274, "gameName": "STARLING", "model": "starling", "displayName": "LF-22 Starling", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/starling.png", "name": "LF-22 Starling", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Leisure Planes",
+    "price": 12000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Fighter Planes",
+  "seats": 1,
+  "hash": -1700874274,
+  "gameName": "STARLING",
+  "model": "starling",
+  "displayName": "LF-22 Starling",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/starling.png",
+  "name": "LF-22 Starling",
+  "manufacturer": "NULL"
+}

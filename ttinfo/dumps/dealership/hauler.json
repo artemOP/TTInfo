@@ -1,1 +1,21 @@
-{"className": "Commercial", "dealership": {"dealership": "Vehicle Shop", "category": "Semi Cabs", "price": 1500000, "premium": false}, "classId": 20, "_data_generated": "2024-01-06 18:17:17", "customClass": "Semi-Cabs", "seats": 2, "hash": 1518533038, "gameName": "HAULER", "model": "hauler", "displayName": "Hauler", "makeName": "JOBUILT", "preview": "https://cdn.tycoon.community/dealership/vehicles/hauler.png", "name": "JoBuilt Hauler", "manufacturer": "JoBuilt"}
+{
+  "className": "Commercial",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Semi Cabs",
+    "price": 1500000,
+    "premium": false
+  },
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": 1518533038,
+  "gameName": "HAULER",
+  "model": "hauler",
+  "displayName": "Hauler",
+  "makeName": "JOBUILT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hauler.png",
+  "name": "JoBuilt Hauler",
+  "manufacturer": "JoBuilt"
+}

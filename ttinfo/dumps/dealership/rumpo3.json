@@ -1,1 +1,21 @@
-{"className": "Vans", "dealership": {"dealership": "Vehicle Shop", "category": "Vans", "price": 15000, "premium": false}, "classId": 12, "_data_generated": "2024-01-06 18:17:34", "customClass": "Vans", "seats": 4, "hash": 1475773103, "gameName": "RUMPO3", "model": "rumpo3", "displayName": "Rumpo Custom", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/rumpo3.png", "name": "Bravado Rumpo Custom", "manufacturer": "Bravado"}
+{
+  "className": "Vans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Vans",
+    "price": 15000,
+    "premium": false
+  },
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Vans",
+  "seats": 4,
+  "hash": 1475773103,
+  "gameName": "RUMPO3",
+  "model": "rumpo3",
+  "displayName": "Rumpo Custom",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rumpo3.png",
+  "name": "Bravado Rumpo Custom",
+  "manufacturer": "Bravado"
+}

@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:36", "customClass": "Trailers", "seats": 0, "hash": -1100548694, "gameName": "TRAILER", "model": "trailers4", "displayName": "Trailer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/trailers4.png", "name": "Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:36",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1100548694,
+  "gameName": "TRAILER",
+  "model": "trailers4",
+  "displayName": "Trailer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/trailers4.png",
+  "name": "Trailer",
+  "manufacturer": "NULL"
+}

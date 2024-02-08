@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:34", "customClass": "Law Enforcement", "seats": 4, "hash": 1427099500, "gameName": "RPDCAR1", "model": "rpdcar1", "displayName": "Stanier", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdcar1.png", "name": "Vapid Stanier", "manufacturer": "Vapid"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": 1427099500,
+  "gameName": "RPDCAR1",
+  "model": "rpdcar1",
+  "displayName": "Stanier",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdcar1.png",
+  "name": "Vapid Stanier",
+  "manufacturer": "Vapid"
+}

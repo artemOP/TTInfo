@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:43", "customClass": "Sedans", "seats": 2, "hash": -1855505138, "gameName": "rhinehart", "model": "rhinehart", "displayName": "Rhinehart", "makeName": "UBERMACHT", "preview": "https://cdn.tycoon.community/dealership/vehicles/rhinehart.png", "name": "Ubermacht Rhinehart", "manufacturer": "Ubermacht"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Sedans",
+  "seats": 2,
+  "hash": -1855505138,
+  "gameName": "rhinehart",
+  "model": "rhinehart",
+  "displayName": "Rhinehart",
+  "makeName": "UBERMACHT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rhinehart.png",
+  "name": "Ubermacht Rhinehart",
+  "manufacturer": "Ubermacht"
+}

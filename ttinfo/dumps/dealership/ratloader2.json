@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 15000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:20", "customClass": "Pickups", "seats": 2, "hash": -589178377, "gameName": "RLOADER2", "model": "ratloader2", "displayName": "Rat-Truck", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/ratloader2.png", "name": "Bravado Rat-Truck", "manufacturer": "Bravado"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 15000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Pickups",
+  "seats": 2,
+  "hash": -589178377,
+  "gameName": "RLOADER2",
+  "model": "ratloader2",
+  "displayName": "Rat-Truck",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ratloader2.png",
+  "name": "Bravado Rat-Truck",
+  "manufacturer": "Bravado"
+}

@@ -1,1 +1,21 @@
-{"className": "Helicopters", "dealership": {"dealership": "Aircraft Shop", "category": "Helicopters", "price": 1200000, "premium": false}, "classId": 15, "_data_generated": "2024-01-06 18:17:18", "customClass": "Helicopters", "seats": 4, "hash": -339587598, "gameName": "SWIFT", "model": "swift", "displayName": "Swift", "makeName": "BUCKING", "preview": "https://cdn.tycoon.community/dealership/vehicles/swift.png", "name": "Buckingham Swift", "manufacturer": "Buckingham"}
+{
+  "className": "Helicopters",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Helicopters",
+    "price": 1200000,
+    "premium": false
+  },
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Helicopters",
+  "seats": 4,
+  "hash": -339587598,
+  "gameName": "SWIFT",
+  "model": "swift",
+  "displayName": "Swift",
+  "makeName": "BUCKING",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/swift.png",
+  "name": "Buckingham Swift",
+  "manufacturer": "Buckingham"
+}

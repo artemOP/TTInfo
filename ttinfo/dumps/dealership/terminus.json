@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:15", "customClass": "Off-Road", "seats": 4, "hash": 167522317, "gameName": "TERMINUS", "model": "terminus", "displayName": "Terminus", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/terminus.png", "name": "Canis Terminus", "manufacturer": "Canis"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Off-Road",
+  "seats": 4,
+  "hash": 167522317,
+  "gameName": "TERMINUS",
+  "model": "terminus",
+  "displayName": "Terminus",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/terminus.png",
+  "name": "Canis Terminus",
+  "manufacturer": "Canis"
+}

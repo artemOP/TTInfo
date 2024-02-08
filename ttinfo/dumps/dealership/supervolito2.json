@@ -1,1 +1,21 @@
-{"className": "Helicopters", "dealership": {"dealership": "Aircraft Shop", "category": "Helicopters", "price": 5000000, "premium": false}, "classId": 15, "_data_generated": "2024-01-06 18:17:33", "customClass": "Helicopters", "seats": 4, "hash": -1671539132, "gameName": "SVOLITO2", "model": "supervolito2", "displayName": "SuperVolito Carbon", "makeName": "BUCKING", "preview": "https://cdn.tycoon.community/dealership/vehicles/supervolito2.png", "name": "Buckingham SuperVolito Carbon", "manufacturer": "Buckingham"}
+{
+  "className": "Helicopters",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Helicopters",
+    "price": 5000000,
+    "premium": false
+  },
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:33",
+  "customClass": "Helicopters",
+  "seats": 4,
+  "hash": -1671539132,
+  "gameName": "SVOLITO2",
+  "model": "supervolito2",
+  "displayName": "SuperVolito Carbon",
+  "makeName": "BUCKING",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/supervolito2.png",
+  "name": "Buckingham SuperVolito Carbon",
+  "manufacturer": "Buckingham"
+}

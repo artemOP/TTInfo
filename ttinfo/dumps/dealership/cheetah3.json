@@ -1,1 +1,15 @@
-{"className": "Sports Classics", "classId": 5, "_data_generated": "2024-01-06 18:17:25", "customClass": "Sports Classics", "seats": 2, "hash": 471399650, "gameName": "CHEETAH3", "model": "cheetah3", "displayName": "Cheetah Classic Custom", "makeName": "GROTTI", "preview": "https://cdn.tycoon.community/dealership/vehicles/cheetah3.png", "name": "Grotti Cheetah Classic Custom", "manufacturer": "Grotti"}
+{
+  "className": "Sports Classics",
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 471399650,
+  "gameName": "CHEETAH3",
+  "model": "cheetah3",
+  "displayName": "Cheetah Classic Custom",
+  "makeName": "GROTTI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cheetah3.png",
+  "name": "Grotti Cheetah Classic Custom",
+  "manufacturer": "Grotti"
+}

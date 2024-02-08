@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 100000000000.0, "premium": true}, "classId": 8, "_data_generated": "2024-01-06 18:17:39", "customClass": "Flying Bikes", "seats": 1, "hash": 2069146067, "gameName": "OPPRESSOR2", "model": "oppressor2", "displayName": "Oppressor Mk II", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/oppressor2.png", "name": "Pegassi Oppressor Mk II", "manufacturer": "Pegassi"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 100000000000.0,
+    "premium": true
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Flying Bikes",
+  "seats": 1,
+  "hash": 2069146067,
+  "gameName": "OPPRESSOR2",
+  "model": "oppressor2",
+  "displayName": "Oppressor Mk II",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/oppressor2.png",
+  "name": "Pegassi Oppressor Mk II",
+  "manufacturer": "Pegassi"
+}

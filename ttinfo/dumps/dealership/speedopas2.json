@@ -1,1 +1,15 @@
-{"className": "Vans", "classId": 12, "_data_generated": "2024-01-06 18:17:22", "customClass": "Vans", "seats": 6, "hash": -174700669, "gameName": "SPEEDOPAS2", "model": "speedopas2", "displayName": "Speedo (CollinsCo)", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/speedopas2.png", "name": "Vapid Speedo (CollinsCo)", "manufacturer": "Vapid"}
+{
+  "className": "Vans",
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Vans",
+  "seats": 6,
+  "hash": -174700669,
+  "gameName": "SPEEDOPAS2",
+  "model": "speedopas2",
+  "displayName": "Speedo (CollinsCo)",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/speedopas2.png",
+  "name": "Vapid Speedo (CollinsCo)",
+  "manufacturer": "Vapid"
+}

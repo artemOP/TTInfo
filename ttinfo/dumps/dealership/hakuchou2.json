@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 90000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:30", "customClass": "Dragsters", "seats": 2, "hash": -255678177, "gameName": "HAKUCHOU2", "model": "hakuchou2", "displayName": "Hakuchou Drag", "makeName": "SHITZU", "preview": "https://cdn.tycoon.community/dealership/vehicles/hakuchou2.png", "name": "Shitzu Hakuchou Drag", "manufacturer": "Shitzu"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 90000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Dragsters",
+  "seats": 2,
+  "hash": -255678177,
+  "gameName": "HAKUCHOU2",
+  "model": "hakuchou2",
+  "displayName": "Hakuchou Drag",
+  "makeName": "SHITZU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hakuchou2.png",
+  "name": "Shitzu Hakuchou Drag",
+  "manufacturer": "Shitzu"
+}

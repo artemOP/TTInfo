@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:43", "customClass": "Muscle", "seats": 2, "hash": 40817712, "gameName": "Greenwood", "model": "greenwood", "displayName": "Greenwood", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/greenwood.png", "name": "Bravado Greenwood", "manufacturer": "Bravado"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 40817712,
+  "gameName": "Greenwood",
+  "model": "greenwood",
+  "displayName": "Greenwood",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/greenwood.png",
+  "name": "Bravado Greenwood",
+  "manufacturer": "Bravado"
+}

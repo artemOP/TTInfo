@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sports", "seats": 2, "hash": -1582061455, "gameName": "JESTER4", "model": "jester4", "displayName": "Jester RR", "makeName": "DINKA", "preview": "https://cdn.tycoon.community/dealership/vehicles/jester4.png", "name": "Dinka Jester RR", "manufacturer": "Dinka"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": -1582061455,
+  "gameName": "JESTER4",
+  "model": "jester4",
+  "displayName": "Jester RR",
+  "makeName": "DINKA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/jester4.png",
+  "name": "Dinka Jester RR",
+  "manufacturer": "Dinka"
+}

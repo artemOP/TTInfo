@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:40", "customClass": "APCs", "seats": 4, "hash": -1146969353, "gameName": "SCARAB", "model": "scarab", "displayName": "Apocalypse Scarab", "makeName": "HVY", "preview": "https://cdn.tycoon.community/dealership/vehicles/scarab.png", "name": "HVY Apocalypse Scarab", "manufacturer": "HVY"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "APCs",
+  "seats": 4,
+  "hash": -1146969353,
+  "gameName": "SCARAB",
+  "model": "scarab",
+  "displayName": "Apocalypse Scarab",
+  "makeName": "HVY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/scarab.png",
+  "name": "HVY Apocalypse Scarab",
+  "manufacturer": "HVY"
+}

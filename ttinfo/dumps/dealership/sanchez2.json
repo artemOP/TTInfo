@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 12000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:25", "customClass": "Dirtbikes", "seats": 2, "hash": -1453280962, "gameName": "SANCHEZ02", "model": "sanchez2", "displayName": "Sanchez", "makeName": "MAIBATSU", "preview": "https://cdn.tycoon.community/dealership/vehicles/sanchez2.png", "name": "Maibatsu Sanchez", "manufacturer": "Maibatsu"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 12000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Dirtbikes",
+  "seats": 2,
+  "hash": -1453280962,
+  "gameName": "SANCHEZ02",
+  "model": "sanchez2",
+  "displayName": "Sanchez",
+  "makeName": "MAIBATSU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sanchez2.png",
+  "name": "Maibatsu Sanchez",
+  "manufacturer": "Maibatsu"
+}

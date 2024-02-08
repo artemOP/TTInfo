@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:43", "customClass": "Sports", "seats": 2, "hash": 1447690049, "gameName": "stingertt", "model": "stingertt", "displayName": "Itali GTO Stinger TT", "makeName": "GROTTI", "preview": "https://cdn.tycoon.community/dealership/vehicles/stingertt.png", "name": "Grotti Itali GTO Stinger TT", "manufacturer": "Grotti"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1447690049,
+  "gameName": "stingertt",
+  "model": "stingertt",
+  "displayName": "Itali GTO Stinger TT",
+  "makeName": "GROTTI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stingertt.png",
+  "name": "Grotti Itali GTO Stinger TT",
+  "manufacturer": "Grotti"
+}

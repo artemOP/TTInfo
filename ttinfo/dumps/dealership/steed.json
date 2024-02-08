@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:18", "customClass": "Trucks", "seats": 6, "hash": 1677715180, "gameName": "STEED", "model": "steed", "displayName": "Steed", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/steed.png", "name": "Vapid Steed", "manufacturer": "Vapid"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Trucks",
+  "seats": 6,
+  "hash": 1677715180,
+  "gameName": "STEED",
+  "model": "steed",
+  "displayName": "Steed",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/steed.png",
+  "name": "Vapid Steed",
+  "manufacturer": "Vapid"
+}

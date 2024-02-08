@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 35000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:31", "customClass": "Dirtbikes", "seats": 2, "hash": 86520421, "gameName": "BF400", "model": "bf400", "displayName": "BF400", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/bf400.png", "name": "Nagasaki BF400", "manufacturer": "Nagasaki"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 35000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Dirtbikes",
+  "seats": 2,
+  "hash": 86520421,
+  "gameName": "BF400",
+  "model": "bf400",
+  "displayName": "BF400",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bf400.png",
+  "name": "Nagasaki BF400",
+  "manufacturer": "Nagasaki"
+}

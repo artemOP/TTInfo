@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:52", "customClass": "Sedans", "seats": 4, "hash": -649284674, "gameName": "SULTANR", "model": "sultanr", "displayName": "Sultan R", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/sultanr.png", "name": "Karin Sultan R", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -649284674,
+  "gameName": "SULTANR",
+  "model": "sultanr",
+  "displayName": "Sultan R",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sultanr.png",
+  "name": "Karin Sultan R",
+  "manufacturer": "Karin"
+}

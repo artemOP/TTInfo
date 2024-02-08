@@ -1,1 +1,24 @@
-{"className": "Sports", "dealership": {"dealership": "Unlockables", "category": "Shipments", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:49", "customClass": "Sports", "seats": 2, "model": "t66ts", "hash": -458062823, "gameName": "T66TS", "makeName": "QUADRA", "displayName": "Type-66 640 TS", "credits": {"author": "rbsace"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/t66ts.png", "name": "Quadra Type-66 640 TS", "manufacturer": "Quadra"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Unlockables",
+    "category": "Shipments",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Sports",
+  "seats": 2,
+  "model": "t66ts",
+  "hash": -458062823,
+  "gameName": "T66TS",
+  "makeName": "QUADRA",
+  "displayName": "Type-66 640 TS",
+  "credits": {
+    "author": "rbsace"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/t66ts.png",
+  "name": "Quadra Type-66 640 TS",
+  "manufacturer": "Quadra"
+}

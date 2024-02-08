@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Company Trailers", "price": 54500000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:45", "customClass": "Trailers", "seats": 2, "hash": -232829119, "gameName": "TRAILER", "model": "imperialtrailer", "displayName": "Trailer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/imperialtrailer.png", "name": "Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Company Trailers",
+    "price": 54500000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": -232829119,
+  "gameName": "TRAILER",
+  "model": "imperialtrailer",
+  "displayName": "Trailer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/imperialtrailer.png",
+  "name": "Trailer",
+  "manufacturer": "NULL"
+}

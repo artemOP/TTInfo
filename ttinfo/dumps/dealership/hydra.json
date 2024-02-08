@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:25", "customClass": "Fighter Planes", "seats": 1, "hash": 970385471, "gameName": "HYDRA", "model": "hydra", "displayName": "Hydra", "makeName": "MAMMOTH", "preview": "https://cdn.tycoon.community/dealership/vehicles/hydra.png", "name": "Mammoth Hydra", "manufacturer": "Mammoth"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Fighter Planes",
+  "seats": 1,
+  "hash": 970385471,
+  "gameName": "HYDRA",
+  "model": "hydra",
+  "displayName": "Hydra",
+  "makeName": "MAMMOTH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hydra.png",
+  "name": "Mammoth Hydra",
+  "manufacturer": "Mammoth"
+}

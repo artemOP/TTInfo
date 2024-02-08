@@ -1,1 +1,15 @@
-{"className": "Compacts", "classId": 0, "_data_generated": "2024-01-06 18:17:18", "customClass": "Compacts", "seats": 2, "hash": 628003514, "gameName": "ISSI4", "model": "issi4", "displayName": "Apocalypse Issi", "makeName": "WEENY", "preview": "https://cdn.tycoon.community/dealership/vehicles/issi4.png", "name": "Weeny Apocalypse Issi", "manufacturer": "Weeny"}
+{
+  "className": "Compacts",
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": 628003514,
+  "gameName": "ISSI4",
+  "model": "issi4",
+  "displayName": "Apocalypse Issi",
+  "makeName": "WEENY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/issi4.png",
+  "name": "Weeny Apocalypse Issi",
+  "manufacturer": "Weeny"
+}

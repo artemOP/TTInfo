@@ -1,1 +1,18 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:49", "customClass": "Military", "seats": 2, "model": "chernotipper", "hash": 468430413, "gameName": "CHRNOTIPPER", "makeName": "HVY", "displayName": "Chernotipper", "credits": {"author": "Goobie"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/chernotipper.png", "name": "HVY Chernotipper", "manufacturer": "HVY"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Military",
+  "seats": 2,
+  "model": "chernotipper",
+  "hash": 468430413,
+  "gameName": "CHRNOTIPPER",
+  "makeName": "HVY",
+  "displayName": "Chernotipper",
+  "credits": {
+    "author": "Goobie"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/chernotipper.png",
+  "name": "HVY Chernotipper",
+  "manufacturer": "HVY"
+}

@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:35", "customClass": "Motorcycles", "seats": 1, "hash": 708830657, "gameName": "SOVEREIGN", "model": "sovereign2", "displayName": "Sovereign", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/sovereign2.png", "name": "Western Sovereign", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": 708830657,
+  "gameName": "SOVEREIGN",
+  "model": "sovereign2",
+  "displayName": "Sovereign",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sovereign2.png",
+  "name": "Western Sovereign",
+  "manufacturer": "Western"
+}

@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:14", "customClass": "Blimps", "seats": 4, "hash": -613725916, "gameName": "BLIMP2", "model": "blimp2", "displayName": "Xero Blimp", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/blimp2.png", "name": "Xero Blimp", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Blimps",
+  "seats": 4,
+  "hash": -613725916,
+  "gameName": "BLIMP2",
+  "model": "blimp2",
+  "displayName": "Xero Blimp",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blimp2.png",
+  "name": "Xero Blimp",
+  "manufacturer": "NULL"
+}

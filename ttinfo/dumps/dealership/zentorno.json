@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 1225000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:14", "customClass": "Super", "seats": 2, "hash": -1403128555, "gameName": "ZENTORNO", "model": "zentorno", "displayName": "Zentorno", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/zentorno.png", "name": "Pegassi Zentorno", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 1225000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -1403128555,
+  "gameName": "ZENTORNO",
+  "model": "zentorno",
+  "displayName": "Zentorno",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/zentorno.png",
+  "name": "Pegassi Zentorno",
+  "manufacturer": "Pegassi"
+}

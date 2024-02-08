@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Company", "price": 86000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:51", "customClass": "Airliners", "seats": 2, "hash": 493610702, "gameName": "A340", "model": "a340", "displayName": "Airbus A340-600", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/a340.png", "name": "Airbus A340-600", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Company",
+    "price": 86000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": 493610702,
+  "gameName": "A340",
+  "model": "a340",
+  "displayName": "Airbus A340-600",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/a340.png",
+  "name": "Airbus A340-600",
+  "manufacturer": "NULL"
+}

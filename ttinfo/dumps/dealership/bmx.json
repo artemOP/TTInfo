@@ -1,1 +1,21 @@
-{"className": "Cycles", "dealership": {"dealership": "Vehicle Shop", "category": "Bicycles", "price": 500, "premium": false}, "classId": 13, "_data_generated": "2024-01-06 18:17:24", "customClass": "Cycles", "seats": 1, "hash": 1131912276, "gameName": "BMX", "model": "bmx", "displayName": "BMX", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/bmx.png", "name": "BMX", "manufacturer": "NULL"}
+{
+  "className": "Cycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bicycles",
+    "price": 500,
+    "premium": false
+  },
+  "classId": 13,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Cycles",
+  "seats": 1,
+  "hash": 1131912276,
+  "gameName": "BMX",
+  "model": "bmx",
+  "displayName": "BMX",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bmx.png",
+  "name": "BMX",
+  "manufacturer": "NULL"
+}

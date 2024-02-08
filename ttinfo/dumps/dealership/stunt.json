@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Leisure Planes", "price": 20000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:11", "customClass": "Leisure Planes", "seats": 1, "hash": -2122757008, "gameName": "STUNT", "model": "stunt", "displayName": "Mallard", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/stunt.png", "name": "Mallard", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Leisure Planes",
+    "price": 20000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Leisure Planes",
+  "seats": 1,
+  "hash": -2122757008,
+  "gameName": "STUNT",
+  "model": "stunt",
+  "displayName": "Mallard",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stunt.png",
+  "name": "Mallard",
+  "manufacturer": "NULL"
+}

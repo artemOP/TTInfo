@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 675000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:20", "customClass": "Sports Classics", "seats": 2, "hash": 1504306544, "gameName": "TORERO", "model": "torero", "displayName": "Torero", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/torero.png", "name": "Pegassi Torero", "manufacturer": "Pegassi"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 675000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 1504306544,
+  "gameName": "TORERO",
+  "model": "torero",
+  "displayName": "Torero",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/torero.png",
+  "name": "Pegassi Torero",
+  "manufacturer": "Pegassi"
+}

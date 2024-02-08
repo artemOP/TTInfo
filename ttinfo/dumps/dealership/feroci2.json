@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:14", "customClass": "Airport", "seats": 4, "hash": 1026055242, "gameName": "FEROCI2", "model": "feroci2", "displayName": "Airport Feroci", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/feroci2.png", "name": "Airport Feroci", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Airport",
+  "seats": 4,
+  "hash": 1026055242,
+  "gameName": "FEROCI2",
+  "model": "feroci2",
+  "displayName": "Airport Feroci",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/feroci2.png",
+  "name": "Airport Feroci",
+  "manufacturer": "NULL"
+}

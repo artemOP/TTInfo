@@ -1,1 +1,25 @@
-{"className": "Sports", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:28", "customClass": "Sports", "seats": 2, "model": "jesterv12", "hash": 1049523987, "gameName": "JESTERV12", "makeName": "DINKA", "displayName": "Jester Super Secret", "credits": {"author": "BB20", "download": "https://www.gta5-mods.com/vehicles/bbtwnty-jester-v12-super-secret-d65a7870-3e50-4bc6-9ac3-4ca0d8340ee5"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/jesterv12.png", "name": "Dinka Jester Super Secret", "manufacturer": "Dinka"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:28",
+  "customClass": "Sports",
+  "seats": 2,
+  "model": "jesterv12",
+  "hash": 1049523987,
+  "gameName": "JESTERV12",
+  "makeName": "DINKA",
+  "displayName": "Jester Super Secret",
+  "credits": {
+    "author": "BB20",
+    "download": "https://www.gta5-mods.com/vehicles/bbtwnty-jester-v12-super-secret-d65a7870-3e50-4bc6-9ac3-4ca0d8340ee5"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/jesterv12.png",
+  "name": "Dinka Jester Super Secret",
+  "manufacturer": "Dinka"
+}

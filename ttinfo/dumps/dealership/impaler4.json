@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:39", "customClass": "Muscle", "seats": 2, "hash": -1744505657, "gameName": "IMPALER4", "model": "impaler4", "displayName": "Nightmare Impaler", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler4.png", "name": "Declasse Nightmare Impaler", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -1744505657,
+  "gameName": "IMPALER4",
+  "model": "impaler4",
+  "displayName": "Nightmare Impaler",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler4.png",
+  "name": "Declasse Nightmare Impaler",
+  "manufacturer": "Declasse"
+}

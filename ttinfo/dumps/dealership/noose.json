@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:30", "customClass": "Emergency", "seats": 4, "hash": 148777611, "gameName": "STANIER", "model": "noose", "displayName": "Stanier", "makeName": "NOOSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/noose.png", "name": "N.O.O.S.E Stanier", "manufacturer": "N.O.O.S.E"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Emergency",
+  "seats": 4,
+  "hash": 148777611,
+  "gameName": "STANIER",
+  "model": "noose",
+  "displayName": "Stanier",
+  "makeName": "NOOSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/noose.png",
+  "name": "N.O.O.S.E Stanier",
+  "manufacturer": "N.O.O.S.E"
+}

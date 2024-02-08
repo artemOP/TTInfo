@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:32", "customClass": "Sports", "seats": 2, "hash": -1193912403, "gameName": "CALICO", "model": "calico", "displayName": "Calico GTF", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/calico.png", "name": "Karin Calico GTF", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": -1193912403,
+  "gameName": "CALICO",
+  "model": "calico",
+  "displayName": "Calico GTF",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/calico.png",
+  "name": "Karin Calico GTF",
+  "manufacturer": "Karin"
+}

@@ -1,1 +1,15 @@
-{"className": "Industrial", "classId": 10, "_data_generated": "2024-01-06 18:17:24", "customClass": "Heavy Equipment", "seats": 2, "hash": -947761570, "gameName": "TIPTRUCK2", "model": "tiptruck2", "displayName": "Tipper", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/tiptruck2.png", "name": "Tipper", "manufacturer": "NULL"}
+{
+  "className": "Industrial",
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Heavy Equipment",
+  "seats": 2,
+  "hash": -947761570,
+  "gameName": "TIPTRUCK2",
+  "model": "tiptruck2",
+  "displayName": "Tipper",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tiptruck2.png",
+  "name": "Tipper",
+  "manufacturer": "NULL"
+}

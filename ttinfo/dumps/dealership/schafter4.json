@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 150000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:21", "customClass": "Sedans", "seats": 4, "hash": 1489967196, "gameName": "SCHAFTER4", "model": "schafter4", "displayName": "Schafter LWB", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter4.png", "name": "Benefactor Schafter LWB", "manufacturer": "Benefactor"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 150000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 1489967196,
+  "gameName": "SCHAFTER4",
+  "model": "schafter4",
+  "displayName": "Schafter LWB",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/schafter4.png",
+  "name": "Benefactor Schafter LWB",
+  "manufacturer": "Benefactor"
+}

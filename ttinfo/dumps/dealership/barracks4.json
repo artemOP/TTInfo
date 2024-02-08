@@ -1,1 +1,21 @@
-{"className": "Military", "dealership": {"dealership": "Vehicle Shop", "category": "Semi Cabs", "price": 1500000, "premium": false}, "classId": 19, "_data_generated": "2024-01-06 18:17:37", "customClass": "Semi-Cabs", "seats": 2, "hash": 1926811738, "gameName": "BARRACKS4", "model": "barracks4", "displayName": "Civilian Barracks", "makeName": "HVY", "preview": "https://cdn.tycoon.community/dealership/vehicles/barracks4.png", "name": "HVY Civilian Barracks", "manufacturer": "HVY"}
+{
+  "className": "Military",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Semi Cabs",
+    "price": 1500000,
+    "premium": false
+  },
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": 1926811738,
+  "gameName": "BARRACKS4",
+  "model": "barracks4",
+  "displayName": "Civilian Barracks",
+  "makeName": "HVY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/barracks4.png",
+  "name": "HVY Civilian Barracks",
+  "manufacturer": "HVY"
+}

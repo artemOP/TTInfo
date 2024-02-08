@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 140000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:21", "customClass": "Coupes", "seats": 2, "hash": 767087018, "gameName": "ALPHA", "model": "alpha", "displayName": "Alpha", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/alpha.png", "name": "Albany Alpha", "manufacturer": "Albany"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 140000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Coupes",
+  "seats": 2,
+  "hash": 767087018,
+  "gameName": "ALPHA",
+  "model": "alpha",
+  "displayName": "Alpha",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/alpha.png",
+  "name": "Albany Alpha",
+  "manufacturer": "Albany"
+}
