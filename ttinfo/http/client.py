@@ -314,8 +314,6 @@ class Client:
             force (bool, optional): Optionally forcibly refresh the cache
         """
         data = await self.session.players(server)
-        if not data:
-            return None
 
         uptime = data["server"]["uptime"].replace("h", "").replace("m", "").split()
         if len(uptime) == 2:
@@ -358,8 +356,6 @@ class Client:
             models.Positions: list[Position]
         """
         data = await self.session.positions(server, key=key)
-        if not data:
-            return None
 
         return models.Positions(
             models.Position(
