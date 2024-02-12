@@ -62,7 +62,7 @@ class Bot(commands.Bot):
         for file in root.iterdir():
             if file.match("[!-|_]*.py"):
                 yield file
-            if self.env_values.get("debug", "").lower() == "false" and file.name == "tasks":
+            if self.env_values.get("tasks", "").lower() == "false" and file.name == "tasks":
                 continue
             elif file.is_dir():
                 yield from self.collect_cogs(file)
