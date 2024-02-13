@@ -306,7 +306,7 @@ class Client:
         return models.Forecast(enums.Weather[weather] for weather in data)
 
     @cache.with_server(60)
-    async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players | None:
+    async def fetch_players(self, server: enums.Server, force: bool = False) -> models.Players:
         """get data about online players and the server
 
         Args:
@@ -345,7 +345,7 @@ class Client:
             ),
         )
 
-    async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions | None:
+    async def fetch_positions(self, server: enums.Server, key: Key) -> models.Positions:
         """return list of positions, contains player data, coords, vehicle data and *usually* has a history
 
         Args:
@@ -394,7 +394,7 @@ class Client:
                         for coord in player[6]
                     ]
                     if len(player) > 6
-                    else None
+                    else []
                 ),
             )
             for player in data["players"]

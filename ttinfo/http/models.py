@@ -20,7 +20,7 @@ class Coords(NamedTuple):
     y: float
     z: float
     h: Optional[float] = None
-    index: Optional[int] = None
+    index: int = 0
 
 
 class RaceTrack(NamedTuple):
@@ -109,7 +109,7 @@ class Position(NamedTuple):
     player: Player
     position: Coords
     vehicle_data: VehicleData
-    history: Optional[list[Coords]] = None
+    history: list[Coords] = []
 
 
 class Top10(NamedTuple):
