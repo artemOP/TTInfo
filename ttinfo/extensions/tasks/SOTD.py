@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import time, timezone
 from typing import TYPE_CHECKING
+from discord import Game
 from discord.ext import commands, tasks
 
 from ...http.enums import Server
@@ -36,12 +37,16 @@ class SOTD(commands.Cog):
         self.bot.dispatch("sotd_change", request)
 
     @commands.Cog.listener("on_sotd_change")
-    async def on_sotd_change(self, payload: models.SOTD) -> None:
+    async def insert_sotd(self, payload: models.SOTD) -> None:
         await self.bot.pool.execute(
             "INSERT INTO sotd(date, aptitude, bonus) VALUES(now()::date, $1, $2)",
             payload.aptitude,
             payload.bonus,
         )
+
+    @commands.Cog.listener("on_sotd_change")
+    async def update_status(self, payload: models.SOTD) -> None:
+        await self.bot.change_presence(activity=Game(name=f"SOTD: {payload.short} - {payload.bonus}%"))
 
     @task.before_loop
     async def wait_for_ready(self):

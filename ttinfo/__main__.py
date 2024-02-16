@@ -8,6 +8,7 @@ import dotenv
 import orjson
 
 from ttinfo import Bot, LogHandler, Pool, TycoonClient
+from .http.enums import Server
 
 
 async def main():
@@ -37,6 +38,13 @@ async def main():
         bot.tycoon_client = tycoon_client
         bot.pool = pool
         bot.session = session
+
+        try:
+            sotd = await tycoon_client.fetch_sotd(Server.main, await tycoon_client.get_donated_key(Server.main))
+        except:
+            pass
+        else:
+            bot.activity = discord.Game(name=f"SOTD: {sotd.short} - {sotd.bonus}%")
 
         log_handler.info("Starting bot")
         log_handler.info(f"{pool} connected")
