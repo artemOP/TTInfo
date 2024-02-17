@@ -1,1 +1,21 @@
-{"className": "Coupes", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 200000, "premium": false}, "classId": 3, "_data_generated": "2024-01-06 18:17:18", "customClass": "Coupes", "seats": 2, "hash": -903001984, "gameName": "RC350", "model": "rc350", "displayName": "Lexus RC 350", "makeName": "Lexus", "preview": "https://cdn.tycoon.community/dealership/vehicles/rc350.png", "name": "Lexus RC 350", "manufacturer": "NULL"}
+{
+  "className": "Coupes",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 200000,
+    "premium": false
+  },
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Coupes",
+  "seats": 2,
+  "hash": -903001984,
+  "gameName": "RC350",
+  "model": "rc350",
+  "displayName": "Lexus RC 350",
+  "makeName": "Lexus",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rc350.png",
+  "name": "Lexus RC 350",
+  "manufacturer": "NULL"
+}

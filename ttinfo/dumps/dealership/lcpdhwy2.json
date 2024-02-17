@@ -1,1 +1,19 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:19", "customClass": "Emergency", "seats": 4, "model": "lcpdhwy2", "hash": -1770602658, "gameName": "lcpdhwy2", "makeName": "BRAVADO", "displayName": "Buffalo SX", "credits": {"author": "SAS994 & ShaoyeBen", "name": "Buffalo SX with SLR lightbar"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwy2.png", "name": "Bravado Buffalo SX", "manufacturer": "Bravado"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Emergency",
+  "seats": 4,
+  "model": "lcpdhwy2",
+  "hash": -1770602658,
+  "gameName": "lcpdhwy2",
+  "makeName": "BRAVADO",
+  "displayName": "Buffalo SX",
+  "credits": {
+    "author": "SAS994 & ShaoyeBen",
+    "name": "Buffalo SX with SLR lightbar"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lcpdhwy2.png",
+  "name": "Bravado Buffalo SX",
+  "manufacturer": "Bravado"
+}

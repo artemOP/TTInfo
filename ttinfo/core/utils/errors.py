@@ -1,6 +1,16 @@
 from typing import Any, Optional
+from discord.ext.commands import CommandError
 
-__all__ = "TTInfoException", "NoKey", "NotLinked", "OfflineError", "InvalidItem", "HTTPException", "MalformedResponse"
+__all__ = (
+    "TTInfoException",
+    "NoKey",
+    "NotLinked",
+    "OfflineError",
+    "InvalidItem",
+    "HTTPException",
+    "MalformedResponse",
+    "ButtonOnCooldown",
+)
 
 
 class TTInfoException(Exception):
@@ -54,3 +64,9 @@ class HTTPException(TTInfoException):
 
 class MalformedResponse(HTTPException):
     pass
+
+
+class ButtonOnCooldown(CommandError):
+    def __init__(self, retry_after: float):
+        self.retry_after = retry_after
+        super().__init__(f"Button is on cooldown for {retry_after:.1f} seconds")

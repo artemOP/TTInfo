@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:44", "customClass": "Airliners", "seats": 2, "hash": 1391907295, "gameName": "a343", "model": "a343", "displayName": "Airbus A343", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/a343.png", "name": "Airbus A343", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": 1391907295,
+  "gameName": "a343",
+  "model": "a343",
+  "displayName": "Airbus A343",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/a343.png",
+  "name": "Airbus A343",
+  "manufacturer": "NULL"
+}

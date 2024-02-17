@@ -1,1 +1,21 @@
-{"className": "Open Wheel", "dealership": {"dealership": "Race Track Shop", "category": "Open Wheel", "price": 1200000000, "premium": false}, "classId": 22, "_data_generated": "2024-01-06 18:17:36", "customClass": "Open Wheel", "seats": 1, "hash": 1492612435, "gameName": "OPENWHEEL1", "model": "openwheel1", "displayName": "BR8", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/openwheel1.png", "name": "Benefactor BR8", "manufacturer": "Benefactor"}
+{
+  "className": "Open Wheel",
+  "dealership": {
+    "dealership": "Race Track Shop",
+    "category": "Open Wheel",
+    "price": 1200000000,
+    "premium": false
+  },
+  "classId": 22,
+  "_data_generated": "2024-01-06 18:17:36",
+  "customClass": "Open Wheel",
+  "seats": 1,
+  "hash": 1492612435,
+  "gameName": "OPENWHEEL1",
+  "model": "openwheel1",
+  "displayName": "BR8",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/openwheel1.png",
+  "name": "Benefactor BR8",
+  "manufacturer": "Benefactor"
+}

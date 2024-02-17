@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:21", "customClass": "Mechanic", "seats": 2, "hash": -1323100960, "gameName": "TOWTRUCK", "model": "towtruck", "displayName": "Tow Truck", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/towtruck.png", "name": "Tow Truck", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Mechanic",
+  "seats": 2,
+  "hash": -1323100960,
+  "gameName": "TOWTRUCK",
+  "model": "towtruck",
+  "displayName": "Tow Truck",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/towtruck.png",
+  "name": "Tow Truck",
+  "manufacturer": "NULL"
+}

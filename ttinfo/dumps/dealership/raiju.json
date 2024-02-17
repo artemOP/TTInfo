@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:43", "customClass": "Planes", "seats": 1, "hash": 239897677, "gameName": "RAIJU", "model": "raiju", "displayName": "F-160 Raiju", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/raiju.png", "name": "F-160 Raiju", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Planes",
+  "seats": 1,
+  "hash": 239897677,
+  "gameName": "RAIJU",
+  "model": "raiju",
+  "displayName": "F-160 Raiju",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/raiju.png",
+  "name": "F-160 Raiju",
+  "manufacturer": "NULL"
+}

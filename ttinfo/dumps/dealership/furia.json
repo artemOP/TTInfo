@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 51871643, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:41", "customClass": "Super", "seats": 2, "hash": 960812448, "gameName": "FURIA", "model": "furia", "displayName": "Furia", "makeName": "GROTTI", "preview": "https://cdn.tycoon.community/dealership/vehicles/furia.png", "name": "Grotti Furia", "manufacturer": "Grotti"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 51871643,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 960812448,
+  "gameName": "FURIA",
+  "model": "furia",
+  "displayName": "Furia",
+  "makeName": "GROTTI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/furia.png",
+  "name": "Grotti Furia",
+  "manufacturer": "Grotti"
+}

@@ -1,1 +1,18 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:16", "customClass": "Garbage Trucks", "seats": 2, "model": "master2", "hash": -175572642, "gameName": "MASTER2", "makeName": "BRUTE", "displayName": "BinMaster B8", "credits": {"author": "Monkeypolice188 et al"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/master2.png", "name": "Brute BinMaster B8", "manufacturer": "Brute"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Garbage Trucks",
+  "seats": 2,
+  "model": "master2",
+  "hash": -175572642,
+  "gameName": "MASTER2",
+  "makeName": "BRUTE",
+  "displayName": "BinMaster B8",
+  "credits": {
+    "author": "Monkeypolice188 et al"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/master2.png",
+  "name": "Brute BinMaster B8",
+  "manufacturer": "Brute"
+}

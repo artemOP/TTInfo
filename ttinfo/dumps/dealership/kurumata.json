@@ -1,1 +1,24 @@
-{"className": "Super", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:45", "customClass": "Race Cars", "seats": 4, "model": "kurumata", "hash": -803131242, "gameName": "KURUMATA", "makeName": "KARIN", "displayName": "Kuruma T/A Mk.I", "credits": {"author": "Vanillaworks Team"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/kurumata.png", "name": "Karin Kuruma T/A Mk.I", "manufacturer": "Karin"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Race Cars",
+  "seats": 4,
+  "model": "kurumata",
+  "hash": -803131242,
+  "gameName": "KURUMATA",
+  "makeName": "KARIN",
+  "displayName": "Kuruma T/A Mk.I",
+  "credits": {
+    "author": "Vanillaworks Team"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/kurumata.png",
+  "name": "Karin Kuruma T/A Mk.I",
+  "manufacturer": "Karin"
+}

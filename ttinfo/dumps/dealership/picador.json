@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 15000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:16", "customClass": "Muscle", "seats": 2, "hash": 1507916787, "gameName": "PICADOR", "model": "picador", "displayName": "Picador", "makeName": "CHEVAL", "preview": "https://cdn.tycoon.community/dealership/vehicles/picador.png", "name": "Cheval Picador", "manufacturer": "Cheval"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 15000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 1507916787,
+  "gameName": "PICADOR",
+  "model": "picador",
+  "displayName": "Picador",
+  "makeName": "CHEVAL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/picador.png",
+  "name": "Cheval Picador",
+  "manufacturer": "Cheval"
+}

@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:52", "customClass": "Airliners", "seats": 2, "hash": -1867889928, "gameName": "JET", "model": "748", "displayName": "Boeing 747-400", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/748.png", "name": "Boeing 747-400", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": -1867889928,
+  "gameName": "JET",
+  "model": "748",
+  "displayName": "Boeing 747-400",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/748.png",
+  "name": "Boeing 747-400",
+  "manufacturer": "NULL"
+}

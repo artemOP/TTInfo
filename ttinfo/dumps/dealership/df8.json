@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:12", "customClass": "Sedans", "seats": 4, "hash": 162883121, "gameName": "DF8", "model": "df8", "displayName": "DF8-90", "makeName": "IMPONTE", "preview": "https://cdn.tycoon.community/dealership/vehicles/df8.png", "name": "Imponte DF8-90", "manufacturer": "Imponte"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 162883121,
+  "gameName": "DF8",
+  "model": "df8",
+  "displayName": "DF8-90",
+  "makeName": "IMPONTE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/df8.png",
+  "name": "Imponte DF8-90",
+  "manufacturer": "Imponte"
+}

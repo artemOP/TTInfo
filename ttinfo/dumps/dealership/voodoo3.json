@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:48", "customClass": "Muscle", "seats": 2, "hash": -254997993, "gameName": "VOODOO", "model": "voodoo3", "displayName": "Voodoo", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/voodoo3.png", "name": "Declasse Voodoo", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -254997993,
+  "gameName": "VOODOO",
+  "model": "voodoo3",
+  "displayName": "Voodoo",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/voodoo3.png",
+  "name": "Declasse Voodoo",
+  "manufacturer": "Declasse"
+}

@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:23", "customClass": "Stealth Helicopters", "seats": 6, "hash": 295054921, "gameName": "ANNIHLATOR2", "model": "annihilator2", "displayName": "Annihilator Stealth", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/annihilator2.png", "name": "Annihilator Stealth", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:23",
+  "customClass": "Stealth Helicopters",
+  "seats": 6,
+  "hash": 295054921,
+  "gameName": "ANNIHLATOR2",
+  "model": "annihilator2",
+  "displayName": "Annihilator Stealth",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/annihilator2.png",
+  "name": "Annihilator Stealth",
+  "manufacturer": "NULL"
+}

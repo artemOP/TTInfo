@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 10000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:23", "customClass": "Sedans", "seats": 4, "hash": -1477580979, "gameName": "STANIER", "model": "stanier", "displayName": "Stanier", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/stanier.png", "name": "Vapid Stanier", "manufacturer": "Vapid"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:23",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1477580979,
+  "gameName": "STANIER",
+  "model": "stanier",
+  "displayName": "Stanier",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stanier.png",
+  "name": "Vapid Stanier",
+  "manufacturer": "Vapid"
+}

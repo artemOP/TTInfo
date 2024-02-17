@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 55000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:24", "customClass": "Sedans", "seats": 4, "hash": -1008861746, "gameName": "TAILGATE", "model": "tailgater", "displayName": "Tailgater", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/tailgater.png", "name": "Obey Tailgater", "manufacturer": "Obey"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 55000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1008861746,
+  "gameName": "TAILGATE",
+  "model": "tailgater",
+  "displayName": "Tailgater",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tailgater.png",
+  "name": "Obey Tailgater",
+  "manufacturer": "Obey"
+}

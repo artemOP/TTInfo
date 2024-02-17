@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 1385000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:30", "customClass": "Race Cars", "seats": 2, "hash": -631760477, "gameName": "MASSACRO2", "model": "massacro2", "displayName": "Massacro (Racecar)", "makeName": "DEWBAUCH", "preview": "https://cdn.tycoon.community/dealership/vehicles/massacro2.png", "name": "Dewbauchee Massacro (Racecar)", "manufacturer": "Dewbauchee"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 1385000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": -631760477,
+  "gameName": "MASSACRO2",
+  "model": "massacro2",
+  "displayName": "Massacro (Racecar)",
+  "makeName": "DEWBAUCH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/massacro2.png",
+  "name": "Dewbauchee Massacro (Racecar)",
+  "manufacturer": "Dewbauchee"
+}

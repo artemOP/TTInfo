@@ -1,1 +1,18 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:49", "customClass": "HEMTT", "seats": 2, "model": "m983", "hash": 814559556, "gameName": "M983", "makeName": "OSHKOSH", "displayName": "M983 HEMTT", "credits": {"author": "SkylineGTRFreak"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/m983.png", "name": "Oshkosh M983 HEMTT", "manufacturer": "Oshkosh"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "HEMTT",
+  "seats": 2,
+  "model": "m983",
+  "hash": 814559556,
+  "gameName": "M983",
+  "makeName": "OSHKOSH",
+  "displayName": "M983 HEMTT",
+  "credits": {
+    "author": "SkylineGTRFreak"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/m983.png",
+  "name": "Oshkosh M983 HEMTT",
+  "manufacturer": "Oshkosh"
+}

@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:46", "customClass": "Trailers", "seats": 2, "hash": 2089866995, "gameName": "TRAILER", "model": "corp_sal_trailer3", "displayName": "Trailer", "makeName": "SALogistics", "preview": "https://cdn.tycoon.community/dealership/vehicles/corp_sal_trailer3.png", "name": "Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": 2089866995,
+  "gameName": "TRAILER",
+  "model": "corp_sal_trailer3",
+  "displayName": "Trailer",
+  "makeName": "SALogistics",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/corp_sal_trailer3.png",
+  "name": "Trailer",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Cycles", "classId": 13, "_data_generated": "2024-01-06 18:17:43", "customClass": "Cycles", "seats": 1, "hash": -897824023, "gameName": "INDUCTOR", "model": "inductor", "displayName": "Inductor", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/inductor.png", "name": "Inductor", "manufacturer": "NULL"}
+{
+  "className": "Cycles",
+  "classId": 13,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Cycles",
+  "seats": 1,
+  "hash": -897824023,
+  "gameName": "INDUCTOR",
+  "model": "inductor",
+  "displayName": "Inductor",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/inductor.png",
+  "name": "Inductor",
+  "manufacturer": "NULL"
+}

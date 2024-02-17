@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Hunter", "price": 85000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:17", "customClass": "Pickups", "seats": 4, "hash": -1189015600, "gameName": "SANDKING", "model": "sandking", "displayName": "Sandking XL", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/sandking.png", "name": "Vapid Sandking XL", "manufacturer": "Vapid"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Hunter",
+    "price": 85000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Pickups",
+  "seats": 4,
+  "hash": -1189015600,
+  "gameName": "SANDKING",
+  "model": "sandking",
+  "displayName": "Sandking XL",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sandking.png",
+  "name": "Vapid Sandking XL",
+  "manufacturer": "Vapid"
+}

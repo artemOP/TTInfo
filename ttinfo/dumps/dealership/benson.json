@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:12", "customClass": "Trucks", "seats": 2, "hash": 2053223216, "gameName": "BENSON", "model": "benson", "displayName": "Benson", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/benson.png", "name": "Vapid Benson", "manufacturer": "Vapid"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Trucks",
+  "seats": 2,
+  "hash": 2053223216,
+  "gameName": "BENSON",
+  "model": "benson",
+  "displayName": "Benson",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/benson.png",
+  "name": "Vapid Benson",
+  "manufacturer": "Vapid"
+}

@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:21", "customClass": "Heavy Equipment", "seats": 2, "hash": -785397255, "gameName": "ct660", "model": "ct660", "displayName": "CT660 Mixer", "makeName": "CAT CT 660", "preview": "https://cdn.tycoon.community/dealership/vehicles/ct660.png", "name": "CT660 Mixer", "manufacturer": "NULL"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Heavy Equipment",
+  "seats": 2,
+  "hash": -785397255,
+  "gameName": "ct660",
+  "model": "ct660",
+  "displayName": "CT660 Mixer",
+  "makeName": "CAT CT 660",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ct660.png",
+  "name": "CT660 Mixer",
+  "manufacturer": "NULL"
+}

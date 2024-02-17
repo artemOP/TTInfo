@@ -1,1 +1,15 @@
-{"className": "Super", "classId": 7, "_data_generated": "2024-01-06 18:17:43", "customClass": "Super", "seats": 1, "hash": -10917683, "gameName": "LM87", "model": "lm87", "displayName": "LM87", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/lm87.png", "name": "Benefactor LM87", "manufacturer": "Benefactor"}
+{
+  "className": "Super",
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Super",
+  "seats": 1,
+  "hash": -10917683,
+  "gameName": "LM87",
+  "model": "lm87",
+  "displayName": "LM87",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lm87.png",
+  "name": "Benefactor LM87",
+  "manufacturer": "Benefactor"
+}

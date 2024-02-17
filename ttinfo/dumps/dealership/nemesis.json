@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:26", "customClass": "Motorcycles", "seats": 2, "hash": -634879114, "gameName": "NEMESIS", "model": "nemesis", "displayName": "Nemesis", "makeName": "PRINCIPL", "preview": "https://cdn.tycoon.community/dealership/vehicles/nemesis.png", "name": "Principe Nemesis", "manufacturer": "Principe"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:26",
+  "customClass": "Motorcycles",
+  "seats": 2,
+  "hash": -634879114,
+  "gameName": "NEMESIS",
+  "model": "nemesis",
+  "displayName": "Nemesis",
+  "makeName": "PRINCIPL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nemesis.png",
+  "name": "Principe Nemesis",
+  "manufacturer": "Principe"
+}

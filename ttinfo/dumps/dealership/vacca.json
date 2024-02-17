@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 840000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:25", "customClass": "Sports", "seats": 2, "hash": 338562499, "gameName": "VACCA", "model": "vacca", "displayName": "Vacca", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/vacca.png", "name": "Pegassi Vacca", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 840000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 338562499,
+  "gameName": "VACCA",
+  "model": "vacca",
+  "displayName": "Vacca",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/vacca.png",
+  "name": "Pegassi Vacca",
+  "manufacturer": "Pegassi"
+}

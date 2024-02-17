@@ -1,1 +1,15 @@
-{"className": "Super", "classId": 7, "_data_generated": "2024-01-06 18:17:47", "customClass": "Super", "seats": 2, "hash": 368013078, "gameName": "SCHAFGTR", "model": "schaftergtr", "displayName": "Schafter GTR", "makeName": "BENEFAC", "preview": "https://cdn.tycoon.community/dealership/vehicles/schaftergtr.png", "name": "Benefactor Schafter GTR", "manufacturer": "Benefactor"}
+{
+  "className": "Super",
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 368013078,
+  "gameName": "SCHAFGTR",
+  "model": "schaftergtr",
+  "displayName": "Schafter GTR",
+  "makeName": "BENEFAC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/schaftergtr.png",
+  "name": "Benefactor Schafter GTR",
+  "manufacturer": "Benefactor"
+}

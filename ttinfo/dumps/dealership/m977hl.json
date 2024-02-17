@@ -1,1 +1,18 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:49", "customClass": "HEMTT", "seats": 2, "model": "m977hl", "hash": -554507741, "gameName": "M977HL", "makeName": "OSHKOSH", "displayName": "M977 Cargo", "credits": {"author": "PANICO TOTAL & SkylineGTRFreak"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/m977hl.png", "name": "Oshkosh M977 Cargo", "manufacturer": "Oshkosh"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "HEMTT",
+  "seats": 2,
+  "model": "m977hl",
+  "hash": -554507741,
+  "gameName": "M977HL",
+  "makeName": "OSHKOSH",
+  "displayName": "M977 Cargo",
+  "credits": {
+    "author": "PANICO TOTAL & SkylineGTRFreak"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/m977hl.png",
+  "name": "Oshkosh M977 Cargo",
+  "manufacturer": "Oshkosh"
+}

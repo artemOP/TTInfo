@@ -1,1 +1,21 @@
-{"className": "Service", "dealership": {"dealership": "Vehicle Shop", "category": "Bus Driver", "price": 50000, "premium": false}, "classId": 17, "_data_generated": "2024-01-06 18:17:24", "customClass": "Buses", "seats": 10, "hash": 1941029835, "gameName": "TOURBUS", "model": "tourbus", "displayName": "Tour Bus", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/tourbus.png", "name": "Tour Bus", "manufacturer": "NULL"}
+{
+  "className": "Service",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bus Driver",
+    "price": 50000,
+    "premium": false
+  },
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:24",
+  "customClass": "Buses",
+  "seats": 10,
+  "hash": 1941029835,
+  "gameName": "TOURBUS",
+  "model": "tourbus",
+  "displayName": "Tour Bus",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tourbus.png",
+  "name": "Tour Bus",
+  "manufacturer": "NULL"
+}

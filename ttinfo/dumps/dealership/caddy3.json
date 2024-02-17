@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:17", "customClass": "Caddies", "seats": 2, "hash": -769147461, "gameName": "CADDY3", "model": "caddy3", "displayName": "Caddy", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/caddy3.png", "name": "Caddy", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Caddies",
+  "seats": 2,
+  "hash": -769147461,
+  "gameName": "CADDY3",
+  "model": "caddy3",
+  "displayName": "Caddy",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/caddy3.png",
+  "name": "Caddy",
+  "manufacturer": "NULL"
+}

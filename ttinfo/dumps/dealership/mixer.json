@@ -1,1 +1,15 @@
-{"className": "Industrial", "classId": 10, "_data_generated": "2024-01-06 18:17:18", "customClass": "Heavy Equipment", "seats": 2, "hash": -784816453, "gameName": "MIXER", "model": "mixer", "displayName": "Mixer", "makeName": "HVY", "preview": "https://cdn.tycoon.community/dealership/vehicles/mixer.png", "name": "HVY Mixer", "manufacturer": "HVY"}
+{
+  "className": "Industrial",
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Heavy Equipment",
+  "seats": 2,
+  "hash": -784816453,
+  "gameName": "MIXER",
+  "model": "mixer",
+  "displayName": "Mixer",
+  "makeName": "HVY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mixer.png",
+  "name": "HVY Mixer",
+  "manufacturer": "HVY"
+}

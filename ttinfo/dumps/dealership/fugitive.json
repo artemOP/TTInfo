@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 24000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sedans", "seats": 4, "hash": 1909141499, "gameName": "FUGITIVE", "model": "fugitive", "displayName": "Fugitive", "makeName": "CHEVAL", "preview": "https://cdn.tycoon.community/dealership/vehicles/fugitive.png", "name": "Cheval Fugitive", "manufacturer": "Cheval"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 24000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 1909141499,
+  "gameName": "FUGITIVE",
+  "model": "fugitive",
+  "displayName": "Fugitive",
+  "makeName": "CHEVAL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/fugitive.png",
+  "name": "Cheval Fugitive",
+  "manufacturer": "Cheval"
+}

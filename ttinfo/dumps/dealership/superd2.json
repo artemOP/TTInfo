@@ -1,1 +1,15 @@
-{"className": "Coupes", "classId": 3, "_data_generated": "2024-01-06 18:17:47", "customClass": "Coupes", "seats": 4, "hash": 1638119866, "gameName": "SUPERD2", "model": "superd2", "displayName": "Super Drop Diamond", "makeName": "ENUS", "preview": "https://cdn.tycoon.community/dealership/vehicles/superd2.png", "name": "Enus Super Drop Diamond", "manufacturer": "Enus"}
+{
+  "className": "Coupes",
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Coupes",
+  "seats": 4,
+  "hash": 1638119866,
+  "gameName": "SUPERD2",
+  "model": "superd2",
+  "displayName": "Super Drop Diamond",
+  "makeName": "ENUS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/superd2.png",
+  "name": "Enus Super Drop Diamond",
+  "manufacturer": "Enus"
+}

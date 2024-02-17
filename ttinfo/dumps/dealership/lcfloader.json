@@ -1,1 +1,15 @@
-{"className": "Industrial", "classId": 10, "_data_generated": "2024-01-06 18:17:53", "customClass": "Industrial", "seats": 1, "hash": -269800791, "gameName": "LCFLOADER", "model": "lcfloader", "displayName": "NULL", "makeName": "LCF", "preview": "https://cdn.tycoon.community/dealership/vehicles/lcfloader.png", "name": "Missing Name (lcfloader)", "manufacturer": "NULL"}
+{
+  "className": "Industrial",
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:53",
+  "customClass": "Industrial",
+  "seats": 1,
+  "hash": -269800791,
+  "gameName": "LCFLOADER",
+  "model": "lcfloader",
+  "displayName": "NULL",
+  "makeName": "LCF",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lcfloader.png",
+  "name": "Missing Name (lcfloader)",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 45000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:15", "customClass": "Trailers", "seats": 0, "hash": -2140210194, "gameName": "DOCKTRAILER", "model": "docktrailer", "displayName": "Container Trailer (MK7)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/docktrailer.png", "name": "Container Trailer (MK7)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 45000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -2140210194,
+  "gameName": "DOCKTRAILER",
+  "model": "docktrailer",
+  "displayName": "Container Trailer (MK7)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/docktrailer.png",
+  "name": "Container Trailer (MK7)",
+  "manufacturer": "NULL"
+}

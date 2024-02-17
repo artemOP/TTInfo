@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:39", "customClass": "Monster Trucks", "seats": 2, "hash": -715746948, "gameName": "MONSTER5", "model": "monster5", "displayName": "Nightmare Sasquatch", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/monster5.png", "name": "Bravado Nightmare Sasquatch", "manufacturer": "Bravado"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Monster Trucks",
+  "seats": 2,
+  "hash": -715746948,
+  "gameName": "MONSTER5",
+  "model": "monster5",
+  "displayName": "Nightmare Sasquatch",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/monster5.png",
+  "name": "Bravado Nightmare Sasquatch",
+  "manufacturer": "Bravado"
+}

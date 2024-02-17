@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 135000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:15", "customClass": "Sports", "seats": 2, "hash": 108773431, "gameName": "COQUETTE", "model": "coquette", "displayName": "Coquette", "makeName": "INVERTO", "preview": "https://cdn.tycoon.community/dealership/vehicles/coquette.png", "name": "Invetero Coquette", "manufacturer": "Invetero"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 135000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 108773431,
+  "gameName": "COQUETTE",
+  "model": "coquette",
+  "displayName": "Coquette",
+  "makeName": "INVERTO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/coquette.png",
+  "name": "Invetero Coquette",
+  "manufacturer": "Invetero"
+}

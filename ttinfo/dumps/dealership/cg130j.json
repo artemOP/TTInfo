@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:45", "customClass": "Emergency", "seats": 16, "hash": 1175803920, "gameName": "CG130J", "model": "cg130j", "displayName": "HC-130J Hercules", "makeName": "CGHERC", "preview": "https://cdn.tycoon.community/dealership/vehicles/cg130j.png", "name": "Lockheed HC-130J Hercules", "manufacturer": "Lockheed"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Emergency",
+  "seats": 16,
+  "hash": 1175803920,
+  "gameName": "CG130J",
+  "model": "cg130j",
+  "displayName": "HC-130J Hercules",
+  "makeName": "CGHERC",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cg130j.png",
+  "name": "Lockheed HC-130J Hercules",
+  "manufacturer": "Lockheed"
+}

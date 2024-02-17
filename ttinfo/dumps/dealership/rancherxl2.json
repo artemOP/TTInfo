@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:21", "customClass": "Off-Road", "seats": 4, "hash": 1933662059, "gameName": "RANCHERX", "model": "rancherxl2", "displayName": "Rancher XL", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/rancherxl2.png", "name": "Declasse Rancher XL", "manufacturer": "Declasse"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Off-Road",
+  "seats": 4,
+  "hash": 1933662059,
+  "gameName": "RANCHERX",
+  "model": "rancherxl2",
+  "displayName": "Rancher XL",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rancherxl2.png",
+  "name": "Declasse Rancher XL",
+  "manufacturer": "Declasse"
+}

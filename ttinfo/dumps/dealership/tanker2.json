@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:12", "customClass": "Trailers", "seats": 0, "hash": 1956216962, "gameName": "TANKER", "model": "tanker2", "displayName": "Tanker", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/tanker2.png", "name": "Tanker", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": 1956216962,
+  "gameName": "TANKER",
+  "model": "tanker2",
+  "displayName": "Tanker",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tanker2.png",
+  "name": "Tanker",
+  "manufacturer": "NULL"
+}

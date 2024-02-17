@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 1565000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:33", "customClass": "Race Cars", "seats": 2, "hash": 633712403, "gameName": "BANSHEE2", "model": "banshee2", "displayName": "Banshee 900R", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/banshee2.png", "name": "Bravado Banshee 900R", "manufacturer": "Bravado"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 1565000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:33",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": 633712403,
+  "gameName": "BANSHEE2",
+  "model": "banshee2",
+  "displayName": "Banshee 900R",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/banshee2.png",
+  "name": "Bravado Banshee 900R",
+  "manufacturer": "Bravado"
+}

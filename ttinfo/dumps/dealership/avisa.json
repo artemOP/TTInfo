@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:11", "customClass": "Submersibles", "seats": 4, "hash": -1706603682, "gameName": "AVISA", "model": "avisa", "displayName": "Avisa", "makeName": "KRAKEN", "preview": "https://cdn.tycoon.community/dealership/vehicles/avisa.png", "name": "Kraken Avisa", "manufacturer": "Kraken"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Submersibles",
+  "seats": 4,
+  "hash": -1706603682,
+  "gameName": "AVISA",
+  "model": "avisa",
+  "displayName": "Avisa",
+  "makeName": "KRAKEN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/avisa.png",
+  "name": "Kraken Avisa",
+  "manufacturer": "Kraken"
+}

@@ -1,1 +1,21 @@
-{"className": "Service", "dealership": {"dealership": "Vehicle Shop", "category": "Bus Driver", "price": 43000000, "premium": false}, "classId": 17, "_data_generated": "2024-01-06 18:17:47", "customClass": "Buses", "seats": 10, "hash": -2089625811, "gameName": "COACH PARAD", "model": "coach_paradiso", "displayName": "Volvo Marcopolo Paradiso 1200 Coach", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/coach_paradiso.png", "name": "Volvo Marcopolo Paradiso 1200 Coach", "manufacturer": "NULL"}
+{
+  "className": "Service",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bus Driver",
+    "price": 43000000,
+    "premium": false
+  },
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Buses",
+  "seats": 10,
+  "hash": -2089625811,
+  "gameName": "COACH PARAD",
+  "model": "coach_paradiso",
+  "displayName": "Volvo Marcopolo Paradiso 1200 Coach",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/coach_paradiso.png",
+  "name": "Volvo Marcopolo Paradiso 1200 Coach",
+  "manufacturer": "NULL"
+}

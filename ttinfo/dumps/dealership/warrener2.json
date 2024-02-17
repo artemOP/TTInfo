@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:42", "customClass": "Sedans", "seats": 2, "hash": 579912970, "gameName": "WARRENER2", "model": "warrener2", "displayName": "Warrener HKR", "makeName": "VULCAR", "preview": "https://cdn.tycoon.community/dealership/vehicles/warrener2.png", "name": "Vulcar Warrener HKR", "manufacturer": "Vulcar"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Sedans",
+  "seats": 2,
+  "hash": 579912970,
+  "gameName": "WARRENER2",
+  "model": "warrener2",
+  "displayName": "Warrener HKR",
+  "makeName": "VULCAR",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/warrener2.png",
+  "name": "Vulcar Warrener HKR",
+  "manufacturer": "Vulcar"
+}

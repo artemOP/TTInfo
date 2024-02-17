@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 9000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:20", "customClass": "Sedans", "seats": 4, "hash": -1150599089, "gameName": "PRIMO", "model": "primo", "displayName": "Primo", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/primo.png", "name": "Albany Primo", "manufacturer": "Albany"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 9000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1150599089,
+  "gameName": "PRIMO",
+  "model": "primo",
+  "displayName": "Primo",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/primo.png",
+  "name": "Albany Primo",
+  "manufacturer": "Albany"
+}

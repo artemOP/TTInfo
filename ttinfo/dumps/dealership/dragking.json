@@ -1,1 +1,24 @@
-{"className": "Open Wheel", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 22, "_data_generated": "2024-01-06 18:17:47", "customClass": "Dragsters", "seats": 1, "model": "dragking", "hash": 28973045, "gameName": "Dragking", "makeName": "VAPID", "displayName": "Dragking", "credits": {"author": "Smukkeunger"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/dragking.png", "name": "Vapid Dragking", "manufacturer": "Vapid"}
+{
+  "className": "Open Wheel",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 22,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Dragsters",
+  "seats": 1,
+  "model": "dragking",
+  "hash": 28973045,
+  "gameName": "Dragking",
+  "makeName": "VAPID",
+  "displayName": "Dragking",
+  "credits": {
+    "author": "Smukkeunger"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dragking.png",
+  "name": "Vapid Dragking",
+  "manufacturer": "Vapid"
+}

@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:22", "customClass": "Trailers", "seats": 2, "hash": 706898006, "gameName": "TRAILER", "model": "narwhalcorp_trailers2", "displayName": "Trailer", "makeName": "NARWHALCORP", "preview": "https://cdn.tycoon.community/dealership/vehicles/narwhalcorp_trailers2.png", "name": "Narwhal Corp. Trailer", "manufacturer": "Narwhal Corp."}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": 706898006,
+  "gameName": "TRAILER",
+  "model": "narwhalcorp_trailers2",
+  "displayName": "Trailer",
+  "makeName": "NARWHALCORP",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/narwhalcorp_trailers2.png",
+  "name": "Narwhal Corp. Trailer",
+  "manufacturer": "Narwhal Corp."
+}

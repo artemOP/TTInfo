@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:12", "customClass": "Trailers", "seats": 0, "hash": -777275802, "gameName": "FREIGHTTRAI", "model": "freighttrailer", "displayName": "Large Flatbed Trailer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/freighttrailer.png", "name": "Large Flatbed Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -777275802,
+  "gameName": "FREIGHTTRAI",
+  "model": "freighttrailer",
+  "displayName": "Large Flatbed Trailer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/freighttrailer.png",
+  "name": "Large Flatbed Trailer",
+  "manufacturer": "NULL"
+}

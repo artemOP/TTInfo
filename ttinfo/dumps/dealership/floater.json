@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:46", "customClass": "Boats", "seats": 4, "hash": -1731432653, "gameName": "FLOATER", "model": "floater", "displayName": "Floater", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/floater.png", "name": "Floater", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": -1731432653,
+  "gameName": "FLOATER",
+  "model": "floater",
+  "displayName": "Floater",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/floater.png",
+  "name": "Floater",
+  "manufacturer": "NULL"
+}

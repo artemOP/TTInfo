@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "PostOP", "price": 75000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:49", "customClass": "Cargo Planes", "seats": 2, "hash": 349221278, "gameName": "postopp3", "model": "postopp3", "displayName": "PostOP P-3", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/postopp3.png", "name": "PostOP P-3", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "PostOP",
+    "price": 75000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "hash": 349221278,
+  "gameName": "postopp3",
+  "model": "postopp3",
+  "displayName": "PostOP P-3",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/postopp3.png",
+  "name": "PostOP P-3",
+  "manufacturer": "NULL"
+}

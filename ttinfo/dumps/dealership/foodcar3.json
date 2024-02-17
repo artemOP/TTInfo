@@ -1,1 +1,24 @@
-{"className": "Compacts", "dealership": {"dealership": "Vehicle Shop", "category": "Event", "price": 0, "premium": false}, "classId": 0, "_data_generated": "2024-01-06 18:17:46", "customClass": "Food Delivery", "seats": 4, "model": "foodcar3", "hash": 1806048398, "gameName": "FOODCAR3", "makeName": "KARIN", "displayName": "Dilettante (Delivery)", "credits": {"author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar3.png", "name": "Karin Dilettante (Delivery)", "manufacturer": "Karin"}
+{
+  "className": "Compacts",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Event",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Food Delivery",
+  "seats": 4,
+  "model": "foodcar3",
+  "hash": 1806048398,
+  "gameName": "FOODCAR3",
+  "makeName": "KARIN",
+  "displayName": "Dilettante (Delivery)",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar3.png",
+  "name": "Karin Dilettante (Delivery)",
+  "manufacturer": "Karin"
+}

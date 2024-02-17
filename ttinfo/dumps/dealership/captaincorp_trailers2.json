@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:26", "customClass": "Trailers", "seats": 2, "hash": 1687668974, "gameName": "TRAILER", "model": "captaincorp_trailers2", "displayName": "Trailer", "makeName": "CAPTAINCORP", "preview": "https://cdn.tycoon.community/dealership/vehicles/captaincorp_trailers2.png", "name": "San Andreas Logistics Trailer", "manufacturer": "San Andreas Logistics"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:26",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": 1687668974,
+  "gameName": "TRAILER",
+  "model": "captaincorp_trailers2",
+  "displayName": "Trailer",
+  "makeName": "CAPTAINCORP",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/captaincorp_trailers2.png",
+  "name": "San Andreas Logistics Trailer",
+  "manufacturer": "San Andreas Logistics"
+}

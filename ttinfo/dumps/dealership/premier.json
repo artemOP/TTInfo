@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 10000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:20", "customClass": "Sedans", "seats": 4, "hash": -1883869285, "gameName": "PREMIER", "model": "premier", "displayName": "Premier", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/premier.png", "name": "Declasse Premier", "manufacturer": "Declasse"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1883869285,
+  "gameName": "PREMIER",
+  "model": "premier",
+  "displayName": "Premier",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/premier.png",
+  "name": "Declasse Premier",
+  "manufacturer": "Declasse"
+}

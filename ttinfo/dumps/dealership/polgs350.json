@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Police", "price": 350000, "premium": true}, "classId": 18, "_data_generated": "2024-01-06 18:17:31", "customClass": "Law Enforcement", "seats": 4, "hash": 831758577, "gameName": "gs", "model": "polgs350", "displayName": "Lexus GS 350", "makeName": "lexus", "preview": "https://cdn.tycoon.community/dealership/vehicles/polgs350.png", "name": "Lexus GS 350", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Police",
+    "price": 350000,
+    "premium": true
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": 831758577,
+  "gameName": "gs",
+  "model": "polgs350",
+  "displayName": "Lexus GS 350",
+  "makeName": "lexus",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/polgs350.png",
+  "name": "Lexus GS 350",
+  "manufacturer": "NULL"
+}

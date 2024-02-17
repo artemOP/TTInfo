@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:29", "customClass": "Sedans", "seats": 4, "hash": -478639183, "gameName": "IMPALER5", "model": "impaler5", "displayName": "Impaler SZ", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler5.png", "name": "Declasse Impaler SZ", "manufacturer": "Declasse"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -478639183,
+  "gameName": "IMPALER5",
+  "model": "impaler5",
+  "displayName": "Impaler SZ",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler5.png",
+  "name": "Declasse Impaler SZ",
+  "manufacturer": "Declasse"
+}

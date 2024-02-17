@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 55000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:28", "customClass": "Choppers", "seats": 2, "hash": -1404136503, "gameName": "DAEMON2", "model": "daemon2", "displayName": "Daemon", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/daemon2.png", "name": "Western Daemon", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 55000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:28",
+  "customClass": "Choppers",
+  "seats": 2,
+  "hash": -1404136503,
+  "gameName": "DAEMON2",
+  "model": "daemon2",
+  "displayName": "Daemon",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/daemon2.png",
+  "name": "Western Daemon",
+  "manufacturer": "Western"
+}

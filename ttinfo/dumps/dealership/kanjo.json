@@ -1,1 +1,21 @@
-{"className": "Compacts", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 35254822, "premium": false}, "classId": 0, "_data_generated": "2024-01-06 18:17:41", "customClass": "Compacts", "seats": 2, "hash": 409049982, "gameName": "KANJO", "model": "kanjo", "displayName": "Blista Kanjo", "makeName": "DINKA", "preview": "https://cdn.tycoon.community/dealership/vehicles/kanjo.png", "name": "Dinka Blista Kanjo", "manufacturer": "Dinka"}
+{
+  "className": "Compacts",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 35254822,
+    "premium": false
+  },
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": 409049982,
+  "gameName": "KANJO",
+  "model": "kanjo",
+  "displayName": "Blista Kanjo",
+  "makeName": "DINKA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/kanjo.png",
+  "name": "Dinka Blista Kanjo",
+  "manufacturer": "Dinka"
+}

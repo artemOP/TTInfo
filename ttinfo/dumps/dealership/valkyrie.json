@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:31", "customClass": "Attack Helicopters", "seats": 4, "hash": -1600252419, "gameName": "VALKYRIE", "model": "valkyrie", "displayName": "Valkyrie", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/valkyrie.png", "name": "Valkyrie", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Attack Helicopters",
+  "seats": 4,
+  "hash": -1600252419,
+  "gameName": "VALKYRIE",
+  "model": "valkyrie",
+  "displayName": "Valkyrie",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/valkyrie.png",
+  "name": "Valkyrie",
+  "manufacturer": "NULL"
+}

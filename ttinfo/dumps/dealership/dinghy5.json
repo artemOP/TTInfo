@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:35", "customClass": "Boats", "seats": 5, "hash": -980573366, "gameName": "DINGHY5", "model": "dinghy5", "displayName": "Weaponized Dinghy", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/dinghy5.png", "name": "Nagasaki Weaponized Dinghy", "manufacturer": "Nagasaki"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Boats",
+  "seats": 5,
+  "hash": -980573366,
+  "gameName": "DINGHY5",
+  "model": "dinghy5",
+  "displayName": "Weaponized Dinghy",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dinghy5.png",
+  "name": "Nagasaki Weaponized Dinghy",
+  "manufacturer": "Nagasaki"
+}

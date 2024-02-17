@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:48", "customClass": "Buses", "seats": 0, "hash": -1379552289, "gameName": "IKARUS284T", "model": "ikarus284t", "displayName": "Ikarus 284 Articulated Bus", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/ikarus284t.png", "name": "Ikarus 284 Articulated Bus", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Buses",
+  "seats": 0,
+  "hash": -1379552289,
+  "gameName": "IKARUS284T",
+  "model": "ikarus284t",
+  "displayName": "Ikarus 284 Articulated Bus",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ikarus284t.png",
+  "name": "Ikarus 284 Articulated Bus",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:40", "customClass": "Semi-Cabs", "seats": 5, "hash": -184925090, "gameName": "PHANTOM", "model": "custom_phantom3", "displayName": "Phantom", "makeName": "TYCOON", "preview": "https://cdn.tycoon.community/dealership/vehicles/custom_phantom3.png", "name": "Transport Tycoon Phantom", "manufacturer": "Transport Tycoon"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "Semi-Cabs",
+  "seats": 5,
+  "hash": -184925090,
+  "gameName": "PHANTOM",
+  "model": "custom_phantom3",
+  "displayName": "Phantom",
+  "makeName": "TYCOON",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/custom_phantom3.png",
+  "name": "Transport Tycoon Phantom",
+  "manufacturer": "Transport Tycoon"
+}

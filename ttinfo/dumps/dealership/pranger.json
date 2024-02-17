@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Emergency", "price": 35000000, "premium": true}, "classId": 18, "_data_generated": "2024-01-06 18:17:20", "customClass": "Law Enforcement", "seats": 8, "hash": 741586030, "gameName": "PRANGER", "model": "pranger", "displayName": "Park Ranger", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/pranger.png", "name": "Declasse Park Ranger", "manufacturer": "Declasse"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Emergency",
+    "price": 35000000,
+    "premium": true
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Law Enforcement",
+  "seats": 8,
+  "hash": 741586030,
+  "gameName": "PRANGER",
+  "model": "pranger",
+  "displayName": "Park Ranger",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pranger.png",
+  "name": "Declasse Park Ranger",
+  "manufacturer": "Declasse"
+}

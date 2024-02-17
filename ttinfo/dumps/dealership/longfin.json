@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:13", "customClass": "Boats", "seats": 4, "hash": 1861786828, "gameName": "LONGFIN", "model": "longfin", "displayName": "Longfin", "makeName": "SHITZU", "preview": "https://cdn.tycoon.community/dealership/vehicles/longfin.png", "name": "Shitzu Longfin", "manufacturer": "Shitzu"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": 1861786828,
+  "gameName": "LONGFIN",
+  "model": "longfin",
+  "displayName": "Longfin",
+  "makeName": "SHITZU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/longfin.png",
+  "name": "Shitzu Longfin",
+  "manufacturer": "Shitzu"
+}

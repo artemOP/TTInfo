@@ -1,1 +1,21 @@
-{"className": "Helicopters", "dealership": {"dealership": "Aircraft Shop", "category": "Helicopters", "price": 100000000, "premium": false}, "classId": 15, "_data_generated": "2024-01-06 18:17:12", "customClass": "Emergency", "seats": 4, "hash": 990116733, "gameName": "aw139", "model": "aw139", "displayName": "FRLLC AW139", "makeName": "AUGUSTW", "preview": "https://cdn.tycoon.community/dealership/vehicles/aw139.png", "name": "FRLLC AW139", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Helicopters",
+    "price": 100000000,
+    "premium": false
+  },
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Emergency",
+  "seats": 4,
+  "hash": 990116733,
+  "gameName": "aw139",
+  "model": "aw139",
+  "displayName": "FRLLC AW139",
+  "makeName": "AUGUSTW",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/aw139.png",
+  "name": "FRLLC AW139",
+  "manufacturer": "NULL"
+}

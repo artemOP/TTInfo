@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 2150000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:20", "customClass": "Super", "seats": 2, "hash": 1034187331, "gameName": "NERO", "model": "nero", "displayName": "Nero", "makeName": "TRUFFADE", "preview": "https://cdn.tycoon.community/dealership/vehicles/nero.png", "name": "Truffade Nero", "manufacturer": "Truffade"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 2150000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 1034187331,
+  "gameName": "NERO",
+  "model": "nero",
+  "displayName": "Nero",
+  "makeName": "TRUFFADE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nero.png",
+  "name": "Truffade Nero",
+  "manufacturer": "Truffade"
+}

@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:46", "customClass": "Sports", "seats": 2, "hash": 1941903221, "gameName": "COQUETTEIV", "model": "coquetteiv", "displayName": "Coquette L", "makeName": "INVERTO", "preview": "https://cdn.tycoon.community/dealership/vehicles/coquetteiv.png", "name": "Invetero Coquette L", "manufacturer": "Invetero"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1941903221,
+  "gameName": "COQUETTEIV",
+  "model": "coquetteiv",
+  "displayName": "Coquette L",
+  "makeName": "INVERTO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/coquetteiv.png",
+  "name": "Invetero Coquette L",
+  "manufacturer": "Invetero"
+}

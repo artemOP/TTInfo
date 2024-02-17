@@ -1,1 +1,15 @@
-{"className": "Super", "classId": 7, "_data_generated": "2024-01-06 18:17:31", "customClass": "Super", "seats": 2, "hash": -915234475, "gameName": "CHAMPION", "model": "champion", "displayName": "Champion", "makeName": "DEWBAUCH", "preview": "https://cdn.tycoon.community/dealership/vehicles/champion.png", "name": "Dewbauchee Champion", "manufacturer": "Dewbauchee"}
+{
+  "className": "Super",
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -915234475,
+  "gameName": "CHAMPION",
+  "model": "champion",
+  "displayName": "Champion",
+  "makeName": "DEWBAUCH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/champion.png",
+  "name": "Dewbauchee Champion",
+  "manufacturer": "Dewbauchee"
+}

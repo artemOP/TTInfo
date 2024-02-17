@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:51", "customClass": "Trailers", "seats": 0, "hash": -1779915440, "gameName": "GASTR", "model": "gastr", "displayName": "Gas Trailer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/gastr.png", "name": "Gas Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1779915440,
+  "gameName": "GASTR",
+  "model": "gastr",
+  "displayName": "Gas Trailer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/gastr.png",
+  "name": "Gas Trailer",
+  "manufacturer": "NULL"
+}

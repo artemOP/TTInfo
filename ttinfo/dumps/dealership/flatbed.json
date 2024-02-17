@@ -1,1 +1,21 @@
-{"className": "Industrial", "dealership": {"dealership": "Vehicle Shop", "category": "Mechanic", "price": 11000, "premium": false}, "classId": 10, "_data_generated": "2024-01-06 18:17:11", "customClass": "Mechanic", "seats": 2, "hash": 1353720154, "gameName": "FLATBED", "model": "flatbed", "displayName": "Flatbed", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/flatbed.png", "name": "MTL Flatbed", "manufacturer": "MTL"}
+{
+  "className": "Industrial",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Mechanic",
+    "price": 11000,
+    "premium": false
+  },
+  "classId": 10,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Mechanic",
+  "seats": 2,
+  "hash": 1353720154,
+  "gameName": "FLATBED",
+  "model": "flatbed",
+  "displayName": "Flatbed",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/flatbed.png",
+  "name": "MTL Flatbed",
+  "manufacturer": "MTL"
+}

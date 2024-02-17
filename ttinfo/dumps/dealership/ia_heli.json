@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Company", "price": 80000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:46", "customClass": "Flying Triangle", "seats": 1, "hash": -1979310104, "gameName": "ia heli", "model": "ia_heli", "displayName": "T-4A Lambda Shuttle", "makeName": "T-4a", "preview": "https://cdn.tycoon.community/dealership/vehicles/ia_heli.png", "name": "T-4A Lambda Shuttle", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Company",
+    "price": 80000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Flying Triangle",
+  "seats": 1,
+  "hash": -1979310104,
+  "gameName": "ia heli",
+  "model": "ia_heli",
+  "displayName": "T-4A Lambda Shuttle",
+  "makeName": "T-4a",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ia_heli.png",
+  "name": "T-4A Lambda Shuttle",
+  "manufacturer": "NULL"
+}

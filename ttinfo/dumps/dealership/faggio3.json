@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 10000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:15", "customClass": "Scooters", "seats": 2, "hash": -1289178744, "gameName": "FAGGIO3", "model": "faggio3", "displayName": "Faggio Mod", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/faggio3.png", "name": "Pegassi Faggio Mod", "manufacturer": "Pegassi"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Scooters",
+  "seats": 2,
+  "hash": -1289178744,
+  "gameName": "FAGGIO3",
+  "model": "faggio3",
+  "displayName": "Faggio Mod",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/faggio3.png",
+  "name": "Pegassi Faggio Mod",
+  "manufacturer": "Pegassi"
+}

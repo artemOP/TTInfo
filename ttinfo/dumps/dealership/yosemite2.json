@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 86472168, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:41", "customClass": "Pickups", "seats": 2, "hash": 1693751655, "gameName": "YOSEMITE2", "model": "yosemite2", "displayName": "Drift Yosemite", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/yosemite2.png", "name": "Declasse Drift Yosemite", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 86472168,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Pickups",
+  "seats": 2,
+  "hash": 1693751655,
+  "gameName": "YOSEMITE2",
+  "model": "yosemite2",
+  "displayName": "Drift Yosemite",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/yosemite2.png",
+  "name": "Declasse Drift Yosemite",
+  "manufacturer": "Declasse"
+}

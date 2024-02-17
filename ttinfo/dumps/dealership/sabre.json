@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:30", "customClass": "Muscle", "seats": 2, "hash": -449022887, "gameName": "SABRE", "model": "sabre", "displayName": "Sabre", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/sabre.png", "name": "Declasse Sabre", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -449022887,
+  "gameName": "SABRE",
+  "model": "sabre",
+  "displayName": "Sabre",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sabre.png",
+  "name": "Declasse Sabre",
+  "manufacturer": "Declasse"
+}

@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:42", "customClass": "Submarines", "seats": 1, "hash": 1336872304, "gameName": "KOSATKA", "model": "kosatka", "displayName": "Kosatka", "makeName": "RUNE", "preview": "https://cdn.tycoon.community/dealership/vehicles/kosatka.png", "name": "RUNE Kosatka", "manufacturer": "RUNE"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Submarines",
+  "seats": 1,
+  "hash": 1336872304,
+  "gameName": "KOSATKA",
+  "model": "kosatka",
+  "displayName": "Kosatka",
+  "makeName": "RUNE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/kosatka.png",
+  "name": "RUNE Kosatka",
+  "manufacturer": "RUNE"
+}

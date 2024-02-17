@@ -1,1 +1,21 @@
-{"className": "Commercial", "dealership": {"dealership": "Upgrades", "category": "Kits", "price": 0, "premium": false}, "classId": 20, "_data_generated": "2024-01-06 18:17:14", "customClass": "Semi-Cabs", "seats": 2, "hash": 387748548, "gameName": "HAULER2", "model": "hauler2", "displayName": "Hauler Custom", "makeName": "JOBUILT", "preview": "https://cdn.tycoon.community/dealership/vehicles/hauler2.png", "name": "JoBuilt Hauler Custom", "manufacturer": "JoBuilt"}
+{
+  "className": "Commercial",
+  "dealership": {
+    "dealership": "Upgrades",
+    "category": "Kits",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": 387748548,
+  "gameName": "HAULER2",
+  "model": "hauler2",
+  "displayName": "Hauler Custom",
+  "makeName": "JOBUILT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/hauler2.png",
+  "name": "JoBuilt Hauler Custom",
+  "manufacturer": "JoBuilt"
+}

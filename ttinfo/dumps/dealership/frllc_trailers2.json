@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:45", "customClass": "Trailers", "seats": 2, "hash": 425530889, "gameName": "TRAILER", "model": "frllc_trailers2", "displayName": "Trailer", "makeName": "COBRACO", "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_trailers2.png", "name": "First Responders LLC Trailer", "manufacturer": "First Responders LLC"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": 425530889,
+  "gameName": "TRAILER",
+  "model": "frllc_trailers2",
+  "displayName": "Trailer",
+  "makeName": "COBRACO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_trailers2.png",
+  "name": "First Responders LLC Trailer",
+  "manufacturer": "First Responders LLC"
+}

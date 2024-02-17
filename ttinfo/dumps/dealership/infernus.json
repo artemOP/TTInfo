@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 750000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:17", "customClass": "Super", "seats": 2, "hash": 418536135, "gameName": "INFERNUS", "model": "infernus", "displayName": "Infernus", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/infernus.png", "name": "Pegassi Infernus", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 750000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 418536135,
+  "gameName": "INFERNUS",
+  "model": "infernus",
+  "displayName": "Infernus",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/infernus.png",
+  "name": "Pegassi Infernus",
+  "manufacturer": "Pegassi"
+}

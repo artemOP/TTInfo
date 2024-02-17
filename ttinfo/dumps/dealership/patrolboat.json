@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:19", "customClass": "Boats", "seats": 4, "hash": -276744698, "gameName": "PATROLBOAT", "model": "patrolboat", "displayName": "Kurtz 31 Patrol Boat", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/patrolboat.png", "name": "Kurtz 31 Patrol Boat", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": -276744698,
+  "gameName": "PATROLBOAT",
+  "model": "patrolboat",
+  "displayName": "Kurtz 31 Patrol Boat",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/patrolboat.png",
+  "name": "Kurtz 31 Patrol Boat",
+  "manufacturer": "NULL"
+}

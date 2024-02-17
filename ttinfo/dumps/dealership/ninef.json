@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 135000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:11", "customClass": "Sports", "seats": 2, "hash": 1032823388, "gameName": "NINEF", "model": "ninef", "displayName": "9F", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/ninef.png", "name": "Obey 9F", "manufacturer": "Obey"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 135000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1032823388,
+  "gameName": "NINEF",
+  "model": "ninef",
+  "displayName": "9F",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ninef.png",
+  "name": "Obey 9F",
+  "manufacturer": "Obey"
+}

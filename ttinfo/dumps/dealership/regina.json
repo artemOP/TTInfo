@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 8000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:20", "customClass": "Sedans", "seats": 4, "hash": -14495224, "gameName": "REGINA", "model": "regina", "displayName": "Regina", "makeName": "DUNDREAR", "preview": "https://cdn.tycoon.community/dealership/vehicles/regina.png", "name": "Dundreary Regina", "manufacturer": "Dundreary"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 8000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -14495224,
+  "gameName": "REGINA",
+  "model": "regina",
+  "displayName": "Regina",
+  "makeName": "DUNDREAR",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/regina.png",
+  "name": "Dundreary Regina",
+  "manufacturer": "Dundreary"
+}

@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 2475000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:34", "customClass": "LMPs", "seats": 2, "hash": -1232836011, "gameName": "LE7B", "model": "le7b", "displayName": "RE-7B", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/le7b.png", "name": "Annis RE-7B", "manufacturer": "Annis"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 2475000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "LMPs",
+  "seats": 2,
+  "hash": -1232836011,
+  "gameName": "LE7B",
+  "model": "le7b",
+  "displayName": "RE-7B",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/le7b.png",
+  "name": "Annis RE-7B",
+  "manufacturer": "Annis"
+}

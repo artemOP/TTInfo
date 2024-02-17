@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:29", "customClass": "Hearses", "seats": 2, "hash": 2068293287, "gameName": "LURCHER", "model": "lurcher", "displayName": "Lurcher", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/lurcher.png", "name": "Albany Lurcher", "manufacturer": "Albany"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Hearses",
+  "seats": 2,
+  "hash": 2068293287,
+  "gameName": "LURCHER",
+  "model": "lurcher",
+  "displayName": "Lurcher",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lurcher.png",
+  "name": "Albany Lurcher",
+  "manufacturer": "Albany"
+}

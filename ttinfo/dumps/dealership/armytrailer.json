@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:12", "customClass": "Trailers", "seats": 0, "hash": -1476447243, "gameName": "ARMYTRAILER", "model": "armytrailer", "displayName": "Army Trailer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/armytrailer.png", "name": "Army Trailer", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:12",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1476447243,
+  "gameName": "ARMYTRAILER",
+  "model": "armytrailer",
+  "displayName": "Army Trailer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/armytrailer.png",
+  "name": "Army Trailer",
+  "manufacturer": "NULL"
+}

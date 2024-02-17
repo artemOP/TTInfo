@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:28", "customClass": "Fighter Planes", "seats": 1, "hash": -1281684762, "gameName": "LAZER", "model": "lazer", "displayName": "P-996 LAZER", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/lazer.png", "name": "P-996 LAZER", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:28",
+  "customClass": "Fighter Planes",
+  "seats": 1,
+  "hash": -1281684762,
+  "gameName": "LAZER",
+  "model": "lazer",
+  "displayName": "P-996 LAZER",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/lazer.png",
+  "name": "P-996 LAZER",
+  "manufacturer": "NULL"
+}

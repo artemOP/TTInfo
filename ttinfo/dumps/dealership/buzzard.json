@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:22", "customClass": "Attack Helicopters", "seats": 4, "hash": 788747387, "gameName": "BUZZARD", "model": "buzzard", "displayName": "Buzzard Attack Chopper", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/buzzard.png", "name": "Buzzard Attack Chopper", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Attack Helicopters",
+  "seats": 4,
+  "hash": 788747387,
+  "gameName": "BUZZARD",
+  "model": "buzzard",
+  "displayName": "Buzzard Attack Chopper",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/buzzard.png",
+  "name": "Buzzard Attack Chopper",
+  "manufacturer": "NULL"
+}

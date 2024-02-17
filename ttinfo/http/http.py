@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from copy import copy
 import logging
 from typing import TYPE_CHECKING
 
@@ -16,6 +17,7 @@ if TYPE_CHECKING:
     from types import TracebackType
 
     from aiohttp import ClientSession
+    from typing_extensions import Self
 
     Key: TypeAlias = str
 
@@ -56,9 +58,16 @@ class Route:
         else:
             self.body = body
 
+    def __copy__(self) -> Self:
+        cls = self.__class__
+        result = cls.__new__(cls)
+        result.__dict__.update(self.__dict__)
+        return result
+
 
 class TycoonHTTP:
     logger = logging.getLogger("ttinfo.http")
+    logger.setLevel(10)
 
     def __init__(self, session: ClientSession):
         self.session: ClientSession = session
@@ -75,14 +84,22 @@ class TycoonHTTP:
         await self.session.close()
 
     async def request(self, route: Route, retries: int = 5, timeout: int = 3, fallback: bool = True) -> Any:
-        for server in Server:
-            if fallback:
-                route.server = server
-            for attempt in range(retries):
-                result = await self._request(route, attempt, timeout)
-                if result:
-                    return result
-            self.logger.warning(f"Falling back to {server.name}")
+        for attempt in range(retries):
+            result = await self._request(route, attempt, timeout)
+            if result:
+                return result
+
+        if fallback:
+            new_route = copy(route)
+            server = Server.beta if route.server is Server.main else Server.main
+            new_route.server = server
+            self.logger.warning(f"Falling back to {server.name} ({route.path})")
+            await self.request(new_route, fallback=False)
+        raise errors.HTTPException(
+            "No response found after fallback, are both servers down?",
+            status=502,
+            extra={"route": route},
+        )
 
     async def _request(self, route: Route, attempt: int = 5, timeout: int = 3) -> Any:
         assert self.session
@@ -617,12 +634,13 @@ class TycoonHTTP:
             fallback=False,
         )
 
-    async def get_paste(self, paste_id: str, headers: dict[str, str]) -> dict[str, Any]:
+    async def get_paste(self, paste_id: str, password: str | None, headers: dict[str, str]) -> dict[str, Any]:
         return await self.request(
             Route(
                 Method.get,
                 BaseRoute.MYSTBIN,
                 path=f"paste/{paste_id}",
+                query=[("password", password)] if password else None,
                 headers=headers,
             ),
             timeout=10,
@@ -647,6 +665,11 @@ class TycoonHTTP:
                 Method.patch,
                 BaseRoute.MYSTBIN,
                 path=f"paste/{paste_id}",
+                body={
+                    "new_expire": paste["expires"],
+                    "new_password": paste["password"],
+                    "files": paste["files"],
+                },
                 headers=headers,
             ),
             timeout=10,

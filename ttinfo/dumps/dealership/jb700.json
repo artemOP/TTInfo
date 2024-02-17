@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 535000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sports Classics", "seats": 2, "hash": 1051415893, "gameName": "JB700", "model": "jb700", "displayName": "JB 700", "makeName": "DEWBAUCH", "preview": "https://cdn.tycoon.community/dealership/vehicles/jb700.png", "name": "Dewbauchee JB 700", "manufacturer": "Dewbauchee"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 535000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 1051415893,
+  "gameName": "JB700",
+  "model": "jb700",
+  "displayName": "JB 700",
+  "makeName": "DEWBAUCH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/jb700.png",
+  "name": "Dewbauchee JB 700",
+  "manufacturer": "Dewbauchee"
+}

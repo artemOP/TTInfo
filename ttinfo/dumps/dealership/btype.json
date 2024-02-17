@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 2000000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:29", "customClass": "Sports Classics", "seats": 6, "hash": 117401876, "gameName": "ROOSEVELT", "model": "btype", "displayName": "Roosevelt", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/btype.png", "name": "Albany Roosevelt", "manufacturer": "Albany"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 2000000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Sports Classics",
+  "seats": 6,
+  "hash": 117401876,
+  "gameName": "ROOSEVELT",
+  "model": "btype",
+  "displayName": "Roosevelt",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/btype.png",
+  "name": "Albany Roosevelt",
+  "manufacturer": "Albany"
+}

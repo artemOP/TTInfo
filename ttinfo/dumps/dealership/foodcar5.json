@@ -1,1 +1,24 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Event", "price": 0, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:48", "customClass": "Food Delivery", "seats": 4, "model": "foodcar5", "hash": -2027301995, "gameName": "FOODCAR5", "makeName": "EMPEROR", "displayName": "Lokus (Delivery)", "credits": {"author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar5.png", "name": "Emperor Lokus (Delivery)", "manufacturer": "Emperor"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Event",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:48",
+  "customClass": "Food Delivery",
+  "seats": 4,
+  "model": "foodcar5",
+  "hash": -2027301995,
+  "gameName": "FOODCAR5",
+  "makeName": "EMPEROR",
+  "displayName": "Lokus (Delivery)",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/foodcar5.png",
+  "name": "Emperor Lokus (Delivery)",
+  "manufacturer": "Emperor"
+}

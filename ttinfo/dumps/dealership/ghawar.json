@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Passenger Planes", "price": 1250000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:17", "customClass": "Airliners", "seats": 2, "hash": 482162119, "gameName": "GHAWAR", "model": "ghawar", "displayName": "Ghawar", "makeName": "BUCKING", "preview": "https://cdn.tycoon.community/dealership/vehicles/ghawar.png", "name": "Buckingham Ghawar", "manufacturer": "Buckingham"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Passenger Planes",
+    "price": 1250000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": 482162119,
+  "gameName": "GHAWAR",
+  "model": "ghawar",
+  "displayName": "Ghawar",
+  "makeName": "BUCKING",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ghawar.png",
+  "name": "Buckingham Ghawar",
+  "manufacturer": "Buckingham"
+}

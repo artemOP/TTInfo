@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:44", "customClass": "Planes", "seats": 4, "hash": 191916658, "gameName": "STREAMER216", "model": "streamer216", "displayName": "Streamer216", "makeName": "MAMMOTH", "preview": "https://cdn.tycoon.community/dealership/vehicles/streamer216.png", "name": "Mammoth Streamer216", "manufacturer": "Mammoth"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Planes",
+  "seats": 4,
+  "hash": 191916658,
+  "gameName": "STREAMER216",
+  "model": "streamer216",
+  "displayName": "Streamer216",
+  "makeName": "MAMMOTH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/streamer216.png",
+  "name": "Mammoth Streamer216",
+  "manufacturer": "Mammoth"
+}

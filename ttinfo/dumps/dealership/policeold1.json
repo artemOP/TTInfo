@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:20", "customClass": "Law Enforcement", "seats": 4, "hash": -1536924937, "gameName": "POLICEO1", "model": "policeold1", "displayName": "Police Rancher", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/policeold1.png", "name": "Police Rancher", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": -1536924937,
+  "gameName": "POLICEO1",
+  "model": "policeold1",
+  "displayName": "Police Rancher",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/policeold1.png",
+  "name": "Police Rancher",
+  "manufacturer": "NULL"
+}

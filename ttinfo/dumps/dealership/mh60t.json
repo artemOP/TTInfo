@@ -1,1 +1,15 @@
-{"className": "Helicopters", "classId": 15, "_data_generated": "2024-01-06 18:17:49", "customClass": "Emergency", "seats": 4, "hash": 1125950491, "gameName": "MH60T", "model": "mh60t", "displayName": "MH-60 Jayhawk", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/mh60t.png", "name": "MH-60 Jayhawk", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Emergency",
+  "seats": 4,
+  "hash": 1125950491,
+  "gameName": "MH60T",
+  "model": "mh60t",
+  "displayName": "MH-60 Jayhawk",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mh60t.png",
+  "name": "MH-60 Jayhawk",
+  "manufacturer": "NULL"
+}

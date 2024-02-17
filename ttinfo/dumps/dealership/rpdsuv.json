@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:50", "customClass": "Law Enforcement", "seats": 4, "hash": 749836236, "gameName": "RPDSUV", "model": "rpdsuv", "displayName": "Seminole", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdsuv.png", "name": "Canis Seminole", "manufacturer": "Canis"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": 749836236,
+  "gameName": "RPDSUV",
+  "model": "rpdsuv",
+  "displayName": "Seminole",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdsuv.png",
+  "name": "Canis Seminole",
+  "manufacturer": "Canis"
+}

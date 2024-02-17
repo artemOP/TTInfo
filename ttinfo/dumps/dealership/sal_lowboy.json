@@ -1,1 +1,15 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:30", "customClass": "Trailers", "seats": 2, "hash": -1005278529, "gameName": "TRAILERS", "model": "sal_lowboy", "displayName": "Lowboy", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/sal_lowboy.png", "name": "Lowboy", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Trailers",
+  "seats": 2,
+  "hash": -1005278529,
+  "gameName": "TRAILERS",
+  "model": "sal_lowboy",
+  "displayName": "Lowboy",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sal_lowboy.png",
+  "name": "Lowboy",
+  "manufacturer": "NULL"
+}

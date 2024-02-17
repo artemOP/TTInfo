@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 35000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:31", "customClass": "Muscle", "seats": 2, "hash": 1923400478, "gameName": "STALION", "model": "stalion", "displayName": "Stallion", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/stalion.png", "name": "Declasse Stallion", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 35000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 1923400478,
+  "gameName": "STALION",
+  "model": "stalion",
+  "displayName": "Stallion",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/stalion.png",
+  "name": "Declasse Stallion",
+  "manufacturer": "Declasse"
+}

@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Cargo Planes", "price": 650000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:51", "customClass": "Cargo Planes", "seats": 2, "hash": 378088123, "gameName": "p3", "model": "p3", "displayName": "P-3", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/p3.png", "name": "P-3", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Cargo Planes",
+    "price": 650000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "hash": 378088123,
+  "gameName": "p3",
+  "model": "p3",
+  "displayName": "P-3",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/p3.png",
+  "name": "P-3",
+  "manufacturer": "NULL"
+}

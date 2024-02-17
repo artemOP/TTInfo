@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 300000000, "premium": true}, "classId": 1, "_data_generated": "2024-01-06 18:17:51", "customClass": "EVs", "seats": 4, "hash": -252836656, "gameName": "MODELS", "model": "models", "displayName": "Tesla Model S", "makeName": "TESLA", "preview": "https://cdn.tycoon.community/dealership/vehicles/models.png", "name": "Tesla Ave Tesla Model S", "manufacturer": "Tesla Ave"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 300000000,
+    "premium": true
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "EVs",
+  "seats": 4,
+  "hash": -252836656,
+  "gameName": "MODELS",
+  "model": "models",
+  "displayName": "Tesla Model S",
+  "makeName": "TESLA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/models.png",
+  "name": "Tesla Ave Tesla Model S",
+  "manufacturer": "Tesla Ave"
+}

@@ -1,1 +1,21 @@
-{"className": "SUVs", "dealership": {"dealership": "Vehicle Shop", "category": "SUVs", "price": 60000, "premium": false}, "classId": 2, "_data_generated": "2024-01-06 18:17:13", "customClass": "SUVs", "seats": 4, "hash": -789894171, "gameName": "CAVCADE", "model": "cavalcade2", "displayName": "Cavalcade", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/cavalcade2.png", "name": "Albany Cavalcade", "manufacturer": "Albany"}
+{
+  "className": "SUVs",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "SUVs",
+    "price": 60000,
+    "premium": false
+  },
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "SUVs",
+  "seats": 4,
+  "hash": -789894171,
+  "gameName": "CAVCADE",
+  "model": "cavalcade2",
+  "displayName": "Cavalcade",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cavalcade2.png",
+  "name": "Albany Cavalcade",
+  "manufacturer": "Albany"
+}

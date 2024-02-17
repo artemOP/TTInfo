@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 575000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:35", "customClass": "Sports Classics", "seats": 2, "hash": -982130927, "gameName": "TURISMO2", "model": "turismo2", "displayName": "Turismo Classic", "makeName": "GROTTI", "preview": "https://cdn.tycoon.community/dealership/vehicles/turismo2.png", "name": "Grotti Turismo Classic", "manufacturer": "Grotti"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 575000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": -982130927,
+  "gameName": "TURISMO2",
+  "model": "turismo2",
+  "displayName": "Turismo Classic",
+  "makeName": "GROTTI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/turismo2.png",
+  "name": "Grotti Turismo Classic",
+  "manufacturer": "Grotti"
+}

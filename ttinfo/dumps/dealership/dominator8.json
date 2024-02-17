@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:42", "customClass": "Muscle", "seats": 2, "hash": 736672010, "gameName": "DOMINATOR8", "model": "dominator8", "displayName": "Dominator GTT", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/dominator8.png", "name": "Vapid Dominator GTT", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 736672010,
+  "gameName": "DOMINATOR8",
+  "model": "dominator8",
+  "displayName": "Dominator GTT",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dominator8.png",
+  "name": "Vapid Dominator GTT",
+  "manufacturer": "Vapid"
+}

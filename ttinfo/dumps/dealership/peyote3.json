@@ -1,1 +1,15 @@
-{"className": "Sports Classics", "classId": 5, "_data_generated": "2024-01-06 18:17:41", "customClass": "Sports Classics", "seats": 2, "hash": 1107404867, "gameName": "PEYOTE3", "model": "peyote3", "displayName": "Peyote Custom", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/peyote3.png", "name": "Vapid Peyote Custom", "manufacturer": "Vapid"}
+{
+  "className": "Sports Classics",
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": 1107404867,
+  "gameName": "PEYOTE3",
+  "model": "peyote3",
+  "displayName": "Peyote Custom",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/peyote3.png",
+  "name": "Vapid Peyote Custom",
+  "manufacturer": "Vapid"
+}

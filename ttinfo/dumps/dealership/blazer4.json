@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Offroad", "price": 8000, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:35", "customClass": "ATVs", "seats": 1, "hash": -440768424, "gameName": "BLAZER4", "model": "blazer4", "displayName": "Street Blazer", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/blazer4.png", "name": "Nagasaki Street Blazer", "manufacturer": "Nagasaki"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Offroad",
+    "price": 8000,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "ATVs",
+  "seats": 1,
+  "hash": -440768424,
+  "gameName": "BLAZER4",
+  "model": "blazer4",
+  "displayName": "Street Blazer",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blazer4.png",
+  "name": "Nagasaki Street Blazer",
+  "manufacturer": "Nagasaki"
+}

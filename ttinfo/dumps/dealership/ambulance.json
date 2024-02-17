@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Emergency", "price": 10000, "premium": false}, "classId": 18, "_data_generated": "2024-01-06 18:17:11", "customClass": "Ambulances", "seats": 4, "hash": 1171614426, "gameName": "AMBULAN", "model": "ambulance", "displayName": "Ambulance", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/ambulance.png", "name": "Ambulance", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Emergency",
+    "price": 10000,
+    "premium": false
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Ambulances",
+  "seats": 4,
+  "hash": 1171614426,
+  "gameName": "AMBULAN",
+  "model": "ambulance",
+  "displayName": "Ambulance",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ambulance.png",
+  "name": "Ambulance",
+  "manufacturer": "NULL"
+}

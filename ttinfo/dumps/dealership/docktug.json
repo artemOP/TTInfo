@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Semi Cabs", "price": 50000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:13", "customClass": "Semi-Cabs", "seats": 1, "hash": -884690486, "gameName": "DOCKTUG", "model": "docktug", "displayName": "Docktug", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/docktug.png", "name": "Docktug", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Semi Cabs",
+    "price": 50000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Semi-Cabs",
+  "seats": 1,
+  "hash": -884690486,
+  "gameName": "DOCKTUG",
+  "model": "docktug",
+  "displayName": "Docktug",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/docktug.png",
+  "name": "Docktug",
+  "manufacturer": "NULL"
+}

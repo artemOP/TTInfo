@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:39", "customClass": "Off-Road", "seats": 2, "hash": 802856453, "gameName": "MONSTROCITI", "model": "monstrociti", "displayName": "MonstroCiti", "makeName": "MAIBATSU", "preview": "https://cdn.tycoon.community/dealership/vehicles/monstrociti.png", "name": "Maibatsu MonstroCiti", "manufacturer": "Maibatsu"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Off-Road",
+  "seats": 2,
+  "hash": 802856453,
+  "gameName": "MONSTROCITI",
+  "model": "monstrociti",
+  "displayName": "MonstroCiti",
+  "makeName": "MAIBATSU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/monstrociti.png",
+  "name": "Maibatsu MonstroCiti",
+  "manufacturer": "Maibatsu"
+}

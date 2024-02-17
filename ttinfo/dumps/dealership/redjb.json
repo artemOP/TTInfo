@@ -1,1 +1,18 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:49", "customClass": "Boats", "seats": 4, "model": "redjb", "hash": -146163168, "gameName": "redjb", "makeName": "", "displayName": "Jetstream Deluxe", "credits": {"author": "czedlugo"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/redjb.png", "name": "Jetstream Deluxe", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Boats",
+  "seats": 4,
+  "model": "redjb",
+  "hash": -146163168,
+  "gameName": "redjb",
+  "makeName": "",
+  "displayName": "Jetstream Deluxe",
+  "credits": {
+    "author": "czedlugo"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/redjb.png",
+  "name": "Jetstream Deluxe",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:47", "customClass": "Muscle", "seats": 2, "hash": 674751523, "gameName": "VIGEROB", "model": "vigerob", "displayName": "Vigero Beater", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/vigerob.png", "name": "Declasse Vigero Beater", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 674751523,
+  "gameName": "VIGEROB",
+  "model": "vigerob",
+  "displayName": "Vigero Beater",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/vigerob.png",
+  "name": "Declasse Vigero Beater",
+  "manufacturer": "Declasse"
+}

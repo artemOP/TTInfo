@@ -1,1 +1,25 @@
-{"className": "Utility", "dealership": {"dealership": "Unlockables", "category": "Shipments", "price": 0, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:18", "customClass": "Snowplows", "seats": 2, "model": "snowplow", "hash": 851641334, "gameName": "snowplow", "makeName": "HVY", "displayName": "Utility Plow", "credits": {"author": "Candice_211", "download": "https://www.gta5-mods.com/vehicles/plow-pack-non-els-5m-sp"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/snowplow.png", "name": "HVY Utility Plow", "manufacturer": "HVY"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Unlockables",
+    "category": "Shipments",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:18",
+  "customClass": "Snowplows",
+  "seats": 2,
+  "model": "snowplow",
+  "hash": 851641334,
+  "gameName": "snowplow",
+  "makeName": "HVY",
+  "displayName": "Utility Plow",
+  "credits": {
+    "author": "Candice_211",
+    "download": "https://www.gta5-mods.com/vehicles/plow-pack-non-els-5m-sp"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/snowplow.png",
+  "name": "HVY Utility Plow",
+  "manufacturer": "HVY"
+}

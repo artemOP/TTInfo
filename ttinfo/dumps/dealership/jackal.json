@@ -1,1 +1,21 @@
-{"className": "Coupes", "dealership": {"dealership": "Vehicle Shop", "category": "Coupes", "price": 65000, "premium": false}, "classId": 3, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sedans", "seats": 4, "hash": -624529134, "gameName": "JACKAL", "model": "jackal", "displayName": "Jackal", "makeName": "OCELOT", "preview": "https://cdn.tycoon.community/dealership/vehicles/jackal.png", "name": "Ocelot Jackal", "manufacturer": "Ocelot"}
+{
+  "className": "Coupes",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Coupes",
+    "price": 65000,
+    "premium": false
+  },
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -624529134,
+  "gameName": "JACKAL",
+  "model": "jackal",
+  "displayName": "Jackal",
+  "makeName": "OCELOT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/jackal.png",
+  "name": "Ocelot Jackal",
+  "manufacturer": "Ocelot"
+}

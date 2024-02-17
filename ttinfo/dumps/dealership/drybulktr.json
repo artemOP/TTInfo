@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 10000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:13", "customClass": "Trailers", "seats": 0, "hash": -280988326, "gameName": "DRYBULKTR", "model": "drybulktr", "displayName": "Dry Bulk Trailer (MK5)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/drybulktr.png", "name": "Dry Bulk Trailer (MK5)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 10000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -280988326,
+  "gameName": "DRYBULKTR",
+  "model": "drybulktr",
+  "displayName": "Dry Bulk Trailer (MK5)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/drybulktr.png",
+  "name": "Dry Bulk Trailer (MK5)",
+  "manufacturer": "NULL"
+}

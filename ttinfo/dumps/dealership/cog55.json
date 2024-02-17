@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 55000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:32", "customClass": "Sedans", "seats": 4, "hash": 906642318, "gameName": "COG55", "model": "cog55", "displayName": "Cognoscenti 55", "makeName": "ENUS", "preview": "https://cdn.tycoon.community/dealership/vehicles/cog55.png", "name": "Enus Cognoscenti 55", "manufacturer": "Enus"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 55000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 906642318,
+  "gameName": "COG55",
+  "model": "cog55",
+  "displayName": "Cognoscenti 55",
+  "makeName": "ENUS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cog55.png",
+  "name": "Enus Cognoscenti 55",
+  "manufacturer": "Enus"
+}

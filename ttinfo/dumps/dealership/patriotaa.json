@@ -1,1 +1,18 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:49", "customClass": "Anti-Air", "seats": 1, "model": "patriotaa", "hash": -1585989636, "gameName": "PATRIOTAA", "makeName": "", "displayName": "Patriot Missile Unit", "credits": {"author": "SkylineGTRFreak"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/patriotaa.png", "name": "Patriot Missile Unit", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Anti-Air",
+  "seats": 1,
+  "model": "patriotaa",
+  "hash": -1585989636,
+  "gameName": "PATRIOTAA",
+  "makeName": "",
+  "displayName": "Patriot Missile Unit",
+  "credits": {
+    "author": "SkylineGTRFreak"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/patriotaa.png",
+  "name": "Patriot Missile Unit",
+  "manufacturer": "NULL"
+}

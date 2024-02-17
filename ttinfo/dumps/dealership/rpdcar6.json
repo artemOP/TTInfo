@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:50", "customClass": "Law Enforcement", "seats": 2, "hash": 749928103, "gameName": "RPDCAR5", "model": "rpdcar6", "displayName": "Coquette", "makeName": "INVERTO", "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdcar6.png", "name": "Invetero Coquette", "manufacturer": "Invetero"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "Law Enforcement",
+  "seats": 2,
+  "hash": 749928103,
+  "gameName": "RPDCAR5",
+  "model": "rpdcar6",
+  "displayName": "Coquette",
+  "makeName": "INVERTO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rpdcar6.png",
+  "name": "Invetero Coquette",
+  "manufacturer": "Invetero"
+}

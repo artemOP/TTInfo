@@ -1,1 +1,18 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:23", "customClass": "HEMTT", "seats": 2, "model": "patriotradar", "hash": -63997480, "gameName": "PATRIOTRADA", "makeName": "", "displayName": "NULL", "credits": {"author": "SkylineGTRFreak"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/patriotradar.png", "name": "Missing Name (patriotradar)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:23",
+  "customClass": "HEMTT",
+  "seats": 2,
+  "model": "patriotradar",
+  "hash": -63997480,
+  "gameName": "PATRIOTRADA",
+  "makeName": "",
+  "displayName": "NULL",
+  "credits": {
+    "author": "SkylineGTRFreak"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/patriotradar.png",
+  "name": "Missing Name (patriotradar)",
+  "manufacturer": "NULL"
+}

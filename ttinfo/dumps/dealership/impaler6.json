@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:44", "customClass": "Muscle", "seats": 2, "hash": -178442374, "gameName": "IMPALER6", "model": "impaler6", "displayName": "Impaler LX", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler6.png", "name": "Declasse Impaler LX", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": -178442374,
+  "gameName": "IMPALER6",
+  "model": "impaler6",
+  "displayName": "Impaler LX",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/impaler6.png",
+  "name": "Declasse Impaler LX",
+  "manufacturer": "Declasse"
+}

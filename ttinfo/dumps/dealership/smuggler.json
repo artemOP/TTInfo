@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:20", "customClass": "Boats", "seats": 2, "hash": 944930284, "gameName": "SMUGGLER", "model": "smuggler", "displayName": "Smuggler", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/smuggler.png", "name": "Smuggler", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Boats",
+  "seats": 2,
+  "hash": 944930284,
+  "gameName": "SMUGGLER",
+  "model": "smuggler",
+  "displayName": "Smuggler",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/smuggler.png",
+  "name": "Smuggler",
+  "manufacturer": "NULL"
+}

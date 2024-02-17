@@ -1,1 +1,25 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "PostOP", "price": 150000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:52", "customClass": "Cargo Planes", "seats": 2, "model": "postopcp", "hash": -21007624, "gameName": "POSTOPCP", "makeName": "", "displayName": "PostOP 747-400", "credits": {"author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders", "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/postopcp.png", "name": "PostOP 747-400", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "PostOP",
+    "price": 150000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "model": "postopcp",
+  "hash": -21007624,
+  "gameName": "POSTOPCP",
+  "makeName": "",
+  "displayName": "PostOP 747-400",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders",
+    "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/postopcp.png",
+  "name": "PostOP 747-400",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:50", "customClass": "FailRP", "seats": 2, "hash": -883573120, "gameName": "security3", "model": "security3", "displayName": "Tycoon Staff F430", "makeName": "FERRARI", "preview": "https://cdn.tycoon.community/dealership/vehicles/security3.png", "name": "Tycoon Staff F430", "manufacturer": "NULL"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:50",
+  "customClass": "FailRP",
+  "seats": 2,
+  "hash": -883573120,
+  "gameName": "security3",
+  "model": "security3",
+  "displayName": "Tycoon Staff F430",
+  "makeName": "FERRARI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/security3.png",
+  "name": "Tycoon Staff F430",
+  "manufacturer": "NULL"
+}

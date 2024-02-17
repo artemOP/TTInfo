@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:17", "customClass": "Motorcycles", "seats": 1, "hash": 1353120668, "gameName": "SHINOBI", "model": "shinobi", "displayName": "Shinobi", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/shinobi.png", "name": "Nagasaki Shinobi", "manufacturer": "Nagasaki"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": 1353120668,
+  "gameName": "SHINOBI",
+  "model": "shinobi",
+  "displayName": "Shinobi",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/shinobi.png",
+  "name": "Nagasaki Shinobi",
+  "manufacturer": "Nagasaki"
+}

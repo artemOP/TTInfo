@@ -1,1 +1,25 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Passenger Planes", "price": 3200000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:29", "customClass": "Airliners", "seats": 2, "model": "737200", "hash": -918101036, "gameName": "732", "makeName": "B732", "displayName": "737-200", "credits": {"author": "bushiido444", "download": "https://www.gta5-mods.com/vehicles/boeing-737-200-add-on"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/737200.png", "name": "Boeing 737-200", "manufacturer": "Boeing"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Passenger Planes",
+    "price": 3200000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Airliners",
+  "seats": 2,
+  "model": "737200",
+  "hash": -918101036,
+  "gameName": "732",
+  "makeName": "B732",
+  "displayName": "737-200",
+  "credits": {
+    "author": "bushiido444",
+    "download": "https://www.gta5-mods.com/vehicles/boeing-737-200-add-on"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/737200.png",
+  "name": "Boeing 737-200",
+  "manufacturer": "Boeing"
+}

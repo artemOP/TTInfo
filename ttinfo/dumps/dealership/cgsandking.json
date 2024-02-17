@@ -1,1 +1,25 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Emergency", "price": 35000000, "premium": true}, "classId": 18, "_data_generated": "2024-01-06 18:17:52", "customClass": "Emergency", "seats": 4, "model": "cgsandking", "hash": 1008683257, "gameName": "SANDKING", "makeName": "USCG", "displayName": "Sandking XL", "credits": {"author": "TheF3nt0n, Jacobmaate, AlexanderLB and others", "download": "https://www.gta5-mods.com/vehicles/united-states-coast-guard-lore-friendly-pack-add-on"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/cgsandking.png", "name": "Coast Guard Sandking XL", "manufacturer": "Coast Guard"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Emergency",
+    "price": 35000000,
+    "premium": true
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:52",
+  "customClass": "Emergency",
+  "seats": 4,
+  "model": "cgsandking",
+  "hash": 1008683257,
+  "gameName": "SANDKING",
+  "makeName": "USCG",
+  "displayName": "Sandking XL",
+  "credits": {
+    "author": "TheF3nt0n, Jacobmaate, AlexanderLB and others",
+    "download": "https://www.gta5-mods.com/vehicles/united-states-coast-guard-lore-friendly-pack-add-on"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cgsandking.png",
+  "name": "Coast Guard Sandking XL",
+  "manufacturer": "Coast Guard"
+}

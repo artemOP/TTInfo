@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 60000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:34", "customClass": "Sports Classics", "seats": 2, "hash": -1797613329, "gameName": "TORNADO5", "model": "tornado5", "displayName": "Tornado Custom", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/tornado5.png", "name": "Declasse Tornado Custom", "manufacturer": "Declasse"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 60000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Sports Classics",
+  "seats": 2,
+  "hash": -1797613329,
+  "gameName": "TORNADO5",
+  "model": "tornado5",
+  "displayName": "Tornado Custom",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tornado5.png",
+  "name": "Declasse Tornado Custom",
+  "manufacturer": "Declasse"
+}

@@ -1,1 +1,21 @@
-{"className": "Helicopters", "dealership": {"dealership": "Aircraft Shop", "category": "Premium", "price": 300000000, "premium": true}, "classId": 15, "_data_generated": "2024-01-06 18:17:37", "customClass": "Stealth Helicopters", "seats": 4, "hash": 1181327175, "gameName": "AKULA", "model": "akula", "displayName": "Akula", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/akula.png", "name": "Akula", "manufacturer": "NULL"}
+{
+  "className": "Helicopters",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Premium",
+    "price": 300000000,
+    "premium": true
+  },
+  "classId": 15,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Stealth Helicopters",
+  "seats": 4,
+  "hash": 1181327175,
+  "gameName": "AKULA",
+  "model": "akula",
+  "displayName": "Akula",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/akula.png",
+  "name": "Akula",
+  "manufacturer": "NULL"
+}

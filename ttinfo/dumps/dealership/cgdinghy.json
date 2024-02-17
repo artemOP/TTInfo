@@ -1,1 +1,19 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:32", "customClass": "Boats", "seats": 4, "model": "cgdinghy", "hash": -657233978, "gameName": "DINGHY", "makeName": "USCG", "displayName": "Dinghy", "credits": {"author": "TheF3nt0n, Jacobmaate, AlexanderLB and others", "download": "https://www.gta5-mods.com/vehicles/united-states-coast-guard-lore-friendly-pack-add-on"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/cgdinghy.png", "name": "Coast Guard Dinghy", "manufacturer": "Coast Guard"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Boats",
+  "seats": 4,
+  "model": "cgdinghy",
+  "hash": -657233978,
+  "gameName": "DINGHY",
+  "makeName": "USCG",
+  "displayName": "Dinghy",
+  "credits": {
+    "author": "TheF3nt0n, Jacobmaate, AlexanderLB and others",
+    "download": "https://www.gta5-mods.com/vehicles/united-states-coast-guard-lore-friendly-pack-add-on"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cgdinghy.png",
+  "name": "Coast Guard Dinghy",
+  "manufacturer": "Coast Guard"
+}

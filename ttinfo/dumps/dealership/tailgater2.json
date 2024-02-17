@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:42", "customClass": "Sedans", "seats": 4, "hash": -1244461404, "gameName": "TAILGATER2", "model": "tailgater2", "displayName": "Tailgater S", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/tailgater2.png", "name": "Obey Tailgater S", "manufacturer": "Obey"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1244461404,
+  "gameName": "TAILGATER2",
+  "model": "tailgater2",
+  "displayName": "Tailgater S",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tailgater2.png",
+  "name": "Obey Tailgater S",
+  "manufacturer": "Obey"
+}

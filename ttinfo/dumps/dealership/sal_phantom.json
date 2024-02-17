@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:46", "customClass": "Semi-Cabs", "seats": 2, "hash": 1021068820, "gameName": "PHANTOMHD", "model": "sal_phantom", "displayName": "Phantom Heavy", "makeName": "JOBUILT", "preview": "https://cdn.tycoon.community/dealership/vehicles/sal_phantom.png", "name": "JoBuilt Phantom Heavy", "manufacturer": "JoBuilt"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Semi-Cabs",
+  "seats": 2,
+  "hash": 1021068820,
+  "gameName": "PHANTOMHD",
+  "model": "sal_phantom",
+  "displayName": "Phantom Heavy",
+  "makeName": "JOBUILT",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sal_phantom.png",
+  "name": "JoBuilt Phantom Heavy",
+  "manufacturer": "JoBuilt"
+}

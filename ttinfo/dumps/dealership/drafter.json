@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 42590332, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:41", "customClass": "Sports", "seats": 2, "hash": 686471183, "gameName": "DRAFTER", "model": "drafter", "displayName": "8F Drafter", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/drafter.png", "name": "Obey 8F Drafter", "manufacturer": "Obey"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 42590332,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 686471183,
+  "gameName": "DRAFTER",
+  "model": "drafter",
+  "displayName": "8F Drafter",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/drafter.png",
+  "name": "Obey 8F Drafter",
+  "manufacturer": "Obey"
+}

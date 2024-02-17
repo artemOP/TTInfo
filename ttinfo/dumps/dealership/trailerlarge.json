@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 500000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:32", "customClass": "Trailers", "seats": 1, "hash": 1502869817, "gameName": "TRLARGE", "model": "trailerlarge", "displayName": "Mobile Operations Center (MK14)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerlarge.png", "name": "Mobile Operations Center (MK14)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 500000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Trailers",
+  "seats": 1,
+  "hash": 1502869817,
+  "gameName": "TRLARGE",
+  "model": "trailerlarge",
+  "displayName": "Mobile Operations Center (MK14)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/trailerlarge.png",
+  "name": "Mobile Operations Center (MK14)",
+  "manufacturer": "NULL"
+}

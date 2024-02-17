@@ -1,1 +1,21 @@
-{"className": "Sedans", "dealership": {"dealership": "Vehicle Shop", "category": "Sedans", "price": 9000, "premium": false}, "classId": 1, "_data_generated": "2024-01-06 18:17:17", "customClass": "Sedans", "seats": 4, "hash": -1289722222, "gameName": "INGOT", "model": "ingot", "displayName": "Ingot", "makeName": "VULCAR", "preview": "https://cdn.tycoon.community/dealership/vehicles/ingot.png", "name": "Vulcar Ingot", "manufacturer": "Vulcar"}
+{
+  "className": "Sedans",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sedans",
+    "price": 9000,
+    "premium": false
+  },
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": -1289722222,
+  "gameName": "INGOT",
+  "model": "ingot",
+  "displayName": "Ingot",
+  "makeName": "VULCAR",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/ingot.png",
+  "name": "Vulcar Ingot",
+  "manufacturer": "Vulcar"
+}

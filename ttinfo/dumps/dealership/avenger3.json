@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:44", "customClass": "Planes", "seats": 3, "hash": -426933872, "gameName": "AVENGER3", "model": "avenger3", "displayName": "Avenger", "makeName": "MAMMOTH", "preview": "https://cdn.tycoon.community/dealership/vehicles/avenger3.png", "name": "Mammoth Avenger", "manufacturer": "Mammoth"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Planes",
+  "seats": 3,
+  "hash": -426933872,
+  "gameName": "AVENGER3",
+  "model": "avenger3",
+  "displayName": "Avenger",
+  "makeName": "MAMMOTH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/avenger3.png",
+  "name": "Mammoth Avenger",
+  "manufacturer": "Mammoth"
+}

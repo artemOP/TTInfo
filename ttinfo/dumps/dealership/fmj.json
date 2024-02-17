@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 1750000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:34", "customClass": "Super", "seats": 2, "hash": 1426219628, "gameName": "FMJ", "model": "fmj", "displayName": "FMJ", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/fmj.png", "name": "Vapid FMJ", "manufacturer": "Vapid"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 1750000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 1426219628,
+  "gameName": "FMJ",
+  "model": "fmj",
+  "displayName": "FMJ",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/fmj.png",
+  "name": "Vapid FMJ",
+  "manufacturer": "Vapid"
+}

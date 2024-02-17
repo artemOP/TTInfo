@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 0, "premium": false}, "classId": 9, "_data_generated": "2024-01-06 18:17:15", "customClass": "UTVs", "seats": 2, "hash": 534258863, "gameName": "DUNE2", "model": "dune2", "displayName": "Space Docker", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/dune2.png", "name": "Space Docker", "manufacturer": "NULL"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "UTVs",
+  "seats": 2,
+  "hash": 534258863,
+  "gameName": "DUNE2",
+  "model": "dune2",
+  "displayName": "Space Docker",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dune2.png",
+  "name": "Space Docker",
+  "manufacturer": "NULL"
+}

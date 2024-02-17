@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Trucking", "price": 18000000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:51", "customClass": "Trailers", "seats": 0, "hash": -1346287782, "gameName": "DUMPTR", "model": "dumptr", "displayName": "Dump Trailer (MK6)", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/dumptr.png", "name": "Dump Trailer (MK6)", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Trucking",
+    "price": 18000000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:51",
+  "customClass": "Trailers",
+  "seats": 0,
+  "hash": -1346287782,
+  "gameName": "DUMPTR",
+  "model": "dumptr",
+  "displayName": "Dump Trailer (MK6)",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dumptr.png",
+  "name": "Dump Trailer (MK6)",
+  "manufacturer": "NULL"
+}

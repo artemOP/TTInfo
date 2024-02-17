@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:29", "customClass": "Sedans", "seats": 4, "hash": 974744810, "gameName": "FEROCI", "model": "feroci", "displayName": "Feroci", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/feroci.png", "name": "Bravado Feroci", "manufacturer": "Bravado"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 974744810,
+  "gameName": "FEROCI",
+  "model": "feroci",
+  "displayName": "Feroci",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/feroci.png",
+  "name": "Bravado Feroci",
+  "manufacturer": "Bravado"
+}

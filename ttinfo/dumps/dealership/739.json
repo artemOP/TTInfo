@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:41", "customClass": "Airliners", "seats": 2, "hash": -428903347, "gameName": "a739", "model": "739", "displayName": "Boeing 739 MAX 9", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/739.png", "name": "Boeing 739 MAX 9", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Airliners",
+  "seats": 2,
+  "hash": -428903347,
+  "gameName": "a739",
+  "model": "739",
+  "displayName": "Boeing 739 MAX 9",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/739.png",
+  "name": "Boeing 739 MAX 9",
+  "manufacturer": "NULL"
+}

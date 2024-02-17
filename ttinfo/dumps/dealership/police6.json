@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:47", "customClass": "Law Enforcement", "seats": 4, "hash": -1291872016, "gameName": "POLICE6", "model": "police6", "displayName": "Chevrolet K-9 SUV", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/police6.png", "name": "Chevrolet K-9 SUV", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:47",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": -1291872016,
+  "gameName": "POLICE6",
+  "model": "police6",
+  "displayName": "Chevrolet K-9 SUV",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/police6.png",
+  "name": "Chevrolet K-9 SUV",
+  "manufacturer": "NULL"
+}

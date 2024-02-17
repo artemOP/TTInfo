@@ -1,1 +1,15 @@
-{"className": "SUVs", "classId": 2, "_data_generated": "2024-01-06 18:17:42", "customClass": "SUVs", "seats": 4, "hash": 662793086, "gameName": "IWAGEN", "model": "iwagen", "displayName": "I-Wagen", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/iwagen.png", "name": "Obey I-Wagen", "manufacturer": "Obey"}
+{
+  "className": "SUVs",
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "SUVs",
+  "seats": 4,
+  "hash": 662793086,
+  "gameName": "IWAGEN",
+  "model": "iwagen",
+  "displayName": "I-Wagen",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/iwagen.png",
+  "name": "Obey I-Wagen",
+  "manufacturer": "Obey"
+}

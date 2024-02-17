@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 15000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:30", "customClass": "Scooters", "seats": 2, "hash": -1842748181, "gameName": "FAGGION", "model": "faggio", "displayName": "Faggio Sport", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/faggio.png", "name": "Pegassi Faggio Sport", "manufacturer": "Pegassi"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 15000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Scooters",
+  "seats": 2,
+  "hash": -1842748181,
+  "gameName": "FAGGION",
+  "model": "faggio",
+  "displayName": "Faggio Sport",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/faggio.png",
+  "name": "Pegassi Faggio Sport",
+  "manufacturer": "Pegassi"
+}

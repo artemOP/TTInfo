@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:36", "customClass": "Sports", "seats": 2, "hash": -1620126302, "gameName": "NEO", "model": "neo", "displayName": "Neo", "makeName": "VYSSER", "preview": "https://cdn.tycoon.community/dealership/vehicles/neo.png", "name": "Vysser Neo", "manufacturer": "Vysser"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:36",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": -1620126302,
+  "gameName": "NEO",
+  "model": "neo",
+  "displayName": "Neo",
+  "makeName": "VYSSER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/neo.png",
+  "name": "Vysser Neo",
+  "manufacturer": "Vysser"
+}

@@ -1,1 +1,15 @@
-{"className": "SUVs", "classId": 2, "_data_generated": "2024-01-06 18:17:40", "customClass": "SUVs", "seats": 2, "hash": -1810806490, "gameName": "SEMINOLE2", "model": "seminole2", "displayName": "Seminole Frontier", "makeName": "CANIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/seminole2.png", "name": "Canis Seminole Frontier", "manufacturer": "Canis"}
+{
+  "className": "SUVs",
+  "classId": 2,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "SUVs",
+  "seats": 2,
+  "hash": -1810806490,
+  "gameName": "SEMINOLE2",
+  "model": "seminole2",
+  "displayName": "Seminole Frontier",
+  "makeName": "CANIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/seminole2.png",
+  "name": "Canis Seminole Frontier",
+  "manufacturer": "Canis"
+}

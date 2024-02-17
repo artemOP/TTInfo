@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:53", "customClass": "Motorcycles", "seats": 1, "hash": -1731387934, "gameName": "Nimbus2000", "model": "nimbus16", "displayName": "Nimbus 2000", "makeName": "NIMBUS", "preview": "https://cdn.tycoon.community/dealership/vehicles/nimbus16.png", "name": "Nimbus Nimbus 2000", "manufacturer": "Nimbus"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:53",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": -1731387934,
+  "gameName": "Nimbus2000",
+  "model": "nimbus16",
+  "displayName": "Nimbus 2000",
+  "makeName": "NIMBUS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nimbus16.png",
+  "name": "Nimbus Nimbus 2000",
+  "manufacturer": "Nimbus"
+}

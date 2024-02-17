@@ -1,1 +1,18 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:49", "customClass": "Boats", "seats": 4, "model": "msuntrap", "hash": -1122733979, "gameName": "MSUNTRAP", "makeName": "", "displayName": "Lightning", "credits": {"author": "tall70"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/msuntrap.png", "name": "Lightning", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:49",
+  "customClass": "Boats",
+  "seats": 4,
+  "model": "msuntrap",
+  "hash": -1122733979,
+  "gameName": "MSUNTRAP",
+  "makeName": "",
+  "displayName": "Lightning",
+  "credits": {
+    "author": "tall70"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/msuntrap.png",
+  "name": "Lightning",
+  "manufacturer": "NULL"
+}

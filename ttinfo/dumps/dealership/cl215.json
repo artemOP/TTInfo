@@ -1,1 +1,18 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:14", "customClass": "Planes", "seats": 2, "model": "cl215", "hash": -696219973, "gameName": "cl215", "makeName": "CANADAIR", "displayName": "CL-215", "credits": {"author": "Pedro Cano"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/cl215.png", "name": "Canadair CL-215", "manufacturer": "Canadair"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:14",
+  "customClass": "Planes",
+  "seats": 2,
+  "model": "cl215",
+  "hash": -696219973,
+  "gameName": "cl215",
+  "makeName": "CANADAIR",
+  "displayName": "CL-215",
+  "credits": {
+    "author": "Pedro Cano"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cl215.png",
+  "name": "Canadair CL-215",
+  "manufacturer": "Canadair"
+}

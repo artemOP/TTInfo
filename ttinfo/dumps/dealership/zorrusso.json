@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 100000000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:40", "customClass": "Super", "seats": 2, "hash": -682108547, "gameName": "ZORRUSSO", "model": "zorrusso", "displayName": "Zorrusso", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/zorrusso.png", "name": "Pegassi Zorrusso", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 100000000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -682108547,
+  "gameName": "ZORRUSSO",
+  "model": "zorrusso",
+  "displayName": "Zorrusso",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/zorrusso.png",
+  "name": "Pegassi Zorrusso",
+  "manufacturer": "Pegassi"
+}

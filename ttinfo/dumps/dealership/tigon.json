@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Race Track Shop", "category": "Deluxe Vehicles", "price": 1200000000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:20", "customClass": "Super", "seats": 2, "hash": -1358197432, "gameName": "TIGON", "model": "tigon", "displayName": "Tigon", "makeName": "LAMPADATI", "preview": "https://cdn.tycoon.community/dealership/vehicles/tigon.png", "name": "Lampadati Tigon", "manufacturer": "Lampadati"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Race Track Shop",
+    "category": "Deluxe Vehicles",
+    "price": 1200000000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": -1358197432,
+  "gameName": "TIGON",
+  "model": "tigon",
+  "displayName": "Tigon",
+  "makeName": "LAMPADATI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tigon.png",
+  "name": "Lampadati Tigon",
+  "manufacturer": "Lampadati"
+}

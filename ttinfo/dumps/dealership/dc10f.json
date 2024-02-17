@@ -1,1 +1,21 @@
-{"className": "Planes", "dealership": {"dealership": "Aircraft Shop", "category": "Cargo Planes", "price": 50000000, "premium": false}, "classId": 16, "_data_generated": "2024-01-06 18:17:45", "customClass": "Cargo Planes", "seats": 2, "hash": -806707879, "gameName": "dc10f", "model": "dc10f", "displayName": "Boeing DC-10F", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/dc10f.png", "name": "Boeing DC-10F", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "dealership": {
+    "dealership": "Aircraft Shop",
+    "category": "Cargo Planes",
+    "price": 50000000,
+    "premium": false
+  },
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "hash": -806707879,
+  "gameName": "dc10f",
+  "model": "dc10f",
+  "displayName": "Boeing DC-10F",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dc10f.png",
+  "name": "Boeing DC-10F",
+  "manufacturer": "NULL"
+}

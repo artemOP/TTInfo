@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:44", "customClass": "Emergency", "seats": 2, "hash": -1233767450, "gameName": "POLGAUNTLET", "model": "polgauntlet", "displayName": "Gauntlet Interceptor", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/polgauntlet.png", "name": "Bravado Gauntlet Interceptor", "manufacturer": "Bravado"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Emergency",
+  "seats": 2,
+  "hash": -1233767450,
+  "gameName": "POLGAUNTLET",
+  "model": "polgauntlet",
+  "displayName": "Gauntlet Interceptor",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/polgauntlet.png",
+  "name": "Bravado Gauntlet Interceptor",
+  "manufacturer": "Bravado"
+}

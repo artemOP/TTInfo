@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:46", "customClass": "Fighter Planes", "seats": 1, "hash": -184035291, "gameName": "F22", "model": "f23", "displayName": "F-22 Raptor", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/f23.png", "name": "F-22 Raptor", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Fighter Planes",
+  "seats": 1,
+  "hash": -184035291,
+  "gameName": "F22",
+  "model": "f23",
+  "displayName": "F-22 Raptor",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/f23.png",
+  "name": "F-22 Raptor",
+  "manufacturer": "NULL"
+}

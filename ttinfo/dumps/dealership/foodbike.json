@@ -1,1 +1,24 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Event", "price": 0, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:25", "customClass": "Food Delivery", "seats": 2, "model": "foodbike", "hash": 1236861718, "gameName": "FOODBIKE", "makeName": "PEGASSI", "displayName": "Faggio Sport (Delivery)", "credits": {"author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/foodbike.png", "name": "Pegassi Faggio Sport (Delivery)", "manufacturer": "Pegassi"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Event",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Food Delivery",
+  "seats": 2,
+  "model": "foodbike",
+  "hash": 1236861718,
+  "gameName": "FOODBIKE",
+  "makeName": "PEGASSI",
+  "displayName": "Faggio Sport (Delivery)",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, Dynamo, other modders"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/foodbike.png",
+  "name": "Pegassi Faggio Sport (Delivery)",
+  "manufacturer": "Pegassi"
+}

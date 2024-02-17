@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 100000000, "premium": true}, "classId": 7, "_data_generated": "2024-01-06 18:17:21", "customClass": "Super", "seats": 2, "hash": 1591739866, "gameName": "DEVESTE", "model": "deveste", "displayName": "Deveste Eight", "makeName": "PRINCIPL", "preview": "https://cdn.tycoon.community/dealership/vehicles/deveste.png", "name": "Principe Deveste Eight", "manufacturer": "Principe"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 100000000,
+    "premium": true
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 1591739866,
+  "gameName": "DEVESTE",
+  "model": "deveste",
+  "displayName": "Deveste Eight",
+  "makeName": "PRINCIPL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/deveste.png",
+  "name": "Principe Deveste Eight",
+  "manufacturer": "Principe"
+}

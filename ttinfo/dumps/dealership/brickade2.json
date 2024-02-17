@@ -1,1 +1,15 @@
-{"className": "Service", "classId": 17, "_data_generated": "2024-01-06 18:17:32", "customClass": "Service", "seats": 6, "hash": -1576586413, "gameName": "BRICKADE2", "model": "brickade2", "displayName": "Brickade 6x6", "makeName": "MTL", "preview": "https://cdn.tycoon.community/dealership/vehicles/brickade2.png", "name": "MTL Brickade 6x6", "manufacturer": "MTL"}
+{
+  "className": "Service",
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Service",
+  "seats": 6,
+  "hash": -1576586413,
+  "gameName": "BRICKADE2",
+  "model": "brickade2",
+  "displayName": "Brickade 6x6",
+  "makeName": "MTL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/brickade2.png",
+  "name": "MTL Brickade 6x6",
+  "manufacturer": "MTL"
+}

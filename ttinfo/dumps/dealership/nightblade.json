@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 50000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:35", "customClass": "Choppers", "seats": 2, "hash": -1606187161, "gameName": "NIGHTBLADE", "model": "nightblade", "displayName": "Nightblade", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/nightblade.png", "name": "Western Nightblade", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 50000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:35",
+  "customClass": "Choppers",
+  "seats": 2,
+  "hash": -1606187161,
+  "gameName": "NIGHTBLADE",
+  "model": "nightblade",
+  "displayName": "Nightblade",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nightblade.png",
+  "name": "Western Nightblade",
+  "manufacturer": "Western"
+}

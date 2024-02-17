@@ -1,1 +1,21 @@
-{"className": "Off-Road", "dealership": {"dealership": "Vehicle Shop", "category": "Premium", "price": 1000000, "premium": true}, "classId": 9, "_data_generated": "2024-01-06 18:17:28", "customClass": "Military", "seats": 6, "hash": 2071877360, "gameName": "INSURGENT2", "model": "insurgent2", "displayName": "Insurgent", "makeName": "HVY", "preview": "https://cdn.tycoon.community/dealership/vehicles/insurgent2.png", "name": "HVY Insurgent", "manufacturer": "HVY"}
+{
+  "className": "Off-Road",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Premium",
+    "price": 1000000,
+    "premium": true
+  },
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:28",
+  "customClass": "Military",
+  "seats": 6,
+  "hash": 2071877360,
+  "gameName": "INSURGENT2",
+  "model": "insurgent2",
+  "displayName": "Insurgent",
+  "makeName": "HVY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/insurgent2.png",
+  "name": "HVY Insurgent",
+  "manufacturer": "HVY"
+}

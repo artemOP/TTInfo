@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Lowriders", "price": 180000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:19", "customClass": "Lowriders", "seats": 2, "hash": 223258115, "gameName": "SABREGT2", "model": "sabregt2", "displayName": "Sabre Turbo Custom", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/sabregt2.png", "name": "Declasse Sabre Turbo Custom", "manufacturer": "Declasse"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Lowriders",
+    "price": 180000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Lowriders",
+  "seats": 2,
+  "hash": 223258115,
+  "gameName": "SABREGT2",
+  "model": "sabregt2",
+  "displayName": "Sabre Turbo Custom",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/sabregt2.png",
+  "name": "Declasse Sabre Turbo Custom",
+  "manufacturer": "Declasse"
+}

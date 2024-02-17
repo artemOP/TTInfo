@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Lowriders", "price": 175000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:34", "customClass": "Lowriders", "seats": 2, "hash": -899509638, "gameName": "VIRGO2", "model": "virgo2", "displayName": "Virgo Classic Custom", "makeName": "DUNDREAR", "preview": "https://cdn.tycoon.community/dealership/vehicles/virgo2.png", "name": "Dundreary Virgo Classic Custom", "manufacturer": "Dundreary"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Lowriders",
+    "price": 175000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Lowriders",
+  "seats": 2,
+  "hash": -899509638,
+  "gameName": "VIRGO2",
+  "model": "virgo2",
+  "displayName": "Virgo Classic Custom",
+  "makeName": "DUNDREAR",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/virgo2.png",
+  "name": "Dundreary Virgo Classic Custom",
+  "manufacturer": "Dundreary"
+}

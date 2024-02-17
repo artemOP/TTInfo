@@ -1,1 +1,15 @@
-{"className": "Boats", "classId": 14, "_data_generated": "2024-01-06 18:17:41", "customClass": "Boats", "seats": 4, "hash": -104340778, "gameName": "PREDATOR", "model": "defender", "displayName": "Police Predator", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/defender.png", "name": "Police Predator", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": -104340778,
+  "gameName": "PREDATOR",
+  "model": "defender",
+  "displayName": "Police Predator",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/defender.png",
+  "name": "Police Predator",
+  "manufacturer": "NULL"
+}

@@ -1,1 +1,15 @@
-{"className": "Service", "classId": 17, "_data_generated": "2024-01-06 18:17:39", "customClass": "Buses", "seats": 11, "hash": 345756458, "gameName": "PBUS2", "model": "pbus2", "displayName": "Festival Bus", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/pbus2.png", "name": "Festival Bus", "manufacturer": "NULL"}
+{
+  "className": "Service",
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Buses",
+  "seats": 11,
+  "hash": 345756458,
+  "gameName": "PBUS2",
+  "model": "pbus2",
+  "displayName": "Festival Bus",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pbus2.png",
+  "name": "Festival Bus",
+  "manufacturer": "NULL"
+}

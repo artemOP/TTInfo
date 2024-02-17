@@ -1,1 +1,15 @@
-{"className": "Vans", "classId": 12, "_data_generated": "2024-01-06 18:17:43", "customClass": "Vans", "seats": 4, "hash": -1035489563, "gameName": "SURFER3", "model": "surfer3", "displayName": "Surfer Custom", "makeName": "BF", "preview": "https://cdn.tycoon.community/dealership/vehicles/surfer3.png", "name": "BF Surfer Custom", "manufacturer": "BF"}
+{
+  "className": "Vans",
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Vans",
+  "seats": 4,
+  "hash": -1035489563,
+  "gameName": "SURFER3",
+  "model": "surfer3",
+  "displayName": "Surfer Custom",
+  "makeName": "BF",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/surfer3.png",
+  "name": "BF Surfer Custom",
+  "manufacturer": "BF"
+}

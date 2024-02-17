@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:22", "customClass": "Motorcycles", "seats": 2, "hash": 1203311498, "gameName": "NRG900", "model": "nrg900", "displayName": "NRG900", "makeName": "SHITZU", "preview": "https://cdn.tycoon.community/dealership/vehicles/nrg900.png", "name": "Shitzu NRG900", "manufacturer": "Shitzu"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:22",
+  "customClass": "Motorcycles",
+  "seats": 2,
+  "hash": 1203311498,
+  "gameName": "NRG900",
+  "model": "nrg900",
+  "displayName": "NRG900",
+  "makeName": "SHITZU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nrg900.png",
+  "name": "Shitzu NRG900",
+  "manufacturer": "Shitzu"
+}

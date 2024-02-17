@@ -1,1 +1,15 @@
-{"className": "Service", "classId": 17, "_data_generated": "2024-01-06 18:17:17", "customClass": "Taxis", "seats": 4, "hash": -1932515764, "gameName": "ROMAN", "model": "rom", "displayName": "Roman's Cab", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/rom.png", "name": "Albany Roman's Cab", "manufacturer": "Albany"}
+{
+  "className": "Service",
+  "classId": 17,
+  "_data_generated": "2024-01-06 18:17:17",
+  "customClass": "Taxis",
+  "seats": 4,
+  "hash": -1932515764,
+  "gameName": "ROMAN",
+  "model": "rom",
+  "displayName": "Roman's Cab",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rom.png",
+  "name": "Albany Roman's Cab",
+  "manufacturer": "Albany"
+}

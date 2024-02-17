@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:37", "customClass": "Military", "seats": 10, "hash": 2014313426, "gameName": "VETIR", "model": "vetir", "displayName": "Vetir", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/vetir.png", "name": "Vetir", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Military",
+  "seats": 10,
+  "hash": 2014313426,
+  "gameName": "VETIR",
+  "model": "vetir",
+  "displayName": "Vetir",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/vetir.png",
+  "name": "Vetir",
+  "manufacturer": "NULL"
+}

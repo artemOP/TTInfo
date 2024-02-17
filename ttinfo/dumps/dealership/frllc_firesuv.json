@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Company Vehicles", "price": 100000000, "premium": false}, "classId": 18, "_data_generated": "2024-01-06 18:17:45", "customClass": "Emergency", "seats": 4, "hash": 365123685, "gameName": "FRSUV", "model": "frllc_firesuv", "displayName": "Explorer", "makeName": "COBRACO", "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_firesuv.png", "name": "First Responders LLC Explorer", "manufacturer": "First Responders LLC"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Company Vehicles",
+    "price": 100000000,
+    "premium": false
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:45",
+  "customClass": "Emergency",
+  "seats": 4,
+  "hash": 365123685,
+  "gameName": "FRSUV",
+  "model": "frllc_firesuv",
+  "displayName": "Explorer",
+  "makeName": "COBRACO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/frllc_firesuv.png",
+  "name": "First Responders LLC Explorer",
+  "manufacturer": "First Responders LLC"
+}

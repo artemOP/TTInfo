@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 75000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:34", "customClass": "Choppers", "seats": 1, "hash": 6774487, "gameName": "CHIMERA", "model": "chimera", "displayName": "Chimera", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/chimera.png", "name": "Nagasaki Chimera", "manufacturer": "Nagasaki"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 75000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Choppers",
+  "seats": 1,
+  "hash": 6774487,
+  "gameName": "CHIMERA",
+  "model": "chimera",
+  "displayName": "Chimera",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/chimera.png",
+  "name": "Nagasaki Chimera",
+  "manufacturer": "Nagasaki"
+}

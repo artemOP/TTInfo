@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 125000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:25", "customClass": "Muscle", "seats": 2, "hash": 349605904, "gameName": "CHINO", "model": "chino", "displayName": "Chino", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/chino.png", "name": "Vapid Chino", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 125000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:25",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 349605904,
+  "gameName": "CHINO",
+  "model": "chino",
+  "displayName": "Chino",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/chino.png",
+  "name": "Vapid Chino",
+  "manufacturer": "Vapid"
+}

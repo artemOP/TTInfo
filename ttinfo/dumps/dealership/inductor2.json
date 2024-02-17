@@ -1,1 +1,15 @@
-{"className": "Cycles", "classId": 13, "_data_generated": "2024-01-06 18:17:43", "customClass": "Cycles", "seats": 1, "hash": -1983622024, "gameName": "INDUCTOR2", "model": "inductor2", "displayName": "Junk Energy Inductor", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/inductor2.png", "name": "Junk Energy Inductor", "manufacturer": "NULL"}
+{
+  "className": "Cycles",
+  "classId": 13,
+  "_data_generated": "2024-01-06 18:17:43",
+  "customClass": "Cycles",
+  "seats": 1,
+  "hash": -1983622024,
+  "gameName": "INDUCTOR2",
+  "model": "inductor2",
+  "displayName": "Junk Energy Inductor",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/inductor2.png",
+  "name": "Junk Energy Inductor",
+  "manufacturer": "NULL"
+}

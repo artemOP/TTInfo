@@ -1,1 +1,21 @@
-{"className": "Motorcycles", "dealership": {"dealership": "Vehicle Shop", "category": "Motorcycles", "price": 33000, "premium": false}, "classId": 8, "_data_generated": "2024-01-06 18:17:34", "customClass": "Motorcycles", "seats": 1, "hash": -239841468, "gameName": "DIABLOUS", "model": "diablous", "displayName": "Diabolus", "makeName": "PRINCIPL", "preview": "https://cdn.tycoon.community/dealership/vehicles/diablous.png", "name": "Principe Diabolus", "manufacturer": "Principe"}
+{
+  "className": "Motorcycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Motorcycles",
+    "price": 33000,
+    "premium": false
+  },
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": -239841468,
+  "gameName": "DIABLOUS",
+  "model": "diablous",
+  "displayName": "Diabolus",
+  "makeName": "PRINCIPL",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/diablous.png",
+  "name": "Principe Diabolus",
+  "manufacturer": "Principe"
+}

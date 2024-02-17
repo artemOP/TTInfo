@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 1000000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:37", "customClass": "Sports", "seats": 2, "hash": 661493923, "gameName": "COMET5", "model": "comet5", "displayName": "Comet SR", "makeName": "PFISTER", "preview": "https://cdn.tycoon.community/dealership/vehicles/comet5.png", "name": "Pfister Comet SR", "manufacturer": "Pfister"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 1000000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:37",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 661493923,
+  "gameName": "COMET5",
+  "model": "comet5",
+  "displayName": "Comet SR",
+  "makeName": "PFISTER",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/comet5.png",
+  "name": "Pfister Comet SR",
+  "manufacturer": "Pfister"
+}

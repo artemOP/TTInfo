@@ -1,1 +1,15 @@
-{"className": "Planes", "classId": 16, "_data_generated": "2024-01-06 18:17:13", "customClass": "Cargo Planes", "seats": 2, "hash": 368211810, "gameName": "CARGOPL", "model": "cargoplane", "displayName": "Cargo Plane", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/cargoplane.png", "name": "Cargo Plane", "manufacturer": "NULL"}
+{
+  "className": "Planes",
+  "classId": 16,
+  "_data_generated": "2024-01-06 18:17:13",
+  "customClass": "Cargo Planes",
+  "seats": 2,
+  "hash": 368211810,
+  "gameName": "CARGOPL",
+  "model": "cargoplane",
+  "displayName": "Cargo Plane",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/cargoplane.png",
+  "name": "Cargo Plane",
+  "manufacturer": "NULL"
+}

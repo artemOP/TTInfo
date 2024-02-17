@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:34", "customClass": "Law Enforcement", "seats": 8, "hash": -1900572838, "gameName": "PSTOCKADE", "model": "pstockade", "displayName": "Police Stockade", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/pstockade.png", "name": "Police Stockade", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Law Enforcement",
+  "seats": 8,
+  "hash": -1900572838,
+  "gameName": "PSTOCKADE",
+  "model": "pstockade",
+  "displayName": "Police Stockade",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/pstockade.png",
+  "name": "Police Stockade",
+  "manufacturer": "NULL"
+}

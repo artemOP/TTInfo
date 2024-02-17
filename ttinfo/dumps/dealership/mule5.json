@@ -1,1 +1,15 @@
-{"className": "Commercial", "classId": 20, "_data_generated": "2024-01-06 18:17:40", "customClass": "Trucks", "seats": 6, "hash": 1343932732, "gameName": "MULE5", "model": "mule5", "displayName": "Mule", "makeName": "MAIBATSU", "preview": "https://cdn.tycoon.community/dealership/vehicles/mule5.png", "name": "Maibatsu Mule", "manufacturer": "Maibatsu"}
+{
+  "className": "Commercial",
+  "classId": 20,
+  "_data_generated": "2024-01-06 18:17:40",
+  "customClass": "Trucks",
+  "seats": 6,
+  "hash": 1343932732,
+  "gameName": "MULE5",
+  "model": "mule5",
+  "displayName": "Mule",
+  "makeName": "MAIBATSU",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/mule5.png",
+  "name": "Maibatsu Mule",
+  "manufacturer": "Maibatsu"
+}

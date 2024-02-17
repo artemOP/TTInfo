@@ -1,1 +1,21 @@
-{"className": "Sports Classics", "dealership": {"dealership": "Vehicle Shop", "category": "Sport Classics", "price": 65000, "premium": false}, "classId": 5, "_data_generated": "2024-01-06 18:17:34", "customClass": "Race Cars", "seats": 2, "hash": -1558399629, "gameName": "TORNADO6", "model": "tornado6", "displayName": "Tornado Rat Rod", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/tornado6.png", "name": "Declasse Tornado Rat Rod", "manufacturer": "Declasse"}
+{
+  "className": "Sports Classics",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sport Classics",
+    "price": 65000,
+    "premium": false
+  },
+  "classId": 5,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": -1558399629,
+  "gameName": "TORNADO6",
+  "model": "tornado6",
+  "displayName": "Tornado Rat Rod",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tornado6.png",
+  "name": "Declasse Tornado Rat Rod",
+  "manufacturer": "Declasse"
+}

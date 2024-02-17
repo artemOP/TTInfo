@@ -1,1 +1,15 @@
-{"className": "Off-Road", "classId": 9, "_data_generated": "2024-01-06 18:17:16", "customClass": "Off-Road", "seats": 2, "hash": 2038858402, "gameName": "BRUTUS3", "model": "brutus3", "displayName": "Nightmare Brutus", "makeName": "DECLASSE", "preview": "https://cdn.tycoon.community/dealership/vehicles/brutus3.png", "name": "Declasse Nightmare Brutus", "manufacturer": "Declasse"}
+{
+  "className": "Off-Road",
+  "classId": 9,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Off-Road",
+  "seats": 2,
+  "hash": 2038858402,
+  "gameName": "BRUTUS3",
+  "model": "brutus3",
+  "displayName": "Nightmare Brutus",
+  "makeName": "DECLASSE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/brutus3.png",
+  "name": "Declasse Nightmare Brutus",
+  "manufacturer": "Declasse"
+}

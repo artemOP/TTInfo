@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 320000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:44", "customClass": "Race Cars", "seats": 2, "hash": 349315417, "gameName": "GAUNTLET2", "model": "gauntlet2", "displayName": "Redwood Gauntlet", "makeName": "BRAVADO", "preview": "https://cdn.tycoon.community/dealership/vehicles/gauntlet2.png", "name": "Bravado Redwood Gauntlet", "manufacturer": "Bravado"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 320000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Race Cars",
+  "seats": 2,
+  "hash": 349315417,
+  "gameName": "GAUNTLET2",
+  "model": "gauntlet2",
+  "displayName": "Redwood Gauntlet",
+  "makeName": "BRAVADO",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/gauntlet2.png",
+  "name": "Bravado Redwood Gauntlet",
+  "manufacturer": "Bravado"
+}

@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Unlockables", "category": "Shipments", "price": 0, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:15", "customClass": "Compacts", "seats": 2, "hash": 2016857647, "gameName": "FUTO", "model": "futo", "displayName": "Futo", "makeName": "KARIN", "preview": "https://cdn.tycoon.community/dealership/vehicles/futo.png", "name": "Karin Futo", "manufacturer": "Karin"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Unlockables",
+    "category": "Shipments",
+    "price": 0,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": 2016857647,
+  "gameName": "FUTO",
+  "model": "futo",
+  "displayName": "Futo",
+  "makeName": "KARIN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/futo.png",
+  "name": "Karin Futo",
+  "manufacturer": "Karin"
+}

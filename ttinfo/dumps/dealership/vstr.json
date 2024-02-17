@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Special", "price": 25227050, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:41", "customClass": "Sports", "seats": 4, "hash": 1456336509, "gameName": "VSTR", "model": "vstr", "displayName": "V-STR", "makeName": "ALBANY", "preview": "https://cdn.tycoon.community/dealership/vehicles/vstr.png", "name": "Albany V-STR", "manufacturer": "Albany"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Special",
+    "price": 25227050,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:41",
+  "customClass": "Sports",
+  "seats": 4,
+  "hash": 1456336509,
+  "gameName": "VSTR",
+  "model": "vstr",
+  "displayName": "V-STR",
+  "makeName": "ALBANY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/vstr.png",
+  "name": "Albany V-STR",
+  "manufacturer": "Albany"
+}

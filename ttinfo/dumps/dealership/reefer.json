@@ -1,1 +1,21 @@
-{"className": "Boats", "dealership": {"dealership": "Boat Shop", "category": "Boats", "price": 10000000, "premium": false}, "classId": 14, "_data_generated": "2024-01-06 18:17:16", "customClass": "Boats", "seats": 1, "hash": 1759673526, "gameName": "REEFER", "model": "reefer", "displayName": "Reefer", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/reefer.png", "name": "Reefer", "manufacturer": "NULL"}
+{
+  "className": "Boats",
+  "dealership": {
+    "dealership": "Boat Shop",
+    "category": "Boats",
+    "price": 10000000,
+    "premium": false
+  },
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Boats",
+  "seats": 1,
+  "hash": 1759673526,
+  "gameName": "REEFER",
+  "model": "reefer",
+  "displayName": "Reefer",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/reefer.png",
+  "name": "Reefer",
+  "manufacturer": "NULL"
+}

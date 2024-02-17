@@ -1,1 +1,21 @@
-{"className": "Cycles", "dealership": {"dealership": "Vehicle Shop", "category": "Bicycles", "price": 2000, "premium": false}, "classId": 13, "_data_generated": "2024-01-06 18:17:16", "customClass": "Cycles", "seats": 1, "hash": -836512833, "gameName": "FIXTER", "model": "fixter", "displayName": "Fixter", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/fixter.png", "name": "Fixter", "manufacturer": "NULL"}
+{
+  "className": "Cycles",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Bicycles",
+    "price": 2000,
+    "premium": false
+  },
+  "classId": 13,
+  "_data_generated": "2024-01-06 18:17:16",
+  "customClass": "Cycles",
+  "seats": 1,
+  "hash": -836512833,
+  "gameName": "FIXTER",
+  "model": "fixter",
+  "displayName": "Fixter",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/fixter.png",
+  "name": "Fixter",
+  "manufacturer": "NULL"
+}

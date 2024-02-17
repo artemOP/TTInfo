@@ -1,1 +1,15 @@
-{"className": "Vans", "classId": 12, "_data_generated": "2024-01-06 18:17:46", "customClass": "Pickups", "seats": 4, "hash": 1075851868, "gameName": "BOBCAT", "model": "bobcat", "displayName": "Bobcat", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/bobcat.png", "name": "Vapid Bobcat", "manufacturer": "Vapid"}
+{
+  "className": "Vans",
+  "classId": 12,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Pickups",
+  "seats": 4,
+  "hash": 1075851868,
+  "gameName": "BOBCAT",
+  "model": "bobcat",
+  "displayName": "Bobcat",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bobcat.png",
+  "name": "Vapid Bobcat",
+  "manufacturer": "Vapid"
+}

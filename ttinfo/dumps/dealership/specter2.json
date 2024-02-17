@@ -1,1 +1,21 @@
-{"className": "Sports", "dealership": {"dealership": "Vehicle Shop", "category": "Sports", "price": 1250000, "premium": false}, "classId": 6, "_data_generated": "2024-01-06 18:17:32", "customClass": "Sports", "seats": 2, "hash": 1074745671, "gameName": "SPECTER2", "model": "specter2", "displayName": "Specter Custom", "makeName": "DEWBAUCH", "preview": "https://cdn.tycoon.community/dealership/vehicles/specter2.png", "name": "Dewbauchee Specter Custom", "manufacturer": "Dewbauchee"}
+{
+  "className": "Sports",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Sports",
+    "price": 1250000,
+    "premium": false
+  },
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:32",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 1074745671,
+  "gameName": "SPECTER2",
+  "model": "specter2",
+  "displayName": "Specter Custom",
+  "makeName": "DEWBAUCH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/specter2.png",
+  "name": "Dewbauchee Specter Custom",
+  "manufacturer": "Dewbauchee"
+}

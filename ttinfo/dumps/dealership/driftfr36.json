@@ -1,1 +1,15 @@
-{"className": "Coupes", "classId": 3, "_data_generated": "2024-01-06 18:17:30", "customClass": "Coupes", "seats": 2, "hash": -1479935577, "gameName": "DRIFTFR36", "model": "driftfr36", "displayName": "FR36", "makeName": "FATHOM", "preview": "https://cdn.tycoon.community/dealership/vehicles/driftfr36.png", "name": "Fathom FR36", "manufacturer": "Fathom"}
+{
+  "className": "Coupes",
+  "classId": 3,
+  "_data_generated": "2024-01-06 18:17:30",
+  "customClass": "Coupes",
+  "seats": 2,
+  "hash": -1479935577,
+  "gameName": "DRIFTFR36",
+  "model": "driftfr36",
+  "displayName": "FR36",
+  "makeName": "FATHOM",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/driftfr36.png",
+  "name": "Fathom FR36",
+  "manufacturer": "Fathom"
+}

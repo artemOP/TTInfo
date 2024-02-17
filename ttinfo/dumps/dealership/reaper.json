@@ -1,1 +1,21 @@
-{"className": "Super", "dealership": {"dealership": "Vehicle Shop", "category": "Supercars", "price": 1595000, "premium": false}, "classId": 7, "_data_generated": "2024-01-06 18:17:34", "customClass": "Super", "seats": 2, "hash": 234062309, "gameName": "REAPER", "model": "reaper", "displayName": "Reaper", "makeName": "PEGASSI", "preview": "https://cdn.tycoon.community/dealership/vehicles/reaper.png", "name": "Pegassi Reaper", "manufacturer": "Pegassi"}
+{
+  "className": "Super",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Supercars",
+    "price": 1595000,
+    "premium": false
+  },
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:34",
+  "customClass": "Super",
+  "seats": 2,
+  "hash": 234062309,
+  "gameName": "REAPER",
+  "model": "reaper",
+  "displayName": "Reaper",
+  "makeName": "PEGASSI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/reaper.png",
+  "name": "Pegassi Reaper",
+  "manufacturer": "Pegassi"
+}

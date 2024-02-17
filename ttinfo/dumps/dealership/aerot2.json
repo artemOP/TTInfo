@@ -1,1 +1,15 @@
-{"className": "Trains", "classId": 21, "_data_generated": "2024-01-06 18:17:46", "customClass": "Trains", "seats": 2, "hash": 1593778932, "gameName": "aerotrc", "model": "aerot2", "displayName": "Aerotrain", "makeName": "gmemd", "preview": "https://cdn.tycoon.community/dealership/vehicles/aerot2.png", "name": "GM Aerotrain", "manufacturer": "GM"}
+{
+  "className": "Trains",
+  "classId": 21,
+  "_data_generated": "2024-01-06 18:17:46",
+  "customClass": "Trains",
+  "seats": 2,
+  "hash": 1593778932,
+  "gameName": "aerotrc",
+  "model": "aerot2",
+  "displayName": "Aerotrain",
+  "makeName": "gmemd",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/aerot2.png",
+  "name": "GM Aerotrain",
+  "manufacturer": "GM"
+}

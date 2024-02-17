@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:21", "customClass": "Tanks", "seats": 2, "hash": 782665360, "gameName": "RHINO", "model": "rhino", "displayName": "Rhino Tank", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/rhino.png", "name": "Rhino Tank", "manufacturer": "NULL"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:21",
+  "customClass": "Tanks",
+  "seats": 2,
+  "hash": 782665360,
+  "gameName": "RHINO",
+  "model": "rhino",
+  "displayName": "Rhino Tank",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/rhino.png",
+  "name": "Rhino Tank",
+  "manufacturer": "NULL"
+}

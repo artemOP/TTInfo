@@ -1,1 +1,21 @@
-{"className": "Boats", "dealership": {"dealership": "Boat Shop", "category": "Boats", "price": 500000, "premium": false}, "classId": 14, "_data_generated": "2024-01-06 18:17:33", "customClass": "Boats", "seats": 4, "hash": 867467158, "gameName": "DINGHY", "model": "dinghy4", "displayName": "Dinghy", "makeName": "NAGASAKI", "preview": "https://cdn.tycoon.community/dealership/vehicles/dinghy4.png", "name": "Nagasaki Dinghy", "manufacturer": "Nagasaki"}
+{
+  "className": "Boats",
+  "dealership": {
+    "dealership": "Boat Shop",
+    "category": "Boats",
+    "price": 500000,
+    "premium": false
+  },
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:33",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": 867467158,
+  "gameName": "DINGHY",
+  "model": "dinghy4",
+  "displayName": "Dinghy",
+  "makeName": "NAGASAKI",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dinghy4.png",
+  "name": "Nagasaki Dinghy",
+  "manufacturer": "Nagasaki"
+}

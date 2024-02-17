@@ -1,1 +1,18 @@
-{"className": "Super", "classId": 7, "_data_generated": "2024-01-06 18:17:54", "customClass": "Super", "seats": 1, "model": "bfemp", "hash": 1548025300, "gameName": "BFEMP", "makeName": "BF", "displayName": "EMP", "credits": {"author": "Paddy Productions"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/bfemp.png", "name": "BF EMP", "manufacturer": "BF"}
+{
+  "className": "Super",
+  "classId": 7,
+  "_data_generated": "2024-01-06 18:17:54",
+  "customClass": "Super",
+  "seats": 1,
+  "model": "bfemp",
+  "hash": 1548025300,
+  "gameName": "BFEMP",
+  "makeName": "BF",
+  "displayName": "EMP",
+  "credits": {
+    "author": "Paddy Productions"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/bfemp.png",
+  "name": "BF EMP",
+  "manufacturer": "BF"
+}

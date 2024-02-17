@@ -1,1 +1,21 @@
-{"className": "Compacts", "dealership": {"dealership": "Vehicle Shop", "category": "Compacts", "price": 42000, "premium": false}, "classId": 0, "_data_generated": "2024-01-06 18:17:11", "customClass": "Compacts", "seats": 2, "hash": -344943009, "gameName": "BLISTA", "model": "blista", "displayName": "Blista", "makeName": "DINKA", "preview": "https://cdn.tycoon.community/dealership/vehicles/blista.png", "name": "Dinka Blista", "manufacturer": "Dinka"}
+{
+  "className": "Compacts",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Compacts",
+    "price": 42000,
+    "premium": false
+  },
+  "classId": 0,
+  "_data_generated": "2024-01-06 18:17:11",
+  "customClass": "Compacts",
+  "seats": 2,
+  "hash": -344943009,
+  "gameName": "BLISTA",
+  "model": "blista",
+  "displayName": "Blista",
+  "makeName": "DINKA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/blista.png",
+  "name": "Dinka Blista",
+  "manufacturer": "Dinka"
+}

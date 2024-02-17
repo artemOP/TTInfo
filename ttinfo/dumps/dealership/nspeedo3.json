@@ -1,1 +1,21 @@
-{"className": "Emergency", "dealership": {"dealership": "Vehicle Shop", "category": "Emergency", "price": 0, "premium": true}, "classId": 18, "_data_generated": "2024-01-06 18:17:53", "customClass": "Fire Engines", "seats": 4, "hash": 569775478, "gameName": "emsnspeedo", "model": "nspeedo3", "displayName": "Speedo Express (EMS)", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/nspeedo3.png", "name": "Vapid Speedo Express (EMS)", "manufacturer": "Vapid"}
+{
+  "className": "Emergency",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Emergency",
+    "price": 0,
+    "premium": true
+  },
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:53",
+  "customClass": "Fire Engines",
+  "seats": 4,
+  "hash": 569775478,
+  "gameName": "emsnspeedo",
+  "model": "nspeedo3",
+  "displayName": "Speedo Express (EMS)",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/nspeedo3.png",
+  "name": "Vapid Speedo Express (EMS)",
+  "manufacturer": "Vapid"
+}

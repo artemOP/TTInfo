@@ -1,1 +1,19 @@
-{"className": "Utility", "classId": 11, "_data_generated": "2024-01-06 18:17:29", "customClass": "Airport", "seats": 4, "model": "airportferoci", "hash": 1916245973, "gameName": "FEROCI2", "makeName": "", "displayName": "Airport Feroci", "credits": {"author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders", "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"}, "preview": "https://cdn.tycoon.community/dealership/vehicles/airportferoci.png", "name": "Airport Feroci", "manufacturer": "NULL"}
+{
+  "className": "Utility",
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Airport",
+  "seats": 4,
+  "model": "airportferoci",
+  "hash": 1916245973,
+  "gameName": "FEROCI2",
+  "makeName": "",
+  "displayName": "Airport Feroci",
+  "credits": {
+    "author": "TheF3nt0n, AlexanderLB, SkylineGTRFreak, other modders",
+    "download": "https://www.gta5-mods.com/vehicles/airport-service-pack-add-on-liveries"
+  },
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/airportferoci.png",
+  "name": "Airport Feroci",
+  "manufacturer": "NULL"
+}

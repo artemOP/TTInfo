@@ -1,1 +1,15 @@
-{"className": "Muscle", "classId": 4, "_data_generated": "2024-01-06 18:17:42", "customClass": "Muscle", "seats": 2, "hash": 426742808, "gameName": "DOMINATOR7", "model": "dominator7", "displayName": "Dominator ASP", "makeName": "VAPID", "preview": "https://cdn.tycoon.community/dealership/vehicles/dominator7.png", "name": "Vapid Dominator ASP", "manufacturer": "Vapid"}
+{
+  "className": "Muscle",
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:42",
+  "customClass": "Muscle",
+  "seats": 2,
+  "hash": 426742808,
+  "gameName": "DOMINATOR7",
+  "model": "dominator7",
+  "displayName": "Dominator ASP",
+  "makeName": "VAPID",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dominator7.png",
+  "name": "Vapid Dominator ASP",
+  "manufacturer": "Vapid"
+}

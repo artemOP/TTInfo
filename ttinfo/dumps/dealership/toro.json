@@ -1,1 +1,21 @@
-{"className": "Boats", "dealership": {"dealership": "Boat Shop", "category": "Boats", "price": 800000, "premium": false}, "classId": 14, "_data_generated": "2024-01-06 18:17:31", "customClass": "Boats", "seats": 4, "hash": 1070967343, "gameName": "TORO", "model": "toro", "displayName": "Toro", "makeName": "LAMPADA", "preview": "https://cdn.tycoon.community/dealership/vehicles/toro.png", "name": "Lampadati Toro", "manufacturer": "Lampadati"}
+{
+  "className": "Boats",
+  "dealership": {
+    "dealership": "Boat Shop",
+    "category": "Boats",
+    "price": 800000,
+    "premium": false
+  },
+  "classId": 14,
+  "_data_generated": "2024-01-06 18:17:31",
+  "customClass": "Boats",
+  "seats": 4,
+  "hash": 1070967343,
+  "gameName": "TORO",
+  "model": "toro",
+  "displayName": "Toro",
+  "makeName": "LAMPADA",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/toro.png",
+  "name": "Lampadati Toro",
+  "manufacturer": "Lampadati"
+}

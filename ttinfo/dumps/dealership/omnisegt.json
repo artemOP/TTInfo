@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:15", "customClass": "Sports", "seats": 4, "hash": -505223465, "gameName": "OMNISEGT", "model": "omnisegt", "displayName": "Omnis e-GT", "makeName": "OBEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/omnisegt.png", "name": "Obey Omnis e-GT", "manufacturer": "Obey"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:15",
+  "customClass": "Sports",
+  "seats": 4,
+  "hash": -505223465,
+  "gameName": "OMNISEGT",
+  "model": "omnisegt",
+  "displayName": "Omnis e-GT",
+  "makeName": "OBEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/omnisegt.png",
+  "name": "Obey Omnis e-GT",
+  "manufacturer": "Obey"
+}

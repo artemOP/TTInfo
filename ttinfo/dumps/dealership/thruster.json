@@ -1,1 +1,15 @@
-{"className": "Military", "classId": 19, "_data_generated": "2024-01-06 18:17:38", "customClass": "Jetpacks", "seats": 1, "hash": 1489874736, "gameName": "THRUSTER", "model": "thruster", "displayName": "Thruster", "makeName": "MAMMOTH", "preview": "https://cdn.tycoon.community/dealership/vehicles/thruster.png", "name": "Mammoth Thruster", "manufacturer": "Mammoth"}
+{
+  "className": "Military",
+  "classId": 19,
+  "_data_generated": "2024-01-06 18:17:38",
+  "customClass": "Jetpacks",
+  "seats": 1,
+  "hash": 1489874736,
+  "gameName": "THRUSTER",
+  "model": "thruster",
+  "displayName": "Thruster",
+  "makeName": "MAMMOTH",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/thruster.png",
+  "name": "Mammoth Thruster",
+  "manufacturer": "Mammoth"
+}

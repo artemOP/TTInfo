@@ -1,1 +1,15 @@
-{"className": "Motorcycles", "classId": 8, "_data_generated": "2024-01-06 18:17:39", "customClass": "Motorcycles", "seats": 1, "hash": -1812949672, "gameName": "DEATHBIKE2", "model": "deathbike2", "displayName": "Future Shock Deathbike", "makeName": "WESTERN", "preview": "https://cdn.tycoon.community/dealership/vehicles/deathbike2.png", "name": "Western Future Shock Deathbike", "manufacturer": "Western"}
+{
+  "className": "Motorcycles",
+  "classId": 8,
+  "_data_generated": "2024-01-06 18:17:39",
+  "customClass": "Motorcycles",
+  "seats": 1,
+  "hash": -1812949672,
+  "gameName": "DEATHBIKE2",
+  "model": "deathbike2",
+  "displayName": "Future Shock Deathbike",
+  "makeName": "WESTERN",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/deathbike2.png",
+  "name": "Western Future Shock Deathbike",
+  "manufacturer": "Western"
+}

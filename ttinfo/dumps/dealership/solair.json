@@ -1,1 +1,15 @@
-{"className": "Sedans", "classId": 1, "_data_generated": "2024-01-06 18:17:19", "customClass": "Sedans", "seats": 4, "hash": 1344573448, "gameName": "SOLAIR", "model": "solair", "displayName": "Solair", "makeName": "WILLARD", "preview": "https://cdn.tycoon.community/dealership/vehicles/solair.png", "name": "Willard Solair", "manufacturer": "Willard"}
+{
+  "className": "Sedans",
+  "classId": 1,
+  "_data_generated": "2024-01-06 18:17:19",
+  "customClass": "Sedans",
+  "seats": 4,
+  "hash": 1344573448,
+  "gameName": "SOLAIR",
+  "model": "solair",
+  "displayName": "Solair",
+  "makeName": "WILLARD",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/solair.png",
+  "name": "Willard Solair",
+  "manufacturer": "Willard"
+}

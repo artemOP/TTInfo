@@ -1,1 +1,21 @@
-{"className": "Muscle", "dealership": {"dealership": "Vehicle Shop", "category": "Muscle", "price": 150000, "premium": false}, "classId": 4, "_data_generated": "2024-01-06 18:17:29", "customClass": "Armored Cars", "seats": 2, "hash": -326143852, "gameName": "DUKES2", "model": "dukes2", "displayName": "Duke O'Death", "makeName": "IMPONTE", "preview": "https://cdn.tycoon.community/dealership/vehicles/dukes2.png", "name": "Imponte Duke O'Death", "manufacturer": "Imponte"}
+{
+  "className": "Muscle",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Muscle",
+    "price": 150000,
+    "premium": false
+  },
+  "classId": 4,
+  "_data_generated": "2024-01-06 18:17:29",
+  "customClass": "Armored Cars",
+  "seats": 2,
+  "hash": -326143852,
+  "gameName": "DUKES2",
+  "model": "dukes2",
+  "displayName": "Duke O'Death",
+  "makeName": "IMPONTE",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/dukes2.png",
+  "name": "Imponte Duke O'Death",
+  "manufacturer": "Imponte"
+}

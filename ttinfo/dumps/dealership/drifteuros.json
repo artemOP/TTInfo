@@ -1,1 +1,15 @@
-{"className": "Sports", "classId": 6, "_data_generated": "2024-01-06 18:17:44", "customClass": "Sports", "seats": 2, "hash": 821121576, "gameName": "DRIFTEUROS", "model": "drifteuros", "displayName": "Euros", "makeName": "ANNIS", "preview": "https://cdn.tycoon.community/dealership/vehicles/drifteuros.png", "name": "Annis Euros", "manufacturer": "Annis"}
+{
+  "className": "Sports",
+  "classId": 6,
+  "_data_generated": "2024-01-06 18:17:44",
+  "customClass": "Sports",
+  "seats": 2,
+  "hash": 821121576,
+  "gameName": "DRIFTEUROS",
+  "model": "drifteuros",
+  "displayName": "Euros",
+  "makeName": "ANNIS",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/drifteuros.png",
+  "name": "Annis Euros",
+  "manufacturer": "Annis"
+}

@@ -1,1 +1,21 @@
-{"className": "Utility", "dealership": {"dealership": "Vehicle Shop", "category": "Farmer", "price": 55000, "premium": false}, "classId": 11, "_data_generated": "2024-01-06 18:17:23", "customClass": "Tractors", "seats": 1, "hash": -2076478498, "gameName": "TRACTOR2", "model": "tractor2", "displayName": "Fieldmaster", "makeName": "STANLEY", "preview": "https://cdn.tycoon.community/dealership/vehicles/tractor2.png", "name": "Stanley Fieldmaster", "manufacturer": "Stanley"}
+{
+  "className": "Utility",
+  "dealership": {
+    "dealership": "Vehicle Shop",
+    "category": "Farmer",
+    "price": 55000,
+    "premium": false
+  },
+  "classId": 11,
+  "_data_generated": "2024-01-06 18:17:23",
+  "customClass": "Tractors",
+  "seats": 1,
+  "hash": -2076478498,
+  "gameName": "TRACTOR2",
+  "model": "tractor2",
+  "displayName": "Fieldmaster",
+  "makeName": "STANLEY",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/tractor2.png",
+  "name": "Stanley Fieldmaster",
+  "manufacturer": "Stanley"
+}

@@ -1,1 +1,15 @@
-{"className": "Emergency", "classId": 18, "_data_generated": "2024-01-06 18:17:20", "customClass": "Law Enforcement", "seats": 4, "hash": -1779120616, "gameName": "POLICEO2", "model": "policeold2", "displayName": "Police Roadcruiser", "makeName": "", "preview": "https://cdn.tycoon.community/dealership/vehicles/policeold2.png", "name": "Police Roadcruiser", "manufacturer": "NULL"}
+{
+  "className": "Emergency",
+  "classId": 18,
+  "_data_generated": "2024-01-06 18:17:20",
+  "customClass": "Law Enforcement",
+  "seats": 4,
+  "hash": -1779120616,
+  "gameName": "POLICEO2",
+  "model": "policeold2",
+  "displayName": "Police Roadcruiser",
+  "makeName": "",
+  "preview": "https://cdn.tycoon.community/dealership/vehicles/policeold2.png",
+  "name": "Police Roadcruiser",
+  "manufacturer": "NULL"
+}
