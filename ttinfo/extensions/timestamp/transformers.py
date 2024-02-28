@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import TYPE_CHECKING, List
+from typing import TYPE_CHECKING
 import zoneinfo
 
 from discord import utils
 from discord.app_commands import Choice, Transformer
-from discord.interactions import Interaction
+from discord import Interaction
 
 if TYPE_CHECKING:
     from typing import Literal
@@ -50,7 +50,7 @@ class Format(Transformer):
         except Exception as e:
             return str(e)
 
-    async def autocomplete(self, interaction: Interaction[Bot], current: str) -> List[Choice[str]]:
+    async def autocomplete(self, interaction: Interaction[Bot], current: str) -> list[Choice[str]]:
         dt = await self.get_dt(interaction)
         if isinstance(dt, str):
             return [Choice(name=dt, value="FILLER")]
