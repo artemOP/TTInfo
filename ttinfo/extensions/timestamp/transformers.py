@@ -10,9 +10,6 @@ from discord import Interaction
 
 if TYPE_CHECKING:
     from typing import Literal
-
-    from discord import Interaction
-
     from ... import Bot
 
 
