@@ -4,7 +4,7 @@ from datetime import datetime
 from typing import TYPE_CHECKING, Literal
 from zoneinfo import ZoneInfo
 
-from discord import app_commands, utils
+from discord import app_commands, utils, TextChannel
 from discord.app_commands import Range, Choice, Transform
 from discord.ext import commands
 from discord.interactions import Interaction
@@ -30,17 +30,26 @@ class Timestamp(commands.Cog):
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
+    async def send(self, interaction: Interaction, message: str, ephemeral: bool = True) -> None:
+        if ephemeral:
+            return await interaction.followup.send(message)
+        else:
+            await interaction.followup.send("Message sent")
+            assert isinstance(interaction.channel, TextChannel)
+            await interaction.channel.send(message)
+
     @app_commands.command(name="timestamp")
     async def to_timestamp(
         self,
         interaction: Interaction[Bot],
+        format: Transform[str, Format],
         year: Range[int, 1970, 2100] | None = None,
         month: Range[int, 1, 12] | None = None,
         day: Range[int, 1, 31] | None = None,
         hour: Range[int, 0, 23] | None = None,
         minute: Range[int, 0, 59] = 0,
         timezone: Transform[ZoneInfo, Timezone] | None = None,
-        format: Transform[str, Format] = "",
+        ephemeral: bool = True,
         raw: bool = False,
     ):
         """Generate a discord timestamp for a given time
@@ -54,12 +63,13 @@ class Timestamp(commands.Cog):
             minute (Range[int, 0, 59] | None): The mintue
             timezone (str | None): The timezone
             format (TimestampStyle | None): The format to return the discord timestamp in
+            ephemeral (bool): Set False to make visible to all
             raw (bool): Set True to return as a copyable code block
         """
         if raw:
-            await interaction.followup.send(to_codeblock(format, language="MD", escape_md=False))
+            await self.send(interaction, to_codeblock(format, language="MD", escape_md=False), ephemeral=ephemeral)
         else:
-            await interaction.followup.send(format, ephemeral=True)
+            await self.send(interaction, format, ephemeral=ephemeral)
 
 
 async def setup(bot):
