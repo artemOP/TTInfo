@@ -37,11 +37,11 @@ class Format(Transformer):
         try:
             now = utils.utcnow()
             return datetime(
-                year=getattr(interaction.namespace, "year", now.year),
-                month=getattr(interaction.namespace, "month", now.month),
-                day=getattr(interaction.namespace, "day", now.day),
-                hour=getattr(interaction.namespace, "hour", now.hour),
-                minute=getattr(interaction.namespace, "minute", now.minute),
+                year=getattr(interaction.namespace, "year", None) or now.year,
+                month=getattr(interaction.namespace, "month", None) or now.month,
+                day=getattr(interaction.namespace, "day", None) or now.day,
+                hour=getattr(interaction.namespace, "hour", None) or now.hour,
+                minute=getattr(interaction.namespace, "minute", None) or now.minute,
                 tzinfo=zoneinfo.ZoneInfo(getattr(interaction.namespace, "timezone", "GMT") or "GMT"),
             )
         except Exception as e:
