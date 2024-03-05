@@ -94,7 +94,7 @@ class Builder(BaseView):
         if not self.embed.fields:
             return await interaction.response.send_message("No fields to delete", ephemeral=True, delete_after=15)
         view = BaseView()
-        view.add_item(DeleteIndex(self))
+        view.add_item(DeleteIndex(self, placeholder="Which indexes would you like to remove?"))
         await interaction.response.send_message(view=view, ephemeral=True)
         view.response = await interaction.original_response()
 
@@ -103,7 +103,7 @@ class Builder(BaseView):
         if not self.embed.fields:
             return await interaction.response.send_message("No fields to edit", ephemeral=True, delete_after=15)
         view = BaseView()
-        view.add_item(EditIndex(self, max_values=1))
+        view.add_item(EditIndex(self, placeholder="Which index would you like to edit?", max_options=1))
         await interaction.response.send_message(view=view, ephemeral=True)
         view.response = await interaction.original_response()
 
@@ -448,7 +448,7 @@ class ImportModal(BaseModal):  # raw text | url
 
 
 class IndexSelect(Select):  # multiselect from n rows, return value
-    def __init__(self, parent_view: Builder, max_options=25) -> None:
+    def __init__(self, parent_view: Builder, placeholder: str | None = None, max_options=25) -> None:
         self.parent_view = parent_view
         options = [
             SelectOption(
@@ -458,7 +458,7 @@ class IndexSelect(Select):  # multiselect from n rows, return value
             for i, field in enumerate(self.parent_view.embed.fields)
         ]
         super().__init__(
-            placeholder="Which indexes would you like to remove",
+            placeholder=placeholder,
             min_values=1,
             max_values=min(max_options, len(options), 25),
             options=options,
@@ -485,8 +485,6 @@ class DeleteIndex(IndexSelect):
 
 
 class EditIndex(IndexSelect):
-    def __init__(self, parent_view: Builder, *, max_values: int = 1) -> None:
-        super().__init__(parent_view, max_values)
 
     async def callback(self, interaction: Interaction[Bot]) -> Any:
         index = int(self.values[0])
