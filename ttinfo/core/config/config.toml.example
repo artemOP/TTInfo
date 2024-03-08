@@ -1,0 +1,26 @@
+bot = ""
+
+[discord]
+token = ""
+webhook = ""
+guild = ""
+owners = [""]
+
+[discord.toggles]
+debug = false
+tasks = false
+maintenance = false
+
+[postgres]
+db = ""
+host = ""
+user = ""
+password = ""
+
+[tycoon]
+token = ""
+
+
+
+[mystbin]
+token = ""

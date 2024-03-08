@@ -27,6 +27,10 @@ class Owner(commands.GroupCog, name="owner"):
     async def cog_unload(self) -> None:
         self.logger.info(f"{self.qualified_name} cog unloaded")
 
+    async def interaction_check(self, interaction: Interaction[Bot]) -> bool:
+        assert self.bot.owner_ids
+        return interaction.user.id in self.bot.owner_ids
+
     @app_commands.command(name="debug")
     async def debug(self, interaction: Interaction, mode: Optional[bool] = None):
         """Toggles debug file logging and asyncio debug mode
@@ -78,5 +82,5 @@ class Owner(commands.GroupCog, name="owner"):
 
 
 async def setup(bot: Bot):
-    guild = bot.env_values["discord_guild"]
+    guild = bot.config["discord"]["guild"]
     await bot.add_cog(Owner(bot), guild=discord.Object(id=guild))

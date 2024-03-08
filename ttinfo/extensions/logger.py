@@ -22,7 +22,7 @@ class Logging(commands.Cog):
 
         self.user: User | None = MISSING
 
-        if url := self.bot.env_values.get("discord_webhook"):
+        if url := self.bot.config["discord"]["webhook"]:
             self.webhook = discord.Webhook.from_url(url, session=bot.session, client=bot)
         else:
             bot.log_handler.warning("Not enabling webhook logging due to missing webhook URL")

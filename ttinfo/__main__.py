@@ -1,10 +1,10 @@
 import asyncio
 import pathlib
+import tomllib
 
 import aiohttp
 import discord
 from discord.ext import commands
-import dotenv
 import orjson
 
 from ttinfo import Bot, LogHandler, Pool, TycoonClient
@@ -12,13 +12,15 @@ from .http.enums import Server
 
 
 async def main():
-    env = dotenv.dotenv_values()
+    with open("ttinfo/core/config/config.toml", "rb") as f:
+        config = tomllib.load(f)
+
     async with (
         Pool(
-            database=env["postgres_db"],
-            user=env["postgres_user"],
-            password=env["postgres_password"],
-            host=env["postgres_host"],
+            database=config["postgres"]["db"],
+            user=config["postgres"]["user"],
+            password=config["postgres"]["password"],
+            host=config["postgres"]["host"],
             command_timeout=1,
             min_size=1,
             max_size=25,
@@ -27,7 +29,7 @@ async def main():
         Bot(
             prefix=commands.when_mentioned,
             intents=discord.Intents.all(),
-            env_values=env,
+            config=config,
             extension_path=pathlib.Path("ttinfo/extensions"),
         ) as bot,
         TycoonClient(bot=bot, pool=pool, session=session) as tycoon_client,
@@ -50,7 +52,7 @@ async def main():
         log_handler.info(f"{pool} connected")
         log_handler.info(f"{tycoon_client} connected")
 
-        token: str = env["discord_token"]  # type: ignore
+        token: str = config["discord"]["token"]
         await bot.start(token)
 
 

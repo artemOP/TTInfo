@@ -100,7 +100,7 @@ class Client:
         )
         if not key:
             self.bot.log_handler.warning("No donated keys are available")
-            return self.bot.env_values["tycoon_token"]
+            return self.bot.config["tycoon"]["token"]
         return key
 
     @cache.with_key(None)

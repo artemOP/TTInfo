@@ -52,7 +52,7 @@ class LogHandler:
         logging.getLogger("discord.state").setLevel(logging.WARNING)
         logging.getLogger("discord.gateway").setLevel(logging.WARNING)
 
-        if self.bot.env_values.get("debug", "").lower() == "true":
+        if self.bot.config["discord"]["toggles"]["debug"]:
             self.log.setLevel(logging.DEBUG)
         else:
             self.log.setLevel(logging.INFO)
@@ -75,7 +75,7 @@ class LogHandler:
             if stream_supports_colour(stream_handler):
                 stream_handler.setFormatter(ColourFormatter())
             self.log.addHandler(stream_handler)
-        if self.bot.env_values.get("discord_webhook"):
+        if self.bot.config["discord"]["webhook"]:
             self.log.addHandler(QueueEmitHandler(self.bot))
 
         return self

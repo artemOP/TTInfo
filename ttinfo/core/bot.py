@@ -32,7 +32,7 @@ class Bot(commands.Bot):
 
     __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "session", "env_values", "extension_path")
 
-    def __init__(self, prefix: Prefix, intents: Intents, env_values: dict[str, Any], extension_path: Path, **kwargs):
+    def __init__(self, prefix: Prefix, intents: Intents, config: dict[str, Any], extension_path: Path, **kwargs):
         super().__init__(
             prefix,  # type: ignore
             help_command=None,
@@ -41,7 +41,7 @@ class Bot(commands.Bot):
             tree_cls=CommandTree,
             **kwargs,
         )
-        self.env_values = env_values
+        self.config = config
         self.extension_path = extension_path
 
     async def setup_hook(self) -> None:
@@ -62,7 +62,7 @@ class Bot(commands.Bot):
         for file in root.iterdir():
             if file.match("[!-|_]*.py"):
                 yield file
-            if self.env_values.get("tasks", "").lower() == "false" and file.name == "tasks":
+            if not self.config["discord"]["toggles"]["tasks"] and file.name == "tasks":
                 continue
             elif file.is_dir():
                 yield from self.collect_cogs(file)

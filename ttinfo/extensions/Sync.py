@@ -67,5 +67,5 @@ class Sync(commands.Cog):
 
 
 async def setup(bot: Bot):
-    guild = bot.env_values["discord_guild"]
+    guild = bot.config["discord"]["guild"]
     await bot.add_cog(Sync(bot), guild=discord.Object(id=guild))
