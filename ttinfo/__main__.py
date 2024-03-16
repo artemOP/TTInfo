@@ -40,6 +40,7 @@ async def main():
         bot.tycoon_client = tycoon_client
         bot.pool = pool
         bot.session = session
+        bot.owner_ids = set(*config["discord"]["owners"])
 
         try:
             sotd = await tycoon_client.fetch_sotd(Server.main, await tycoon_client.get_donated_key(Server.main))
