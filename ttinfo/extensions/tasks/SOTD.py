@@ -30,7 +30,7 @@ class SOTD(commands.Cog):
         if self.task.is_running():
             self.task.cancel()
 
-    @tasks.loop(time=time(hour=1, tzinfo=timezone.utc))
+    @tasks.loop(time=time(hour=0, minute=15, tzinfo=timezone.utc))
     async def task(self):
         key = await self.bot.tycoon_client.get_donated_key(Server.main)
         request = await self.bot.tycoon_client.fetch_sotd(Server.main, key)
