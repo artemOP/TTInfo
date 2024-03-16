@@ -535,8 +535,11 @@ class SendToUserOrChannel(BaseView):
         elif response is None:
             return await interaction.followup.send("Channel not found", ephemeral=True)
 
-        assert interaction.channel
-        view = JumpLink(interaction.channel.jump_url)
+        if isinstance(self.select, UserSelect):
+            assert interaction.channel
+            view = JumpLink(interaction.channel.jump_url)
+        else:
+            view = None
 
         try:
             await response.send(view=view, embed=self.parent_view.embed)
