@@ -11,13 +11,13 @@ if TYPE_CHECKING:
 
 
 class BaseView(ui.View):
-    response: InteractionMessage = None
+    response: InteractionMessage
 
     def __init__(self, *, timeout: float | None = 180):
         super().__init__(timeout=timeout)
 
     async def on_timeout(self) -> None:
-        if not self.response:
+        if not hasattr(self, "response"):
             raise AttributeError("A response must be provided for the view to timeout")
         try:
             await self.response.edit(view=None)
@@ -25,8 +25,10 @@ class BaseView(ui.View):
             pass
 
     async def interaction_check(self, interaction: Interaction, /) -> bool:
-        if not self.response or not getattr(self.response, "interaction", None):
+        if not hasattr(self, "response") or not getattr(self.response, "interaction", None):
             return True
+
+        assert self.response.interaction, "Response seems to be missing an interaction, please reach out to a developer"
         if self.response.interaction.user != interaction.user:
             await interaction.response.send_message("This is not your view, please launch your own", ephemeral=True)
             return False
