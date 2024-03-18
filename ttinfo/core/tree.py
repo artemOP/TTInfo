@@ -28,6 +28,12 @@ class CommandTree(app_commands.CommandTree):
         if not interaction.guild:
             await interaction.followup.send("This bot cannot be used in DMs")
             return False
+
+        assert self.bot.owner_ids, "Owner ids have not been configured correctly"
+        if self.bot.config["discord"]["toggles"]["maintenance"] and interaction.user.id not in self.bot.owner_ids:
+            await interaction.followup.send("I'm currently in maintenance mode, please try again later")
+            return False
+
         if "server" not in interaction.namespace:
             return True
 
