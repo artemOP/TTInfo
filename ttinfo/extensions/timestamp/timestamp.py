@@ -39,6 +39,7 @@ class Timestamp(commands.Cog):
             await interaction.channel.send(message)
 
     @app_commands.command(name="timestamp")
+    @app_commands.guild_only()
     async def to_timestamp(
         self,
         interaction: Interaction[Bot],
