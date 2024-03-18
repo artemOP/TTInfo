@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 from copy import deepcopy
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Coroutine
 
 import discord
-from discord import Interaction, app_commands, ui, SelectOption
+from discord import Interaction, app_commands, ui, SelectOption, User, Member
 from discord.ext import commands
 from discord.ui import Modal, Select, TextInput, ChannelSelect, UserSelect
 
@@ -216,6 +216,9 @@ class BaseModal(Modal):
         if not interaction.response.is_done():
             return await interaction.response.edit_message(view=self.parent_view, embed=self.embed)
         await interaction.edit_original_response(view=self.parent_view, embed=self.embed)
+
+    async def on_error(self, interaction: Interaction[Bot], error: discord.HTTPException) -> None:
+        print(error.args, error.code, error.response, error.status, error.text, sep="\n\n")
 
     def add_items(self, *args: ui.Item):
         for arg in args:
@@ -518,14 +521,22 @@ class SendToUserOrChannel(BaseView):
 
         if retry_after:
             raise ButtonOnCooldown(retry_after)
-        return check or True
+
+        return check
 
     async def on_error(self, interaction: Interaction[Bot], error: Exception, item: ui.Item[Any]):
         if isinstance(error, ButtonOnCooldown):
             return await interaction.response.send_message(error, ephemeral=True)
         return await super().on_error(interaction, error, item)
 
-    async def callback(self, interaction: Interaction[Bot]) -> None:
+    async def send(self, interaction: Interaction, message: Coroutine) -> None:
+        try:
+            await message
+            await interaction.followup.send("Embed sent", ephemeral=True)
+        except (discord.HTTPException, discord.Forbidden):
+            await interaction.followup.send("Failed to send embed", ephemeral=True)
+
+    async def callback(self, interaction: Interaction[Bot]):
         await interaction.response.defer()
         response = self.select.values[0]
         if isinstance(response, (app_commands.AppCommandChannel, app_commands.AppCommandThread)):
@@ -535,17 +546,25 @@ class SendToUserOrChannel(BaseView):
         elif response is None:
             return await interaction.followup.send("Channel not found", ephemeral=True)
 
-        if isinstance(self.select, UserSelect):
+        if isinstance(response, User | Member):
             assert interaction.channel
             view = JumpLink(interaction.channel.jump_url)
-        else:
-            view = None
+            return await self.send(interaction, response.send(view=view, embed=self.parent_view.embed))
 
-        try:
-            await response.send(view=view, embed=self.parent_view.embed)
-            await interaction.followup.send("Embed sent", ephemeral=True)
-        except (discord.HTTPException, discord.Forbidden):
-            await interaction.followup.send("Failed to send embed", ephemeral=True)
+        assert isinstance(interaction.user, Member)
+        permissions = response.permissions_for(interaction.user)
+        if not all(
+            (
+                permissions.send_messages,
+                permissions.send_messages_in_threads,
+                permissions.embed_links,
+            )
+        ):
+            return await interaction.followup.send(
+                f"You do not have permissions to send embeds in {response.mention}",
+                ephemeral=True,
+            )
+        await self.send(interaction, response.send(embed=self.parent_view.embed))
 
 
 class SendToWebhook(BaseModal):
