@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+import traceback
 from typing import TYPE_CHECKING, Any, Coroutine
 
 import discord
@@ -218,7 +219,7 @@ class BaseModal(Modal):
         await interaction.edit_original_response(view=self.parent_view, embed=self.embed)
 
     async def on_error(self, interaction: Interaction[Bot], error: discord.HTTPException) -> None:
-        print(error.args, error.code, error.response, error.status, error.text, sep="\n\n")
+        await interaction.response.send_message(str(error), ephemeral=True)
 
     def add_items(self, *args: ui.Item):
         for arg in args:
