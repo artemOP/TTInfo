@@ -334,8 +334,8 @@ class URLModal(BaseModal):  # thumbnail_url, image_url
             required=False,
         )
         self.thumbnail = TextInput(
-            label="Thumbnail Icon",
-            placeholder="Enter a tumbnail icon for your embed",
+            label="Thumbnail URL",
+            placeholder="Enter a tumbnail URL for your embed",
             default=self.embed.thumbnail.url,
             required=False,
         )
