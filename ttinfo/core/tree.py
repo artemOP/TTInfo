@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from discord import app_commands, AppCommandType
+from discord import app_commands, AppCommandType, InteractionType
 from discord.ext import commands
 
 from ..http.enums import Server
@@ -23,6 +23,9 @@ class CommandTree(app_commands.CommandTree):
         super().__init__(bot)
 
     async def interaction_check(self, interaction: Interaction, /) -> bool:
+        if interaction.type is not InteractionType.application_command:
+            return True
+
         await interaction.response.defer(ephemeral=True)
 
         if not interaction.guild:
