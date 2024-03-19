@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from copy import deepcopy
-import traceback
 from typing import TYPE_CHECKING, Any, Coroutine
 
 import discord
