@@ -1,10 +1,3 @@
-try:
-    import uvloop
-except ModuleNotFoundError:
-    HAS_UVLOOP = False
-else:
-    HAS_UVLOOP = True
-
 import asyncio
 import pathlib
 import tomllib
@@ -16,8 +9,6 @@ import orjson
 
 from ttinfo import Bot, LogHandler, Pool, TycoonClient
 from .http.enums import Server
-
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 async def main():
@@ -68,7 +59,6 @@ async def main():
 
 if __name__ == "__main__":
     try:
-        run = uvloop.run if HAS_UVLOOP else asyncio.run
-        run(main())
+        asyncio.run(main())
     except KeyboardInterrupt:
         pass
