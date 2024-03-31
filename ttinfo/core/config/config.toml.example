@@ -17,10 +17,11 @@ host = ""
 user = ""
 password = ""
 
+[requests]
+timeout = ""
+
 [tycoon]
 token = ""
-
-
 
 [mystbin]
 token = ""

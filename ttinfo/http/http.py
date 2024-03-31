@@ -69,8 +69,9 @@ class TycoonHTTP:
     logger = logging.getLogger("ttinfo.http")
     logger.setLevel(10)
 
-    def __init__(self, session: ClientSession):
+    def __init__(self, session: ClientSession, timeout: int):
         self.session: ClientSession = session
+        self.timeout = timeout
 
     async def __aenter__(self):
         return self
@@ -83,9 +84,9 @@ class TycoonHTTP:
     ):
         await self.session.close()
 
-    async def request(self, route: Route, retries: int = 5, timeout: int = 3, fallback: bool = True) -> Any:
+    async def request(self, route: Route, retries: int = 5, timeout: int | None = None, fallback: bool = True) -> Any:
         for attempt in range(retries):
-            result = await self._request(route, attempt, timeout)
+            result = await self._request(route, attempt, timeout or self.timeout)
             if result:
                 return result
 

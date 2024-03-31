@@ -30,13 +30,14 @@ if TYPE_CHECKING:
 class Client:
     session: TycoonHTTP
 
-    def __init__(self, bot: Bot, pool: Pool, session: ClientSession) -> None:
+    def __init__(self, bot: Bot, pool: Pool, session: ClientSession, timeout: int) -> None:
         self.bot = bot
         self.pool = pool
         self._session = session
+        self._timeout = timeout
 
     async def __aenter__(self) -> Self:
-        self.session = await TycoonHTTP(self._session).__aenter__()
+        self.session = await TycoonHTTP(self._session, timeout=self._timeout).__aenter__()
         return self
 
     async def __aexit__(

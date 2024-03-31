@@ -32,7 +32,7 @@ async def main():
             config=config,
             extension_path=pathlib.Path("ttinfo/extensions"),
         ) as bot,
-        TycoonClient(bot=bot, pool=pool, session=session) as tycoon_client,
+        TycoonClient(bot=bot, pool=pool, session=session, timeout=config["requests"]["timeout"]) as tycoon_client,
         LogHandler(bot=bot) as log_handler,
     ):
         bot.logging_queue = asyncio.Queue()
