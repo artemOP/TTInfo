@@ -102,7 +102,7 @@ class TycoonHTTP:
             extra={"route": route},
         )
 
-    async def _request(self, route: Route, attempt: int = 5, timeout: int = 3) -> Any:
+    async def _request(self, route: Route, attempt: int, timeout: int) -> Any:
         assert self.session
         headers = route.headers
         reason: Optional[str] = None
