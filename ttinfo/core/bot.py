@@ -30,7 +30,7 @@ class Bot(commands.Bot):
     pool: Pool
     session: ClientSession
 
-    __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "session", "env_values", "extension_path")
+    __slots__ = ("tycoon_client", "log_handler", "logging_queue", "pool", "session", "config", "extension_path")
 
     def __init__(self, prefix: Prefix, intents: Intents, config: dict[str, Any], extension_path: Path, **kwargs):
         super().__init__(

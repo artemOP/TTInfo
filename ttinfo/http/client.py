@@ -101,7 +101,7 @@ class Client:
         )
         if not key:
             self.bot.log_handler.warning("No donated keys are available")
-            return self.bot.config["tycoon"]["token"]
+            return self.bot.config["requests"]["tycoon"]["token"]
         return key
 
     @cache.with_key(None)
@@ -931,7 +931,7 @@ class Client:
         return [await self.fetch_vehicle_data(vehicle) for vehicle in vehicles]
 
     def myst_headers(self) -> dict[str, str]:
-        auth = self.bot.env_values.get("mystbin")
+        auth = self.bot.config["requests"]["mystbin"]["token"]
         if auth:
             return {"Content-Type": "application/json", "Authorization": f"Bearer {auth}"}
 
